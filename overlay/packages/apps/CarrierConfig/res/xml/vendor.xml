@@ -3,6 +3,7 @@
     <carrier_config>
         <boolean name="allow_video_call_in_low_battery" value="true" />
         <boolean name="default_carrierconfig_loaded" value="true" />
+        <boolean name="show_apn_setting_cdma_bool" value="true" />
         <boolean name="world_phone_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="310" mnc="120">
