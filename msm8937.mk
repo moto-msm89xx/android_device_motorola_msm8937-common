@@ -283,6 +283,7 @@ PRODUCT_PACKAGES += \
     init.mmi.usb.rc \
     init.oem.rc \
     init.qcom.rc \
+    init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc
 
