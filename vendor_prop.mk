@@ -111,7 +111,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.mm.enable.qcom_parser=4643 \
     vendor.vidc.enc.narrow.searchrange=1 \
     vendor.vidc.disable.split.mode=1 \
-    vendor.video.disable.ubwc=1
+    vendor.video.disable.ubwc=1 \
+    vidc.enc.disable.pq=true
 
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
