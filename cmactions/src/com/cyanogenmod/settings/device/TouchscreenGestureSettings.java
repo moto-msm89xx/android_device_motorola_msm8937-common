@@ -16,7 +16,6 @@
 
 package com.cyanogenmod.settings.device;
 
-import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.NotificationManager;
 import android.os.Bundle;
@@ -27,8 +26,6 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
 import android.preference.SwitchPreference;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import org.cyanogenmod.internal.util.ScreenType;
 
@@ -47,8 +44,6 @@ public class TouchscreenGestureSettings extends PreferenceActivity {
         if (ambientDisplayCat != null) {
             ambientDisplayCat.setEnabled(CMActionsSettings.isDozeEnabled(getContentResolver()));
         }
-        final ActionBar actionBar = getActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
         mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         mFlipPref = (SwitchPreference) findPreference("gesture_flip_to_mute");
         mFlipPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
@@ -89,14 +84,5 @@ public class TouchscreenGestureSettings extends PreferenceActivity {
         if (mNotificationManager.isNotificationPolicyAccessGranted() && mFlipClick) {
             mFlipPref.setChecked(true);
         }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            onBackPressed();
-            return true;
-        }
-        return false;
     }
 }
