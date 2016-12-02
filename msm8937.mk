@@ -324,6 +324,9 @@ PRODUCT_PACKAGES += \
     init.qcom.sh
 
 # Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_motorola
+
 TARGET_RECOVERY_DENSITY := xhdpi
 
 # RenderScript
