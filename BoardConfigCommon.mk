@@ -154,6 +154,7 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_motorola
 
 # SELinux
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
