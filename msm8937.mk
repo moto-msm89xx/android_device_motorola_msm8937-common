@@ -346,6 +346,10 @@ PRODUCT_PACKAGES += \
     libmemset_shim \
     libqsapshim
 
+# Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_motorola_msm8937
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)

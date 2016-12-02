@@ -1,4 +1,6 @@
+import common
 import os
+import re
 from common import BlockDifference, EmptyImage, GetUserImage
 
 # The joined list of user image partitions of source and target builds.
@@ -12,16 +14,34 @@ USERIMAGE_PARTITIONS = [
     "system_ext",
 ]
 
+def AddBasebandAssertion(info):
+  android_info = info.input_zip.read("OTA/android-info.txt")
+  m = re.search(r'require\s+version-baseband\s*=\s*(\S+)', android_info)
+  if m:
+    versions = m.group(1).split('|')
+    if len(versions) and '*' not in versions:
+      cmd = 'assert(motorola_msm8937.verify_baseband(' + ','.join(['"%s"' % baseband for baseband in versions]) + ') == "1" || abort("ERROR: This package requires firmware from an Android 8.1 based stock ROM build. Please upgrade firmware and retry!"););'
+      info.script.AppendExtra(cmd)
+  return
+
 def GetUserImages(input_tmp, input_zip):
   return {partition: GetUserImage(partition, input_tmp, input_zip)
           for partition in USERIMAGE_PARTITIONS
           if os.path.exists(os.path.join(input_tmp,
                                          "IMAGES", partition + ".img"))}
 
+def FullOTA_Assertions(info):
+  AddBasebandAssertion(info)
+  return
+
 def FullOTA_GetBlockDifferences(info):
   images = GetUserImages(info.input_tmp, info.input_zip)
   return [BlockDifference(partition, image)
           for partition, image in images.items()]
+
+def IncrementalOTA_Assertions(info):
+  AddBasebandAssertion(info)
+  return
 
 def IncrementalOTA_GetBlockDifferences(info):
   source_images = GetUserImages(info.source_tmp, info.source_zip)
