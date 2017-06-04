@@ -1,5 +1,3 @@
-ifneq ($(BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE),)
-
 LOCAL_PATH := $(call my-dir)
 
 #add QMI libraries for QMI targets
@@ -46,5 +44,3 @@ $(shell ln -sf /firmware/image/gss.b14 $(TARGET_OUT_ETC)/firmware/gss.b14)
 $(shell ln -sf /firmware/image/gss.b15 $(TARGET_OUT_ETC)/firmware/gss.b15)
 $(shell ln -sf /firmware/image/gss.mdt $(TARGET_OUT_ETC)/firmware/gss.mdt)
 endif
-
-endif#BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE
