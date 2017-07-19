@@ -264,3 +264,7 @@
 # Trustonic TEE device
 /dev/mobicore             0600   system     system
 /dev/mobicore-user        0666   system     system
+
+# /dev/sensors only supports an ioctl to get the current SLPI timestamp
+# allow the sensors daemon to perform this as non-root
+/dev/sensors              0660   root       system
