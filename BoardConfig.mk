@@ -81,6 +81,7 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
