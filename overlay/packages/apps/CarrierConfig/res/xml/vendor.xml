@@ -3,6 +3,7 @@
     <carrier_config>
         <boolean name="allow_video_call_in_low_battery" value="true" />
         <boolean name="default_carrierconfig_loaded" value="true" />
+        <boolean name="world_phone_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="001" customerid="verizon">
         <boolean name="carrier_volte_provisioning_required_bool" value="true" />
