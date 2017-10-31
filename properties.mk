@@ -24,7 +24,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.safx.pbe.enabled=true \
     vendor.tunnel.audio.encode=false \
     vendor.voice.conc.fallbackpath=deep-buffer \
-    vendor.voice.path.for.pcm.voip=true
+    vendor.voice.path.for.pcm.voip=false
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    use.voice.path.for.pcm.voip=false
 
 # Audio ACDB
 PRODUCT_PROPERTY_OVERRIDES += \
