@@ -282,7 +282,7 @@
     <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
     <bool name="config_dozeAfterScreenOff">true</bool>
     <bool name="config_dozePulsePickup">true</bool>
-    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
+    <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
     <bool name="config_displayBlanksAfterDoze">false</bool>
 
     <!-- Default list of files pinned by the Pinner Service -->
