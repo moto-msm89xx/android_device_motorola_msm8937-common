@@ -5,6 +5,18 @@
         <boolean name="default_carrierconfig_loaded" value="true" />
         <boolean name="world_phone_bool" value="true" />
     </carrier_config>
+    <carrier_config mcc="310" mnc="120">
+        <boolean name="sprint_mwi_quirk" value="true" />
+    </carrier_config>
+    <carrier_config mcc="311" mnc="490">
+        <boolean name="sprint_mwi_quirk" value="true" />
+    </carrier_config>
+    <carrier_config mcc="311" mnc="870">
+        <boolean name="sprint_mwi_quirk" value="true" />
+    </carrier_config>
+    <carrier_config mcc="312" mnc="530">
+        <boolean name="sprint_mwi_quirk" value="true" />
+    </carrier_config>
     <carrier_config mcc="001" customerid="verizon">
         <boolean name="carrier_volte_provisioning_required_bool" value="true" />
         <boolean name="carrier_allow_turnoff_ims_bool" value="false" />
