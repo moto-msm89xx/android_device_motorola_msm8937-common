@@ -28,11 +28,11 @@ on early-boot
 
 on boot
        # Change permission for fingerprint sensor
-       chown system mot_tcmd /sys/bus/spi/devices/spi1.0/nav
-       chown system mot_tcmd /sys/bus/spi/devices/spi1.0/clk_enable
-       chown system mot_tcmd /sys/bus/spi/devices/spi1.0/dev_enable
-       chown system mot_tcmd /sys/bus/spi/devices/spi1.0/irq
-       chown system mot_tcmd /sys/bus/spi/devices/spi1.0/irq_cnt
+       chown system oem_5004 /sys/bus/spi/devices/spi1.0/nav
+       chown system oem_5004 /sys/bus/spi/devices/spi1.0/clk_enable
+       chown system oem_5004 /sys/bus/spi/devices/spi1.0/dev_enable
+       chown system oem_5004 /sys/bus/spi/devices/spi1.0/irq
+       chown system oem_5004 /sys/bus/spi/devices/spi1.0/irq_cnt
        chmod 0440 /sys/bus/spi/devices/spi1.0/irq_cnt
 
        # change permission for rear Psensor
