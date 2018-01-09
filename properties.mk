@@ -130,6 +130,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_virtual_display_dimension=4096 \
     ro.surface_flinger.use_color_management=true
 
+# LMKD
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lmk.medium=0 \
+    ro.lmk.kill_timeout_ms=100
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.mm.enable.qcom_parser=4643 \
