@@ -86,6 +86,9 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
+# DRM
+TARGET_ENABLE_MEDIADRM_64 := true
+
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
 TARGET_USES_METADATA_AS_FDE_KEY := true
