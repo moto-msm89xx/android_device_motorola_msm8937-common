@@ -77,10 +77,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/ov5675_jeterht_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov5675_jeterht_chromatix.xml \
     $(LOCAL_PATH)/configs/camera/ov5675_jeterkc_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov5675_jeterkc_chromatix.xml
 
-# CMActions
-PRODUCT_PACKAGES += \
-    CMActions
-
 # CNE
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
@@ -176,6 +172,10 @@ PRODUCT_COPY_FILES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.hannah
+
+# LineageActions
+PRODUCT_PACKAGES += \
+    LineageActions
 
 # Media
 PRODUCT_COPY_FILES += \
