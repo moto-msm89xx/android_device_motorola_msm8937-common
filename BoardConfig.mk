@@ -49,6 +49,10 @@ BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 
+# Bionic
+TARGET_LD_SHIM_LIBS := \
+    /vendor/lib/libmdmcutback.so|libqsap_shim.so
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
