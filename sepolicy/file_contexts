@@ -1,4 +1,5 @@
 # Block devices
+/dev/block/mmcblk0p35                                    u:object_r:metadata_block_device:s0
 /dev/block/bootdevice/by-name/metadata                   u:object_r:metadata_block_device:s0
 /dev/block/bootdevice/by-name/persist                    u:object_r:persist_block_device:s0
 
