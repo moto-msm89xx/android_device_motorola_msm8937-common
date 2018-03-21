@@ -443,7 +443,7 @@ service qti /system/vendor/bin/qti
     user radio
     group radio oem_2901 diag usb
 
-service sensors /vendor/bin/sensors.qcom
+service vendor.sensors /vendor/bin/sensors.qcom
     class core
     user root
     group root
