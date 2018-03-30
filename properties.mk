@@ -132,7 +132,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # LMKD
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lmk.medium=0 \
     ro.lmk.kill_timeout_ms=100
 
 # Media
