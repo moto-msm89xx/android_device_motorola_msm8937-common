@@ -89,6 +89,7 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libqdMetaData.system \
     libtinyxml \
+    libvulkan \
     memtrack.msm8937
 
 PRODUCT_PACKAGES += \
@@ -347,6 +348,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
+
+# VNDK
+PRODUCT_PACKAGES += \
+    vndk_package
 
 # Wifi
 PRODUCT_PACKAGES += \
