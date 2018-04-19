@@ -127,8 +127,8 @@ service ppd /vendor/bin/mm-pp-dpps
     socket pps stream 0660 system system
 
 on property:init.svc.surfaceflinger=restarting
-    stop hwcomposer-2-1
-    start hwcomposer-2-1
+    stop vendor.hwcomposer-2-1
+    start vendor.hwcomposer-2-1
 
 service wcnss-service /system/vendor/bin/wcnss_service
     class main
