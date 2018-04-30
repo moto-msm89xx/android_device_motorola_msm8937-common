@@ -162,14 +162,14 @@ else
     prev_version_info=""
 fi
 
-cur_version_info=`cat /firmware/verinfo/ver_info.txt`
-if [ ! -f /firmware/verinfo/ver_info.txt -o "$prev_version_info" != "$cur_version_info" ]; then
+cur_version_info=`cat /vendor/firmware_mnt/verinfo/ver_info.txt`
+if [ ! -f /vendor/firmware_mnt/verinfo/ver_info.txt -o "$prev_version_info" != "$cur_version_info" ]; then
     chmod g+w -R /data/vendor/modem_config/
     rm -rf /data/vendor/radio/modem_config
     # preserve the read only mode for all subdir and files
-    cp --preserve=m -d /firmware/image/modem_pr/mcfg/configs/* /data/vendor/radio/modem_config
+    cp --preserve=m -d /vendor/firmware_mnt/image/modem_pr/mcfg/configs/* /data/vendor/radio/modem_config
     chown -hR radio.radio /data/vendor/radio/modem_config
-    cp --preserve=m -d /firmware/verinfo/ver_info.txt /data/vendor/radio/ver_info.txt
+    cp --preserve=m -d /vendor/firmware_mnt/verinfo/ver_info.txt /data/vendor/radio/ver_info.txt
 fi
 chmod g-w /data/vendor/modem_config
 setprop ro.vendor.ril.mbn_copy_completed 1
