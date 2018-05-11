@@ -47,9 +47,12 @@ on fs
     # results in failure to launch late-start class.
 
     wait /dev/block/bootdevice/by-name/persist
-    mkdir /persist/data 0700  system system
-    mkdir /persist/bms 0700 root system
-    restorecon_recursive   /persist
+    # Set permissions for persist partition
+    chown root system /mnt/vendor/persist
+    chmod 0771 /mnt/vendor/persist
+    mkdir /mnt/vendor/persist/bms 0700 root system
+    mkdir /mnt/vendor/persist/data 0700 system system
+    restorecon_recursive /mnt/vendor/persist
 
 on post-fs-data
     mkdir /data/tombstones 0771 system system
