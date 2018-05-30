@@ -1,4 +1,5 @@
 hal_client_domain(hal_camera_default, hal_configstore)
+hal_client_domain(hal_camera_default, hal_graphics_allocator)
 allow hal_camera_default sysfs_camera_device:file { open read getattr };
 allow hal_camera_default sysfs_battery_supply:dir search;
 allow hal_camera_default sysfs_battery_supply:file { open read getattr };
