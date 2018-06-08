@@ -106,6 +106,9 @@ on property:ro.hw.dualsim=false
     setprop ro.radio.imei.sv 11
     setprop ro.telephony.default_network 10
 
+on property:ro.product.name=rhannah
+    setprop debug.hwui.use_buffer_age false
+
 on fs
 #    wait /dev/block/bootdevice/by-name/oem
 #    mount ext4 /dev/block/bootdevice/by-name/oem /oem ro nosuid nodev context=u:object_r:oemfs:s0
