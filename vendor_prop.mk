@@ -77,7 +77,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qualcomm.cabl=0 \
+    ro.vendor.display.cabl=0 \
     ro.sf.lcd_density=320 \
     vendor.display.enable_default_color_mode=1
 
