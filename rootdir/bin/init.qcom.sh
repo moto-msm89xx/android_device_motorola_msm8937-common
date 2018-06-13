@@ -172,7 +172,7 @@ if [ ! -f /firmware/verinfo/ver_info.txt -o "$prev_version_info" != "$cur_versio
     cp --preserve=m -d /firmware/verinfo/ver_info.txt /data/vendor/radio/ver_info.txt
 fi
 chmod g-w /data/vendor/modem_config
-setprop ro.runtime.mbn_copy_completed 1
+setprop ro.vendor.ril.mbn_copy_completed 1
 
 #check build variant for printk logging
 #current default minimum boot-time-default
