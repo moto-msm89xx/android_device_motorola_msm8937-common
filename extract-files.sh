@@ -46,4 +46,10 @@ setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 
+BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
+
+# Load wrapped shim
+MDMCUTBACK="$BLOB_ROOT"/vendor/lib64/libmdmcutback.so
+sed -i "s|libqsap_sdk_vendor.so|libqsapshim_vendor.so|g" "$MDMCUTBACK"
+
 "$MY_DIR"/setup-makefiles.sh

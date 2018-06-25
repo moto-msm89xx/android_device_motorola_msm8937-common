@@ -314,7 +314,7 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libqsap_shim \
+    libqsapshim_vendor \
     libshim_ril
 
 # Thermal
