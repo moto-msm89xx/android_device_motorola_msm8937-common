@@ -56,7 +56,10 @@ BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
 
 # Bionic
-TARGET_LD_SHIM_LIBS := /vendor/lib64/libsensorndkbridge.so|libshim_ril.so
+TARGET_LD_SHIM_LIBS := \
+    /vendor/lib/libjustshoot.so|libjustshoot_shim.so \
+    /vendor/lib/libmot_gpu_mapper.so|libgpu_mapper_shim.so \
+    /vendor/lib64/libsensorndkbridge.so|libshim_ril.so
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
