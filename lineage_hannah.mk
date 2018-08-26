@@ -24,10 +24,6 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.product.model \
     ro.product.name
 
-# Vendor security patch level
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2019-03-01
-
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="hannah_t-user 8.0.0 OCPS27.91-150-8 2 release-keys" \
     PRODUCT_NAME="hannah"
