@@ -16,6 +16,9 @@
 # Charge only mode
 /(vendor|system/vendor)/bin/charge_only_mode             u:object_r:charge_only_exec:s0
 
+# DRM
+/vendor/bin/hw/android\.hardware\.drm@1\.0-service\.widevine         u:object_r:hal_drm_widevine_exec:s0
+
 # Fingerprint
 /dev/esfp0                                               u:object_r:fingerprint_device:s0
 /data/fpc                                                u:object_r:fingerprint_data_file:s0
