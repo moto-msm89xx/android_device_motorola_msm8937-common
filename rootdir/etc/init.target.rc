@@ -32,7 +32,6 @@ import /vendor/etc/init/hw/init.mmi.rc
 on early-init
     mkdir /firmware 0771 system system
     mkdir /system 0777 root root
-    symlink /data/tombstones /tombstones
     mkdir /dsp 0771 media media
 
 on fs
@@ -59,16 +58,10 @@ on fs
     restorecon_recursive /mnt/vendor/persist
 
 on post-fs-data
-    mkdir /data/tombstones 0771 system system
-    mkdir /tombstones/modem 0771 system system
-    mkdir /tombstones/lpass 0771 system system
-    mkdir /tombstones/wcnss 0771 system system
-    mkdir /tombstones/dsps 0771 system system
     mkdir /persist/data/sfs 0700 system system
     mkdir /persist/data/tz 0700 system system
     mkdir /data/vendor/hbtp 0750 system system
     mkdir /data/misc/dts 0770 media audio
-
 
 #Create folder for mm-qcamera-daemon
     mkdir /data/vendor/camera 0770 camera camera
