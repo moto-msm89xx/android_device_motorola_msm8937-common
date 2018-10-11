@@ -155,9 +155,6 @@ on boot
     chown system system /sys/class/backlight/panel0-backlight/brightness
     chown system system /sys/class/backlight/panel0-backlight/max_brightness
 
-    # Create directory used for display
-    mkdir /persist/display 0770 system graphics
-
     # Create vpp directory
     mkdir /persist/vpp 0770 media media
 
