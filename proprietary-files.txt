@@ -1235,12 +1235,12 @@ vendor/bin/time_daemon|6a5381a475aece22c480adb4523e979330b1f45f
 vendor/lib/libtime_genoff.so|267516e23fe515013b6ef4e2f7edd0049fb75466
 vendor/lib64/libtime_genoff.so|7683a85cae9f17cd535e8960fceda1d6831074a0
 
-# Widevine - from deen_sprout - OPKS28.63-18-3
-vendor/bin/hw/android.hardware.drm@1.0-service.widevine|692aff9d8c2632ddda775b2b9187ce26ed245871
-vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc|51a3168a0dbc064d78ee11ca83614c0cd2e6daa5
-vendor/lib/mediadrm/libwvdrmengine.so|c73e6b3c06b5e6696fae84e388885e1fc971cfe8
-vendor/lib/liboemcrypto.so|2d99f41677b93ce9d6f4cf35730fd558d9f0876a
-vendor/lib/libwvhidl.so|cfe833fa5a7e5883653ffa4925339fecea611e73
+# Widevine - from deen_sprout - PPKS29.68-16-33-3
+vendor/bin/hw/android.hardware.drm@1.1-service.widevine|fe96d4602429302df1b7917d31f39bf29937a24c
+vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|5a01d337c1d375ee24a6c8992ba91f54afb7637e
+vendor/lib64/mediadrm/libwvdrmengine.so|22ded05457d194ecdb4bb4e8228dc6d1efe9bb6b
+vendor/lib64/liboemcrypto.so|62d16f538f9f7b6453915bc1ce52d6c59526d747
+vendor/lib64/libwvhidl.so|5fc3e2c75a2629dffeaca9fb7c98b8bf6d7ddc78
 
 # WIFI - from deen_sprout - OPKS28.63-18-3
 vendor/bin/cnss-daemon|23c368f34a27997d42bd9cddb54faf45e76b4395
