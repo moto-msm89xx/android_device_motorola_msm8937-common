@@ -89,6 +89,9 @@ on init
    write /dev/cpuctl/bg_non_interactive/cpu.shares 52
    write /dev/cpuctl/bg_non_interactive/cpu.rt_runtime_us 700000
    write /dev/cpuctl/bg_non_interactive/cpu.rt_period_us 1000000
+
+   # Drop write bit from cpu_min_freq so that libqti-perfd can't set it
+   chmod 0444 /sys/module/msm_performance/parameters/cpu_min_freq
   
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
