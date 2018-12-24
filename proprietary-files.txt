@@ -1042,9 +1042,16 @@ vendor/lib64/libkeymasterprovision.so|7ad925d46a558a8c086a61e022eef328b2516f43
 vendor/lib64/libkeymasterutils.so|4c8273711b5ba1a503d4581f661ed20a1578810d
 
 # Media - from D1C - PKQ1.181105.001
+lib/extractors/libmmparser.so|38b2f3c27525efb61d570bb0af2813d0cb673f99
+lib/libFileMux.so|5961dd16c9c6808e8321abf4b0266a9926ef327b
+lib/libmmosal.so|ca8714ad8bd64ae9d23222df6098fbb949e75d96
+lib/libmmparser_lite.so|ad9aa9538f795951391731ee99fa3ba533e955b3
+lib/libOmxMux.so|a02a4d9504f3d51cd96974a7eede235b04ea1b82
+lib64/libmmosal.so|0aeb705637996c89e17c9e4e4dd3a297343376a6
 vendor/lib/libAlacSwDec.so|339a78c17a0b7032e678a38deb523a0d403fdb41
 vendor/lib/libApeSwDec.so|013abb41d28f28bac9904562049c4460add11a47
 vendor/lib/libFlacSwDec.so|ff125da726e44764cf1f249f9214022f1c723ce6
+vendor/lib/libmmosal_proprietary.so|7b4070890dbc94bf59821f88abe617f8f208bd94
 vendor/lib/libOmxAacDec.so|812fb8b8f5a3af2c5844c61d19dfc252b367b020
 vendor/lib/libOmxAlacDec.so|b107909a3e897514a263bceae47592bb91b66ca9
 vendor/lib/libOmxAlacDecSw.so|03f59d661995d701c8e8f196a7764ac9d08dfdb0
@@ -1258,6 +1265,43 @@ vendor/lib64/libwvhidl.so|5fc3e2c75a2629dffeaca9fb7c98b8bf6d7ddc78
 
 # WIFI - from deen_sprout - PPKS29.68-16-33-3
 vendor/bin/cnss-daemon|e07e36d89bb7e62c6183f36e9f4531a318afc37d
+
+
+# WiFi Display - from D1C - PKQ1.181105.001
+bin/wfdservice|edeb291221024401cbae69c2fa4e58733b7efc4c
+etc/init/wfdservice.rc|311bfdd1675e56499662f39455536b75b78477bb
+etc/wfdconfig.xml|dd403c43effdf6478167b340bc9a91dd302276c6
+etc/wfdconfigsink.xml|f180a45f69fa2ff01dbaf98c905cff1e9eba903e
+-framework/WfdCommon.jar|3291ce29c033fb9482011767ebebc52c6cf8c265
+lib/com.qualcomm.qti.wifidisplayhal@1.0.so|93487a83a35f0fa3fe37445edd3ff22fcc52e4fc
+lib/libmmrtpdecoder.so|adb55936e63ff087a9e3458070515e1ab7dbe178
+lib/libmmrtpencoder.so|9a85d450a8633207f7a499962c5821d1a3fec2b8
+lib/libwfdavenhancements.so|56e9d0050d3840bb3b27ce00425bfd67daac01c0
+lib/libwfdcodecv4l2.so|3b1f0d9bd7c11a19cbcf46e161cc746aa09f9273
+lib/libwfdcommonutils.so|12a06c32b44b78eed768fb4330694f6575ac3ca6
+lib/libwfdconfigutils.so|ea7c61a999630f27d3aa7a1dbb89f52f97e451a6
+lib/libwfdmminterface.so|caf012b833585121fed196342c35d24f58940138
+lib/libwfdmmsink.so|788ec5b954d6cbdc9f8cfabe87205fd4098ae301
+lib/libwfdmmsrc.so|8e2d1ff6a2cec4d0ba93abd680712221d84fd28d
+lib/libwfdrtsp.so|35d56a25e9fe0ec7756c8b10183491c00cfb5879
+lib/libwfdservice.so|55459dbfe15058871070f9c47a95f1c69c25c468
+lib/libwfdsm.so|5a8ca696ceb8f1f5e9d53d84d65759c979680099
+lib/libwfduibcinterface.so|85faeea87b41e321de9a6fc0c4106978abf2ca92
+lib/libwfduibcsink.so|2573a8b30d8c774d415ddfa788d4a5b8b12f4c1b
+lib/libwfduibcsinkinterface.so|cb623b0cc9e84adc6315a45d7c3315be62b617e7
+lib/libwfduibcsrc.so|78bc3258deb8f818c3392d5accdf8e7aac729fdc
+lib/libwfduibcsrcinterface.so|d5da17663c07ff1845f8f48feebf584545bb4b34
+lib64/libwfdclient.so|c69712162493bdaa8833b5aae342ee4f9b0c2408
+lib64/libwfdnative.so|6267b320f26870f73523032708eb38cfd1c815a9
+-priv-app/WfdService/WfdService.apk|8c9bd0a9406c287370316b6a5b5bfe69921c3dac
+vendor/bin/wifidisplayhalservice|959c9f4c35f3967d6ebf9d3c5cb5728ce5e4752f
+vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|f3add191d48d9285eb1b69433c36bb3edbaf86fe
+vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so|d4426bb8bb6016c932f9cbcafcb1ff8b7121cb10
+vendor/lib/libwfdcommonutils_proprietary.so|cafa7306e8db738564dfb1bf8f9fb1280bada51c
+vendor/lib/libwfdhaldsmanager.so|e4d236a3feacc0e847d543cd1f5b64b753ac96cb
+vendor/lib/libwfdhdcpcp.so|ec223f555e58a00b4cf2bc754d3bb3f38e6360f0
+vendor/lib/libwfdmmservice.so|a41f27cbc0cb857d47eb967b1889783d3c85b7f3
+vendor/lib/libwfdmodulehdcpsession.so|10004d203cedd78da3e30363a3d9d601837b6c89
 
 # Misc - from deen_sprout - PPKS29.68-16-33-3
 vendor/lib/libmot_afd.so|b5a53df1a1a0f74aba81ac43c9b1e7ff518e31fe
