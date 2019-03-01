@@ -56,6 +56,33 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/configs/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.mmi.common.rc \
+    init.mmi.nonab.rc \
+    init.mmi.overlay.rc \
+    init.mmi.rc \
+    init.mmi.sensor.rc \
+    init.mmi.usb.rc \
+    init.mmi.volte.rc \
+    init.oem.rc \
+    init.qcom.rc \
+    init.target.rc \
+    ueventd.qcom.rc
+
+PRODUCT_PACKAGES += \
+    init.mmi.boot.sh \
+    init.mmi.laser.sh \
+    init.mmi.touch.sh \
+    init.mmi.usb.sh \
+    init.oem.hw.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sensors.sh \
+    init.qcom.sh \
+    init.qcom.syspart_fixup.sh
+
 # Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \

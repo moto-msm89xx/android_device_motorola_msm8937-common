@@ -27,5 +27,8 @@ TARGET_CPU_VARIANT := cortex-a53
 TARGET_KERNEL_CONFIG := hannah_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8937
 
+# Recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+
 # Inherit from the proprietary version
 -include vendor/motorola/hannah/BoardConfigVendor.mk
