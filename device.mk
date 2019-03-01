@@ -18,9 +18,19 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
+# Properties
+-include $(LOCAL_PATH)/vendor_prop.mk
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    libbt-vendor
+
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-service
 
 # Camera
 PRODUCT_COPY_FILES += \
