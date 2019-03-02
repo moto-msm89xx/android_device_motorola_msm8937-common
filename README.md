@@ -23,4 +23,4 @@ Camera  | 12 MP, phase detection autofocus, LED flash
 
 ## Device picture
 
-![Motorola Moto E5+](https://cdn2.gsmarena.com/vv/pics/motorola/motorola-moto-e5-plus-1.jpg "Moto E5+ in gold")
+![Motorola Moto E5+](https://www.tmonews.com/wp-content/uploads/2018/07/motoe5plustmobile-660x532.jpg "Moto E5+ in blue")
