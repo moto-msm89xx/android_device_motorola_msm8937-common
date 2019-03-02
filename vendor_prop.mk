@@ -33,3 +33,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.hfp.ver=1.6 \
     ro.qualcomm.bt.hci_transport=smd \
     vendor.qcom.bluetooth.soc=smd
+
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+    mm.enable.qcom_parser=4643 \
+    vendor.vidc.enc.narrow.searchrange=1 \
+    vendor.vidc.disable.split.mode=1
