@@ -49,6 +49,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=320 \
     vendor.display.enable_default_color_mode=1
 
+# Fm
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.fm.transmitter=false
+
 # GPU
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_hwc_vds=1 \
