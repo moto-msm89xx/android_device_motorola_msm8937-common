@@ -42,6 +42,26 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.display.umax=1920x1080 \
     persist.vendor.camera.display.lmax=1280x720
 
+# Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opengles.version=196610 \
+    ro.qualcomm.cabl=0 \
+    ro.sf.lcd_density=320 \
+    vendor.display.enable_default_color_mode=1
+
+# GPU
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.enable_hwc_vds=1 \
+    debug.sf.hw=1 \
+    debug.sf.latch_unsignaled=1 \
+    debug.egl.hw=1 \
+    persist.hwc.mdpcomp.enable=true \
+    debug.mdpcomp.logs=0 \
+    dev.pm.dyn_samplingrate=1 \
+    persist.demo.hdmirotationlock=false \
+    debug.enable.sglscale=1 \
+    sdm.debug.disable_skip_validate=1
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.qcom_parser=4643 \
