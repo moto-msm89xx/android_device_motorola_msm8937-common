@@ -65,6 +65,14 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service
 
 # Camera
+PRODUCT_PACKAGES += \
+    libbson \
+    Snap
+
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/mot_s5k4h7_hannah_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mot_s5k4h7_hannah_chromatix.xml \
     $(LOCAL_PATH)/configs/camera/msm8937_mot_hannah_camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/msm8937_mot_hannah_camera.xml \

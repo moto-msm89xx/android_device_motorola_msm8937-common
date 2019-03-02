@@ -34,6 +34,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.bt.hci_transport=smd \
     vendor.qcom.bluetooth.soc=smd
 
+# Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+    camera.disable_zsl_mode=1 \
+    camera.hal1.packagelist=com.skype.raider,com.google.android.talk \
+    persist.vendor.camera.tof.direct=1 \
+    persist.vendor.camera.display.umax=1920x1080 \
+    persist.vendor.camera.display.lmax=1280x720
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.qcom_parser=4643 \
