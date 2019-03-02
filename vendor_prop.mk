@@ -72,6 +72,35 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.narrow.searchrange=1 \
     vendor.vidc.disable.split.mode=1
 
+# RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+    rild.libpath=/vendor/lib/libril-qc-qmi-1.so \
+    rild.libargs=-d /dev/smd0 \
+    ril.subscription.types=NV,RUIM \
+    DEVICE_PROVISIONED=1 \
+    persist.vendor.radio.no_wait_for_card=1 \
+    persist.vendor.radio.dfr_mode_set=1 \
+    persist.vendor.radio.relay_oprt_change=1 \
+    persist.vendor.radio.oem_ind_to_both=0 \
+    persist.vendor.radio.qcril_uim_vcc_feature=1 \
+    persist.vendor.radio.0x9e_not_callname=1 \
+    persist.vendor.radio.mt_sms_ack=30 \
+    persist.vendor.radio.force_get_pref=1 \
+    persist.vendor.radio.is_wps_enabled=true \
+    persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.eri64_as_home=1 \
+    persist.vendor.radio.data_con_rprt=1 \
+    persist.vendor.radio.lte_vrte_ltd=1 \
+    persist.vendor.radio.cs_srv_type=1
+    persist.vendor.radio.sw_mbn_update=1 \
+    persist.vendor.radio.app_mbn_path=/fsg \
+    persist.vendor.radio.adb_log_on=0 \
+    persist.radio.msgtunnel.start=true \
+    persist.data.qmi.adb_logmask=0 \
+    persist.data.netmgrd.qos.enable=true \
+    persist.lte.pco_supported=true \
+    telephony.lteOnCdmaDevice=1
+
 # WIFI
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
