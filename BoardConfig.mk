@@ -112,9 +112,6 @@ TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_CONFIG := hannah_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8937
 
-# Lights
-TARGET_PROVIDES_LIBLIGHT := true
-
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
 
