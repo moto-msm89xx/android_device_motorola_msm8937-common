@@ -129,6 +129,15 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
+# GPS
+PRODUCT_PACKAGES += \
+    libgnss \
+    libgnsspps
+
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl-qti \
+    android.hardware.gnss@1.0-service-qti
+
 # Healthd
 PRODUCT_PACKAGES += \
     android.hardware.health@1.0-impl \
