@@ -4,11 +4,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.dolby.ds2.enabled=true \
     audio.offload.min.duration.secs=60 \
     audio.offload.video=true \
+    persist.speaker.prot.enable=false \
     persist.vendor.audio.dualmic.config=endfire \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicecomm=true \
     persist.vendor.audio.fluence.voicerec=true \
     persist.vendor.audio.fluence.speaker=true \
+    ro.config.max_starting_bg=8 \
     ro.config.vc_call_vol_steps=8 \
     ro.vendor.audio.sdk.fluencetype=fluence \
     ro.vendor.audio.sdk.ssr=false \
@@ -26,6 +28,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.voice.conc.fallbackpath=deep-buffer \
     vendor.voice.path.for.pcm.voip=true
 
+# Audio ACDB
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.audio.calfile0=/vendor/etc/acdbdata/Bluetooth_cal.acdb \
+    persist.audio.calfile1=/vendor/etc/acdbdata/General_cal.acdb \
+    persist.audio.calfile2=/vendor/etc/acdbdata/Global_cal.acdb \
+    persist.audio.calfile3=/vendor/etc/acdbdata/Handset_cal.acdb \
+    persist.audio.calfile4=/vendor/etc/acdbdata/Hdmi_cal.acdb \
+    persist.audio.calfile5=/vendor/etc/acdbdata/Headset_cal.acdb \
+    persist.audio.calfile6=/vendor/etc/acdbdata/Speaker_cal.acdb
+
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.hfp.client=1 \
@@ -40,7 +52,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
     camera.hal1.packagelist=com.skype.raider,com.google.android.talk \
     persist.vendor.camera.tof.direct=1 \
     persist.vendor.camera.display.umax=1920x1080 \
-    persist.vendor.camera.display.lmax=1280x720
+    persist.vendor.camera.display.lmax=1280x720 \
+    persist.vendor.qti.telephony.vt_cam_interface=1
+
+# CNE
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.cne.feature=1 \
+    persist.cne.logging.qxdm=3974 \
+    persist.sys.cnd.iwlan=1
+
+# core control
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.core_ctl_min_cpu=2 \
+    ro.vendor.qti.core_ctl_max_cpu=4
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -48,6 +72,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.cabl=0 \
     ro.sf.lcd_density=320 \
     vendor.display.enable_default_color_mode=1
+
+# Fingerprint
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.qfp=false \
+    ro.fpsensor.position=12
 
 # Fm
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -72,6 +101,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.narrow.searchrange=1 \
     vendor.vidc.disable.split.mode=1
 
+# Memory optimizations
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.sys.fw.bservice_enable=true \
+    ro.vendor.qti.sys.fw.bservice_limit=5 \
+    ro.vendor.qti.sys.fw.bservice_age=5000
+
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/vendor/lib/libril-qc-qmi-1.so \
@@ -95,11 +130,55 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.sw_mbn_update=1 \
     persist.vendor.radio.app_mbn_path=/fsg \
     persist.vendor.radio.adb_log_on=0 \
+    persist.vendor.radio.jbims=1 \
+    persist.vendor.ims.disableDebugLogs=0 \
+    persist.vendor.ims.disableIMSLogs=0 \
+    persist.vendor.ims.disableDebugDataPathLogs=0 \
+    persist.vendor.ims.disableADBLogs=0 \
+    persist.vendor.ims.vt.enableadb=1 \
+    persist.vendor.ims.disableQXDMLogs=1 \
     persist.radio.msgtunnel.start=true \
+    persist.radio.calls.on.ims=true \
+    persist.radio.domain.ps=0 \
+    persist.rmnet.mux=enabled \
+    persist.radio.REVERSE_QMI=0 \
+    persist.radio.VT_USE_MDM_TIME=0 \
+    persist.rcs.supported=1 \
+    persist.eab.supported=1 \
+    persist.rcs.presence.provision=0 \
+    persist.vt.supported=1 \
     persist.data.qmi.adb_logmask=0 \
     persist.data.netmgrd.qos.enable=true \
+    persist.data.iwlan.enable=true \
     persist.lte.pco_supported=true \
+    ro.telephony.default_network=10 \
+    ro.radio.imei.sv=11 \
     telephony.lteOnCdmaDevice=1
+
+#,Sensors
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.sar_sensor=1 \
+    ro.hardware.sensors=hannah \
+    ro.mot.sensors.glance_approach=false \
+    ro.vendor.sensors.pmd=false \
+    ro.vendor.sensors.rmd=false \
+    ro.vendor.sdk.sensors.gestures=false \
+    ro.vendor.sensors.facing=false \
+    ro.vendor.sensors.scrn_ortn=false \
+    ro.vendor.sensors.cmc=false \
+    ro.vendor.sensors.pedometer=false
+
+# TimeService
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.timed.enable=true
+
+# Trim properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.sys.fw.use_trim_settings=true \
+    ro.vendor.qti.sys.fw.empty_app_percent=50 \
+    ro.vendor.qti.sys.fw.trim_empty_percent=100 \
+    ro.vendor.qti.sys.fw.trim_cache_percent=100 \
+    ro.vendor.qti.sys.fw.trim_enable_memory=2147483648
 
 # WIFI
 PRODUCT_PROPERTY_OVERRIDES += \
