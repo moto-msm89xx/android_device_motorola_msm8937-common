@@ -66,7 +66,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    libbson \
+    libbson.vendor \
     Snap \
     libstdc++.vendor \
     libwui
