@@ -729,6 +729,7 @@ vendor/lib/libwqe.so
 vendor/lib/libxml.so
 
 # DRM and SEE
+lib/libtpa.so
 vendor/bin/qseecomd
 vendor/lib/libGPreqcancel.so
 vendor/lib/libGPreqcancel_svc.so
@@ -942,6 +943,7 @@ vendor/bin/rmt_storage
 vendor/bin/tftp_server
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
+vendor/lib/libadropbox.so
 vendor/lib/libconfigdb.so
 vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so
@@ -953,6 +955,8 @@ vendor/lib/libril-qc-radioconfig.so
 vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/librilqmiservices.so
 vendor/lib/libsettings.so
+vendor/lib/libsubsystem_control.so
+vendor/lib/libSubSystemShutdown.so
 vendor/lib/libsystem_health_mon.so
 vendor/lib/vendor.qti.hardware.radio.am@1.0_vendor.so
 vendor/lib/vendor.qti.hardware.radio.atcmdfwd@1.0_vendor.so
@@ -963,8 +967,10 @@ vendor/lib/vendor.qti.hardware.radio.qtiradio@1.0_vendor.so
 vendor/lib/vendor.qti.hardware.radio.uim@1.0_vendor.so
 vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.0_vendor.so
 vendor/lib/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so
+vendor/radio/qcril_database/qcril.db
 
 # MOTO RIL
+lib/libsysutils.so
 vendor/bin/qmi_motext_hook
 vendor/lib/libmotext_inf.so
 vendor/lib/libmdmcutback.so
@@ -972,6 +978,8 @@ vendor/lib/libqmimotext.so
 vendor/lib/libsensorndkbridge.so
 
 # Sensors
+lib/libslpcsystem_jni.so
+vendor/bin/sensors.qcom
 vendor/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
 vendor/lib/hw/activity_recognition.msm8937.so
 vendor/lib/lib_motsensorlistener.so
@@ -999,6 +1007,9 @@ vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/liboemcrypto.so
 vendor/lib/libwvhidl.so
+
+# WIFI
+vendor/lib/libqsap_sdk_vendor.so
 
 # Misc
 vendor/lib/libmot_afd.so
