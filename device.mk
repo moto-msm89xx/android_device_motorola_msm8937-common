@@ -170,7 +170,7 @@ PRODUCT_COPY_FILES += \
 
 # IDC
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/idc/uinput-egis.idc:$(TARGET_COPY_OUT_VENDOR)/idc/uinput-egis.idc
+    $(LOCAL_PATH)/idc/uinput-egis.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-egis.idc
 
 # Lights
 PRODUCT_PACKAGES += \
