@@ -1,5 +1,28 @@
 on init
     mkdir /oem 0550 root root
+
+    # Set Hardware properties
+    setprop ro.hw.dualsim ${ro.boot.dualsim}
+    setprop ro.hw.device ${ro.boot.device}
+    setprop ro.hw.radio ${ro.boot.radio}
+    setprop ro.hw.fps true
+    setprop ro.hw.imager 12MP
+
+on property:ro.boot.hardware.sku=XT1924-6
+    setprop ro.hw.ecompass true
+
+on property:ro.boot.hardware.sku=XT1924-7
+    setprop ro.hw.ecompass true
+
+on property:ro.boot.hardware.sku=XT1924-8
+    setprop ro.hw.ecompass true
+
+on property:ro.hw.dualsim=true
+    setprop ro.telephony.default_network 11,0
+
+on property:ro.hw.dualsim=false
+    setprop ro.telephony.default_network 10
+
 on fs
     wait /dev/block/bootdevice/by-name/oem
     mount ext4 /dev/block/bootdevice/by-name/oem /oem ro nosuid nodev context=u:object_r:oemfs:s0
