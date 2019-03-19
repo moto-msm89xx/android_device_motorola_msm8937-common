@@ -278,6 +278,7 @@ PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.sensors.sh \
+    init.qcom.ril.sh \
     init.qcom.sh \
     init.qcom.syspart_fixup.sh
 

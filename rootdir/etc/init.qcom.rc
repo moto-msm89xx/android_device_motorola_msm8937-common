@@ -974,7 +974,14 @@ service ril-daemon2 /vendor/bin/hw/rild -c 2
     user radio
     user radio
     group radio cache inet misc audio oem_2901 log
+    disabled
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
+
+service rild2-wrapper /vendor/bin/init.qcom.ril.sh
+    class late_start
+    user root
+    group root
+    oneshot
 
 service usb_uicc_enable /system/bin/sh /system/etc/init.qcom.uicc.sh
     class late_start
