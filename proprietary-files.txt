@@ -903,7 +903,7 @@ vendor/firmware/a530v3_seq.fw2
 vendor/firmware/a540_gpmu.fw2
 
 # IMS - from potter - OPSS28.85-13-5
--app/ims/ims.apk|2c11c91044dbd36c9ecd7b0e7535130b2888ef35
+#-app/ims/ims.apk|2c11c91044dbd36c9ecd7b0e7535130b2888ef35
 vendor/bin/ims_rtp_daemon|aae1f6bd3cac56c4d9ea05ffba358afce75fe483
 vendor/bin/imsdatadaemon|031430b76fbb334d50e5a8b54f8af49c71604e20
 vendor/bin/imsqmidaemon|98f08c8ee1d95cdb1238d7cbb66a4a9c4a40f364
@@ -995,8 +995,8 @@ vendor/lib/libsmemlog.so|8f0e2c95280922335bfa38117253dd8d6381dfeb
 -app/QtiTelephonyService/QtiTelephonyService.apk|bf6539991ac8c10491fbc5a52f10bfc6e6800f9f
 etc/permissions/qcrilhook.xml|9fc58a3d54d20ac1d53bab14608815121aefbce5
 framework/qcrilhook.jar|9ba7fd1d527e857852cab4d2152c8d58f05f39e0
-framework/qti-telephony-common.jar|4d8145ea2a2a4c97a073baa8ccbac5f14ddb476a
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|af3fad97374192884feb3c31e82b5d15eaaace5e
+#framework/qti-telephony-common.jar|4d8145ea2a2a4c97a073baa8ccbac5f14ddb476a
+#-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|af3fad97374192884feb3c31e82b5d15eaaace5e
 vendor/bin/ATFWD-daemon|62992865a3d3c743e93c081692d030d7af2f794d
 vendor/bin/netmgrd|365e6ba2b734b3f9bea969dade0ea43c1b3e8ce4
 vendor/bin/qti|d116a19ffe35a092d9b0d8f37f2d7ca1081e9daf
