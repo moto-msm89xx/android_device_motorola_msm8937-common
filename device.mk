@@ -256,6 +256,7 @@ PRODUCT_COPY_FILES += \
 # RIL
 PRODUCT_PACKAGES += \
     librmnetctl \
+    libsensorndkbridge \
     libxml2
 
 # Ramdisk
@@ -309,7 +310,7 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0-service
+    android.hardware.sensors@1.0-service \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
@@ -318,7 +319,8 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libqsap_shim
+    libqsap_shim \
+    libshim_ril
 
 # Thermal
 PRODUCT_PACKAGES += \

@@ -1040,7 +1040,6 @@ vendor/bin/qmi_motext_hook|acc9be730e28190c3078b01e6dc5975b30b0e985
 vendor/lib/libmotext_inf.so|1bcb8be2111dfc4f6064ebdbfcc89407c1ce2afb
 vendor/lib/libmdmcutback.so|dcbd4aa232e669d58d572ec16ba9c3b8c5e4b272
 vendor/lib/libqmimotext.so|69d394fd9346e11e2e65621831224741f5322fef
-vendor/lib/libsensorndkbridge.so|ddb8184c26e8ee4dd284f5f78a3223117ceacae3
 
 # Sensors
 lib/libslpcsystem_jni.so
