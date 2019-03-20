@@ -1,5 +1,3 @@
-import init.mmi.dtv.rc
-
 service capsense_reset /system/vendor/bin/capsense_reset
 	class core
 	user system
@@ -11,19 +9,6 @@ on init
    chown system system /sys/class/graphics/fb0/hbm
    # Change ownership for for cabc feature
    chown system system /sys/class/graphics/fb0/cabc
-
-on property:wc_transport.start_fmhci=true
-    start fmhal_service
-
-on property:wc_transport.start_fmhci=false
-    stop fmhal_service
-
-#net_admin capability needed to write rfkill sysfs entry
-service fmhal_service /system/bin/fmhal_service
-    class late_start
-    user bluetooth
-    group bluetooth net_bt_admin net_admin
-    disabled
 
 on property:ro.carrier=tmo
     write /sys/class/power_supply/battery/device/force_max_chrg_temp 55
@@ -116,4 +101,3 @@ service mmi-laser-sh /vendor/bin/init.mmi.laser.sh
     class core
     user root
     oneshot
-

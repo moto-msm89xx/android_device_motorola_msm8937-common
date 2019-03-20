@@ -27,7 +27,6 @@
 #
 #
 
-import init.carrier.rc
 import /vendor/etc/init/hw/init.mmi.rc
 
 on early-init
@@ -91,12 +90,6 @@ on init
    write /dev/cpuctl/bg_non_interactive/cpu.rt_runtime_us 700000
    write /dev/cpuctl/bg_non_interactive/cpu.rt_period_us 1000000
   
-
-#service qfp-daemon /system/vendor/bin/qfp-daemon
-#   class late_start
-#   user system
-#   group system drmrpc
-
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
     write /sys/class/power_supply/battery/charging_enabled 0
@@ -104,46 +97,10 @@ on property:persist.usb.chgdisabled=1
 on property:persist.usb.chgdisabled=0
     write /sys/class/power_supply/battery/charging_enabled 1
 
-#service qrngd /system/bin/qrngd -f
-#   class main
-#   user root
-#   group root
-
-#service qrngp /system/bin/qrngp -f
-#   class main
-#   user root
-#   group root
-#   oneshot
-#   disabled
-
-#on property:sys.boot_completed=1
-#   start qrngp
-
 service qseecomd /vendor/bin/qseecomd
    class core
    user root
    group root
-
-#service aostlmd /system/bin/aostlmd
-#   class late_start
-#   user system
-#   group system net_raw
-
-#service mpdecision /system/bin/mpdecision --avg_comp
-#   user root
-#   disabled
-
-service perfd /system/vendor/bin/perfd
-   class main
-   user root
-   disabled
-
-#service gamed /system/vendor/bin/gamed
-#   class main
-#   user system
-#   group system
-#   disabled
-#   socket gamed seqpacket 0640 system system
 
 service thermal-engine /system/vendor/bin/thermal-engine
    class main
@@ -154,19 +111,8 @@ service thermal-engine /system/vendor/bin/thermal-engine
    socket thermal-send-rule stream 0660 system system
    group root
 
-#service time_daemon /system/vendor/bin/time_daemon
-#   class late_start
-#   user root
-#   group root
-
-service audiod /system/vendor/bin/audiod
-   class late_start
-   user system
-   group system
-
 on boot
     start rmt_storage
-    insmod /system/lib/modules/adsprpc.ko
 # access permission for secure touch
     chmod 0660 /sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch_enable
     chmod 0440 /sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch
@@ -226,74 +172,10 @@ on charger
     start qcom-post-boot
     setprop persist.sys.usb.config mass_storage
 
-#service imsstarter /vendor/bin/init.qti.ims.sh
-#    class main
-#    oneshot
-#
-#on property:vold.decrypt=trigger_restart_framework
-#    start imsstarter
-#
-#service imsqmidaemon /system/vendor/bin/imsqmidaemon
-#    class main
-#    user system
-#    socket ims_qmid stream 0660 system radio
-#    group radio log diag
-#    disabled
-#
-#on property:service.qti.ims.enabled=1
-#    start imsqmidaemon
-#
-#service imsdatadaemon /system/vendor/bin/imsdatadaemon
-#    class main
-#    user system
-#    socket ims_datad stream 0660 system radio
-#    group system wifi radio inet log diag
-#    disabled
-#
-#on property:vendor.ims.QMI_DAEMON_STATUS=1
-#    start imsdatadaemon
-#
-#service ims_rtp_daemon /system/vendor/bin/ims_rtp_daemon
-#   class main
-#   user system
-#   group radio diag inet log
-#   disabled
-
-#service vendor.imsrcsservice /system/vendor/bin/imsrcsd
-#   class main
-#   user system
-#   group radio diag inet log
-#   disabled
-
-#on property:vendor.ims.DATA_DAEMON_STATUS=1
-#    start ims_rtp_daemon
-#    start start vendor.imsrcsservice
-
-#service hbtp /system/vendor/bin/hbtp_daemon
-#    class main
-#    user system
-#    group system
-#    disabled
-
-#service dts_configurator /system/vendor/bin/dts_configurator
-#    class late_start
-#    user system
-#    group media audio
-#    oneshot
-
-#service dtseagleservice /system/vendor/bin/dts_eagle_service
-#    class late_start
-#    user system
-#    group audio media
-#    disabled
-
 service adsprpcd /system/vendor/bin/adsprpcd
     class main
     user media
     group media
-
-#on property:init.svc.dts_configurator=stopped
-#    start dtseagleservice
 
 service per_mgr /system/vendor/bin/pm-service
     class core
@@ -311,16 +193,6 @@ on property:init.svc.per_mgr=running
 
 on property:sys.shutdown.requested=*
     stop per_proxy
-
-#service hvdcp_opti /system/bin/hvdcp_opti
-#    class main
-#    user root
-#    group root
-
-#service mdtpd /system/vendor/bin/mdtpd
-#    class late_start
-#    user root
-#    group system radio drmrpc
 
 on boot
     write /sys/devices/soc/78b8000.i2c/i2c-4/4-0020/input/input0/fw_name PR1702898-s3528t_00260005_00380008.img

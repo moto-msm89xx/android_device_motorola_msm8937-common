@@ -262,13 +262,9 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.mmi.common.rc \
-    init.mmi.nonab.rc \
     init.mmi.overlay.rc \
     init.mmi.rc \
-    init.mmi.sensor.rc \
     init.mmi.usb.rc \
-    init.mmi.volte.rc \
     init.oem.rc \
     init.qcom.rc \
     init.target.rc \

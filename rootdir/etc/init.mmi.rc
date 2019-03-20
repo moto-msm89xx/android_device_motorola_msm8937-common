@@ -1,29 +1,10 @@
 # Target-specific file
 import /vendor/etc/init/hw/init.mmi.overlay.rc
 
-# Chipset-specific file
-import /vendor/etc/init/hw/init.mmi.chipset.rc
-
 # Moto USB configuration
 import /vendor/etc/init/hw/init.mmi.usb.rc
-# Moto debugging
-import /vendor/etc/init/hw/init.mmi.debug.rc
-
-# Moto VT, the file isn't exit in non VT devices, but that's OK
-import /vendor/etc/init/hw/init.mmi.volte.rc
-
-# Moto diag_mdlog configuration
-import /vendor/etc/init/hw/init.mmi.diag_mdlog.rc
 
 import /vendor/etc/init/hw/init.oem.rc
-import /vendor/etc/init/hw/init.mmi.common.rc
-import /vendor/etc/init/hw/init.mmi.nonab.rc
-
-# Moto sensors configuration
-import /vendor/etc/init/hw/init.mmi.sensor.rc
-
-# Moto verified boot extension
-import /vendor/etc/init/hw/init.mmi.hab.rc
 
 on early-boot
     write /sys/module/subsystem_restart/parameters/disable_restart_work 0x0
@@ -32,8 +13,6 @@ on early-boot
 on early-init
 
 on init
-    export LD_SHIM_LIBS /system/vendor/lib/libmdmcutback.so|libqsap_shim.so:/system/vendor/lib64/libmdmcutback.so|libqsap_shim.so
-
     chown system log /sys/fs/pstore/console-ramoops-0
     chmod 0440 /sys/fs/pstore/console-ramoops-0
     chown system log /sys/fs/pstore/annotate-ramoops-0
@@ -41,12 +20,8 @@ on init
     chown system log /sys/fs/pstore/dmesg-ramoops-0
     chmod 0640 /sys/fs/pstore/dmesg-ramoops-0
 
-    # Setup kernel dropbox permissions so that dropboxd can utilize it
-    chown root diag /sys/kernel/dropbox/event
-    chown root diag /sys/kernel/dropbox/data
-
-    #ESDFS
-    chown mot_esdfs root /proc/fs/esdfs/packages
+    # Create modem FSG mount point
+    mkdir /fsg 755 root root
 
 on fs
     wait /dev/block/bootdevice/by-name/hw
@@ -89,12 +64,6 @@ on post-fs
     chmod 0660 /persist/wifi/wlan_mac.bin
     chown mot_tcmd mot_tcmd /persist/bt/bt_bdaddr
     chmod 0664 /persist/bt/bt_bdaddr
-
-    # Set life_calls and life_timer file permissions
-    chown radio mot_tcmd /persist/public/hiddenmenu/life_calls
-    chmod 0775 /persist/public/hiddenmenu/life_calls
-    chown radio mot_tcmd /persist/public/hiddenmenu/life_timer
-    chmod 0775 /persist/public/hiddenmenu/life_timer
 
     chmod 0711 /persist/rfs
     chmod 0711 /persist/rfs/msm
@@ -153,12 +122,6 @@ on post-fs-data
     chown root mot_mod /sys/class/power_supply/usb/usb_priority
     chmod 0660 /sys/class/power_supply/usb/usb_priority
 
-    # Sensor Hub calibration data directory
-    mkdir /data/misc/sensorhub 0770 system compass
-
-    # Setup folder for native to transfer data to NativeDropBoxAgent
-    mkdir /data/system/dropbox-add 0730 system diag
-
     # Create panic dump dir.
     mkdir /data/dontpanic 0750 root log
 
@@ -172,20 +135,11 @@ on post-fs-data
     mkdir /data/wapi_certificate 0750 system wifi
     chown system wifi /data/wapi_certificate
 
-    # Create greybus firmware folder
-    mkdir /data/gbfirmware 0770 mot_mod mot_mod
-
     # mkdir IPLog folder
     mkdir /data/misc/iplog 0770 system system
 
     # mkdir ModemStatsService folder
     mkdir /data/misc/ps_recovery_iplog 0770 system system
-
-    # Create bug2go folder
-    mkdir /data/vendor/bug2go 0770 log log
-
-    # Setup folder for aplogd
-    mkdir /data/vendor/aplogd 0750 log log
 
     # Permissions for phone power off log
     mkdir /data/power_log 0750 root log
@@ -218,17 +172,6 @@ on post-fs-data
 
     # Imager tuning data for camera subsystem
     mkdir /data/vendor/misc/imager 0771 camera camera
-
-    # OTA Package directory
-    mkdir /data/misc_ne 0770 system cache
-
-    # NFC vendor data
-    mkdir /data/vendor/nfc 0770 nfc nfc
-
-    # Enable directory writer xattr for 2nd level directory /storage/emulated/xx/yy
-    setfattr /data/media user.dwriter /%s/%s 0
-    # Enable relatime for /storage/emulated/xx/Download
-    setfattr /data/media user.relatime /%s/Download:com.motorola.mya 0
 
 on boot
    # restore default console_loglevel to KERN_DEBUG
@@ -266,39 +209,6 @@ on boot
    chown system system /persist/chargeonly/cooldown
    chmod 0660 /persist/chargeonly/cooldown
 
-# Pass carrier to wlan
-on property:ro.carrier=*
-    start init_wifi
-
-service init_wifi /vendor/bin/wlan_carrier_bin.sh
-    class main
-    user root
-    group root
-    oneshot
-    disabled
-
-service mmi-block-perm /vendor/bin/init.mmi.block_perm.sh
-    class main
-    user root
-    oneshot
-
-on nonencrypted
-    setprop ro.kick.logcopy ${ro.bootreason}
-
-on property:vold.decrypt=trigger_restart_framework
-    setprop ro.kick.logcopy ${ro.bootreason}
-
-service pstore_annotate /vendor/bin/pstore_annotate.sh build
-    class main
-    group log
-    oneshot
-
-service apanic_copy /vendor/bin/apanic_copy.sh
-    class late_start
-    group log
-    oneshot
-    disabled
-
 on charger
     trigger early-fs
     trigger fs
@@ -309,164 +219,11 @@ on charger
     class_stop main
     class_stop late_start
 
-service pstore_annotate /vendor/bin/pstore_annotate.sh build
-    class main
-    group log
-    oneshot
-
-service apanic_annotate /vendor/bin/apanic_save.sh build
-    class late_start
-    group log
-    oneshot
-    disabled
-
-service tcmd /vendor/bin/tcmd
-    class core
-#  Total number of supplementary groups below is 33 now. Limit defined in service.h is 64.
-#  Please update the current number if you add more groups.
-    group mot_tcmd radio mot_pwric input system log camera graphics mot_accy sdcard_r sdcard_rw audio inet bluetooth wifi compass net_bt_admin mot_tombstone mot_tpapi drmrpc mount net_raw net_admin media shell mot_usb nfc oem_2901 mot_dbvc cache media_rw mot_dtv mot_mod
-    socket local_tcmd stream 0660 mot_tcmd mot_tcmd
-    socket batch_socket stream 0600 mot_tcmd mot_tcmd
-    oneshot
-    disabled
-
-service tcmdhelp /vendor/bin/tcmdhelp
-    class main
-    socket tcmdhelp stream 0600 mot_tcmd mot_tcmd
-    oneshot
-    disabled
-
-service ftmipcd /vendor/bin/ftmipcd
-    user radio
-    group radio net_raw inet oem_2901
-    disabled
-    oneshot
-
-service tcmd_system /system/bin/tcmd_system
-    class main
-    user root
-    oneshot
-    disabled
-
-on property:ro.bootmode=factory
-    start ftmipcd
-
-on property:ro.bootmode=mot-factory
-    start ftmipcd
-
-
-# Power up to suspend
-on property:tcmd.suspend=1
-    stop surfaceflinger
-    stop zygote
-    stop sensors
-    setprop debug.sf.nobootanimation 1
-
-# Normal to suspend
-on property:tcmd.suspend=2
-    stop surfaceflinger
-    stop zygote
-    stop sensors
-    stop qcamerasvr
-    setprop debug.sf.nobootanimation 1
-
-on property:tcmd.start_tcmdhelp=1
-    start tcmdhelp
-
-on property:tcmd.start_ftmdaemon=1
-    start ftmd
-
-on property:tcmd.start_wdsdaemon=1
-    start wdsdaemon
-
-on property:tcmd.start_wdsdaemon=0
-    stop wdsdaemon
-
-service wdsdaemon /vendor/bin/wdsdaemon -us
-    class late_start
-    user root
-    group mot_tcmd bluetooth net_bt_admin misc oem_2901 net_bt
-    disabled
-    oneshot
-
-on property:tcmd.start_fm_wdsdaemon=1
-    start fm_wdsdaemon
-
-on property:tcmd.start_fm_wdsdaemon=0
-    stop fm_wdsdaemon
-
-service fm_wdsdaemon /vendor/bin/wdsdaemon -ms
-    class late_start
-    user root
-    group mot_tcmd
-    disabled
-    oneshot
-
-on property:mot.erase_modemst12=1
-    start erase_modemst12
-
-service erase_modemst12 /vendor/bin/modem_erase_modemst12.sh
-    class main
-    user root
-    group root
-    disabled
-    oneshot
-
-service batt_health /vendor/bin/batt_health
-    class late_start
-    user mot_pwric
-    group mot_pwric cache net_admin log
-    disabled
-
-on property:sys.boot_completed=1
-    start batt_health
-
-on property:persist.mot.demo_mode_charging=1
-    write /sys/class/power_supply/battery/device/force_demo_mode 70
-
-on property:persist.mot.demo_mode_charging=1 && property:ro.carrier=vzw
-    write /sys/class/power_supply/battery/device/force_demo_mode 35
-
 on property:ro.carrier=tmo
     write /sys/class/power_supply/battery/device/force_max_chrg_temp 55
 
 on property:ro.carrier=metropcs
     write /sys/class/power_supply/battery/device/force_max_chrg_temp 55
-
-on property:ro.kick.logcopy=coldboot
-    start apanic_copy
-
-on property:ro.bootreason=watchdog
-    stop surfaceflinger
-    stop zygote
-    stop zygote_secondary
-    stop sensors
-    setprop debug.sf.nobootanimation 1
-    start apanic_annotate
-
-on property:ro.bootreason=pmic_watchdog
-    stop surfaceflinger
-    stop zygote
-    stop zygote_secondary
-    stop sensors
-    setprop debug.sf.nobootanimation 1
-    start apanic_annotate
-
-on property:persist.log.aplogd.enable=1
-    start aplogd
-
-on property:persist.log.aplogd.enable=0
-    stop aplogd
-
-service aplogd /vendor/bin/aplogd
-    class late_start
-    #user log
-    #group log system sdcard_rw sdcard_r media_rw mount
-    # The user and group definitions above are intentionally disabled and left
-    # only as documentation. It actually starts as root and immediately drops
-    # to log plus those groups after preserving CAP_SYS_ADMIN, which is required
-    # for kernel logging.
-    disabled
 
 service mmi-boot-sh /vendor/bin/init.mmi.boot.sh
     class core
@@ -484,31 +241,6 @@ on property:ro.hw.dualsim=true
 
 on property:ro.hw.dualsim=false
    setprop persist.radio.multisim.config ""
-
-on property:ro.bootreason=kernel_panic
-    stop surfaceflinger
-    stop zygote
-    stop zygote_secondary
-    stop sensors
-    setprop debug.sf.nobootanimation 1
-    start apanic_annotate
-
-service mbm_spy /vendor/bin/mbm_spy
-    class late_start
-    user system
-    group system
-    oneshot
-
-service dropboxd /vendor/bin/dropboxd
-    class late_start
-    user diag
-    group diag
-
-service hw_revs /vendor/bin/hardware_revisions.sh
-    class late_start
-    user system
-    group system
-    oneshot
 
 service mmi-touch-sh /vendor/bin/init.mmi.touch.sh
     class core
@@ -554,11 +286,6 @@ on property:hw.touch.status="dead"
 on property:hw.touch.status="ready"
     start touch-ready-sh
 
-service mmi-audio-sh /vendor/bin/init.mmi.audio.sh
-    class core
-    user root
-    oneshot
-
 service charge_only_mode /vendor/bin/charge_only_mode
     user root
     group graphics system input
@@ -569,52 +296,11 @@ service thermal-com /vendor/bin/thermal-engine --minimode
     user root
     disabled
 
-service esdpll /vendor/bin/esdpll -w
-    class main
-    user mot_esdfs
-    group mot_esdfs package_info
-    disabled
-
-# Start esdpll if running esdfs
-on property:persist.esdfs_sdcard="true" && property:vold.decrypt=trigger_restart_framework
-    start esdpll
-
-# Start esdpll if running esdfs
-on property:persist.esdfs_sdcard="true" && nonencrypted
-    start esdpll
-
 service adspd /vendor/bin/adspd
    class main
    socket adspdsock stream 0660 system audio
    user audio
    group audio input diag
-
-# Let init manage the bug2go-native wakelock, so that we guarantee its
-# lifecycle exactly matches that of bug2go-bugreport.  Since init sends
-# SIGKILL when stopping a service, we could not guarantee the wakelock would
-# get cleaned up if it were managed by bug2go-bugreport itself.
-on property:init.svc.bug2go-bugreport=running
-    write /sys/power/wake_lock bug2go-native
-
-on property:init.svc.bug2go-bugreport=stopping
-    write /sys/power/wake_unlock bug2go-native
-
-on property:init.svc.bug2go-bugreport=stopped
-    write /sys/power/wake_unlock bug2go-native
-
-service bug2go-bugreport /vendor/bin/bug2go-bugreport
-    class main
-    disabled
-    oneshot
-    keycodes 115 116 # VOLUME_UP + PWR
-
-# bugreport is triggered by holding down volume down, volume up and power
-service bugreport /system/bin/dumpstate -d -p -B -z \
-        -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
-    class main
-    disabled
-    oneshot
-    keycodes 114 115 116
 
 # Set RPS Mask for Wifi Hotspot
 on property:sys.wifi.tethering=true
@@ -641,10 +327,3 @@ service sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-service
 
 on property:sys.sysctl.swappiness=*
     write /proc/sys/vm/swappiness ${sys.sysctl.swappiness}
-
-#Override fwpath string when wpa_supplicant server was killed
-#on property:init.svc.wpa_supplicant=running
-#    write /sys/module/wlan/parameters/fwpath sta
-
-#on property:init.svc.wpa_supplicant=stopped
-#    write /sys/module/wlan/parameters/fwpath wpadown
