@@ -144,6 +144,9 @@ TARGET_RIL_VARIANT := caf
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
+# Thermal
+USE_DEVICE_SPECIFIC_THERMAL := true
+
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 BOARD_VNDK_RUNTIME_DISABLE := true
