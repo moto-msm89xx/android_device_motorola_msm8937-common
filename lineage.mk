@@ -21,6 +21,10 @@ PRODUCT_MANUFACTURER := motorola
 
 BUILD_FINGERPRINT := motorola/hannah_t/hannah:8.0.0/OCPS27.91-150-4/4:user/release-keys
 
+# Vendor security patch level
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lineage.build.vendor_security_patch=2019-01-01
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="hannah"
 
