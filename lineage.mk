@@ -19,6 +19,8 @@ PRODUCT_BRAND := motorola
 PRODUCT_MODEL := moto e5 plus
 PRODUCT_MANUFACTURER := motorola
 
+BUILD_FINGERPRINT := motorola/hannah_t/hannah:8.0.0/OCPS27.91-150-4/4:user/release-keys
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="hannah"
 
