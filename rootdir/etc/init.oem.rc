@@ -8,6 +8,15 @@ on init
     setprop ro.hw.fps true
     setprop ro.hw.imager 12MP
 
+on property:ro.boot.hardware.sku=XT1924-3
+    setprop ro.hw.ecompass false
+    setprop ro.mot.sensors.chopchop false
+    setprop ro.mot.sensors.camgest false
+    setprop ro.vendor.sensors.gravity false
+    setprop ro.vendor.sensors.laccel false
+    setprop ro.vendor.sensors.amd false
+    setprop persist.vendor.camera.tof.direct 1
+
 on property:ro.boot.hardware.sku=XT1924-6
     setprop ro.hw.ecompass true
 
