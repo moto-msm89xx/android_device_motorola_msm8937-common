@@ -740,6 +740,9 @@ vendor/lib/libmmcamera_s5k3p3.so
 vendor/lib/libmmcamera_s5k4h7.so
 vendor/lib/libmmcamera_s5k4h8.so
 
+# Charger
+vendor/bin/charge_only_mode
+
 # CNE - from potter - OPSS28.85-13-5
 vendor/bin/cnd|e10969684c36adcc757e3409655e17b6d49c4bab
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|d818df2ae38cf3b2aa9acc34c4531d975db65f2f

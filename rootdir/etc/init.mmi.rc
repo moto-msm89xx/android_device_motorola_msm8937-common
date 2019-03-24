@@ -218,6 +218,12 @@ on charger
     class_stop main
     class_stop late_start
 
+on moto-charger
+    setprop ro.board.platform msm8937
+    trigger firmware_mounts_complete
+    start charge_only_mode
+    start thermal-com
+
 on property:ro.carrier=tmo
     write /sys/class/power_supply/battery/device/force_max_chrg_temp 55
 

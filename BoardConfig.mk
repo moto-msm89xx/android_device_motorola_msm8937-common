@@ -62,6 +62,12 @@ QCOM_BT_READ_ADDR_FROM_PROP := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
 
+# Charger
+WITH_LINEAGE_CHARGER := false
+BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_NO_CHARGER_LED := true
+
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
 
