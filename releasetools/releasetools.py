@@ -22,6 +22,6 @@ def FullOTA_InstallEnd(info):
 
 def ReplaceDeviceConfig(info):
   info.script.Mount("/vendor")
-  info.script.AppendExtra('ui_print("Check audio configurations");')
+  info.script.AppendExtra('ui_print("Check device");')
   info.script.AppendExtra('run_program("/sbin/sh", "/tmp/install/bin/check_device.sh");')
   info.script.Unmount("/vendor")
