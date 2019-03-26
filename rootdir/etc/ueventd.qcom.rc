@@ -197,45 +197,9 @@
 /dev/i2c-5                0660   media       media
 /dev/avtimer              0660   system     audio
 
-# DVB devices
-/dev/dvb/adapter0/demux*  0440   media       media
-/dev/dvb/adapter0/dvr*    0660   media       media
-/dev/dvb/adapter0/video*  0660   media       media
-
-# Broadcast devices
-/dev/tsc_mux0             0660   media       media
-/dev/tsc_ci0              0660   media       media
-
 # sensors
-/sys/devices/i2c-12/12-*  pollrate_ms 0664 system system
-/sys/devices/f9925000.i2c/i2c-0/0-*                 enable         0660    input    system
-/sys/devices/f9925000.i2c/i2c-0/0-*                 poll_delay     0660    input    system
-/sys/devices/soc/78b6000.i2c/i2c-0/0-*            enable         0660    input    system
-/sys/devices/soc/78b6000.i2c/i2c-0/0-*            poll_delay     0660    input    system
-/sys/devices/soc/78b6000.i2c/i2c-0/0-*            enable_wakeup  0660    input    system
-/sys/devices/soc/78b6000.i2c/i2c-0/0-*            max_latency    0660    input    system
-/sys/devices/soc/78b6000.i2c/i2c-0/0-*            flush          0660    input    system
-/sys/devices/soc/78b6000.i2c/i2c-0/0-*            calibrate      0660    input    system
-/sys/devices/soc/78b5000.i2c/i2c-1/1-*            enable         0660    input    system
-/sys/devices/soc/78b5000.i2c/i2c-1/1-*            poll_delay     0660    input    system
-/sys/devices/soc/78b5000.i2c/i2c-1/1-*            enable_wakeup  0660    input    system
-/sys/devices/soc/78b5000.i2c/i2c-1/1-*            max_latency    0660    input    system
-/sys/devices/soc/78b5000.i2c/i2c-1/1-*            flush          0660    input    system
-/sys/devices/soc/78b5000.i2c/i2c-1/1-*            calibrate      0660    input    system
-/sys/devices/virtual/optical_sensors/proximity      ps_adc         0660    input    system
-/sys/devices/virtual/optical_sensors/proximity      ps_poll_delay  0660    input    system
-/sys/devices/virtual/optical_sensors/lightsensor    ls_auto        0660    input    system
-/sys/devices/virtual/optical_sensors/lightsensor    ls_poll_delay  0660    input    system
 /sys/devices/virtual/input/input*                   poll           0660    input    system
 /sys/devices/virtual/input/input*                   pollrate_ms    0660    input    system
-/sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/input*    secure_touch         0440   system  drmrpc
-/sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/input*    secure_touch_enable  0660   system  drmrpc
-/sys/devices/soc/78b7000.i2c/i2c-3/3-0038/input/input*    secure_touch         0440   system  drmrpc
-/sys/devices/soc/78b7000.i2c/i2c-3/3-0038/input/input*    secure_touch_enable  0660   system  drmrpc
-/sys/devices/soc/78b7000.i2c/i2c-3/3-004b/input/input*    secure_touch         0440   system  drmrpc
-/sys/devices/soc/78b7000.i2c/i2c-3/3-004b/input/input*    secure_touch_enable  0660   system  drmrpc
-/sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input*    secure_touch         0440   system  drmrpc
-/sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input*    secure_touch_enable  0660   system  drmrpc
 
 # laser sensor access
 /sys/devices/virtual/input/input*                   enable_ps_sensor 0660  system   input
@@ -243,7 +207,6 @@
 /sys/devices/virtual/input/input*                   do_flush         0660  system   input
 
 # vm_bms
-/dev/vm_bms               0660   system     system
 /dev/battery_data         0660   system     system
 
 # wlan
@@ -259,18 +222,6 @@
 /sys/bus/pci/drivers/wil6210* 0000:01:00.0/net/wigig0/gro_flush_timeout 0660 system system
 /sys/devices/virtual/net/bond0 queues/rx-0/rps_cpus 0660 system system
 
-#nfc permissions
-/dev/nfc-nci              0660    nfc         nfc
-/dev/nq-nci               0660    nfc         nfc
-/dev/assd                 0660    nfc         nfc
-/dev/pn544                0660    nfc         nfc
-/dev/bcm2079x-i2c         0660    nfc         nfc
-
-# UIO devices
-/dev/uio0                 0660   system     system
-/dev/uio1                 0660   system     system
-/dev/uio2                 0660   system     system
-
 # SSR devices
 /dev/subsys_*         0640   system     system
 
@@ -283,20 +234,9 @@
 # Ramdump devices
 /dev/ramdump*             0640   system     system
 
-# Fingerprint device
-/dev/qbt1000              0660   system     system
-
 #ImproveTouch device
 /dev/hbtp_input           0660   system     system
 /dev/hbtp_vm              0660   system     system
-
-# Add device block for FRP
-/dev/block/platform/soc/7464900.sdhci/by-name/frp       0600   system     system
-/dev/block/platform/soc/624000.ufshc/by-name/frp        0600   system     system
-/dev/block/platform/soc/1da4000.ufshc/by-name/frp       0600   system     system
-/dev/block/platform/soc/c0c4000.sdhci/by-name/frp       0600   system     system
-/dev/block/platform/soc/1d84000.ufshc/by-name/frp       0600   system     system
-/dev/block/bootdevice/by-name/frp 0600 system system
 
 # Kmsg device
 /dev/kmsg                                               0620   root       system
@@ -308,63 +248,9 @@
 /dev/hidraw0              0660   root       oem_5004
 /dev/hidraw1              0660   root       oem_5004
 
-# MOD device
-/sys/devices/soc/75b5000.i2c/i2c-7/7-0072 irq_enable 0660 oem_5004 oem_5004
-/sys/devices/soc/0.apba_ctrl apba_enable 0660 oem_5004 oem_5020
-/sys/devices/soc/0.apba_ctrl apba_mode 0660 oem_5004 oem_5020
-/sys/devices/soc/0.apba_ctrl flash_partition 0220 oem_5004 oem_5020
-/sys/devices/soc/0.apba_ctrl unipro_mid 0440 root oem_5020
-/sys/devices/soc/0.apba_ctrl unipro_pid 0440 root oem_5020
-/sys/devices/soc/0.apba_ctrl vid 0440 root oem_5020
-/sys/devices/soc/0.apba_ctrl pid 0440 root oem_5020
-/sys/devices/soc/0.apba_ctrl fw_version 0440 root oem_5020
-/sys/devices/soc/0.apba_ctrl fw_version_str 0440 root oem_5020
-/sys/devices/soc/soc:muc_svc@0/mods_interfaces/* hotplug 0660 root oem_5020
-/sys/devices/soc/soc:muc_svc@0/mods_interfaces/* uevent 0660 root oem_5020
-/sys/devices/soc/soc:muc_svc@0/mods_interfaces/* current_limit 0220 root oem_5020
-/sys/devices/soc/soc:muc_svc@0/mods_interfaces/* rtc_sync 0220 root oem_5020
-/sys/devices/soc/soc:muc_svc@0 flashmode 0660 root oem_5020
-/sys/devices/soc/soc:muc_svc@0 reset 0660 root oem_5020
-/sys/devices/soc/0.muc/0.muc:muc_svc@0/mods_interfaces/* hotplug 0660 root oem_5020
-/sys/devices/soc/0.muc/0.muc:muc_svc@0/mods_interfaces/* uevent 0660 root oem_5020
-/sys/devices/soc/0.muc/0.muc:muc_svc@0 flashmode 0660 root oem_5020
-/sys/devices/platform/mods_ap uevent 0660 root oem_5020
-/sys/devices/platform/mods_ap/* uevent 0660 root oem_5020
-/sys/devices/platform/mods_ap/greybus1 uevent 0664 root oem_5020
-
-# MOD display device
-/sys/devices/platform/mods_ap/greybus1/*/*/display/display* state 0660 root oem_5020
-/sys/devices/platform/mods_ap/greybus1/*/*/display/display* config 0444 root oem_5020
-/sys/devices/platform/mods_ap/greybus1/*/*/display/display* notification 0660 root oem_5020
-
-# MOD light device
-/sys/devices/platform/mods_ap/greybus1/*/*/leds/mod_light*::backlight brightness 0660 root oem_5020
-
 # IIO (dynamic sensors)
 /sys/devices/iio_sysfs_trigger/add_trigger          0220    system      system
 /sys/devices/iio_sysfs_trigger/remove_trigger       0220    system      system
-
-/sys/devices/iio:device* buffer/*                   0664    system      system
-/sys/devices/iio:device* scan_elements/in_*_en      0664    system      system
-/sys/devices/iio:device* trigger/current_trigger    0664    system      system
-/sys/devices/iio:device* in_sampling_frequency      0664    system      system
-/sys/devices/iio:device* max_latency_ns             0664    system      system
-/sys/devices/iio:device* flush                      0220    system      system
-
-/dev/iio:device*                                    0600    system      system
-
-# RAW device
-/dev/gbraw*             0660   root   oem_5020
-# Audio device
-/sys/devices/platform/mods_codec.0 uevent 0660 root oem_5020
-/sys/devices/platform/mods_codec.0/* uevent 0660 root oem_5020
-
-# MOD camera device
-/dev/mot_camera_ext*               0660   system     camera
-/sys/devices/virtual/video4linux/mot_camera_ext* open_mode 0660 system camera
-/sys/devices/virtual/video4linux/mot_camera_ext* uevent 0660 root oem_5020
-/sys/devices/virtual/video4linux/video* open_mode 0660 system camera
-/sys/devices/virtual/video4linux/video* uevent 0660 root oem_5020
 
 # Laser device
 /dev/laser                0660   system     camera
@@ -372,13 +258,9 @@
 # haptic
 /dev/drv2605              0660   system     system
 
-#DTV
-/dev/isdbt                 0660 oem_5019  oem_5019
-
 #Egistec fingerprint
 /dev/esfp0		  0660   system     system
 
 # Trustonic TEE device
 /dev/mobicore             0600   system     system
 /dev/mobicore-user        0666   system     system
-
