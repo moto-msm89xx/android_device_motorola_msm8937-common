@@ -9,7 +9,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicecomm=true \
     persist.vendor.audio.fluence.voicerec=true \
-    persist.vendor.audio.fluence.speaker=true \
     ro.config.max_starting_bg=8 \
     ro.config.vc_call_vol_steps=8 \
     ro.vendor.audio.sdk.fluencetype=fluence \
@@ -86,7 +85,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Fingerprint
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.qfp=false \
-    ro.fpsensor.position=12
+    ro.fpsensor.position=1
 
 # Fm
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -153,16 +152,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.rmnet.mux=enabled \
     persist.radio.REVERSE_QMI=0 \
     persist.radio.VT_USE_MDM_TIME=0 \
-    persist.rcs.supported=1 \
-    persist.eab.supported=1 \
-    persist.rcs.presence.provision=0 \
     persist.vt.supported=1 \
     persist.data.qmi.adb_logmask=0 \
     persist.data.netmgrd.qos.enable=true \
     persist.data.iwlan.enable=true \
-    persist.lte.pco_supported=true \
-    ro.telephony.default_network=10 \
-    ro.radio.imei.sv=11 \
     telephony.lteOnCdmaDevice=1
 
 #,Sensors
@@ -189,6 +182,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.trim_empty_percent=100 \
     ro.vendor.qti.sys.fw.trim_cache_percent=100 \
     ro.vendor.qti.sys.fw.trim_enable_memory=2147483648
+
+# USB
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.usb.bpt=2ec1 \
+    ro.usb.bpt_adb=2ec5 \
+    ro.usb.bpteth=2ec3 \
+    ro.usb.bpteth_adb=2ec6 \
+    ro.usb.mtp=2e82 \
+    ro.usb.mtp_adb=2e76 \
+    ro.usb.ptp=2e83 \
+    ro.usb.ptp_adb=2e84
 
 # WIFI
 PRODUCT_PROPERTY_OVERRIDES += \
