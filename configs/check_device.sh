@@ -10,6 +10,7 @@ if [ "$sku" = "XT1924-3" ]; then
     rm /vendor/etc/permissions/android.hardware.sensor.compass.xml
     rm /vendor/etc/permissions/android.hardware.sensor.gyroscope.xml
 else
+    rm -rf /system/priv-app/MotoDoze
     rm /vendor/etc/audio_platform_info_ahannah.xml
     rm /vendor/etc/mixer_paths_ahannah.xml
     rm /vendor/etc/sensors/sensor_def_qcomdev_ahannah.conf
