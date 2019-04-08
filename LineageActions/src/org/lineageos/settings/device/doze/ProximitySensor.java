@@ -58,7 +58,7 @@ public class ProximitySensor implements ScreenStateNotifier, SensorEventListener
 
     @Override
     public void screenTurnedOff() {
-        if (mLineageActionsSettings.isIrWakeupEnabled() && !mEnabled) {
+        if (!mEnabled) {
             Log.d(TAG, "Enabling");
             mSensorHelper.registerListener(mSensor, this);
             mEnabled = true;

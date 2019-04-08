@@ -61,8 +61,7 @@ public class StowSensor implements ScreenStateNotifier, SensorEventListener {
 
     @Override
     public void screenTurnedOff() {
-        if (!mLineageActionsSettings.isIrWakeupEnabled() &&
-            mLineageActionsSettings.isPickUpEnabled() && !mEnabled) {
+        if (mLineageActionsSettings.isPickUpEnabled() && !mEnabled) {
             Log.d(TAG, "Enabling");
             mSensorHelper.registerListener(mSensor, this);
             mEnabled = true;
