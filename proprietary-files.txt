@@ -1049,6 +1049,7 @@ vendor/lib/vendor.display.postproc@1.0_vendor.so
 
 # Sensors
 lib/libslpcsystem_jni.so
+vendor/bin/capsense_reset
 vendor/bin/sensors.qcom
 vendor/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
 vendor/lib/hw/activity_recognition.msm8937.so

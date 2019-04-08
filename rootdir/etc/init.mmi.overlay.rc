@@ -35,12 +35,6 @@ on boot
        chown system oem_5004 /sys/bus/spi/devices/spi1.0/irq_cnt
        chmod 0440 /sys/bus/spi/devices/spi1.0/irq_cnt
 
-       # change permission for rear Psensor
-       chown system system /sys/class/sensors/Rear\ Proximity\ sensor/enable
-       chown system system /sys/class/sensors/Rear\ Proximity\ sensor/poll_delay
-       chmod 0664  /sys/class/sensors/Rear\ Proximity\ sensor/enable
-       chmod 0664  /sys/class/sensors/Rear\ Proximity\ sensor/poll_delay
-
        #change permission for capsensor
        chmod 0660 /sys/class/capsense/enable
        chown system system sys/class/capsense/enable
@@ -74,28 +68,6 @@ on boot
    chmod 0660 /sys/class/input/input7/do_flush
    chown system system /sys/class/input/input7/offset
    chmod 0660 /sys/class/input/input7/offset
-
-   chown system system /sys/class/input/input6/enable_ps_sensor
-   chmod 0660 /sys/class/input/input6/enable_ps_sensor
-   chown system system /sys/class/input/input6/set_delay_ms
-   chmod 0660 /sys/class/input/input6/set_delay_ms
-   chown system system /sys/class/input/input6/xtalk
-   chmod 0660 /sys/class/input/input6/xtalk
-   chown system system /sys/class/input/input6/do_flush
-   chmod 0660 /sys/class/input/input6/do_flush
-   chown system system /sys/class/input/input7/offset
-   chmod 0660 /sys/class/input/input6/offset
-
-   chown system system /sys/class/input/input5/enable_ps_sensor
-   chmod 0660 /sys/class/input/input5/enable_ps_sensor
-   chown system system /sys/class/input/input5/set_delay_ms
-   chmod 0660 /sys/class/input/input5/set_delay_ms
-   chown system system /sys/class/input/input5/xtalk
-   chmod 0660 /sys/class/input/input5/xtalk
-   chown system system /sys/class/input/input5/do_flush
-   chmod 0660 /sys/class/input/input5/do_flush
-   chown system system /sys/class/input/input5/offset
-   chmod 0660 /sys/class/input/input5/offset
 
 service mmi-laser-sh /vendor/bin/init.mmi.laser.sh
     class core
