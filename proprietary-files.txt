@@ -858,6 +858,7 @@ vendor/lib/libadreno_utils.so
 vendor/lib/libbccQTI.so
 vendor/lib/libC2D2.so
 vendor/lib/libc2d30_bltlib.so
+vendor/lib/libc2d30-a3xx.so
 vendor/lib/libc2d30-a5xx.so
 vendor/lib/libCB.so
 vendor/lib/libgralloc1.so
@@ -869,6 +870,7 @@ vendor/lib/libOpenCL.so
 vendor/lib/librs_adreno_sha1.so
 vendor/lib/librs_adreno.so
 vendor/lib/libRSDriver_adreno.so
+vendor/lib/libsc-a3xx.so
 
 # Graphics - (DRM)
 vendor/lib/libsdedrm.so
@@ -888,6 +890,10 @@ vendor/lib/libtinyxml2_1.so
 vendor/lib/hw/vulkan.msm8937.so
 
 # Graphics firmware
+vendor/firmware/a300_pfp.fw
+vendor/firmware/a300_pm4.fw
+vendor/firmware/a330_pfp.fw
+vendor/firmware/a330_pm4.fw
 vendor/firmware/a530_gpmu.fw2
 vendor/firmware/a530_pfp.fw
 vendor/firmware/a530_pm4.fw

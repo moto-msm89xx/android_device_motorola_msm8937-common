@@ -9,6 +9,27 @@ on init
     setprop ro.hw.imager 12MP
 
 on property:ro.boot.hardware.sku=XT1924-3
+    setprop dalvik.vm.dex2oat-threads 6
+    setprop persist.vendor.audio.fluence.speaker false
+    setprop ro.hw.ecompass false
+    setprop ro.mot.sensors.chopchop false
+    setprop ro.mot.sensors.camgest false
+    setprop ro.vendor.sensors.gravity false
+    setprop ro.vendor.sensors.laccel false
+    setprop ro.vendor.sensors.amd false
+
+on property:ro.boot.hardware.sku=XT1924-4
+    setprop dalvik.vm.dex2oat-threads 2
+    setprop persist.vendor.audio.fluence.speaker false
+    setprop ro.hw.ecompass false
+    setprop ro.mot.sensors.chopchop false
+    setprop ro.mot.sensors.camgest false
+    setprop ro.vendor.sensors.gravity false
+    setprop ro.vendor.sensors.laccel false
+    setprop ro.vendor.sensors.amd false
+
+on property:ro.boot.hardware.sku=XT1924-5
+    setprop dalvik.vm.dex2oat-threads 2
     setprop persist.vendor.audio.fluence.speaker false
     setprop ro.hw.ecompass false
     setprop ro.mot.sensors.chopchop false
@@ -21,6 +42,7 @@ on property:ro.boot.hardware.sku=XT1924-6
     setprop ro.hw.ecompass true
 
 on property:ro.boot.hardware.sku=XT1924-7
+    setprop dalvik.vm.dex2oat-threads 6
     setprop persist.lte.pco_supported true
     setprop persist.vendor.audio.fluence.speaker true
     setprop persist.vendor.radio.snapshot_timer 22
@@ -31,6 +53,7 @@ on property:ro.boot.hardware.sku=XT1924-7
     setprop ro.hw.ecompass true
 
 on property:ro.boot.hardware.sku=XT1924-8
+    setprop dalvik.vm.dex2oat-threads 6
     setprop persist.lte.pco_supported true
     setprop persist.vendor.audio.fluence.speaker true
     setprop persist.vendor.radio.snapshot_timer 22
