@@ -31,6 +31,13 @@ on property:ro.boot.hardware.sku=XT1924-7
     setprop ro.hw.ecompass true
 
 on property:ro.boot.hardware.sku=XT1924-8
+    setprop persist.lte.pco_supported true
+    setprop persist.vendor.audio.fluence.speaker true
+    setprop persist.vendor.radio.snapshot_timer 22
+    setprop persist.vendor.radio.snapshot_enabled 1
+    setprop persist.eab.supported 1
+    setprop persist.rcs.supported 1
+    setprop persist.rcs.presence.provision 0
     setprop ro.hw.ecompass true
 
 on property:ro.hw.dualsim=true
