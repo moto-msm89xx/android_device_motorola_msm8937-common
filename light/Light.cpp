@@ -19,7 +19,7 @@ namespace implementation {
 #define LEDS                       "/sys/class/leds/"
 #define LCD_LED                    LEDS "lcd-backlight/"
 #define BRIGHTNESS                 "brightness"
-#define CHARGING_LED               LEDS "charging/"
+#define WHITE                      LEDS "white/"
 
 /*
  * Write value to path and close file.
@@ -53,7 +53,7 @@ static void hannahBacklight(const LightState& state) {
 }
 
 static inline void hannahLed(const LightState& state, uint32_t pattern) {
-    isLit(state) ? set(CHARGING_LED BRIGHTNESS, pattern) : set(CHARGING_LED BRIGHTNESS, 0);
+    isLit(state) ? set(WHITE BRIGHTNESS, pattern) : set(WHITE BRIGHTNESS, 0);
 }
 
 static void hannahNotification(const LightState& state) {

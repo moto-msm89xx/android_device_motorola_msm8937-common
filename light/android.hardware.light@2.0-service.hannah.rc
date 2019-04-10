@@ -1,7 +1,7 @@
 on boot
     # Notification LED
-    chown system system /sys/class/leds/charging/brightness
-    chmod 660 /sys/class/leds/charging/brightness
+    chown system system /sys/class/leds/white/brightness
+    chmod 660 /sys/class/leds/white/brightness
  
 service light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.hannah
     class hal
