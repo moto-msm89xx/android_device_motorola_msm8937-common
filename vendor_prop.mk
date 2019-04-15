@@ -147,6 +147,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.sw_mbn_update=1 \
     persist.vendor.radio.app_mbn_path=/fsg \
     persist.vendor.radio.adb_log_on=0 \
+    persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.jbims=1 \
     persist.vendor.ims.disableDebugLogs=0 \
     persist.vendor.ims.disableIMSLogs=0 \
