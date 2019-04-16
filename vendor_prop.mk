@@ -141,6 +141,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.is_wps_enabled=true \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.eri64_as_home=1 \
+    persist.vendor.radio.add_power_save=1 \
     persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.lte_vrte_ltd=1 \
     persist.vendor.radio.cs_srv_type=1
