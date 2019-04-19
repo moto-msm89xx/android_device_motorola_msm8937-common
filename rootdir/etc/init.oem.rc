@@ -9,6 +9,7 @@ on init
     setprop ro.hw.imager 12MP
 
 on property:ro.boot.hardware.sku=XT1924-3
+    setprop ro.opengles.version 196610
     setprop ro.product.model XT1924-3
     setprop ro.product.name ahannah
     setprop dalvik.vm.dex2oat-threads 6
@@ -21,6 +22,7 @@ on property:ro.boot.hardware.sku=XT1924-3
     setprop ro.vendor.sensors.amd false
 
 on property:ro.boot.hardware.sku=XT1924-4
+    setprop ro.opengles.version 196608
     setprop ro.product.model XT1924-4
     setprop ro.product.name rhannah
     setprop dalvik.vm.dex2oat-threads 2
@@ -33,6 +35,7 @@ on property:ro.boot.hardware.sku=XT1924-4
     setprop ro.vendor.sensors.amd false
 
 on property:ro.boot.hardware.sku=XT1924-5
+    setprop ro.opengles.version 196608
     setprop ro.product.model XT1924-5
     setprop ro.product.name rhannah
     setprop dalvik.vm.dex2oat-threads 2
@@ -49,6 +52,7 @@ on property:ro.boot.hardware.sku=XT1924-6
     setprop ro.hw.ecompass true
 
 on property:ro.boot.hardware.sku=XT1924-7
+    setprop ro.opengles.version 196610
     setprop ro.product.model XT1924-7
     setprop ro.product.name hannah_t
     setprop dalvik.vm.dex2oat-threads 6
@@ -62,6 +66,7 @@ on property:ro.boot.hardware.sku=XT1924-7
     setprop ro.hw.ecompass true
 
 on property:ro.boot.hardware.sku=XT1924-8
+    setprop ro.opengles.version 196610
     setprop ro.product.model XT1924-8
     setprop ro.product.name hannah_sprint
     setprop dalvik.vm.dex2oat-threads 6
@@ -83,5 +88,5 @@ on property:ro.hw.dualsim=false
     setprop ro.telephony.default_network 10
 
 on fs
-    wait /dev/block/bootdevice/by-name/oem
-    mount ext4 /dev/block/bootdevice/by-name/oem /oem ro nosuid nodev context=u:object_r:oemfs:s0
+#    wait /dev/block/bootdevice/by-name/oem
+#    mount ext4 /dev/block/bootdevice/by-name/oem /oem ro nosuid nodev context=u:object_r:oemfs:s0

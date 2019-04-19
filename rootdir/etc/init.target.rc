@@ -47,15 +47,9 @@ on fs
     # results in failure to launch late-start class.
 
     wait /dev/block/bootdevice/by-name/persist
-    mount ext4 /dev/block/bootdevice/by-name/persist /persist noatime nosuid nodev barrier=1 defcontext=u:object_r:persist_file:s0
     mkdir /persist/data 0700  system system
     mkdir /persist/bms 0700 root system
     restorecon_recursive   /persist
-
-    #write /sys/kernel/boot_adsp/boot 1
-
-    #wait /dev/block/bootdevice/by-name/oem
-    #mount ext4 /dev/block/bootdevice/by-name/oem /oem ro nosuid nodev barrier=1
 
 on post-fs-data
     mkdir /data/tombstones 0771 system system
