@@ -1,6 +1,9 @@
 # Block devices
 /dev/block/bootdevice/by-name/persist                    u:object_r:persist_block_device:s0
 
+# Fsg
+/fsg                                                     u:object_r:fsg_firmware_file:s0
+
 # Input devices
 /(vendor|system/vendor)/usr/idc(/.*)?                    u:object_r:idc_file:s0
 /(vendor|system/vendor)/usr/keylayout(/.*)?              u:object_r:keylayout_file:s0

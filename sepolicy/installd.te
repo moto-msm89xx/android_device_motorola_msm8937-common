@@ -1,0 +1,1 @@
+allow installd fsg_firmware_file:filesystem quotaget;
