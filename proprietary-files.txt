@@ -1,25 +1,25 @@
-# ADSP
-vendor/bin/adsprpcd
-vendor/lib/libadsp_default_listener.so
-vendor/lib/libadsprpc.so
-vendor/lib/libfastcvadsp_stub.so
-vendor/lib/libfastcvopt.so
+# ADSP - from montana - OPP28.65-37-2
+vendor/bin/adsprpcd|2cdaf69962f28b33eef8b83852dff28caf0f87d8
+vendor/lib/libadsp_default_listener.so|1f6a768235d55446be7b865b950b6589ac487c97
+vendor/lib/libadsprpc.so|aa054b63eea4aaf5eecec2f3b160ea9ea62a0849
+vendor/lib/libfastcvadsp_stub.so|d3c250fbd82c75667757a1b08949279474a27e1d
+vendor/lib/libfastcvopt.so|c091499599e1d0b646bc883a2c7dc8e10a5e6403
 
-# ADSP modules
-vendor/lib/rfsa/adsp/libapps_mem_heap.so
-vendor/lib/rfsa/adsp/libdspCV_skel.so
-vendor/lib/rfsa/adsp/libexternal_dog_skel.so
-vendor/lib/rfsa/adsp/libfastcvadsp.so
-vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
-vendor/lib/rfsa/adsp/tas2560_TI.bin
+# ADSP modules - from montana - OPP28.65-37-2
+vendor/lib/rfsa/adsp/libapps_mem_heap.so|5c82ad9cfe3f30105d899e2a4e90cc7566f81252
+vendor/lib/rfsa/adsp/libdspCV_skel.so|628985174b0088bed21c866d7984d23855e5e150
+vendor/lib/rfsa/adsp/libexternal_dog_skel.so|02b69c54437fb5a6f7ad88c3f58e7c4adfea9ede
+vendor/lib/rfsa/adsp/libfastcvadsp.so|9818625bfa018f517e32a8f4a1e7fb4b255e5049
+vendor/lib/rfsa/adsp/libfastcvadsp_skel.so|1ff4a48009e88435d93fd2b9b0c5ea59cedbb4f7
+vendor/lib/rfsa/adsp/tas2560_TI.bin|dce251362e9057969e4523c45232f3700191a9c1
 
-# Audio
-vendor/lib/libacdb-fts.so
-vendor/lib/libacdbloader.so
-vendor/lib/libacdbrtac.so
-vendor/lib/libacdbmapper.so
-vendor/lib/libadiertac.so
-vendor/lib/libaudcal.so
+# Audio - from montana - OPP28.65-37-2
+vendor/lib/libacdb-fts.so|d48fe983c7ab9f0376681ee5cc4e28e6dfa2b35f
+vendor/lib/libacdbloader.so|d957eaf106cb84142ff70762c559cf247df152cf
+vendor/lib/libacdbrtac.so|fb18fa34da9e37d672a1fa9c91924e83339c1ecb
+vendor/lib/libacdbmapper.so|39f543a2a3d53363e40c1d538e8bb2d0980b8b1e
+vendor/lib/libadiertac.so|8c1fde720a63d8bba8939af4936628032ee90116
+vendor/lib/libaudcal.so|58c65f3dffd6d9439259a7cb3c57643997836f50
 
 # Audio ACDB
 vendor/etc/acdbdata/Bluetooth_cal.acdb
@@ -30,28 +30,28 @@ vendor/etc/acdbdata/Hdmi_cal.acdb
 vendor/etc/acdbdata/Headset_cal.acdb
 vendor/etc/acdbdata/Speaker_cal.acdb
 
-# Bluetooth
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib/libbtnv.so
-vendor/lib/libbt-hidlclient.so
-vendor/lib/vendor.qti.hardware.fm@1.0_vendor.so
-vendor/lib/com.qualcomm.qti.ant@1.0_vendor.so
+# Bluetooth - from montana - OPP28.65-37-2
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|feabf64480557ab86b23b878b8b8c25a37e631d4
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|1a2dc1c2d217f47b9c99a0afa9e4912abd32e381
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|4c1a4af063aa94ac8e865314834a9693cdf38c4d
+vendor/lib/libbtnv.so|4a461d4281c7ea892fa3b0d5d1dd9b5ccd40cd06
+vendor/lib/libbt-hidlclient.so|a8026393881678ed3cc7a43608edcb801a901089
+vendor/lib/vendor.qti.hardware.fm@1.0_vendor.so|64fbfc8c8db238ca31693772716fa49927597a3f
+vendor/lib/com.qualcomm.qti.ant@1.0_vendor.so|09ac8a50a1b6fb2ed32175f0d551a151f249123c
 
-# Bluetooth (aptX)
-vendor/lib/libaptXHD_encoder.so
-vendor/lib/libaptX_encoder.so
+# Bluetooth (aptX) - from montana - OPP28.65-37-2
+vendor/lib/libaptXHD_encoder.so|b65cd3b72ae3e6a57901fd5b5383bfa1a88c5737
+vendor/lib/libaptX_encoder.so|b03772672144d4b750a5672c2922aded93bb0512
 
-# Motorola Camera
-lib/motorola.hardware.camera.device@1.0.so
-lib/motorola.hardware.camera.provider@2.4.so
-vendor/lib/motcamera.device@1.0-impl.so
-vendor/bin/hw/motorola.hardware.camera.provider@2.4-service
-vendor/etc/init/motorola.hardware.camera.provider@2.4-service_delayed.rc
-vendor/lib/hw/motorola.hardware.camera.provider@2.4-impl.so
-vendor/lib/motorola.hardware.camera.device@1.0_vendor.so
-vendor/lib/motorola.hardware.camera.provider@2.4_vendor.so
+# Motorola Camera - from montana - OPP28.65-37-2
+lib/motorola.hardware.camera.device@1.0.so|c4a22ae79c855d5e9777de19ced3db7186a21018
+lib/motorola.hardware.camera.provider@2.4.so|40f47d266a2f31db23efc4465727797a11f2774c
+vendor/lib/motcamera.device@1.0-impl.so|6f531814bf2cef830421c83106c7f10244792056
+vendor/bin/hw/motorola.hardware.camera.provider@2.4-service|939fc109f772bda54a9e66fa38e55ccad2a52ae3
+vendor/etc/init/motorola.hardware.camera.provider@2.4-service_delayed.rc|f0e7e99b3a449f2fd033a5bcb5899d0376763ea2
+vendor/lib/hw/motorola.hardware.camera.provider@2.4-impl.so|e4f517aabe706e5ac359f1d9b4ade9e6d890d200
+vendor/lib/motorola.hardware.camera.device@1.0_vendor.so|da880cfd8b3b5237901e954e3ee96768be5865b7
+vendor/lib/motorola.hardware.camera.provider@2.4_vendor.so|1c2aceb0534501d6ce7d6ce328e430426760ecb1
 
 # Camera
 lib/libdualcameraddm.so
@@ -703,15 +703,15 @@ vendor/lib/libmmcamera_sony_rumba_eeprom.so
 
 # Camera firmware
 vendor/firmware/cpp_firmware_v1_10_0.fw
-vendor/firmware/cpp_firmware_v1_12_0.fw                
-vendor/firmware/cpp_firmware_v1_1_1.fw                 
-vendor/firmware/cpp_firmware_v1_1_6.fw                 
-vendor/firmware/cpp_firmware_v1_2_0.fw                 
-vendor/firmware/cpp_firmware_v1_4_0.fw                 
-vendor/firmware/cpp_firmware_v1_5_0.fw                 
-vendor/firmware/cpp_firmware_v1_5_1.fw                 
-vendor/firmware/cpp_firmware_v1_5_2.fw                 
-vendor/firmware/cpp_firmware_v1_6_0.fw                 
+vendor/firmware/cpp_firmware_v1_12_0.fw
+vendor/firmware/cpp_firmware_v1_1_1.fw
+vendor/firmware/cpp_firmware_v1_1_6.fw
+vendor/firmware/cpp_firmware_v1_2_0.fw
+vendor/firmware/cpp_firmware_v1_4_0.fw
+vendor/firmware/cpp_firmware_v1_5_0.fw
+vendor/firmware/cpp_firmware_v1_5_1.fw
+vendor/firmware/cpp_firmware_v1_5_2.fw
+vendor/firmware/cpp_firmware_v1_6_0.fw
 vendor/firmware/cpp_firmware_v1_8_0.fw
 
 # Camera sensors
@@ -740,8 +740,8 @@ vendor/lib/libmmcamera_s5k3p3.so
 vendor/lib/libmmcamera_s5k4h7.so
 vendor/lib/libmmcamera_s5k4h8.so
 
-# Charger
-vendor/bin/charge_only_mode
+# Charger - from montana - OPP28.65-37-2
+vendor/bin/charge_only_mode|21bf1ad5e06a1c454dbd6b542d4384d18cbe84c4
 
 # CNE - from potter - OPSS28.85-13-5
 vendor/bin/cnd|e10969684c36adcc757e3409655e17b6d49c4bab
@@ -777,26 +777,26 @@ vendor/lib/libwqe.so|37acd16d646cd07c8989e1290280063df174ba15
 vendor/lib/libxml.so|fbab715743f610ab73a4a1fcba18d5ed958ef125
 vendor/lib/vendor.qti.hardware.data.latency@1.0_vendor.so|9d0ebb511c8b5c5c7cff54c82ecb15872db046ad
 
-# DRM and SEE
-vendor/bin/qseecomd
-vendor/lib/libcppf.so
-vendor/lib/libGPreqcancel.so
-vendor/lib/libGPreqcancel_svc.so
-vendor/lib/libQSEEComAPI.so
-vendor/lib/libStDrvInt.so
-vendor/lib/libdrmfs.so
-vendor/lib/libdrmtime.so
-vendor/lib/libqisl.so
-vendor/lib/librpmb.so
-vendor/lib/libsecureui_svcsock.so
-vendor/lib/libssd.so
+# DRM and SEE - from montana - OPP28.65-37-2
+vendor/bin/qseecomd|e245467c4bdba4b608b929c699948a49204be8fd
+vendor/lib/libcppf.so|63277c967778f51ba838fd888cd7dfc08a4b9aa2
+vendor/lib/libGPreqcancel.so|e7fbfb30368440d3789428bbe769269b20018f88
+vendor/lib/libGPreqcancel_svc.so|f9ca19b0b71e974e9cf89cc20abba76cbe84feb4
+vendor/lib/libQSEEComAPI.so|4eedb96c0c4621976aa8903251fa679b7ecd6bb4
+vendor/lib/libStDrvInt.so|8bbbc7832f776f34411e76549343bdbf92733c3b
+vendor/lib/libdrmfs.so|53995c20d33d414a90869320b5c7ec3fa1f6ecd5
+vendor/lib/libdrmtime.so|1d867306b3c5ff25dd87c7fbc45b995349cc3eb2
+vendor/lib/libqisl.so|237f52d644503f75d75e0b665b69061dc6df9220
+vendor/lib/librpmb.so|508ee7fe3aace0ee0fa003dc78d418c51c1e5715
+vendor/lib/libsecureui_svcsock.so|c701277815ef83f95d352e5c74e071e2b7e6d58f
+vendor/lib/libssd.so|7cc0262d831bd0b1cea62b57e1ed578606a8db4f
 
-# DRM - Qualcomm Trusted Execution Enviornment
-lib/vendor.qti.hardware.qteeconnector@1.0.so
-vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
-vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
-vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
-vendor/lib/vendor.qti.hardware.qteeconnector@1.0_vendor.so
+# DRM - Qualcomm Trusted Execution Enviornment - from montana - OPP28.65-37-2
+lib/vendor.qti.hardware.qteeconnector@1.0.so|80df7ce3e4552b6389cddfdc2f25ee9e11e2df36
+vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|0696b4b2344d13325a1a80b79a2022d0e6a84f2e
+vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
+vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|e2370dcafda6f457c8d828bf1e138f2f34d41928
+vendor/lib/vendor.qti.hardware.qteeconnector@1.0_vendor.so|ed76830804a91e9057c2dade499e6df48f32a33d
 
 # Fingerprint
 lib/vendor.egistec.hardware.fingerprint@2.0.so
@@ -811,7 +811,9 @@ vendor/lib/vendor.egistec.hardware.fingerprint@2.0_vendor.so
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
-vendor/lib/hw/gatekeeper.msm8937.so
+
+# Gatekeeper HAL - from
+vendor/lib/hw/gatekeeper.msm8937.so|339167c8a72eceeb83590cee617620ae4ee2466a
 
 # GPS - from potter - OPSS28.85-13-5
 vendor/bin/hw/vendor.qti.gnss@1.0-service|222a311c95d747694017bbaa5d432c316cca72e3
@@ -839,73 +841,72 @@ vendor/lib/libxtadapter.so|52a9c1dffb3778dcd1a40ae4ff2fe813933bf1a9
 vendor/lib/libxtwifi_ulp_adaptor.so|6b58887ef7d5a92e1f85a47e8860c1ec3886d371
 vendor/lib/vendor.qti.gnss@1.0_vendor.so|85522c1833cb51d564d88ae866dc3330aa54b3a4
 
-# Graphics
-vendor/lib/egl/eglSubDriverAndroid.so
-vendor/lib/egl/eglsubAndroid.so
-vendor/lib/egl/libEGL_adreno.so
-vendor/lib/egl/libESXEGL_adreno.so
-vendor/lib/egl/libESXGLESv1_CM_adreno.so
-vendor/lib/egl/libESXGLESv2_adreno.so
-vendor/lib/egl/libGLESv1_CM_adreno.so
-vendor/lib/egl/libGLESv2_adreno.so
-vendor/lib/egl/libQTapGLES.so
-vendor/lib/egl/libRBEGL_adreno.so
-vendor/lib/egl/libRBGLESv1_CM_adreno.so
-vendor/lib/egl/libRBGLESv2_adreno.so
-vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/egl/libq3dtools_esx.so
-vendor/lib/libadreno_utils.so
-vendor/lib/libbccQTI.so
-vendor/lib/libC2D2.so
-vendor/lib/libc2d30_bltlib.so
-vendor/lib/libc2d30-a3xx.so
-vendor/lib/libc2d30-a5xx.so
-vendor/lib/libCB.so
-vendor/lib/libgralloc1.so
-vendor/lib/libgsl.so
-vendor/lib/libllvm-glnext.so
-vendor/lib/libllvm-qcom.so
-vendor/lib/libllvm-qgl.so
-vendor/lib/libOpenCL.so
-vendor/lib/librs_adreno_sha1.so
-vendor/lib/librs_adreno.so
-vendor/lib/libRSDriver_adreno.so
-vendor/lib/libsc-a3xx.so
+# Graphics - from montana - OPP28.65-37-2
+vendor/lib/egl/eglSubDriverAndroid.so|cd42cf4bfc0a101b4ffb01b74cccaf27f12b0007
+vendor/lib/egl/eglsubAndroid.so|699e0c0a5c41000a77ec7ff806f03387a9cea72c
+vendor/lib/egl/libEGL_adreno.so|095c0ca2f5d3b0da4c8bdc370cd53244e859a1ee
+vendor/lib/egl/libESXEGL_adreno.so|863ba76e8f0f821706b03d3a9aff61c15227fce7
+vendor/lib/egl/libESXGLESv1_CM_adreno.so|557be1489b174e49d0046217c2796a2e26a92cc1
+vendor/lib/egl/libESXGLESv2_adreno.so|fe1b225d38c004117b970002ed674c732dc3788d
+vendor/lib/egl/libGLESv1_CM_adreno.so|0f3ab19a2572658f78826bfa6fe6149b0554fa9f
+vendor/lib/egl/libGLESv2_adreno.so|2f7b8abc7def59c607b58a03e091d92427c0da25
+vendor/lib/egl/libQTapGLES.so|62a4f747d7c9266f40d03d0af252fd9771a7e999
+vendor/lib/egl/libRBEGL_adreno.so|443b939321b5b2818692574b53303f6b4a753bf9
+vendor/lib/egl/libRBGLESv1_CM_adreno.so|10c18d6ad691bbaa751c805e4722daae47c467a1
+vendor/lib/egl/libRBGLESv2_adreno.so|9eeea2f304bdb9bc30537b66871194ed6295776c
+vendor/lib/egl/libq3dtools_adreno.so|a936a91b92d0130bdeb18505caf11a49985b1885
+vendor/lib/egl/libq3dtools_esx.so|66c273ea65d3e6d10e021817ae73f0ea79a21be4
+vendor/lib/libadreno_utils.so|5f5be20be8c35428d76769ad6ed138611fb90b8c
+vendor/lib/libbccQTI.so|7bfe04f475cdd11cfade9672fabbaff9cad9de20
+vendor/lib/libC2D2.so|c4adece8dc2bf75f1aa0c2368b739d341851a1de
+vendor/lib/libc2d30_bltlib.so|9be189906fcd8f35e7c3fdc7ab547afa581d31ea
+vendor/lib/libc2d30-a3xx.so|1496650f2c94f5b290a62dea91a4d854811f6c2e
+vendor/lib/libc2d30-a5xx.so|0672672f3fb95eab090ea57553592991c13bc971
+vendor/lib/libCB.so|e45526d48f9d15aad1b44f7ef417e06abc708b00
+vendor/lib/libgralloc1.so|a11688dc3229b00cc3dd3aa9ffd7595a53cad734
+vendor/lib/libgsl.so|60df05450231002c281e3d9327a23eed15667ecf
+vendor/lib/libllvm-glnext.so|9bef89da026de31a24949ae2401cc97a42241030
+vendor/lib/libllvm-qcom.so|dbac6f9c40bd6daddbac537942b3458703843805
+vendor/lib/libllvm-qgl.so|195b57eeae8e5092527c1fdc17c430d5dc9f22c5
+vendor/lib/libOpenCL.so|fd93196a8d22b96c101e16891be79594dcc0ce7e
+vendor/lib/librs_adreno_sha1.so|a9df238e41231c44fdc19d4b6f223481b2d2bd5d
+vendor/lib/librs_adreno.so|0df4614181bc30db84ec464e6ae1da60ac7d8763
+vendor/lib/libRSDriver_adreno.so|5198c1ce8178bbb527ccc6bc0811f3c4f96b31b9
+vendor/lib/libsc-a3xx.so|48a6e14c312f4bd783bc71251089bf4bad9fa91b
 
-# Graphics - (DRM)
-vendor/lib/libsdedrm.so
+# Graphics - (DRM) - from montana - OPP28.65-37-2
+vendor/lib/libsdedrm.so|dc77eb76dfe5b006e590b4c4e5f3f470fcc17b0e
 
-# Grapbics (HDR)
-vendor/lib/libhdr_tm.so
+# Grapbics (HDR) - from  montana - OPP28.65-37-2
+vendor/lib/libhdr_tm.so|b903eefba64d8ee4e54ee912410892a8566077bd
 
-# Graphics (SDM)
--vendor/lib/libsdm-disp-vndapis.so
-vendor/lib/libsdm-color.so
-vendor/lib/libsdm-diag.so
-vendor/lib/libscalar.so
-vendor/lib/libsdmextension.so
-vendor/lib/libtinyxml2_1.so
+# Graphics (SDM) - from montana - OPP28.65-37-2
+-vendor/lib/libsdm-disp-vndapis.so|acb1184511647529f9917454366a4add612e84a0
+vendor/lib/libsdm-color.so|cc89d2c2ef756f48a647058aba4771121aafb479
+vendor/lib/libsdm-diag.so|4c5874d6e697313ee8546c6133f30d6566e04502
+vendor/lib/libscalar.so|9ec06f5af10a0fda09bbb1d8f8ac634db992ec89
+vendor/lib/libsdmextension.so|3ff104a33fa1c669ae99555e9f88f5917d4a9fe7
+vendor/lib/libtinyxml2_1.so|3ee768813f5b351b71bd7dd2367b13a3698a591a
 
-# Graphics (Vulkan)
-vendor/lib/hw/vulkan.msm8937.so
+# Graphics (Vulkan) - from montana - OPP28.65-37-2
+vendor/lib/hw/vulkan.msm8937.so|f9d56631d335978123d043127dbb26e35a528b00
 
-# Graphics firmware
-vendor/firmware/a300_pfp.fw
-vendor/firmware/a300_pm4.fw
-vendor/firmware/a330_pfp.fw
-vendor/firmware/a330_pm4.fw
-vendor/firmware/a530_gpmu.fw2
-vendor/firmware/a530_pfp.fw
-vendor/firmware/a530_pm4.fw
-vendor/firmware/a530v1_pfp.fw
-vendor/firmware/a530v1_pm4.fw
-vendor/firmware/a530v2_seq.fw2
-vendor/firmware/a530v3_gpmu.fw2
-vendor/firmware/a530v3_seq.fw2
-vendor/firmware/a540_gpmu.fw2
+# Graphics firmware - from montana - OPP28.65-37-2
+vendor/firmware/a300_pfp.fw|899dbfad4812084971cfc1ff30f06a4b45c2d34c
+vendor/firmware/a300_pm4.fw|94529206b45b6e9f6ed30dadabe4244a88a60975
+vendor/firmware/a330_pfp.fw|3e2fcee7276ded819cf2d95864fdd6788a484ee1
+vendor/firmware/a330_pm4.fw|ae739ea812f9e4462d7bba8b9ead5782d4496618
+vendor/firmware/a530_gpmu.fw2|706da8d5ee565dcf456341f805ee75a40773f65a
+vendor/firmware/a530_pfp.fw|448f9db8271fefb08348cbc50409e8e95bd93f78
+vendor/firmware/a530_pm4.fw|5741a28752355b478d455635bab008028ff7e1c6
+vendor/firmware/a530v1_pfp.fw|0864291b99bed712edfcffa94be7b4595d3af306
+vendor/firmware/a530v1_pm4.fw|6a82a4fb4035fa2a933c1a26b5535d7ec7c0ac4c
+vendor/firmware/a530v2_seq.fw2|63b6d25594a5c1f4217d996a2b636e17a29fc840
+vendor/firmware/a530v3_gpmu.fw2|0a2f6f450231673d75ba39e5d28776db3becf810
+vendor/firmware/a530v3_seq.fw2|8963a53acc689725dee4b22881a4dd4b80e5def8
+vendor/firmware/a540_gpmu.fw2|3530f10b4825a3b08c79e0bcfaf6471ec8422f24
 
 # IMS - from potter - OPSS28.85-13-5
-#-app/ims/ims.apk|2c11c91044dbd36c9ecd7b0e7535130b2888ef35
 vendor/bin/ims_rtp_daemon|aae1f6bd3cac56c4d9ea05ffba358afce75fe483
 vendor/bin/imsdatadaemon|031430b76fbb334d50e5a8b54f8af49c71604e20
 vendor/bin/imsqmidaemon|98f08c8ee1d95cdb1238d7cbb66a4a9c4a40f364
@@ -930,47 +931,47 @@ vendor/lib/libkeymasterdeviceutils.so
 vendor/lib/libkeymasterprovision.so
 vendor/lib/libkeymasterutils.so
 
-# Keystore
-vendor/lib/hw/keystore.msm8937.so
+# Keystore HAL - from montana - OPP28.65-37-2
+vendor/lib/hw/keystore.msm8937.so|71ec410adf6237952f81f8b4aa7c097e0daaf64e
 
-# Media
-vendor/lib/libAlacSwDec.so
-vendor/lib/libApeSwDec.so
-vendor/lib/libFlacSwDec.so
-vendor/lib/libOmxAacDec.so
-vendor/lib/libOmxAlacDec.so
-vendor/lib/libOmxAlacDecSw.so
-vendor/lib/libOmxAmrDec.so
-vendor/lib/libOmxAmrwbplusDec.so
-vendor/lib/libOmxApeDec.so
-vendor/lib/libOmxApeDecSw.so
-vendor/lib/libOmxEvrcDec.so
-vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxVpp.so
-vendor/lib/libOmxWmaDec.so
-vendor/lib/libvpplibrary.so
-vendor/lib/libvqzip.so
+# Media - from montana - OPP28.65-37-2
+vendor/lib/libAlacSwDec.so|d39ad1695c84f4ef3bdcf67e904682c92d50e1ab
+vendor/lib/libApeSwDec.so|76eaaccd07099fd77252a0331c5444ecf9e106f4
+vendor/lib/libFlacSwDec.so|7c323ae3576217c0d2b3ad5a518dac2a26ffc3fc
+vendor/lib/libOmxAacDec.so|40baa29e59cc8f5aa5cf83d6520e0e1f37fb81bf
+vendor/lib/libOmxAlacDec.so|10a22aadd9bfc1ab27e84246fad016d8d844bbdc
+vendor/lib/libOmxAlacDecSw.so|1ef77d471f078ea88f95476fc5259aec657bb2a7
+vendor/lib/libOmxAmrDec.so|b6fb63a2e2a2b905a1515a27afd91500de9dbe9d
+vendor/lib/libOmxAmrwbplusDec.so|34eefd27d6be618cab9a342c141d6e05a4ede203
+vendor/lib/libOmxApeDec.so|d37ccc1d821f9966bc8d80fb410292966d24204a
+vendor/lib/libOmxApeDecSw.so|98dd5993938d768f8d5202984d2cf3bb43bce9c4
+vendor/lib/libOmxEvrcDec.so|0f7a11dde420b5bac40d8742f4adc0c99896aa8e
+vendor/lib/libOmxQcelp13Dec.so|1138c3e534c6c5035058fa3e1ec224028b1d9f43
+vendor/lib/libOmxVpp.so|2cb810a2c764d6666e28207b6d75113f8849a352
+vendor/lib/libOmxWmaDec.so|f527339c8f72d2af618afdc4c163886823af4f29
+vendor/lib/libvpplibrary.so|cb39ecb3c5d588f4e9065165702585d351947627
+vendor/lib/libvqzip.so|70451e720fb3d5697cf440432c430e3e39e0ad71
 
-# Media
--vendor/lib/libMpeg4SwEncoder.so
--vendor/lib/libOmxSwVencMpeg4.so
+# Media - from montana - OPP28.65-37-2
+-vendor/lib/libMpeg4SwEncoder.so|6dd8134a8304d31a1b4da711853d035b7881ec32
+-vendor/lib/libOmxSwVencMpeg4.so|72f5c071f671af66e3d3dc3be5cd0509486fe9bf
 
-# Perf
-vendor/bin/msm_irqbalance
-vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
-vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc
-vendor/etc/perf/perfboostsconfig.xml
-vendor/lib/libfeedbackhandler.so
-vendor/lib/libperfgluelayer.so
-vendor/lib/libqti-perfd.so
-vendor/lib/libqti-perfd-client.so
-vendor/lib/libqti-util.so
-vendor/lib/vendor.qti.hardware.perf@1.0_vendor.so
+# Perf - from montana - OPP28.65-37-2
+vendor/bin/msm_irqbalance|aedd1b30e2c8be3748ed178ebe866d7e8d7b025a
+vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|f22cd6379ed37cce3dbf7666332cfaab0b71fa16
+vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|b50182aadab2e31409df61c523d0fb914a394e43
+vendor/etc/perf/perfboostsconfig.xml|9ca7d867f05b4a0b1efc780b04c1892826004854
+vendor/lib/libfeedbackhandler.so|6b9876b1f649aaef895b75ba6a47e03f8ae22186
+vendor/lib/libperfgluelayer.so|701dccc6912647b3ea29bb3fdb0b20a43b0c5213
+vendor/lib/libqti-perfd.so|72ecaeadeb59bb2c19eaf32cfc3b5fda2ab46cee
+vendor/lib/libqti-perfd-client.so|582336afcadb82800178cc312367cb1e0a9dc3b4
+vendor/lib/libqti-util.so|49ef7e51ae38127ff3b54ce3c2b3d1986f0af38c
+vendor/lib/vendor.qti.hardware.perf@1.0_vendor.so|add8d51e211ef4fd73c2289e8c066c5ecd0d4df9
 
-# Peripheral manager
-vendor/bin/pm-proxy
-vendor/bin/pm-service
-vendor/lib/libperipheral_client.so
+# Peripheral manager - from montana - OPP28.65-37-2
+vendor/bin/pm-proxy|3b09124cc99328da07827c096975c4a48523b323
+vendor/bin/pm-service|56b8be7f7f80ab6aa642c62f60be890fae4c671e
+vendor/lib/libperipheral_client.so|29c586b9b50c7becfcfa74f3a5c397972525bbcb
 
 # QMI - from potter - OPSS28.85-13-5
 etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
@@ -997,8 +998,6 @@ vendor/lib/libsmemlog.so|8f0e2c95280922335bfa38117253dd8d6381dfeb
 -app/QtiTelephonyService/QtiTelephonyService.apk|bf6539991ac8c10491fbc5a52f10bfc6e6800f9f
 etc/permissions/qcrilhook.xml|9fc58a3d54d20ac1d53bab14608815121aefbce5
 framework/qcrilhook.jar|9ba7fd1d527e857852cab4d2152c8d58f05f39e0
-#framework/qti-telephony-common.jar|4d8145ea2a2a4c97a073baa8ccbac5f14ddb476a
-#-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|af3fad97374192884feb3c31e82b5d15eaaace5e
 vendor/bin/ATFWD-daemon|62992865a3d3c743e93c081692d030d7af2f794d
 vendor/bin/netmgrd|365e6ba2b734b3f9bea969dade0ea43c1b3e8ce4
 vendor/bin/qti|d116a19ffe35a092d9b0d8f37f2d7ca1081e9daf
@@ -1042,16 +1041,16 @@ vendor/lib/libmotext_inf.so|1bcb8be2111dfc4f6064ebdbfcc89407c1ce2afb
 vendor/lib/libmdmcutback.so|dcbd4aa232e669d58d572ec16ba9c3b8c5e4b272
 vendor/lib/libqmimotext.so|69d394fd9346e11e2e65621831224741f5322fef
 
-# Postprocessing
-etc/permissions/com.qti.snapdragon.sdk.display.xml
-framework/com.qti.snapdragon.sdk.display.jar
--vendor/app/colorservice/colorservice.apk
-vendor/bin/hw/vendor.display.color@1.0-service
-vendor/bin/mm-pp-dpps
-vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib/libdisp-aba.so
-vendor/lib/vendor.display.color@1.0_vendor.so
-vendor/lib/vendor.display.postproc@1.0_vendor.so
+# Postprocessing - from montana - OPP28.65-37-2
+etc/permissions/com.qti.snapdragon.sdk.display.xml|0bff16d681e75f203c1e11ff33afba82490e49b3
+framework/com.qti.snapdragon.sdk.display.jar|907442503a68e9f1d00a9da1e78874a553812bff
+-vendor/app/colorservice/colorservice.apk|26561d2303bcdc3e5d8a1db1b2fb7ef2ddffb8a7
+vendor/bin/hw/vendor.display.color@1.0-service|773aa7ee3690905faff29d9200e8d2e861bca50d
+vendor/bin/mm-pp-dpps|950bc3dd79ba39b55ce8f14d6ea6b4dfe54eca60
+vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
+vendor/lib/libdisp-aba.so|25017c9d9a61ca663e6fb46051b0d3a125e1471e
+vendor/lib/vendor.display.color@1.0_vendor.so|7ca706d322a38084ea2e6b103efe1acd33183400
+vendor/lib/vendor.display.postproc@1.0_vendor.so|a710a9d7f93892961ff71420fe222add0bfcf57e
 
 # Sensors
 lib/libslpcsystem_jni.so
@@ -1068,26 +1067,26 @@ vendor/lib/sensors.rp.so
 vendor/lib/sensors.ssc.so
 vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
 
-# Thermal
-vendor/bin/thermal-engine
-vendor/lib/hw/thermal.msm8937.so
-vendor/lib/libthermalclient.so
-vendor/lib/libthermalioctl.so
+# Thermal - from montana - OPP28.65-37-2
+vendor/bin/thermal-engine|8d02920dbd7b0c3bb5416c1cc8b0d8a618640d28
+vendor/lib/hw/thermal.msm8937.so|5ffddb06f30da15dea892db84cfae022564cb9f0
+vendor/lib/libthermalclient.so|a811a1b0051c4eeea30655e52bc5b31033d95315
+vendor/lib/libthermalioctl.so|df141fcbb82cfb58438e06d02bab34150109b793
 
-# Time services
--vendor/app/TimeService/TimeService.apk
-vendor/bin/time_daemon
-vendor/lib/libtime_genoff.so
+# Time services - from montana - OPP28.65-37-2
+-vendor/app/TimeService/TimeService.apk|679cb378511750a0f41efa23d75f7860d8394eb1
+vendor/bin/time_daemon|570ab228d640ff75f9a41c9b43654ac33a4777e8
+vendor/lib/libtime_genoff.so|267516e23fe515013b6ef4e2f7edd0049fb75466
 
-# Widevine
-vendor/bin/hw/android.hardware.drm@1.0-service.widevine
-vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc
-vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib/liboemcrypto.so
-vendor/lib/libwvhidl.so
+# Widevine - from montana - OPP28.65-37-2
+vendor/bin/hw/android.hardware.drm@1.0-service.widevine|692aff9d8c2632ddda775b2b9187ce26ed245871
+vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc|51a3168a0dbc064d78ee11ca83614c0cd2e6daa5
+vendor/lib/mediadrm/libwvdrmengine.so|f110f2fcd9ff067af9fa6eb65024f0f5983589e1
+vendor/lib/liboemcrypto.so|a6b3792d3bdc1da4b131b727357627ac2843c149
+vendor/lib/libwvhidl.so|2342c2e4759acc909d812b6c315c42b8d332c388
 
-# WIFI
-vendor/bin/cnss-daemon
+# WIFI - from montana - OPP28.65-37-2
+vendor/bin/cnss-daemon|abfe7b9d40a36db5859b8ab623337b38d56a3a54
 
-# Misc
-vendor/lib/libmot_afd.so
+# Misc - from montana - OPP28.65-37-2
+vendor/lib/libmot_afd.so|b1641427784b1b0374e5b0d4a7b50c16d15656a9
