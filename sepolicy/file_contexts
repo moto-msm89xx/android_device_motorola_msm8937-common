@@ -15,6 +15,10 @@
 # Fsg
 /fsg                                                     u:object_r:fsg_firmware_file:s0
 
+# Init scripts
+/(vendor|system/vendor)/bin/init\.mmi\.(boot|laser|touch|usb)\.sh u:object_r:qti_init_shell_exec:s0
+/(vendor|system/vendor)/bin/init\.oem\.hw\.sh            u:object_r:qti_init_shell_exec:s0
+
 # Input devices
 /(vendor|system/vendor)/usr/idc(/.*)?                    u:object_r:idc_file:s0
 /(vendor|system/vendor)/usr/keylayout(/.*)?              u:object_r:keylayout_file:s0
