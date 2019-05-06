@@ -1,1 +1,7 @@
 allow init adsprpcd_file:filesystem { mount relabelfrom relabelto };
+
+allow init fingerprint_device:chr_file { write ioctl };
+allow init ion_device:chr_file { read open ioctl };
+allow init tee_device:chr_file { write ioctl };
+
+allow init system_server:binder { transfer call };

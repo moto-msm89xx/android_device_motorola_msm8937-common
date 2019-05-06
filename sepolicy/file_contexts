@@ -4,6 +4,14 @@
 # Charge only mode
 /(vendor|system/vendor)/bin/charge_only_mode             u:object_r:charge_only_exec:s0
 
+# Fingerprint
+/dev/esfp0                                               u:object_r:fingerprint_device:s0
+/data/fpc                                                u:object_r:fingerprint_data_file:s0
+/data/fpc/socket                                         u:object_r:fingerprint_socket:s0
+/sys/devices/soc/0.et320/etspi_enable                    u:object_r:sysfs_devices_fingerprint:s0
+/sys/devices/platform/egis_input(/.*)?                   u:object_r:sysfs_devices_fingerprint:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-ets u:object_r:hal_fingerprint_default_exec:s0
+
 # Fsg
 /fsg                                                     u:object_r:fsg_firmware_file:s0
 
