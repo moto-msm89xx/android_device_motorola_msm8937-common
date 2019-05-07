@@ -1,6 +1,9 @@
 # Block devices
 /dev/block/bootdevice/by-name/persist                    u:object_r:persist_block_device:s0
 
+# Camera
+/(vendor|system/vendor)/bin/hw/motorola\.hardware\.camera\.provider@2\.4-service u:object_r:hal_camera_default_exec:s0
+
 # Charge only mode
 /(vendor|system/vendor)/bin/charge_only_mode             u:object_r:charge_only_exec:s0
 
