@@ -31,6 +31,10 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.hannah u:object_r:hal_light_default_exec:s0
 /sys/devices/soc/leds-atc-20/leds(/.*)?                  u:object_r:sysfs_leds:s0
 
+# Radio
+/data/misc/cutback(/.*)?                                 u:object_r:cutback_ipc_file:s0
+/(vendor|system/vendor)/radio(/.*)?                      u:object_r:radio_data_file:s0
+
 # Rmts
 /sys/kernel/debug/rmt_storage(/.*)?                      u:object_r:debugfs_rmt:s0
 
