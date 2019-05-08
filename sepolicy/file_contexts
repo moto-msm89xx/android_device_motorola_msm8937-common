@@ -5,6 +5,12 @@
 /dev/laser                                               u:object_r:laser_device:s0
 /(vendor|system/vendor)/bin/hw/motorola\.hardware\.camera\.provider@2\.4-service u:object_r:hal_camera_default_exec:s0
 
+# Capsense
+/sys/class/capsense(/.*)?                                u:object_r:sysfs_capsense:s0
+/sys/class/input/input5/capsense_top(/.*)?               u:object_r:sysfs_capsense:s0
+/sys/class/input/input6/capsense_bottom(/.*)?            u:object_r:sysfs_capsense:s0
+/(vendor|system/vendor)/bin/capsense_reset               u:object_r:capsense_reset_exec:s0
+
 # Charge only mode
 /(vendor|system/vendor)/bin/charge_only_mode             u:object_r:charge_only_exec:s0
 
