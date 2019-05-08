@@ -301,12 +301,6 @@ service thermal-com /vendor/bin/thermal-engine --minimode
     user root
     disabled
 
-service adspd /vendor/bin/adspd
-   class main
-   socket adspdsock stream 0660 system audio
-   user audio
-   group audio input diag
-
 # Set RPS Mask for Wifi Hotspot
 on property:sys.wifi.tethering=true
     write /sys/class/net/rmnet_data0/queues/rx-0/rps_cpus ${sys.usb.rps_mask}
@@ -319,9 +313,6 @@ on property:sys.wifi.tethering=true
 on property:sys.wifi.tethering=false
     write /sys/class/net/rmnet_data0/queues/rx-0/rps_cpus ${sys.rmnet_vnd.rps_mask}
     write /sys/module/wlan/parameters/fwpath apdown
-
-on property:tcmd_system.action=*
-    start tcmd_system
 
 # Override to add input group access and use of wake locks
 service sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-service

@@ -110,15 +110,6 @@ service thermal-engine /system/vendor/bin/thermal-engine
 
 on boot
     start rmt_storage
-# access permission for secure touch
-    chmod 0660 /sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch_enable
-    chmod 0440 /sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch
-    chmod 0660 /sys/devices/soc/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch_enable
-    chmod 0440 /sys/devices/soc/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch
-    chown system drmrpc /sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch_enable
-    chown system drmrpc /sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch
-    chown system drmrpc /sys/devices/soc/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch_enable
-    chown system drmrpc /sys/devices/soc/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch
 
  # Add a cpuset for the camera daemon
  # We want all cores for camera
@@ -192,10 +183,6 @@ on property:init.svc.per_mgr=running
 
 on property:sys.shutdown.requested=*
     stop per_proxy
-
-on boot
-    write /sys/devices/soc/78b8000.i2c/i2c-4/4-0020/input/input0/fw_name PR1702898-s3528t_00260005_00380008.img
-    write /sys/devices/soc/78b8000.i2c/i2c-4/4-0020/input/input0/update_fw 1
 
 on property:persist.enable.usb.charging=1
     write /sys/class/power_supply/battery/battery_charging_enabled 1
