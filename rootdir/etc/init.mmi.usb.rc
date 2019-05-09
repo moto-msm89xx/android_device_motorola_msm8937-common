@@ -363,3 +363,9 @@ on property:sys.usb.tethering=true
 
 on property:sys.usb.tethering=false
     write /sys/class/net/rmnet_data0/queues/rx-0/rps_cpus ${sys.rmnet_vnd.rps_mask}
+
+on property:sys.boot_completed=1
+    #Configure mtp rx/tx req len for msm8937
+    write /sys/module/g_android/parameters/mtp_rx_req_len 1048576
+    write /sys/module/g_android/parameters/mtp_tx_req_len 16384
+    write /sys/class/android_usb/android0/f_rndis_qc/rndis_transports " "
