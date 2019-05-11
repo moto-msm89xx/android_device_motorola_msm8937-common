@@ -94,7 +94,7 @@ on property:ro.boot.hardware.sku=XT1924-8
 
 on property:ro.hw.dualsim=true
     setprop ro.radio.imei.sv 6
-    setprop ro.telephony.default_network 11,0
+    setprop ro.telephony.default_network 10,0
 
 on property:ro.hw.dualsim=false
     setprop ro.radio.imei.sv 11
