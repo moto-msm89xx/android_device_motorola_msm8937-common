@@ -27,7 +27,7 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2019-01-01
+    ro.lineage.build.vendor_security_patch=2019-03-01
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="hannah"
