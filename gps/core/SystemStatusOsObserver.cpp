@@ -97,7 +97,6 @@ void SystemStatusOsObserver::subscribe(const list<DataItemId>& l, IDataItemObser
                 list<DataItemId>& l, IDataItemObserver* client, bool requestData) :
                 mParent(parent), mClient(client),
                 mDataItemSet(containerTransfer<list<DataItemId>, unordered_set<DataItemId>>(l)),
-                diItemlist(l),
                 mToRequestData(requestData) {}
 
         void proc() const {
@@ -108,13 +107,16 @@ void SystemStatusOsObserver::subscribe(const list<DataItemId>& l, IDataItemObser
             mParent->sendCachedDataItems(mDataItemSet, mClient);
 
             // Send subscription set to framework
-            if (nullptr != mParent->mContext.mSubscriptionObj) {
+            if (nullptr != mParent->mContext.mSubscriptionObj && !dataItemsToSubscribe.empty()) {
+                LOC_LOGD("Subscribe Request sent to framework for the following");
+                mParent->logMe(dataItemsToSubscribe);
+
                 if (mToRequestData) {
-                    LOC_LOGD("Request Data sent to framework for the following");
-                    mParent->mContext.mSubscriptionObj->requestData(diItemlist, mParent);
-                } else if (!dataItemsToSubscribe.empty()) {
-                    LOC_LOGD("Subscribe Request sent to framework for the following");
-                    mParent->logMe(dataItemsToSubscribe);
+                    mParent->mContext.mSubscriptionObj->requestData(
+                            containerTransfer<unordered_set<DataItemId>, list<DataItemId>>(
+                                    std::move(dataItemsToSubscribe)),
+                            mParent);
+                } else {
                     mParent->mContext.mSubscriptionObj->subscribe(
                             containerTransfer<unordered_set<DataItemId>, list<DataItemId>>(
                                     std::move(dataItemsToSubscribe)),
@@ -125,7 +127,6 @@ void SystemStatusOsObserver::subscribe(const list<DataItemId>& l, IDataItemObser
         mutable SystemStatusOsObserver* mParent;
         IDataItemObserver* mClient;
         const unordered_set<DataItemId> mDataItemSet;
-        const list<DataItemId> diItemlist;
         bool mToRequestData;
     };
 
@@ -447,6 +448,65 @@ void SystemStatusOsObserver::turnOff(DataItemId dit)
     }
 }
 
+#ifdef USE_GLIB
+bool SystemStatusOsObserver::connectBackhaul()
+{
+    bool result = false;
+
+    if (mContext.mFrameworkActionReqObj != NULL) {
+        struct HandleConnectBackhaul : public LocMsg {
+            HandleConnectBackhaul(IFrameworkActionReq* fwkActReq) :
+                    mFwkActionReqObj(fwkActReq) {}
+            virtual ~HandleConnectBackhaul() {}
+            void proc() const {
+                LOC_LOGD("HandleConnectBackhaul");
+                mFwkActionReqObj->connectBackhaul();
+            }
+            IFrameworkActionReq* mFwkActionReqObj;
+        };
+        mContext.mMsgTask->sendMsg(
+                new (nothrow) HandleConnectBackhaul(mContext.mFrameworkActionReqObj));
+        result = true;
+    }
+    else {
+        ++mBackHaulConnectReqCount;
+        LOC_LOGE("Framework action request object is NULL.Caching connect request: %d",
+                        mBackHaulConnectReqCount);
+        result = false;
+    }
+    return result;
+
+}
+
+bool SystemStatusOsObserver::disconnectBackhaul()
+{
+    bool result = false;
+
+    if (mContext.mFrameworkActionReqObj != NULL) {
+        struct HandleDisconnectBackhaul : public LocMsg {
+            HandleDisconnectBackhaul(IFrameworkActionReq* fwkActReq) :
+                    mFwkActionReqObj(fwkActReq) {}
+            virtual ~HandleDisconnectBackhaul() {}
+            void proc() const {
+                LOC_LOGD("HandleDisconnectBackhaul");
+                mFwkActionReqObj->disconnectBackhaul();
+            }
+            IFrameworkActionReq* mFwkActionReqObj;
+        };
+        mContext.mMsgTask->sendMsg(
+                new (nothrow) HandleDisconnectBackhaul(mContext.mFrameworkActionReqObj));
+    }
+    else {
+        if (mBackHaulConnectReqCount > 0) {
+            --mBackHaulConnectReqCount;
+        }
+        LOC_LOGE("Framework action request object is NULL.Caching disconnect request: %d",
+                        mBackHaulConnectReqCount);
+        result = false;
+    }
+    return result;
+}
+#endif
 /******************************************************************************
  Helpers
 ******************************************************************************/
