@@ -846,31 +846,31 @@ vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|fa40de5d5623c082c0269d6060052bf996710470
 vendor/lib64/hw/gatekeeper.msm8953.so:vendor/lib64/hw/gatekeeper.msm8937.so|c7b1fb00d0189513327e93c541c6e9b003bc76e9
 
-# GPS - from deen_sprout - OPKS28.63-18-3
-vendor/bin/hw/vendor.qti.gnss@1.0-service|bdf23fe2af07c2afb74721023431446104fd828d
-vendor/bin/loc_launcher|133d41049a88784e7fe14b8c93a284b09054b2de
-vendor/bin/lowi-server|1734353992c7caf1dfb87671b4480335d7a33dce
-vendor/bin/xtra-daemon|6e86b607c49571a79a66f6ebcc2229f2153e8874
+# GPS - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
+vendor/bin/hw/vendor.qti.gnss@1.0-service|049201d8e22064b87eb52df208d8cda7066d140a
+vendor/bin/loc_launcher|23a4470552c0c418662a7d91fa7f593bee767459
+vendor/bin/lowi-server|f83f6ab9b978c618c87d2b5c66854533d0e3a66f
+vendor/bin/xtra-daemon|f4fdd2d7fc56472066b05899340eb19ff67d54b4
 vendor/etc/init/vendor.qti.gnss@1.0-service.rc|98655e2adc2158a052b0ecf06b065535f0a2aac7
-vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so|87811e50f7f20a85c270697f27e8c4cc5ddbf35b
-vendor/lib64/libdataitems.so|04d077b07ee3dac11623dacc925955e3ba72b333
-vendor/lib64/libDRPlugin.so|d4f1127ed8f98011fe9687d40e8942e5738f4273
-vendor/lib64/libdrplugin_client.so|312ef07b275bdbfb923cca18e961edf146736616
-vendor/lib64/libevent_observer.so|b8cbae36c236facd6fa11af7050cb772b1c9eb2c
-vendor/lib64/libflp.so|3ccecdd103f0ff8689e22b6f0105ba1b6a1c2b27
-vendor/lib64/libgeofence.so|b666ad9429e910f3644e73066a2fd2fd5bc7df1e
-vendor/lib64/libizat_client_api.so|896931c51c7fa8a9f626c971361679823e635d77
-vendor/lib64/libizat_core.so|49a29753966951814cb94b5ca0b899a3bfb74297
-vendor/lib64/liblbs_core.so|0d554cb5b71e41b9591d45a4bd1b162979f7e578
-vendor/lib64/libloc_api_v02.so|e3b78b3c85d9c891aabef48216b9d32c3f499b05
-vendor/lib64/libloc_ds_api.so|d16b00d021d1818e65af1ebbb13751a9dc29dcf4
-vendor/lib64/liblocationservice.so|cf307ab7b3ee7303e61ddb7251465021228a5756
-vendor/lib64/liblocationservice_glue.so|ab3d99fef2d0ced076b6c72695c524381bbed1b6
-vendor/lib64/liblowi_client.so|89305e655cbdbe53dde3afc804b5dddb5fa9ce6e
-vendor/lib64/libulp2.so|e414500828f112e993456dea19adcf02e87431bf
-vendor/lib64/libxtadapter.so|9a8fbd106994aaaf380be883fa2ef37d04e20401
-vendor/lib64/libxtwifi_ulp_adaptor.so|078124cc018badf89c1f5588e9102e9f7c034da2
-vendor/lib64/vendor.qti.gnss@1.0_vendor.so|6d0f4247dd7601b3cfccf4e24ab0182dcc84edfa
+vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so|86406bdc49ee29ffc49f0c92be4793071874f3bc
+vendor/lib64/libdataitems.so|2ae06cb5a687fdf2c5a533a17d9529a1984b2803
+vendor/lib64/libDRPlugin.so|d60dffb3751b5095ead2747610c6d022d052a560
+vendor/lib64/libdrplugin_client.so|ba6de3e6a872ec53d7b4e11bd5b9371428a26909
+vendor/lib64/libevent_observer.so|9f51c7267f4396c5ffedfce0dd5e1007041aeba8
+vendor/lib64/libflp.so|24f95f8b568c393d8b51d7376a62b8e9151f9b9d
+vendor/lib64/libgeofence.so|c7250877898a17f4bfdc244f613dd1e1a9397cb6
+vendor/lib64/libizat_client_api.so|853e4ccd91718edac986f755fc9800603d3a284a
+vendor/lib64/libizat_core.so|381f72f4c0030f88e5acaf6a3498d9036fb30215
+vendor/lib64/liblbs_core.so|2dcf1cfffcc3db13b06c90feec6d81a7a8f7d428
+vendor/lib64/libloc_api_v02.so|e3dafec13d58ad2c1d7dfe5aad14371d5f47e295
+vendor/lib64/libloc_ds_api.so|158c9d75eb01b7ae55877ee9e9c9046ad3cafea8
+vendor/lib64/liblocationservice.so|f9e6a94c260abafa857d2bcc96f23adef56527e7
+vendor/lib64/liblocationservice_glue.so|d423896f97fa4a1c3f9fecda11df97baf3fa0969
+vendor/lib64/liblowi_client.so|34f65f866c950733c72d5a4f0de00580d2ac3cf5
+vendor/lib64/libulp2.so|275cb2f94d8b59fe8bfd8a28a5c1c39994c4569c
+vendor/lib64/libxtadapter.so|d404e8c5c6e14a556926ba772ca99aa51cbd6a36
+vendor/lib64/libxtwifi_ulp_adaptor.so|58b20fbdbb500add11784acce0808c7198c96c34
+vendor/lib64/vendor.qti.gnss@1.0.so|90b465adc4542f16fbdd935d0592df73d778909b
 
 # Graphics (EGL) - from riva - OPM1.171019.026
 vendor/lib/egl/eglSubDriverAndroid.so|e97547fb0cbb4c371870d926121e43a917e0c0fd
