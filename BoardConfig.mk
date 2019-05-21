@@ -57,8 +57,8 @@ USE_CUSTOM_AUDIO_POLICY := 1
 
 # Bionic
 TARGET_LD_SHIM_LIBS := \
-    /vendor/lib/libmdmcutback.so|libqsap_shim.so \
-    /vendor/lib/libsensorndkbridge.so|libshim_ril.so
+    /vendor/lib64/libmdmcutback.so|libqsap_shim.so \
+    /vendor/lib64/libsensorndkbridge.so|libshim_ril.so
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
