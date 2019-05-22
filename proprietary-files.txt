@@ -1146,7 +1146,7 @@ vendor/radio/qcril_database/qcril.db|3d351b00fce885b4c67921f1042487838514ce17
 # MOTO RIL - from deen_sprout - OPKS28.63-18-3
 vendor/bin/qmi_motext_hook|2b3b15f5e08ca48084c129e68d686877206dfc07
 vendor/lib64/libmotext_inf.so|4a7f061aee1ddd6af3da28491813bff16bb66141
-vendor/lib64/libmdmcutback.so|db04ff5ecdf484f0fb387f9a3d7184ad97d43051
+vendor/lib64/libmdmcutback.so|ffae4aa21ae3b1d1842f6b57429f689e13e2071b
 vendor/lib64/libqmimotext.so|abf020e4d6f99758014cba06ea5df78198f475b2
 
 # Postprocessing - from deen_sprout - OPKS28.63-18-3
