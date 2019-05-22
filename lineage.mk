@@ -19,7 +19,6 @@ PRODUCT_BRAND := motorola
 PRODUCT_MODEL := moto e5 plus
 PRODUCT_MANUFACTURER := motorola
 
-BUILD_FINGERPRINT := motorola/hannah_t/hannah:8.0.0/OCP27.91-150-8/2:user/release-keys
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.product.model \
@@ -30,7 +29,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.lineage.build.vendor_security_patch=2019-03-01
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="hannah_t-user 8.0.0 OCPS27.91-150-8 2 release-keys" \
     PRODUCT_NAME="hannah"
+
+BUILD_FINGERPRINT := motorola/hannah_t/hannah:8.0.0/OCP27.91-150-8/2:user/release-keys
 
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
