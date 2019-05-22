@@ -1087,13 +1087,12 @@ vendor/lib64/libqmiservices.so|27b4fdd45857bd83631c4c06f10cd95a811fe9a2
 vendor/lib64/libsmemlog.so|6be9b6bfa31866dd3553203730f2b6af6df1a13f
 
 # RIL - from deen_sprout - OPKS28.63-18-3
--app/datastatusnotification/datastatusnotification.apk|45f06164472952eefa61b2255a04e728effcbc14
 -app/QtiTelephonyService/QtiTelephonyService.apk|c8df5c6c43a4433987d594d75b351770913696fd
 etc/permissions/qcrilhook.xml|9fc58a3d54d20ac1d53bab14608815121aefbce5
 etc/permissions/telephonyservice.xml|b297c8a27443570377d78586b00198839ce326bb
--framework/QtiTelephonyServicelibrary.jar|18539cd4171a401ad75e7b1c5ff4be1b5096bf1b
+-framework/QtiTelephonyServicelibrary.jar|bd4638a0aaa98f2e3762b93b9f88fd9712faed68
 -framework/qcrilhook.jar|7a552194911dfa7057f3a2c4e17f05539ea23390
--framework/qti-telephony-common.jar|0093f93207fcc84b8358076c856ed158e4665cd5
+-framework/qti-telephony-common.jar|7f9b73e99b37339a56f8e74ad5093f4913a1ca32
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|1ec4e008fdcfcaeb06211206fb0d76931ac8a784
 vendor/bin/ATFWD-daemon|4b5912bcf66465bc41967108cb9dd9067a427f21
 vendor/bin/netmgrd|25bd0e36eee950d461c853640b7c120db10c86cb
