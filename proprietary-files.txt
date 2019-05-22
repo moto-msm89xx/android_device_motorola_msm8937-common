@@ -955,32 +955,45 @@ vendor/firmware/a530v3_gpmu.fw2|0a2f6f450231673d75ba39e5d28776db3becf810
 vendor/firmware/a530v3_seq.fw2|8963a53acc689725dee4b22881a4dd4b80e5def8
 vendor/firmware/a540_gpmu.fw2|3530f10b4825a3b08c79e0bcfaf6471ec8422f24
 
-# IMS - from deen_sprout - OPKS28.63-18-3
--app/ims/ims.apk|3afb2098dbb7c273b06ccf3be832608970f6e49e
-lib/lib-imscamera.so|9710ab778f23fc68b50ce36f7b8f6b389bf0a0bc
-lib/lib-imsvideocodec.so|bf8a1d30221b09d14f8955ee7320008403e7481b
+# IMS - from tissot - OPM1.171019.026
+-app/ims/ims.apk|d4acb083b6eba05a7779497206545338f8612350
+-app/imssettings/imssettings.apk|77f96057c2cd62be59b8f7ccf84dfe071249403d
+etc/permissions/qti-vzw-ims-internal.xml|3e41b645dd4ad8bad6775c103a34bfd7a507a4f7
+lib/com.qualcomm.qti.imscmservice@1.0.so|22b7b530065f73cf7c97f4add71985e01fb72527
+lib/lib-imscamera.so|a3c58a8faf0a46223999125818009b13ec48b068
+lib/lib-imsvideocodec.so|ac3bf51aee380d9e260196b0135c95012203a3ff
 lib/lib-imsvtextutils.so|94214744af8b12cc26747624f8c0255c5be29364
 lib/lib-imsvtutils.so|08ba3c02215773c3084b86df93b38af079123edc
-lib/libimscamera_jni.so|c2736a02ac1ee6ab6c4ecd62cf04e22d196b33eb
-lib/libimsmedia_jni.so|241ace463d74b30cd7c3456b385cabf64c97d211
+lib/libdiag_system.so|50f783c3c25ba42e3be4c4263be08425e0cddf39
+lib/libimscamera_jni.so|53aa6d70d0ea47b212498418db5b902d47367815
+lib/libimsmedia_jni.so|8eaf9556144e5e2e2f35ad42b9471e98d0550de2
 lib/librcc.so|21b54802e0da4283d666278ebe3c8f1e3f3b819d
 lib/vendor.qti.imsrtpservice@1.0.so|d5abd00d3842eeecc4df25d8eee0497a3a1fa703
-lib64/lib-imscamera.so|5dad8b26cdfcd49509b54450848d828d48b312ea
-lib64/lib-imsvideocodec.so|a80f5dac7f2c766a6a10f4b35674948490aa9ec4
-lib64/lib-imsvt.so|a734db0b19438467603a7d536ea2c94f655b7598
+lib64/com.qualcomm.qti.imscmservice@1.0.so|fcde6ed7fd6056ea88864078e63ee984c324b75a
+lib64/lib-imscamera.so|dc8d5f11e64121b0a91adf49e725a0ff0762bbb9
+lib64/lib-imsvideocodec.so|f1d41fedbdc1f5f2d7e2c3628218482b2ef438d8
+lib64/lib-imsvt.so|9a72a53fcc9b5aa8257aca8e41deb824cc6842c1
 lib64/lib-imsvtextutils.so|4cc52cdabef79ad0ed640696569ec5c335d7c884
 lib64/lib-imsvtutils.so|60c8c22e23b84b080d039fc8e5da7c1b8379ccbc
+lib64/libdiag_system.so|1cd5bf3ef956bdeb6bc4c29ad25e8cc2b266be12
 lib64/libimscamera_jni.so|3c80458602e2e360eb549c9abe89b680d2446fd1
-lib64/libimsmedia_jni.so|1ef830088fb8c990098b16f6e6f6bdbac04d984e
+lib64/libimsmedia_jni.so|93c34f3048d55f89a85274cb2d92e99df440b641
 lib64/librcc.so|2168f8dba8ed6c2e44325c19fb77e351bff20b57
 lib64/vendor.qti.imsrtpservice@1.0.so|4721974cb4f0ea45f4fc9abaaba24f43730bc7cd
 vendor/bin/ims_rtp_daemon|989513b20e83614e78043c6ca779377fa93e406e
 vendor/bin/imsdatadaemon|e9b2bf698ccec8ac39fd0e778f5e2491b9940355
 vendor/bin/imsqmidaemon|e679097f98ab64fb58744ab47d500697fec19ff8
+vendor/bin/imsrcsd|59c920ea09db788acf961fba405312e87aa1d23b
+vendor/framework/qti-vzw-ims-internal.jar|749c9734b9197c438aa52e42814bbc2a0f87fecf
+vendor/lib/com.qualcomm.qti.imscmservice@1.0_vendor.so|98ef8bc671b55ae966e53228593661694f4fb564
+vendor/lib/lib-imscmservice.so|d23df495636f6836a4f51eff1313abc58b75f93f
+vendor/lib/lib-uceservice.so|0ef549ba2e55e6f14e8c4bd4341382e05f2a92b6
 vendor/lib/vendor.qti.imsrtpservice@1.0-service-Impl.so|1ae456585ce0bc392706019c021cf8d1a2ea8a0a
 vendor/lib/vendor.qti.imsrtpservice@1.0_vendor.so|f7df39b1e3fcab12b5ac59903539d6363b0570a4
+vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so|8fff963a5675bd2a549bf92d143274c8149075e9
 vendor/lib64/lib-dplmedia.so|10a76e65644294e89037311e26765278c4fea8db
 vendor/lib64/lib-imsSDP.so|4f91bd7a972d8909042b3f197d4961cb987b34a4
+vendor/lib64/lib-imscmservice.so|f53aa77cb77957bff2933b76c6d914548c10381a
 vendor/lib64/lib-imsdpl.so|30e4dc97542d8d44ac880318fab12533a55f0b04
 vendor/lib64/lib-imsqimf.so|f15406ae3ac87e3e5978750a2278844f3aa68821
 vendor/lib64/lib-imsxml.so|90ebd0cd0210e9442eb693a1649ddeec7ece6379
@@ -988,6 +1001,8 @@ vendor/lib64/lib-rtpcommon.so|706a75ab8b7f61fd6d4b9f4b2c14295e0ec8f43a
 vendor/lib64/lib-rtpcore.so|67e5d45b00135c11ac3db2a0693541f41541996d
 vendor/lib64/lib-rtpdaemoninterface.so|da60b0ea74e633d1dbb940a6d678836757cf7eb7
 vendor/lib64/lib-rtpsl.so|5ac80ed98a92200e10a3dbd144b9c855564adc5f
+vendor/lib64/lib-siputility.so|9d8c89c6ef644a6e0862cfb3971863e94a5114ea
+vendor/lib64/lib-uceservice.so|58ea9dc3b9fcce16023c1923dc8519fa4a8cb6be
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so|7d3a9f7741ec8ea7063e4cbd0bb2881feb89d945
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so|316b987040238deb27017b1b4013f62dcc9cf195
 
@@ -1051,8 +1066,6 @@ vendor/lib64/libperipheral_client.so|5acda41dcc3e85a90220a7cd6eb1ed37f9f67ae1
 # QMI - from deen_sprout - OPKS28.63-18-3
 etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
 vendor/bin/irsc_util|329225016759a7435756ebc219ded52e35f26536
-lib/libdiag_system.so|842747c7389aa8c66be7aef8e0df1f187eafb41d
-lib64/libdiag_system.so|fa5157c9706030a8dbaae86459ce2cc72a78e861
 vendor/lib/libdiag.so|0a429b036bdd17641f0a6ed821f096ce55d5f034
 vendor/lib/libdsutils.so|bfaca3cb63611490f0492008ab39041ff38e9b87
 vendor/lib/libdsi_netctrl.so|85a9d9dc6f860925cdbbfe7aeb3ca6f656b8bf73
