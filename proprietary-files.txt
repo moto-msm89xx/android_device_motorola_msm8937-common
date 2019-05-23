@@ -82,6 +82,7 @@ vendor/lib/libflash_aw3641.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libflash_sky81298.so
 vendor/lib/libflash_wd3100.so
+vendor/lib/libgralloc1.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
@@ -896,37 +897,36 @@ vendor/lib64/egl/libRBGLESv2_adreno.so|88951c34481d835e644d3fca5290d45a32cf4d39
 vendor/lib64/egl/libq3dtools_adreno.so|3744681a9056755540803a0429c5fb41d39de9ec
 vendor/lib64/egl/libq3dtools_esx.so|5445798c7d08e4cd2ce79f4b8323504e1d321a73
 
-# Graphics (Adreno) - from deen_sprout - OPKS28.63-18-3
-vendor/lib/libadreno_utils.so|8b9a1e376af9843d6462fcd1628261a49bebdd06
+# Graphics (Adreno) - from bardock-pro - OPM1.171019.026
+vendor/lib/libadreno_utils.so|5f5be20be8c35428d76769ad6ed138611fb90b8c
 vendor/lib/libbccQTI.so|7bfe04f475cdd11cfade9672fabbaff9cad9de20
-vendor/lib/libC2D2.so|b8d66dbddd687454d2dc545b3dcb487e2ede221a
-vendor/lib/libc2d30_bltlib.so|5458491b7222ca5da745a05438012227e198bd57
+vendor/lib/libC2D2.so|c4adece8dc2bf75f1aa0c2368b739d341851a1de
+vendor/lib/libc2d30_bltlib.so|9be189906fcd8f35e7c3fdc7ab547afa581d31ea
 vendor/lib/libc2d30-a3xx.so|1496650f2c94f5b290a62dea91a4d854811f6c2e
-vendor/lib/libc2d30-a5xx.so|21ed4d64146083542ebe3cdd9061ed7fab80f007
-vendor/lib/libCB.so|371c6262da4035cb1efdfdec474c82de3fb4a362
-vendor/lib/libgsl.so|8779d078b6a2f559fbe97e479eed476bdd31457b
-vendor/lib/libgralloc1.so|776c725a5f39a803be7ec30ed6ba5d4ae5315e66
-vendor/lib/libllvm-glnext.so|9038f62f3005d2fc5ae85ac0a339068e42d767ec
-vendor/lib/libllvm-qcom.so|2a02f67e5675449d3ff264d7cd1e93ddada5ac04
-vendor/lib/libllvm-qgl.so|46572d1024d4f09272d43b3d35fdc2f4f2955d16
+vendor/lib/libc2d30-a5xx.so|0672672f3fb95eab090ea57553592991c13bc971
+vendor/lib/libCB.so|6ca3cfe869b742a4f18da74fe89bf7c3afc8e202
+vendor/lib/libgsl.so|60df05450231002c281e3d9327a23eed15667ecf
+vendor/lib/libllvm-glnext.so|b9932c16410d953f83b2669d0803c9698bc7e734
+vendor/lib/libllvm-qcom.so|91d082fa47a5250d1750919ed4249b6420f8fbdc
+vendor/lib/libllvm-qgl.so|a0ad235c119cc3bffee3d9b4ab286de7a2ca016f
 vendor/lib/libOpenCL.so|8d699bb6d1245596182b89d5f774fde09372fe61
-vendor/lib/librs_adreno_sha1.so|bd228e415c50c27bddad2eb98dfbab7a7bc1eb9b
-vendor/lib/librs_adreno.so|3cdff80b7ddfbd3fa148727c12c1b08cae4400ce
+vendor/lib/librs_adreno_sha1.so|99fc07517cc53da463d7fa7c0ba3fbe5b4f6489d
+vendor/lib/librs_adreno.so|0df4614181bc30db84ec464e6ae1da60ac7d8763
 vendor/lib/libRSDriver_adreno.so|c0551aea7d32e21efde69a6a43b8b45bf69e0528
-vendor/lib64/libadreno_utils.so|03287f41aa8302918c3bd480f28cbfbf6125b3b9
+vendor/lib64/libadreno_utils.so|ee975322c46f7ca78c34c96c33664218f2699857
 vendor/lib64/libbccQTI.so|096c6ed5276b37917219dd88019f4cb114de68e2
-vendor/lib64/libC2D2.so|4e768b4a6c9889e61e0e92771701c9f338efaf03
-vendor/lib64/libc2d30_bltlib.so|d4a6778563bc5f2372b934531fba2f438c512fbb
+vendor/lib64/libC2D2.so|c874c737e986173a443497fe9ec383ae35b1dea0
+vendor/lib64/libc2d30_bltlib.so|ebb3a38ae89e57346049b931af00fbb0679f815c
 vendor/lib64/libc2d30-a3xx.so|0d1907762d34b4e7b7a20566753a60a17d1a8de4
-vendor/lib64/libc2d30-a5xx.so|6a3d1c5cf99ab8a8de14efb9bad565f99d272cb0
-vendor/lib64/libCB.so|cd81a5209757885bc8b0f32b0e1d6a960a25f93c
-vendor/lib64/libgsl.so|2dbb19cabda19eacb6c1812f0ec5db29777b71fa
-vendor/lib64/libllvm-glnext.so|22b2ad34e562ea07d44a7e6ccf6a326fd3c982ee
-vendor/lib64/libllvm-qcom.so|87f07d2e4ca012888af4534fc9dc72869d22123a
-vendor/lib64/libllvm-qgl.so|2869309efb9b185f73f5f53ad8643c3526c20fab
+vendor/lib64/libc2d30-a5xx.so|9924c8e2f23007e4ba6a7febaec3179b6dc2ec41
+vendor/lib64/libCB.so|9afc316537bd1ed5632ab24b88d7be8d97e6b298
+vendor/lib64/libgsl.so|ff95072fa3874699ddf78def6fd87fda8713faae
+vendor/lib64/libllvm-glnext.so|0e7966e0ebdd67b3ab4f08988ea9d4c86e420843
+vendor/lib64/libllvm-qcom.so|9c0be7c1e411d64246bed21d3fbe5788de589876
+vendor/lib64/libllvm-qgl.so|01ced139ad869422d9ddd844e650aa0a46f26c67
 vendor/lib64/libOpenCL.so|f040a46da08ecb13fb2b062aa9d28c44c0d7c16b
-vendor/lib64/librs_adreno_sha1.so|91773eaea91b44de739c57f21a8f322065a8deca
-vendor/lib64/librs_adreno.so|d43c5ee0526452e64e5b80e7ddef71625eda90d5
+vendor/lib64/librs_adreno_sha1.so|9f63632a043f2b82777d000dbef66e0d269995e5
+vendor/lib64/librs_adreno.so|ce5e17ec41d6c8ca61aff22f150a783d5d35aff6
 vendor/lib64/libRSDriver_adreno.so|bfb3bc3396f3b94dd3ba4a8d7fa0b6e9c100daae
 
 # Graphics - (DRM) - from deen_sprout - OPKS28.63-18-3
