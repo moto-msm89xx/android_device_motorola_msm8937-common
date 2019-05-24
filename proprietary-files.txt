@@ -928,6 +928,7 @@ vendor/lib64/libOpenCL.so|f040a46da08ecb13fb2b062aa9d28c44c0d7c16b
 vendor/lib64/librs_adreno_sha1.so|9f63632a043f2b82777d000dbef66e0d269995e5
 vendor/lib64/librs_adreno.so|ce5e17ec41d6c8ca61aff22f150a783d5d35aff6
 vendor/lib64/libRSDriver_adreno.so|bfb3bc3396f3b94dd3ba4a8d7fa0b6e9c100daae
+vendor/lib64/libsc-a3xx.so|b5adb05d08af30107dcb7cad11abf447322235c8
 
 # Graphics - (DRM) - from deen_sprout - OPKS28.63-18-3
 vendor/lib/libsdedrm.so|e8b2700c95c94e79412049536c84e2d0b4ce58bd
