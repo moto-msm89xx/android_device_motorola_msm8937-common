@@ -71,6 +71,11 @@ on property:ro.boot.hardware.sku=XT1924-7
     setprop dalvik.vm.dex2oat-threads 6
     setprop persist.lte.pco_supported true
     setprop persist.vendor.audio.fluence.speaker true
+    setprop persist.radio.data_con_rprt 1
+    setprop persist.radio.customer_mbns tmo_usa_ims_default.mbn
+    setprop persist.vendor.ims.playout_delay 10
+    setprop persist.vendor.ims.cam_sensor_delay 20
+    setprop persist.vendor.ims.display_delay 40
     setprop persist.vendor.radio.snapshot_timer 22
     setprop persist.vendor.radio.snapshot_enabled 1
     setprop persist.eab.supported 1
