@@ -758,42 +758,47 @@ vendor/lib/libmmcamera_s5k4h8.so
 # Charger - from deen_sprout - OPKS28.63-18-3
 vendor/bin/charge_only_mode|4c1e451b4356575e595c9f8dd49e93373d9e7990
 
-# CNE - from deen_sprout - OPKS28.63-18-3
+# CNE - from tissot - OPM1.171019.026
+etc/cne/SwimConfig.xml|68dedcca1c2ac18cf81fdee1854de16a3a60dd02
+etc/cne/andsfCne.xml|f81a69eac5dd16bbb195a0fcf1211a51cc014553
 etc/permissions/cneapiclient.xml|15831adf0e80243042b90c734eea0a68eb8ae9c9
 etc/permissions/com.quicinc.cne.xml|e99e631d8b06ba4680529e9e4004d8d05baf6904
 framework/cneapiclient.jar|1f21d2c86b1899b5aaff96ec6ce41de0ed38ebf0
+framework/com.quicinc.cne.api-V1.0-java.jar|f11667bed94166ad2a050c1e1b542d06699ab3bc
 framework/com.quicinc.cne.jar|4dd4af571ed70eacc11110801099c2bb2e68046b
--priv-app/CNEService/CNEService.apk|8a700acea2c802b79e0ca67a563253bf8a4c6202
+-priv-app/CNEService/CNEService.apk|e81d3a972062797947b9a7b8780ce7b2eff45060
 vendor/bin/cnd|ba85a9eb7ccc539f19868619ad37628aef3f9cae
-vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|d818df2ae38cf3b2aa9acc34c4531d975db65f2f
-vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|508ddce99a344f1c361c88a9af21bd47812ede15
-vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml|6a3fa36eb3cde91d9ad6cada5bb4ceb190e8c068
-vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml|d4a1700029a497fdd46d74f5bd84c6d5c43dd690
-vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml|69182d6df59a4c532104fa23c490dfcd09cd388d
-vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml|38e8e7e8ea49ebb6e131b471a56968d1b1ac9826
-vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml|fc1c75b9b989942fa7faba3f35a5f4f918c3f3c4
-vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml|e91523c771fae40f58c167677f3d6cc3be137a99
-vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml|a31debd99f472ca344bf014d6723ca5daca7180b
-vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml|2442eba680cf08406f7d50f3414a5bc98e9a71ed
-vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml|1a2bdb028a183cdcbe10a669a5db9ad1aa2d610d
-vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml|df235701758a07f9163c817580f5303762429738
-vendor/etc/cne/wqeclient/ROW/ROW_profile7.xml|012700dba3707cbec02e9c436f812999d2e6473f
+vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|578f3f8f56059bfdbef926bcc68d01c15e06951f
+vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|1fb42c672a12b6660bdce3ea94e0c43719dd9de8
+vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml|f88e13f1dd7b82388c90358f71813026370c9ed8
+vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml|fb08e04f57797c5684bf734f7ce4bb4968859b18
+vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml|eb726ad1a42b9b78b9ee3b821fc108611bc9eeac
+vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml|be97b46b0d07ee2f6ebcc677d8099ed2140d5d85
+vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml|e7ca213d0998cb3a6a603ad3eca7bda69830ff55
+vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml|169a5209000e357a1a3183e8e5bfdf6fd07c2787
+vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml|4be4060e8ac2d9fcea490feec7938cadcff46e1f
+vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml|f88e13f1dd7b82388c90358f71813026370c9ed8
+vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml|96101f6b01436a02572c67a469ff67ccfb738874
+vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml|cef14ff8a160c7ad719b85d024a4b3301c3638d0
+vendor/etc/cne/wqeclient/ROW/ROW_profile7.xml|8d6773a4c418d0dcc4dc9096017d2681c7a1defe
 vendor/etc/cne/wqeclient/ROW/ROW_profile15.xml|0130dfd8326ee710bf4e15718ede87c49a85b763
 vendor/etc/cne/wqeclient/ROW/ROW_profile16.xml|e05b935d7ccf48d306b71c719b2e4df83187d9c0
+vendor/etc/cne/wqeclient/ROW/ROW_profile17.xml|f1b33204799268eda78dd8314f26abf2e37431e2
 vendor/etc/cne/wqeclient/ROW/ROW_profile18.xml|19db16f62dabb806a62f192858a9d52b5bc2a064
 vendor/etc/cne/wqeclient/ROW/ROW_profile19.xml|1fcc57b1fa4dbbc7d250e8dd92acf1527d447eb3
 vendor/etc/cne/wqeclient/ROW/ROW_profile20.xml|7be0614cf0116c39b736c58fe5eca36838aeb3db
 vendor/etc/cne/wqeclient/ROW/ROW_profile21.xml|cc62517e6c37e12ee1ebebbb27f9c22878749be3
 vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml|b87542b9284efe4c2bd0ae868bb9a765c2c3dbc5
-vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml|65386fc782f91036762d640bb7c7d78f32911e30
-vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml|ca0bb5b41b6f8cb1c16a05470b093f8b00ffa258
-vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml|fee0c9a598f8ab35e640a05ebc00bccd221bb739
-vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml|5ec5f8df861a397a1e81d85022666cbc1037eb46
-vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml|8d5f3a91d77b91f7df303e6da2ab5dfe8adce572
-vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml|681a4c3efda1cf3d8ab6143eb11d830619d4023c
+vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml|c89d3c062790b442cbe941cafc641a4e322f2d59
+vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml|ba14a9df975cf872ed0cbe28bee8fac63cd848d4
+vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml|9b123d81c9b8991499cda33b0706810e0c8fb974
+vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml|ff91feb5060a6df07e3e4d9bc99ae58bccad7649
+vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml|f76c894f3c6d5b6ed35113a088dc3174c900501b
+vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml|14d136e7fcc682311757d3edc0b9d3eaeba11815
 vendor/lib64/com.quicinc.cne.api@1.0.so|bd7b0f309dbad959d67fca284f439bc7bc6353b8
 vendor/lib64/com.quicinc.cne.constants@1.0.so|8a5303d4fea47bd9c7bc9dc390c9b8906f1fe8ea
 vendor/lib64/com.quicinc.cne.constants@2.0.so|220c2f66e102e487f95767c7da13824d4dc30c33
+vendor/lib64/com.quicinc.cne.server@1.0.so|aefd71b1cc4598bfac85e476ab5c4113dc8f4f5b
 vendor/lib64/com.quicinc.cne.server@2.0.so|bfb17d068704535c45098ab84b87c4f71460a3f1
 vendor/lib64/libcne.so|e20f710c788085092f27b4d09aa51214ed536c7d
 vendor/lib64/libcneapiclient.so|c0196496ed68bd7334c733660cfa4bad68dee2e2
@@ -802,7 +807,7 @@ vendor/lib64/libcneqmiutils.so|4ca2efde2bcdd4586928c018113727c570ad6e7e
 vendor/lib64/libwms.so|0908c9368503e364c858f61ee51a95591f4240c4
 vendor/lib64/libwqe.so|d8c310ba670d82577f089200a992335df7cb236a
 vendor/lib64/libxml.so|470cacf4ad8f23040286be15a08f1e6ccbd35f22
-vendor/lib64/vendor.qti.hardware.data.latency@1.0_vendor.so|746082cf9be2bbb276bfe71b56af43dafd361de0
+vendor/lib64/vendor.qti.hardware.data.latency@1.0_vendor.so|9f0ccc560f84682b08e170e9f7bef7896218110f
 
 # DRM and SEE - from deen_sprout - OPKS28.63-18-3
 vendor/bin/qseecomd|81c8fc842aab5a7c5fc24d01de58180cbb300a74
@@ -975,7 +980,11 @@ vendor/firmware/a540_gpmu.fw2|3530f10b4825a3b08c79e0bcfaf6471ec8422f24
 # IMS - from tissot - OPM1.171019.026
 -app/ims/ims.apk|d4acb083b6eba05a7779497206545338f8612350
 -app/imssettings/imssettings.apk|77f96057c2cd62be59b8f7ccf84dfe071249403d
+etc/permissions/com.qualcomm.qti.imscmservice.xml|db25ef24f1937366d58a53b4f4b8923bc9e98d2d
+etc/permissions/com.qualcomm.qti.imscmservice_1_1.xml|a8eed12fa47413c7c391721e2d6bf3ffa87844f6
 etc/permissions/qti-vzw-ims-internal.xml|3e41b645dd4ad8bad6775c103a34bfd7a507a4f7
+framework/com.qualcomm.qti.imscmservice@1.0-java.jar|548d177bcdad76c39a58a251ef5fe5f277bfdebb
+framework/com.qualcomm.qti.imscmservice@1.1-java.jar|ff694c108c930bfc5faea8bc83a17af89b559e79
 lib/com.qualcomm.qti.imscmservice@1.0.so|22b7b530065f73cf7c97f4add71985e01fb72527
 lib/lib-imscamera.so|a3c58a8faf0a46223999125818009b13ec48b068
 lib/lib-imsvideocodec.so|ac3bf51aee380d9e260196b0135c95012203a3ff
