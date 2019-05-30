@@ -8,6 +8,16 @@ on init
     setprop ro.hw.fps true
     setprop ro.hw.imager 12MP
 
+    # Dalvik properties
+on property:ro.opengles.version=196608
+    setprop dalvik.vm.heapsize 512m
+    setprop dalvik.vm.heapminfree 2m
+
+on property:ro.opengles.version=196610
+    setprop dalvik.vm.heapsize 384m
+    setprop dalvik.vm.heapminfree 512k
+
+    # Variant properties
 on property:ro.boot.hardware.sku=XT1924-1
     setprop ro.opengles.version 196608
     setprop ro.product.model XT1924-1
