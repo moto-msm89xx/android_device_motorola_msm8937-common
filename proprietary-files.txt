@@ -56,15 +56,15 @@ vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so|d49d27f9a9003434ca673d0e02f2fb2b
 vendor/lib64/libaptXHD_encoder.so|76eb03998f9b4f98029a4408076685892726e45a
 vendor/lib64/libaptX_encoder.so|a407a92a6eb467886c3970629ebcab4db95b7600
 
-# Motorola Camera - from montana - OPP28.65-37-2
-lib/motorola.hardware.camera.device@1.0.so|c4a22ae79c855d5e9777de19ced3db7186a21018
-lib/motorola.hardware.camera.provider@2.4.so|40f47d266a2f31db23efc4465727797a11f2774c
-vendor/lib/motcamera.device@1.0-impl.so|6f531814bf2cef830421c83106c7f10244792056
-vendor/bin/hw/motorola.hardware.camera.provider@2.4-service|939fc109f772bda54a9e66fa38e55ccad2a52ae3
-vendor/etc/init/motorola.hardware.camera.provider@2.4-service_delayed.rc|f0e7e99b3a449f2fd033a5bcb5899d0376763ea2
-vendor/lib/hw/motorola.hardware.camera.provider@2.4-impl.so|e4f517aabe706e5ac359f1d9b4ade9e6d890d200
-vendor/lib/motorola.hardware.camera.device@1.0_vendor.so|da880cfd8b3b5237901e954e3ee96768be5865b7
-vendor/lib/motorola.hardware.camera.provider@2.4_vendor.so|1c2aceb0534501d6ce7d6ce328e430426760ecb1
+# Motorola Camera - from aljeter - PPP29.55-25
+lib/motorola.hardware.camera.device@1.0.so|51afafb043bb3fce3509938103e6e6f6f792c7bb
+lib/motorola.hardware.camera.provider@2.4.so|d8b540c4690b8d9253dc6a49e1189abf67017a2c
+vendor/lib/motcamera.device@1.0-impl.so|1b37e7763ddab908d2e33691bf34bc7013b99b4b
+vendor/bin/hw/motorola.hardware.camera.provider@2.4-service|01bd4b9c30dd944ad8572b46a92db23f97fc0c25
+vendor/etc/init/motorola.hardware.camera.provider@2.4-service_delayed.rc|200e7e3e8f2d7011bcc8b9ba3be22099b732e665
+vendor/lib/hw/motorola.hardware.camera.provider@2.4-impl.so|a1ea1616ce72af2885b15fb9e69da8510e20aef8
+vendor/lib/motorola.hardware.camera.device@1.0_vendor.so|f4af15944d8dfc8169edc7d579610ab3b1f88c22
+vendor/lib/motorola.hardware.camera.provider@2.4_vendor.so|3be5ac465a50e2426a834949c392b411e78fa6e5
 
 # Camera
 lib/libdualcameraddm.so
