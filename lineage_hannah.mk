@@ -30,7 +30,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := motorola/hannah_t/hannah:8.0.0/OCP27.91-150-8/2:user/release-keys
 
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
-
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
