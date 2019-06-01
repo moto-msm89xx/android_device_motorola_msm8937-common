@@ -1066,23 +1066,21 @@ vendor/lib/libvqzip.so|70451e720fb3d5697cf440432c430e3e39e0ad71
 -vendor/lib/libMpeg4SwEncoder.so|6dd8134a8304d31a1b4da711853d035b7881ec32
 -vendor/lib/libOmxSwVencMpeg4.so|72f5c071f671af66e3d3dc3be5cd0509486fe9bf
 
-# Perf - from deen_sprout - OPKS28.63-18-3
-vendor/bin/msm_irqbalance|1c0e43d00bc82a597974d13d5872fe033597ae93
-vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|e34d3ab597388add3c68d0583cbb4e3a3fc5921e
+# Perf - from TA-1000_00CN - PKQ1.181105.001
+vendor/bin/msm_irqbalance|bf933b58332cf94fe4a2072bc3e976a6a82efe3c
+vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|1be5ae2497eea201367010ffeb7d9bf4b9f6728e
 vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|b50182aadab2e31409df61c523d0fb914a394e43
-vendor/etc/perf/perfboostsconfig.xml|9ca7d867f05b4a0b1efc780b04c1892826004854
-vendor/lib/libfeedbackhandler.so|6b9876b1f649aaef895b75ba6a47e03f8ae22186
-vendor/lib/libperfgluelayer.so|701dccc6912647b3ea29bb3fdb0b20a43b0c5213
-vendor/lib/libqti-perfd.so|72ecaeadeb59bb2c19eaf32cfc3b5fda2ab46cee
-vendor/lib/libqti-perfd-client.so|582336afcadb82800178cc312367cb1e0a9dc3b4
-vendor/lib/libqti-util.so|49ef7e51ae38127ff3b54ce3c2b3d1986f0af38c
-vendor/lib/vendor.qti.hardware.perf@1.0_vendor.so|d254e5ed515409516c33feb354fe9473b8c6e88e
-vendor/lib64/libfeedbackhandler.so|82728d38aa14268617868ab0750cbb8fb244bf9a
-vendor/lib64/libperfgluelayer.so|bf99ec37cbf4fd191ba641a915c98855b4e2797d
-vendor/lib64/libqti-perfd.so|93b5b8962b9497392e87e80c02b018c729c3c17e
-vendor/lib64/libqti-perfd-client.so|d9724ac58072657c2ba9fc7502c0f2577ef75230
-vendor/lib64/libqti-util.so|6411586729d90e0c6a6f94e456f66d376ddb8969
-vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so|5e4be7dfc73c13e8ba88211df408290cfdc9d349
+vendor/etc/perf/perfboostsconfig.xml|407300899c4d43287ff11dce563187e0215ed861
+vendor/lib/libperfgluelayer.so|3850d4ea3dbead227b622fcc47fcec29955fcc63
+vendor/lib/libqti-perfd.so|2a2077cf455d5a6b03c0bb2b6eeca554ee28a363
+vendor/lib/libqti-perfd-client.so|a4a6da47ee26fcd5116c514f7fed15b91306aea3
+vendor/lib/libqti-util.so|d65f3ef240cebea73bd1ba8b1132a7e639aa05bb
+vendor/lib/vendor.qti.hardware.perf@1.0.so|39a81e7cc35f542e5e2eeed6f38152b44063928f
+vendor/lib64/libperfgluelayer.so|7dba8556bfbc7f8daa44ea01843319940de3f00e
+vendor/lib64/libqti-perfd.so|51521fda9e30aaea5304e8a08799353c6f9861c1
+vendor/lib64/libqti-perfd-client.so|de9d1128cfcf36b329a750f4ac62fdfefae926da
+vendor/lib64/libqti-util.so|59910418e23268f52399ea74e6f451e07ef1f659
+vendor/lib64/vendor.qti.hardware.perf@1.0.so|17f32c2ce3c5bf1d6557e5d9258f9a7fc6ed5f14
 
 # Peripheral manager - from deen_sprout - OPKS28.63-18-3
 vendor/bin/pm-proxy|3a6e03b81206ac445f70bd04309131e2e6757a53
