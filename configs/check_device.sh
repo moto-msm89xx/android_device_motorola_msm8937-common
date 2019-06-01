@@ -15,6 +15,3 @@ else
     rm /vendor/etc/mixer_paths_ahannah.xml
     rm /vendor/etc/sensors/sensor_def_qcomdev_ahannah.conf
 fi
-
-rm /vendor/bin/hw/android.hardware.camera.provider@2.4-service
-rm /vendor/etc/init/hw/android.hardware.camera.provider@2.4-service.rc
