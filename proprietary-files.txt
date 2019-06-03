@@ -918,6 +918,7 @@ vendor/lib/libOpenCL.so|8d699bb6d1245596182b89d5f774fde09372fe61
 vendor/lib/librs_adreno_sha1.so|99fc07517cc53da463d7fa7c0ba3fbe5b4f6489d
 vendor/lib/librs_adreno.so|0df4614181bc30db84ec464e6ae1da60ac7d8763
 vendor/lib/libRSDriver_adreno.so|c0551aea7d32e21efde69a6a43b8b45bf69e0528
+vendor/lib/libsc-a3xx.so|99f7d81029e1d4d6f5e074cb9ad98fc750457348
 vendor/lib64/libadreno_utils.so|ee975322c46f7ca78c34c96c33664218f2699857
 vendor/lib64/libbccQTI.so|096c6ed5276b37917219dd88019f4cb114de68e2
 vendor/lib64/libC2D2.so|c874c737e986173a443497fe9ec383ae35b1dea0
