@@ -873,8 +873,8 @@ vendor/lib64/libxtwifi_ulp_adaptor.so|58b20fbdbb500add11784acce0808c7198c96c34
 vendor/lib64/vendor.qti.gnss@1.0.so|90b465adc4542f16fbdd935d0592df73d778909b
 
 # Graphics (EGL) - from riva - OPM1.171019.026
-vendor/lib/egl/eglSubDriverAndroid.so|e97547fb0cbb4c371870d926121e43a917e0c0fd
-vendor/lib/egl/eglsubAndroid.so|c150a8a1f70040da86b083fd95403b312675d4e6
+vendor/lib/egl/eglSubDriverAndroid.so|9479557cbf64fd9d00b4dc9bae457394b74fdb7f
+vendor/lib/egl/eglsubAndroid.so|47e624dc5dce36d730551090c708dd1aa7f83fc9
 vendor/lib/egl/libEGL_adreno.so|095c0ca2f5d3b0da4c8bdc370cd53244e859a1ee
 vendor/lib/egl/libESXEGL_adreno.so|863ba76e8f0f821706b03d3a9aff61c15227fce7
 vendor/lib/egl/libESXGLESv1_CM_adreno.so|6f7e122fc9fd42cc0840068d52fb3c678ee674d0
@@ -882,13 +882,13 @@ vendor/lib/egl/libESXGLESv2_adreno.so|58108938bfcfd7bab8274624b28c820f3a959223
 vendor/lib/egl/libGLESv1_CM_adreno.so|0f3ab19a2572658f78826bfa6fe6149b0554fa9f
 vendor/lib/egl/libGLESv2_adreno.so|2f7b8abc7def59c607b58a03e091d92427c0da25
 vendor/lib/egl/libQTapGLES.so|cbb7efc834622cf761a149a206c530ecaf723673
-vendor/lib/egl/libRBEGL_adreno.so|b26e896f576b86cc2e8d69f49c48f37302337075
+vendor/lib/egl/libRBEGL_adreno.so|01c3e1c2a640a5f883f8e9a6693fb35bdd076092
 vendor/lib/egl/libRBGLESv1_CM_adreno.so|10c18d6ad691bbaa751c805e4722daae47c467a1
 vendor/lib/egl/libRBGLESv2_adreno.so|cf95caaf03ccd599b0d360a6c1f3b2d9af6f2e34
 vendor/lib/egl/libq3dtools_adreno.so|a936a91b92d0130bdeb18505caf11a49985b1885
 vendor/lib/egl/libq3dtools_esx.so|66c273ea65d3e6d10e021817ae73f0ea79a21be4
-vendor/lib64/egl/eglSubDriverAndroid.so|653936ff8f7cf6f050cf7ebbc97d26c92a9d9536
-vendor/lib64/egl/eglsubAndroid.so|4051c7f7283b0463dc31b39a1f0e64340befd414
+vendor/lib64/egl/eglSubDriverAndroid.so|a89a004a5d529cfecc6432b1fcb18d0a2e479d7c
+vendor/lib64/egl/eglsubAndroid.so|2da54c43577e048f89a5eb16c52a63fc5d2629a5
 vendor/lib64/egl/libEGL_adreno.so|4f2537cca19b11e6aa7f85b3c3ceeebfa1bcb423
 vendor/lib64/egl/libESXEGL_adreno.so|0b414e24e3503e738c027ae4766deb5f7a7943fb
 vendor/lib64/egl/libESXGLESv1_CM_adreno.so|9935dbf58dcfe01c52e1e42c770dddb5725a309e
@@ -896,7 +896,7 @@ vendor/lib64/egl/libESXGLESv2_adreno.so|175bd05582b5389dad054a5ac97c7a82a5ab96af
 vendor/lib64/egl/libGLESv1_CM_adreno.so|f4f2adb5226ce167c66c5dc633ff8d51848aed6e
 vendor/lib64/egl/libGLESv2_adreno.so|63d49ecefb4630a76b32dab2edd7715d2bba2221
 vendor/lib64/egl/libQTapGLES.so|9a123fa4efd73a607b6003c0917ed22f07e41364
-vendor/lib64/egl/libRBEGL_adreno.so|27d28a3a4a8afde7aaa49fc2ffea24eab6903bb2
+vendor/lib64/egl/libRBEGL_adreno.so|ad78f0686b8206e86bdf536a8665121496146f62
 vendor/lib64/egl/libRBGLESv1_CM_adreno.so|c3a83c0dcbc9e7e377890539eedfaae461eeba44
 vendor/lib64/egl/libRBGLESv2_adreno.so|88951c34481d835e644d3fca5290d45a32cf4d39
 vendor/lib64/egl/libq3dtools_adreno.so|3744681a9056755540803a0429c5fb41d39de9ec
