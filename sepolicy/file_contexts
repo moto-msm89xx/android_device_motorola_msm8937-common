@@ -30,6 +30,8 @@
 
 # Fsg
 /fsg                                                     u:object_r:fsg_firmware_file:s0
+/(vendor|system/vendor)/fsg                              u:object_r:fsg_firmware_file:s0
+
 
 # Init scripts
 /(vendor|system/vendor)/bin/init\.mmi\.(boot|laser|touch|usb)\.sh u:object_r:qti_init_shell_exec:s0

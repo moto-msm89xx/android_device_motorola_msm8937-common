@@ -171,7 +171,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.qmi.adb_logmask=0 \
     persist.data.netmgrd.qos.enable=true \
     persist.data.iwlan.enable=true \
-    telephony.lteOnCdmaDevice=1
+    telephony.lteOnCdmaDevice=1 \
+    ro.build.vendorprefix=/vendor
 
 #,Sensors
 PRODUCT_PROPERTY_OVERRIDES += \

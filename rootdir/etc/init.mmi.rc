@@ -21,7 +21,7 @@ on init
     chmod 0640 /sys/fs/pstore/dmesg-ramoops-0
 
     # Create modem FSG mount point
-    mkdir /fsg 755 root root
+    mkdir /vendor/fsg 755 root root
 
 on fs
     wait /dev/block/bootdevice/by-name/hw
