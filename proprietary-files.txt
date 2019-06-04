@@ -1042,31 +1042,29 @@ vendor/lib64/libkeymasterdeviceutils.so|3b4d1b97549b15d85254739613fc8d772f716806
 vendor/lib64/libkeymasterprovision.so|7ad925d46a558a8c086a61e022eef328b2516f43
 vendor/lib64/libkeymasterutils.so|4c8273711b5ba1a503d4581f661ed20a1578810d
 
-# Media - from deen_sprout - OPKS28.63-18-3
--vendor/lib/libgpustats.so|8ed3276cdf4431cccc1e54b619374428eaa8b3ed
-vendor/lib/libAlacSwDec.so|d39ad1695c84f4ef3bdcf67e904682c92d50e1ab
-vendor/lib/libApeSwDec.so|76eaaccd07099fd77252a0331c5444ecf9e106f4
-vendor/lib/libFlacSwDec.so|7c323ae3576217c0d2b3ad5a518dac2a26ffc3fc
-vendor/lib/libOmxAacDec.so|a9847e2d536abed552513071bbc2d19e591be9d6
-vendor/lib/libOmxAlacDec.so|078256b901f1b12dee058c41ae668c5e2a247804
-vendor/lib/libOmxAlacDecSw.so|32d92e8df2cb73e300e23ab5ed23aeadeedb50b0
-vendor/lib/libOmxAmrDec.so|c179adf392c03a116713084f6e68997f148dfe24
-vendor/lib/libOmxAmrwbplusDec.so|12420e6ef2e731a955f6544cdda47cc7c52c7945
-vendor/lib/libOmxApeDec.so|4715cfa3752cbb707822f5f66dd835d5179f039f
-vendor/lib/libOmxApeDecSw.so|95dd8b19b5c393bbc95a659a65d299211bc9d88f
-vendor/lib/libOmxEvrcDec.so|bc06bdcd812e012541dc59a53cae3f1b8fbca250
-vendor/lib/libOmxQcelp13Dec.so|25c7f4a214b9fb18e006bb3368c032a73e9fc729
-vendor/lib/libOmxVpp.so|3c2f5aca9400d98aab21a340f4b50b69dc5f2d61
-vendor/lib/libOmxWmaDec.so|039785cb1a39f0377548cf36f422849d49814dfe
-vendor/lib/libvpplibrary.so|f3fcf8155311f654975e75c28f613e556e1f2180
-vendor/lib/libvqzip.so|70451e720fb3d5697cf440432c430e3e39e0ad71
--vendor/lib64/libgpustats.so|0ff625b832ffff70042cd90e443c6c7651ad327e
+# Media - from D1C - PKQ1.181105.001
+vendor/lib/libAlacSwDec.so|339a78c17a0b7032e678a38deb523a0d403fdb41
+vendor/lib/libApeSwDec.so|013abb41d28f28bac9904562049c4460add11a47
+vendor/lib/libFlacSwDec.so|ff125da726e44764cf1f249f9214022f1c723ce6
+vendor/lib/libOmxAacDec.so|812fb8b8f5a3af2c5844c61d19dfc252b367b020
+vendor/lib/libOmxAlacDec.so|b107909a3e897514a263bceae47592bb91b66ca9
+vendor/lib/libOmxAlacDecSw.so|03f59d661995d701c8e8f196a7764ac9d08dfdb0
+vendor/lib/libOmxAmrDec.so|dac4e2d8904469163c414ec98c1f4467e2c99ee0
+vendor/lib/libOmxAmrwbplusDec.so|a65cc7b188305a17e3518d29ae8c226d203c7e6e
+vendor/lib/libOmxApeDec.so|a8a3dae550fedae9ee46673fe89608ac733caeb2
+vendor/lib/libOmxApeDecSw.so|7c8e2c3fd64ab57a5569035864cd32e6f9c756ad
+vendor/lib/libOmxEvrcDec.so|e12ba037b1186b4501d27d9faa27343419f59c75
+vendor/lib/libOmxQcelp13Dec.so|e498d31e1bec45c27b4944aa38b29eb7dad5b758
+vendor/lib/libOmxVpp.so|3f9f511b8697789715070935639f4534e91126f3
+vendor/lib/libOmxWmaDec.so|d6e4ba56e73be8c67aed216aafb8d2771443524f
+vendor/lib/libvpplibrary.so|d7dad7b2278905892f8d67df4f51c455567d7c64
+vendor/lib/libvqzip.so|0b906db131e99cd5460b8a72d05e86721243de95
 
-# Media - from montana - OPP28.65-37-2
--vendor/lib/libMpeg4SwEncoder.so|6dd8134a8304d31a1b4da711853d035b7881ec32
--vendor/lib/libOmxSwVencMpeg4.so|72f5c071f671af66e3d3dc3be5cd0509486fe9bf
+# Media - from D1C - PKQ1.181105.001
+-vendor/lib/libMpeg4SwEncoder.so|ac4aaba9259a4868ad29a96c07a5814e1f569d47
+-vendor/lib/libOmxSwVencMpeg4.so|ed4200c66e3a185dd13952b3ccf6cc2524ded519
 
-# Perf - from TA-1000_00CN - PKQ1.181105.001
+# Perf - from D1C - PKQ1.181105.001
 vendor/bin/msm_irqbalance|bf933b58332cf94fe4a2072bc3e976a6a82efe3c
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|1be5ae2497eea201367010ffeb7d9bf4b9f6728e
 vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|b50182aadab2e31409df61c523d0fb914a394e43
