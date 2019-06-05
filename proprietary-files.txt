@@ -831,14 +831,14 @@ vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so|14d52254917f8b7e5c02754fc259
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|15460dcdadee96d7e39b28d2b8bcac61b4e8d80a
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|de7f221d00072f7b659493feb71e538e0da5541d
 
-# Fingerprint - from deen_sprout - OPKS28.63-18-3
-lib64/vendor.egistec.hardware.fingerprint@2.0.so|d0ffca8205be1b8661ad1704c2491052cf35be15
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-ets|1634a8e684da9eda91fd2d8205a882f21c0ad84b
+# Fingerprint - from daisy_sprout - PKQ1.180917.001/V10.0.1.0.PDLMIFJ
+lib64/vendor.egistec.hardware.fingerprint@2.0.so|b99a10b68e927dd4a32f7f8c55f30f56465e4919
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-ets|1d1ed9935abba518a84bc504761fd912c014e772
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-ets.rc|dbc7ba996d78e8470add38aca9b2966f703beb15
-vendor/etc/init/init.ets.rc|b4bff27bcb240dd4adf93309508fe9278f77d40e
-vendor/lib64/libets_fp_et5.so|317c2db634a0f4d524367ebce6fb69136b4794e7
-vendor/lib64/libets_teeclient.so|0f2fefe92a796219f3cb647f29fdcbcc460ea7ae
-vendor/lib64/vendor.egistec.hardware.fingerprint@2.0_vendor.so|90bc58d7c46096feb4223f8381f86b55a251e7c6
+vendor/etc/init/init.ets.rc|68e5d6b5dbfcbd329c22b478ad7217e1315db981
+vendor/lib64/libets_fp_et5.so|536e9097b3f188b90c78882e8e72f3e2f8125666
+vendor/lib64/libets_teeclient.so|1021ffc65bd48e405a7c05c1cb3025317f5157c1
+vendor/lib64/vendor.egistec.hardware.fingerprint@2.0_vendor.so|245755e85e0464371dbd0ac3f9bf86fbcb8e6978
 
 # Gatekeeper - from daisy_sprout - PKQ1.180917.001/V10.0.1.0.PDLMIFJ
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|eeb4ba9eacb57c958051a47d307968254ee081d0
@@ -1177,26 +1177,23 @@ vendor/lib64/libdisp-aba.so|f6b5909f917ddcb791c25c99e5cc35414709d6ae
 vendor/lib64/vendor.display.color@1.0_vendor.so|ff74f41b12060413ba1219db563bcb8484d72188
 vendor/lib64/vendor.display.postproc@1.0_vendor.so|18f919c76742d6eccf115262921f44fa773958a4
 
-# Sensors - from deen_sprout - OPKS28.63-18-3
-lib/libslpcsystem_jni.so|668b4f179e0179243c061f52c64a0427f65daf77
-lib64/libslpcsystem_jni.so|cfc4622a35c72c45efa3b78110812da766f9aa64
-vendor/bin/capsense_reset|6107cef294bda986447316277a6dd3a6108320eb
-vendor/bin/sensors.qcom|93e211e6ca6557059383b4fdabf245d1922a05e0
-vendor/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar|63b9bf4c5a7c85445c76d00cd2c6028db7348b90
-vendor/lib/hw/activity_recognition.msm8953.so:vendor/lib/hw/activity_recognition.msm8937.so|3b085b3ad06d1069d0712c9a2f514af9438f46b9
-vendor/lib/libsensor1.so|adea8cac336fbd50a9909aaf5e401189be34a2d5
-vendor/lib/libsensor_reg.so|76c1ec4c7db217346ea12b94441763d1918dd86f
-vendor/lib/sensor_calibrate.so|7b0a03c6b143252f045e90cceec456cd2ec0b74d
-vendor/lib/sensors.rp.so|bbf4c91e9a0777dc1e4ece18220fe34be26c0752
-vendor/lib/sensors.ssc.so|ccd19e7f4937fe623d8f394d7e91613c9807a0bc
-vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so|50b2f47e31c65af5261812026855eed7e62f5c57
-vendor/lib64/hw/activity_recognition.msm8953.so:vendor/lib64/hw/activity_recognition.msm8937.so|5ef6c43a3a683e1f4ad631d5254d32f5e54c1bf7
-vendor/lib64/libsensor1.so|10e09c49690a37aa9f927b0026f638fb2970fa8e
-vendor/lib64/libsensor_reg.so|d909f42fd4ce9fcc1ad5ef5d15329d5102b91021
-vendor/lib64/sensor_calibrate.so|8d524a24082665dc4804779d96d59b52f1c53822
-vendor/lib64/sensors.rp.so|a7cdc83a7b939f78be540226d0b44ee593e5740d
-vendor/lib64/sensors.ssc.so|dd24117db1e486d0b767de352c130a84d4e0fdd9
-vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|743635a4dcb3c67eb32d874b261b12f6b1a19204
+# Sensors - from daisy_sprout - PKQ1.180917.001/V10.0.1.0.PDLMIFJ
+vendor/bin/capsense_reset|4b5c900b12d15402df8f5f7b9e199f8e63b3f307
+vendor/bin/sensors.qti|dc38040e13bdb2690f6fcf739d4f04cded32fe66
+vendor/lib/hw/activity_recognition.msm8953.so:vendor/lib/hw/activity_recognition.msm8937.so|eadca8d4e8c68387b056cb7b3e43b8058d7bd661
+vendor/lib/libsensor1.so|e8e9848a8d9e27f298d2789b365d962c2e7052ac
+vendor/lib/libsensor_reg.so|789af49787bf4f5fe6d99bd99bcced3a3f088ddc
+vendor/lib/sensor_calibrate.so|97424305830c1a3d4e8bf7a7123d3c957b6fc136
+vendor/lib/sensors.rp.so|e83666a495f3280e829e0046c7627d9782ac1577
+vendor/lib/sensors.ssc.so|57ba67c001cb4bcc818a2ad22ef1396d2f60c81d
+vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so|679e8fce32ce45a0e452ad03699f8afa337d200e
+vendor/lib64/hw/activity_recognition.msm8953.so:vendor/lib64/hw/activity_recognition.msm8937.so|de33d73d021b90586f9053069519c0bc66341ac1
+vendor/lib64/libsensor1.so|cde648fa8af9a5db982f396823a684039f94ac8c
+vendor/lib64/libsensor_reg.so|806c7abfa901028c55d37f4128e2a6de18b8a47b
+vendor/lib64/sensor_calibrate.so|efb71205c08557d2961eff9c7bff20ca89a816d0
+vendor/lib64/sensors.rp.so|45fa1cc519a5fbc7ad359f406f3d125cae54aadc
+vendor/lib64/sensors.ssc.so|60fd557a52a70580b3dda1662820ba315b8b7411
+vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|6ce2116c91d09258a2a5d08092d40f58f8af8ba0
 # Sensors (laser)
 vendor/lib/sensors.hal.tof.so
 
