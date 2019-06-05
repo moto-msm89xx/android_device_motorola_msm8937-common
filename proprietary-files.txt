@@ -1109,11 +1109,13 @@ vendor/bin/ATFWD-daemon|4b5912bcf66465bc41967108cb9dd9067a427f21
 vendor/bin/netmgrd|25bd0e36eee950d461c853640b7c120db10c86cb
 vendor/bin/qti|8d58693d4805e5c51e6273fcea579ba40588cb02
 vendor/bin/rmt_storage|a419d1be26c59f2352f8f6301ea7edbcd9bf5429
-vendor/bin/tftp_server|5a197dc80bca998770b4abdd4d9b03116ddc089f
+vendor/bin/tftp_server|ff4d12b015f53b1b139a3cc10e4ca3004450f34c
 vendor/etc/data/dsi_config.xml|c85722f90588edd3288b953b0ab97c81edeabfa9
 vendor/etc/data/netmgr_config.xml|fe94a7e7d04a206fbed43a6b8a657444f4804e0b
 vendor/lib/libmdmdetect.so|82a5ab63c019b26c20f0d0317ae9582c37c239c0
 vendor/lib/libqcmaputils.so|c7ac09b63370d0eed83742ca421457b3d573b614
+vendor/lib/libqrtr.so|d66a7e48e4058cdf490315e97d56155d904a3cfb
+vendor/lib/libqsocket.so|c6f12e49cb42c371b4e2294031601388a397e24a
 vendor/lib/vendor.qti.hardware.radio.am@1.0_vendor.so|d416146382aec872daa02d5772f2329b6bce4f01
 vendor/lib/vendor.qti.hardware.radio.atcmdfwd@1.0_vendor.so|d4fa6189ca611a27f55a7c8af4615fa87c375d67
 vendor/lib/vendor.qti.hardware.radio.ims@1.0_vendor.so|04b0a7d4b4ea1b3bf961b04e37cc6603ae3f7c19
@@ -1131,6 +1133,8 @@ vendor/lib64/libmdmdetect.so|ee897ead1ba2e776c18e4782fdd5c6dfab5bc5cf
 vendor/lib64/libnetmgr.so|ca49dcc22aa9f20dacc0849213e26da9b82a451e
 vendor/lib64/liboemaids_vendor.so|b0cb42ef65585a89b315bafefc7e2a492cb1baee
 vendor/lib64/libqcmaputils.so|a6617796ab00e8ebc2da662e0551b60dd78808d7
+vendor/lib64/libqrtr.so|6816fca79ac3cfed90f8549f9cc43cb80b4f7597
+vendor/lib64/libqsocket.so|81567230497785380e0fd2869b849a766f4f1590
 vendor/lib64/libqcrilFramework.so|a82c477af8461ece607dd086fce8eefb0d896897
 vendor/lib64/libril-qc-hal-qmi.so|919275071810b6b5b3d2690b9ebd2099d136ca7a
 vendor/lib64/libril-qc-ltedirectdisc.so|9dc80a6e034a7161e8bdafb63eee81a2998157ed
