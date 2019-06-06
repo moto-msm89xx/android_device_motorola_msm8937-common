@@ -20,77 +20,100 @@ on init
     chown system log /sys/fs/pstore/dmesg-ramoops-0
     chmod 0640 /sys/fs/pstore/dmesg-ramoops-0
 
-    # Create modem FSG mount point
-    mkdir /vendor/fsg 755 root root
-
 on fs
     wait /dev/block/bootdevice/by-name/hw
-    start oem-hw-sh
+    exec_start vendor.oem-hw-sh
+
+    # Map oem properties, this must follow
+    # execution of vendor.oem-hw-sh to set
+    # required properties.
+    setprop ro.carrier ${ro.boot.carrier}
+    setprop ro.sf.lcd_density ${ro.boot.lcd_density}
+    setprop ro.vendor.fsg-id ${ro.boot.fsg-id}
+    setprop ro.vendor.hw.device ${ro.boot.device}
+    setprop ro.vendor.hw.hwrev ${ro.boot.hwrev}
+    setprop ro.vendor.hw.modelno ${ro.boot.modelno}
+    setprop ro.vendor.hw.revision ${ro.boot.revision}
+    setprop ro.vendor.hw.nav_keys ${ro.boot.nav_keys}
+    setprop ro.product.vendor.device ${ro.vendor.product.device}
+    setprop ro.product.vendor.name ${ro.vendor.product.name}
+    setprop ro.vendor.boot.cid ${ro.boot.cid}
+    setprop ro.vendor.boot.powerup_reason ${ro.boot.powerup_reason}
+    setprop ro.vendor.boot.bl_state ${ro.boot.bl_state}
+    setprop ro.vendor.boot.serialno ${ro.boot.serialno}
+    setprop ro.vendor.zygote ${ro.zygote}
 
 on post-fs
-    mkdir /persist/camera 0755 oem_5004 oem_5004
-    mkdir /persist/camera/focus 0775 camera oem_5004
-    mkdir /persist/camera/ledcal 0775 camera oem_5004
-    mkdir /persist/batt_health 0755 oem_5001 oem_5001
-    mkdir /persist/mdm 0770 radio radio
-    mkdir /persist/factory 0755 oem_5004 oem_5004
-    mkdir /persist/factory/audio 0755 oem_5004 system
-    mkdir /persist/factory/wlan 0755 oem_5004 oem_5004
-    mkdir /persist/factory/regulatory 0755 oem_5004 system
-    mkdir /persist/public 0755 oem_5004 oem_5004
+    mkdir /mnt/vendor/persist/camera 0755 oem_5004 oem_5004
+    mkdir /mnt/vendor/persist/camera/dualcal 0775 camera oem_5004
+    mkdir /mnt/vendor/persist/camera/focus 0775 camera oem_5004
+    mkdir /mnt/vendor/persist/camera/ledcal 0775 camera oem_5004
+    mkdir /mnt/vendor/persist/batt_health 0775 oem_5001 oem_5001
+    mkdir /mnt/vendor/persist/mdm 0770 radio radio
+    mkdir /mnt/vendor/persist/factory 0755 oem_5004 oem_5004
+    mkdir /mnt/vendor/persist/factory/audio 0755 oem_5004 system
+    mkdir /mnt/vendor/persist/factory/wlan 0755 oem_5004 oem_5004
+    mkdir /mnt/vendor/persist/factory/regulatory 0755 oem_5004 system
+    mkdir /mnt/vendor/persist/public 0755 oem_5004 oem_5004
     mkdir /persist/public/atvc 0770 oem_5012 shell
-    mkdir /persist/public/battd 0755 oem_5000 oem_5004
-    mkdir /persist/public/att_dm 0775 radio oem_5004
-    mkdir /persist/public/hiddenmenu 0775 radio oem_5004
-    mkdir /persist/public/hiddenmenu/data 0775 system oem_5004
+    mkdir /mnt/vendor/persist/public/battd 0755 oem_5000 oem_5004
+    mkdir /mnt/vendor/persist/public/att_dm 0775 radio oem_5004
+    mkdir /mnt/vendor/persist/public/hiddenmenu 0775 radio oem_5004
+    mkdir /mnt/vendor/persist/public/hiddenmenu/data 0775 system oem_5004
     mkdir /persist/public/locale 0700 system system
     mkdir /persist/public/omadm 0700 radio radio
     mkdir /persist/public/svcs 0770 system system
-    mkdir /persist/wifi 0755 oem_5004 oem_5004
-    mkdir /persist/bt 0755 oem_5004 bluetooth
-    mkdir /persist/wmdrm 0775 oem_5003 oem_5003
+    mkdir /mnt/vendor/persist/wifi 0755 oem_5004 oem_5004
+    mkdir /mnt/vendor/persist/bt 0755 oem_5004 bluetooth
+    mkdir /mnt/vendor/persist/wmdrm 0775 oem_5003 oem_5003
     mkdir /persist/public/usc_dm 0775 radio radio
     mkdir /persist/sds 0700 vold vold
-    mkdir /persist/rfs/msm/mpss/mot_rfs 0771 rfs system
+    mkdir /mnt/vendor/persist/rfs/msm/mpss/mot_rfs 0771 rfs system
 
     # This dir is used to store any OMA(both DM and CP) files in persist partition
     # Any app with radio UID or oem_5004 GID can read/write/execute files in this dir.
-    mkdir /persist/public/oma 0775 radio oem_5004
+    mkdir /mnt/vendor/persist/public/oma 0775 radio oem_5004
 
-    chown oem_5004 oem_5004 /persist/factory/fti
-    chmod 0660 /persist/factory/fti
-    chown oem_5004 oem_5004 /persist/factory/byte
-    chmod 0660 /persist/factory/byte
-    chmod 0660 /persist/wifi/wlan_mac.bin
-    chown oem_5004 oem_5004 /persist/bt/bt_bdaddr
-    chmod 0664 /persist/bt/bt_bdaddr
+    chown oem_5004 oem_5004 /mnt/vendor/persist/factory/fti
+    chmod 0664 /mnt/vendor/persist/factory/fti
+    chown oem_5004 oem_5004 /mnt/vendor/persist/factory/byte
+    chmod 0660 /mnt/vendor/persist/factory/byte
+    chmod 0660 /mnt/vendor/persist/wifi/wlan_mac.bin
+    chown oem_5004 oem_5004 /mnt/vendor/persist/bt/bt_bdaddr
+    chmod 0664 /mnt/vendor/persist/bt/bt_bdaddr
 
-    chmod 0711 /persist/rfs
-    chmod 0711 /persist/rfs/msm
-    chmod 0711 /persist/rfs/msm/mpss
-    chmod 0771 /persist/rfs/msm/mpss/mot_rfs
+    # Set life_calls and life_timer file permissions
+    chown radio oem_5004 /mnt/vendor/persist/public/hiddenmenu/life_calls
+    chmod 0775 /mnt/vendor/persist/public/hiddenmenu/life_calls
+    chown radio oem_5004 /mnt/vendor/persist/public/hiddenmenu/life_timer
+    chmod 0775 /mnt/vendor/persist/public/hiddenmenu/life_timer
 
-    write /proc/sys/vm/page-cluster 0
-    write /proc/sys/vm/swappiness 100
-    setprop sys.sysctl.swappiness 100
+    chmod 0711 /mnt/vendor/persist/rfs
+    chmod 0711 /mnt/vendor/persist/rfs/msm
+    chmod 0711 /mnt/vendor/persist/rfs/msm/mpss
+    chmod 0771 /mnt/vendor/persist/rfs/msm/mpss/mot_rfs
+
+    swapon_all /vendor/etc/fstab.qcom
+    write /proc/sys/vm/page-cluster 0 
 
     # Set dm-verity property for system partition
     verity_update_state
 
 on post-fs-data
+    setprop ro.vendor.build.fingerprint ${ro.product.vendor.brand}/${ro.product.vendor.name}/${ro.product.vendor.device}:${ro.vendor.build.version.release}/${ro.vendor.build.id}/${ro.vendor.build.version.incremental}:${ro.vendor.build.type}/${ro.vendor.build.tags}
 
     # Setup folders for security
-    mkdir /persist/security 02770 drmrpc drmrpc
-    mkdir /data/local/dbvc 0750 oem_5004 shell
+    mkdir /mnt/vendor/persist/security 02770 drmrpc drmrpc
+    mkdir /data/vendor/dbvc 0750 oem_5004 shell
+    chown drmrpc oem_5004 /mnt/vendor/persist/security
 
     # Setup folder for Pre-Activation Kill Switch app (PAKS)
-    mkdir /persist/paks 02770 oem_5004 oem_5004
+    mkdir /mnt/vendor/persist/paks 02770 oem_5004 oem_5004
 
     # Create directory used by power_supply_logger
-    mkdir /data/power_supply_logger 0750 oem_5001 log
-
-    # Create moodle directory that MOT_MOODLE can write to
-    mkdir /data/local/moodle 0770 graphics oem_5004
+    mkdir /data/vendor/power_supply_logger 0750 mot_pwric log
+    # Create directory power_supply_logger used by memtest and batt_health
+    mkdir /data/vendor_de/power_supply_logger 0770 root log
 
     # Permissions for Factory Test of Charging Paths
     chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_auto_enable
@@ -101,6 +124,15 @@ on post-fs-data
     chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_usb_suspend
     chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_fail_clear
     chown oem_5001 oem_5001 /sys/class/power_supply/battery/device/force_chg_usb_otg_ctl
+
+    chown oem_5001 oem_5001 /sys/class/power_supply/mmi_battery/device/force_chg_auto_enable
+    chown oem_5001 oem_5001 /sys/class/power_supply/mmi_battery/device/force_chg_ibatt
+    chown oem_5001 oem_5001 /sys/class/power_supply/mmi_battery/device/force_chg_itrick
+    chown oem_5001 oem_5001 /sys/class/power_supply/mmi_battery/device/force_chg_iusb
+    chown oem_5001 oem_5001 /sys/class/power_supply/mmi_battery/device/force_chg_idc
+    chown oem_5001 oem_5001 /sys/class/power_supply/mmi_battery/device/force_chg_usb_suspend
+    chown oem_5001 oem_5001 /sys/class/power_supply/mmi_battery/device/force_chg_fail_clear
+    chown oem_5001 oem_5001 /sys/class/power_supply/mmi_battery/device/force_chg_usb_otg_ctl
 
     chown root oem_5020 /sys/module/qpnp_smbcharger_mmi/parameters/eb_rechrg_start_soc
     chown root oem_5020 /sys/module/qpnp_smbcharger_mmi/parameters/eb_rechrg_stop_soc
@@ -120,62 +152,51 @@ on post-fs-data
 
     chown root oem_5020 /sys/class/power_supply/usb/usb_priority
     chmod 0660 /sys/class/power_supply/usb/usb_priority
+    chown root oem_5020 /sys/module/dwc3_msm/parameters/usb_priority
+    chmod 0660 /sys/module/dwc3_msm/parameters/usb_priority
 
     # Create panic dump dir.
-    mkdir /data/dontpanic 0750 root log
+    mkdir /data/vendor/dontpanic 0750 root log
 
     # Create directory for cutback
-    mkdir /data/misc/cutback 0770 radio wifi
+    mkdir /data/vendor/misc/cutback 0770 radio wifi
 
     # Create directory for fm_radio
     mkdir /data/misc/fm_radio 0770 system system
 
-    #setup folder for WLAN WAPI
-    mkdir /data/wapi_certificate 0750 system wifi
-    chown system wifi /data/wapi_certificate
+    # Setup folder for aplogd
+    mkdir /data/vendor/aplogd 0750 log log
 
-    # mkdir IPLog folder
-    mkdir /data/misc/iplog 0770 system system
-
-    # mkdir ModemStatsService folder
-    mkdir /data/misc/ps_recovery_iplog 0770 system system
-
-    # Permissions for phone power off log
-    mkdir /data/power_log 0750 root log
-    chmod 0660 /sys/module/power_supply_log/parameters/log_file
-    write /sys/module/power_supply_log/parameters/log_file /data/power_log/power_off.log
+    # Create directory used by chargeonlymode
+    mkdir /data/vendor/chargeonly 0750 root log
 
     # Subsystem RAM-dumps
-    mkdir /data/ss-ram-dumps 0750 system log
-    mkdir /data/ss-ram-dumps/bp-dumps 0750 system log
-    mkdir /data/ss-ram-dumps/riva-dumps 0750 system log
+    mkdir /data/vendor/ss-ram-dumps 0750 system log
+    mkdir /data/vendor/ss-ram-dumps/bp-dumps 0750 system log
+    mkdir /data/vendor/ss-ram-dumps/riva-dumps 0750 system log
 
     # folder for Blueooth ramdump
-    mkdir /data/bt-ram-dumps 0750 bluetooth log
-
-    # SD card encryption metadata
-    mkdir /data/misc/sds 0750 root root
-
-    # Required by FingerPrint Cards (FPC) via init so we don't need to give qseecomd or fingerprintd permissions to create them
-    mkdir /data/fpc 0700 system system
-    mkdir /data/.fps 0770 system fingerp
+    mkdir /data/vendor/bt-ram-dumps 0750 bluetooth log
 
     #Folder for hardware properties
-    mkdir /data/hardware_revisions 0755 system system
-
-    #Create directory for adspd
-    mkdir /data/adspd 0770 audio diag
-
-    # Setup folder for camera dump subsystem
-    mkdir /data/camera_dump 0750 media media
+    mkdir /data/vendor/hardware_revisions 0755 system system
 
     # Imager tuning data for camera subsystem
     mkdir /data/vendor/misc/imager 0771 camera camera
+
+    # Required by FingerPrint Cards (FPC) via init so we don't need to give qseecomd or fingerprintd permissions to create them
+    mkdir /data/vendor/fpc 0700 system system
+    mkdir /data/vendor/.fps 0770 system fingerp
 
 on boot
    # restore default console_loglevel to KERN_DEBUG
    # restore default_message_loglevel to KERN_WARNING
    write /proc/sys/kernel/printk "7 4 1 7"
+
+    # MOTO, NJH348, IKHALFMWK-1864, change system max tcp buffer sizes based on RAT changes
+    # Define system changable TCP buffer max values
+    chown system system /proc/sys/net/core/rmem_max
+    chown system system /proc/sys/net/core/wmem_max
 
  # Change ownership and permission for leds backlight
    chmod 0664 /sys/class/leds/lcd-backlight/brightness
@@ -189,24 +210,27 @@ on boot
    # Change ownership and permission for vibrator
    chown system system /sys/class/timed_output/vibrator/enable
    chmod 0660 /sys/class/timed_output/vibrator/enable
+   chown system system /sys/class/leds/vibrator/state
+   chmod 0660 /sys/class/leds/vibrator/state
+   chown system system /sys/class/leds/vibrator/activate
+   chmod 0660 /sys/class/leds/vibrator/activate
+   chown system system /sys/class/leds/vibrator/duration
+   chmod 0660 /sys/class/leds/vibrator/duration
+   chown root oem_5020 /sys/bus/i2c/devices/2-005a/reduce
 
    # Change ownership of aov related sysfs entries
    chown audio audio /sys/kernel/aov/trigger
    chown audio audio /sys/kernel/aov/register
    chown audio audio /sys/kernel/aov/event
 
-   # Allow RunIn (factory test app) to control charging state
-   chown system system /sys/class/power_supply/battery/charging_enabled
-   chown system system /sys/class/power_supply/battery/battery_charging_enabled
-
    # Quiet binder logs
    write /sys/module/binder/parameters/debug_mask 0x5
 
    # Clear cooldown state
-   mkdir /persist/chargeonly 0770 system system
-   write /persist/chargeonly/cooldown n
-   chown system system /persist/chargeonly/cooldown
-   chmod 0660 /persist/chargeonly/cooldown
+   mkdir /mnt/vendor/persist/chargeonly 0770 system system
+   write /mnt/vendor/persist/chargeonly/cooldown n
+   chown system system /mnt/vendor/persist/chargeonly/cooldown
+   chmod 0660 /mnt/vendor/persist/chargeonly/cooldown
 
 on charger
     trigger early-fs
@@ -218,112 +242,92 @@ on charger
     class_stop main
     class_stop late_start
 
-on moto-charger
-    setprop ro.board.platform msm8937
-    trigger firmware_mounts_complete
-    start charge_only_mode
-    start thermal-com
-
-on property:ro.carrier=tmo
-    write /sys/class/power_supply/battery/device/force_max_chrg_temp 55
-
-on property:ro.carrier=metropcs
-    write /sys/class/power_supply/battery/device/force_max_chrg_temp 55
-
-service mmi-boot-sh /vendor/bin/init.mmi.boot.sh
+service vendor.mmi-boot-sh /vendor/bin/init.mmi.boot.sh
     class core
     user root
     oneshot
 
 # translate to qcom property name in order to keep the consistent with
 # our legacy property
-on property:persist.sys.qc.sub.rdump.on=*
-   setprop persist.sys.ssr.enable_ramdumps ${persist.sys.qc.sub.rdump.on}
+on property:persist.vendor.qc.sub.rdump.on=*
+    setprop persist.vendor.ssr.enable_ramdumps ${persist.vendor.qc.sub.rdump.on}
 
 # translate MMI property in order to keep the consistent with QCOM
-on property:ro.hw.dualsim=true
+on property:ro.vendor.hw.dualsim=true
    setprop persist.radio.multisim.config dsds
 
-on property:ro.hw.dualsim=false
+on property:ro.vendor.hw.dualsim=false
    setprop persist.radio.multisim.config ""
 
-service mmi-touch-sh /vendor/bin/init.mmi.touch.sh
+service vendor.mmi-touch-sh /vendor/bin/init.mmi.touch.sh
     class core
     user root
     oneshot
 
-service oem-hw-sh /vendor/bin/init.oem.hw.sh
-    class core
-    user root
-    oneshot
-    disabled
-
-service touch-dead-sh /vendor/bin/init.oem.hw.sh -f
-    class main
-    user root
-    oneshot
-    disabled
-
-service touch-ready-sh /vendor/bin/init.oem.hw.sh -r
-    class main
-    user root
-    oneshot
-    disabled
-
-service oem-hw-config-sh /vendor/bin/init.oem.hw.sh -p
-    class main
-    user root
-    oneshot
-    disabled
-
-service oem-vendor-config-sh /vendor/bin/init.oem.hw.sh -v
+service vendor.oem-hw-sh /vendor/bin/init.oem.hw.sh
     class core
     user root
     oneshot
     disabled
 
-on property:ro.treble.enabled=true && property:ro.vendor.build.thumbprint=* && property:ro.build.fingerprint=*
-    start oem-vendor-config-sh
+service vendor.touch-dead-sh /vendor/bin/init.oem.hw.sh -f
+    class main
+    user root
+    oneshot
+    disabled
 
-on property:hw.touch.status="dead"
-    start touch-dead-sh
+service vendor.touch-ready-sh /vendor/bin/init.oem.hw.sh -r
+    class main
+    user root
+    oneshot
+    disabled
 
-on property:hw.touch.status="ready"
-    start touch-ready-sh
+service vendor.oem-hw-config-sh /vendor/bin/init.oem.hw.sh -p
+    class main
+    user root
+    oneshot
+    disabled
 
-service charge_only_mode /vendor/bin/charge_only_mode
+on property:vendor.hw.touch.status="dead"
+    start vendor.touch-dead-sh
+
+on property:vendor.hw.touch.status="ready"
+    start vendor.touch-ready-sh
+
+service vendor.charge_only_mode /vendor/bin/charge_only_mode
     user root
     group graphics system input
     disabled
 
-service thermal-com /vendor/bin/thermal-engine --minimode
+service vendor.thermal-com /vendor/bin/thermal-engine --minimode
     class main
     user root
     disabled
 
-# Set RPS Mask for Wifi Hotspot
-on property:sys.wifi.tethering=true
-    write /sys/class/net/rmnet_data0/queues/rx-0/rps_cpus ${sys.usb.rps_mask}
-    write /sys/class/net/wlan0/queues/rx-0/rps_cpus ${sys.usb.rps_mask}
-    write /sys/class/net/wlan0/queues/rx-1/rps_cpus ${sys.usb.rps_mask}
-    write /sys/class/net/wlan0/queues/rx-2/rps_cpus ${sys.usb.rps_mask}
-    write /sys/class/net/wlan0/queues/rx-3/rps_cpus ${sys.usb.rps_mask}
-    write /sys/class/net/wlan0/queues/rx-4/rps_cpus ${sys.usb.rps_mask}
+on property:vendor.wifi.tethering=false
+    write /sys/module/wlan/parameters/sar_mhs disabled
 
-on property:sys.wifi.tethering=false
-    write /sys/class/net/rmnet_data0/queues/rx-0/rps_cpus ${sys.rmnet_vnd.rps_mask}
-    write /sys/module/wlan/parameters/fwpath apdown
+on property:vendor.wifi.tethering=true
+    write /sys/module/wlan/parameters/sar_mhs enabled
 
-# Override to add input group access and use of wake locks
-service sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-service
+# Override the AOSP sensor HAL service definition to add input group access
+service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-service
     class hal
     user system
     group system input wakelock
-    capabilities BLOCK_SUSPEND SYS_NICE
+    capabilities BLOCK_SUSPEND
+    rlimit rtprio 10 10
 
-on property:sys.sysctl.swappiness=*
-    write /proc/sys/vm/swappiness ${sys.sysctl.swappiness}
+#Override fwpath string when wpa_supplicant server was killed
+on property:vendor.wifi.station=true
+    write /sys/module/wlan/parameters/sar_sta enabled
 
-on property:sys.boot_completed=1
-    # Enable ZRAM on boot_complete
-    swapon_all /vendor/etc/fstab.qcom
+on property:vendor.wifi.station=false
+    write /sys/module/wlan/parameters/sar_sta disabled
+
+# androidboot.hardware.sku represents the SKU name being used for Regulatory approval (e.g. XT1101-01).
+# This property is used in AOSP for the Settings app to display an appropriate Regulatory E-Label
+# androidboot.product.hardware.sku represents a SKU name to assist the vendor image in determining
+# a unique HW form factor for purposes of determining a unique VINTF manifest
+on property:ro.boot.hardware.sku=*
+    setprop ro.boot.product.hardware.sku ${ro.boot.hardware.sku}

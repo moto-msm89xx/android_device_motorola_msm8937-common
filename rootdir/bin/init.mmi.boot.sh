@@ -26,7 +26,7 @@ if [ "$minor2" == "0" ]; then
 		minor1=""
 	fi
 fi
-setprop ro.hw.revision p${hw%??}$minor1$minor2
+setprop ro.vendor.hw.revision p${hw%??}$minor1$minor2
 unset hw cinfo m1 m2 minor1 minor2
 
 # reload UTAGS
@@ -41,35 +41,22 @@ fi
 # Export these for factory validation purposes
 iccid=$(cat /proc/config/iccid/ascii 2>/dev/null)
 if [ ! -z "$iccid" ]; then
-	setprop ro.mot.iccid $iccid
+	setprop ro.vendor.mot.iccid $iccid
 fi
 unset iccid
 cust_md5=$(cat /proc/config/cust_md5/ascii 2>/dev/null)
 if [ ! -z "$cust_md5" ]; then
-	setprop ro.mot.cust_md5 $cust_md5
+	setprop ro.vendor.mot.cust_md5 $cust_md5
 fi
 unset cust_md5
 
 # Get FTI data and catch old units with incorrect/missing UTAG_FTI
-pds_fti=/persist/factory/fti
+pds_fti=/mnt/vendor/persist/factory/fti
 if [ -r $pds_fti ]; then
 	set -A fti $(od -A n -t x1 $pds_fti 2>/dev/null)
 else
 	notice "Can not read FTI data in persist"
 fi
-
-# Read HW version from FTI data
-hw_v1="\x${fti[35]}"
-hw_v2="\x${fti[36]}"
-hw_v3="\x${fti[37]}"
-if [ "$hw_v3" == "\x30" ]; then
-	hw_v3=""
-fi
-hw_v4="\x${fti[38]}"
-if [ "$hw_v4" == "\x30" ]; then
-	hw_v4=""
-fi
-setprop ro.hw.boardversion $(printf "$hw_v1$hw_v2$hw_v3$hw_v4")
 
 # If UTAG_FTI is readable, compare checksums
 # and if they mismatch, assume PDS is valid and overwrite UTAG
@@ -86,13 +73,26 @@ if [ -r $utag_fti/ascii ]; then
 	else
 		# If PDS data is invalid, take UTAG and hope it is correct
 		notice "Will use FTI from UTAG"
-		set -A fti $(cat ${utag_fti}/raw | sed 's/../& /g')
+		set -A fti $(od -A n -t x1 ${utag_fti}/ascii 2>/dev/null)
 	fi
 else
 	notice "Missing FTI UTAG; copying from persist"
 	echo fti > /proc/config/all/new
 	cat $pds_fti > ${utag_fti}/raw
 fi
+
+# Read HW version from FTI data
+hw_v1="\x${fti[35]}"
+hw_v2="\x${fti[36]}"
+hw_v3="\x${fti[37]}"
+if [ "$hw_v3" == "\x30" ]; then
+	hw_v3=""
+fi
+hw_v4="\x${fti[38]}"
+if [ "$hw_v4" == "\x30" ]; then
+	hw_v4=""
+fi
+setprop ro.vendor.hw.boardversion $(printf "$hw_v1$hw_v2$hw_v3$hw_v4")
 
 # Now we have set fti var either from PDS or UTAG
 # Get Last Test Station stamp from FTI
@@ -110,7 +110,7 @@ if [ $month -le 12 -a $day -le 31 -a $year -ge 12 ]; then
 else
 	notice "Corrupt FTI data"
 fi
-setprop ro.manufacturedate $mdate
+setprop ro.vendor.manufacturedate $mdate
 unset fti y m d year month day utag_fti pds_fti fti_utag mdate
 
 t=$(getprop ro.build.tags)
@@ -126,7 +126,7 @@ unset p v a b t
 
 # Cleanup stale/incorrect programmed model value
 # Real values will never contain substrings matching "internal" device name
-product=$(getprop ro.hw.device)
+product=$(getprop ro.vendor.hw.device)
 model=$(cat /proc/config/model/ascii 2>/dev/null)
 if [ $? -eq 0 ]; then
 	if [ "${model#*_}" == "$product" -o "${model%_*}" == "$product" ]; then
@@ -140,13 +140,24 @@ unset model product
 # those values to override the default setting
 if [ "`getprop ro.build.type`" != "user" ]
 then
-	if [ -f /data/minFreeOff.txt ]
+	if [ -f /data/vendor/minFreeOff.txt ]
 	then
 		if [ -e /proc/sys/vm/min_free_normal_offset ]
 		then
-			echo -e `cat /data/minFreeOff.txt` > /proc/sys/vm/min_free_normal_offset
+			echo -e `cat /data/vendor/minFreeOff.txt` > /proc/sys/vm/min_free_normal_offset
 		fi
 	fi
 fi
 
-
+# ro.vendor.bootreason, which be used to indicate kpanic/wdt boot status.
+# When ro.boot.last_powerup_reason is set, it denotes this is a 2nd reboot
+# after kpanic/wdt, we set ro.bootreason as coldboot to copy logs.
+# Otherwise,we would set ro.bootreason the same as ro.boot.bootreason.
+bootreason=$(getprop ro.boot.bootreason)
+last_power_up=$(getprop ro.boot.last_powerup_reason)
+if [ ! -z "$last_power_up" ]
+then
+	setprop ro.vendor.bootreason "coldboot"
+else
+	setprop ro.vendor.bootreason $bootreason
+fi

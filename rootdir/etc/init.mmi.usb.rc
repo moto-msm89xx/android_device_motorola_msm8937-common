@@ -50,6 +50,7 @@ on boot
     chmod 0660 /sys/module/uvcvideo/parameters/quirks
 
 on charger
+    write /sys/class/android_usb/android0/iSerial ${ro.serialno}
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 22B8
     write /sys/class/android_usb/android0/idProduct 2EB7
@@ -63,7 +64,7 @@ on fs
     write /sys/class/android_usb/android0/f_ffs/aliases adb
     setprop sys.usb.ffs.aio_compat 1
 
-service mmi-usb-sh /vendor/bin/init.mmi.usb.sh
+service vendor.mmi-usb-sh /vendor/bin/init.mmi.usb.sh
     class late_start
     user root
     group system
@@ -218,7 +219,6 @@ on property:sys.usb.config=rndis,diag,serial_smd,serial_tty
 
 #Factory mode Compositions
 on property:sys.usb.config=usbnet,adb
-    start tcmd
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idProduct 2e2d
     write /sys/class/android_usb/android0/idVendor 22b8
@@ -229,7 +229,6 @@ on property:sys.usb.config=usbnet,adb
 
 on property:sys.usb.config=usbnet
     stop adbd
-    start tcmd
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idProduct 2e2c
     write /sys/class/android_usb/android0/idVendor 22b8
@@ -323,7 +322,6 @@ on property:sys.usb.config=ptp
     setprop sys.usb.state ${sys.usb.config}
 
 on property:sys.usb.config=ptp,adb
-    start tcmd
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/bDeviceClass 0
     write /sys/class/android_usb/android0/bDeviceSubClass 0
