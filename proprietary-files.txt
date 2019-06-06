@@ -1,18 +1,17 @@
-# ADSP - from deen_sprout - OPKS28.63-18-3
-vendor/bin/adsprpcd|edaaaa249ab22de6fba8bf07d677d060a143218a
-vendor/lib/libadsp_default_listener.so|1f6a768235d55446be7b865b950b6589ac487c97
-vendor/lib/libadsprpc.so|3786785e33f2596f7a82339eb847c7b2660b4fe5
-vendor/lib/libfastcvadsp_stub.so|d3c250fbd82c75667757a1b08949279474a27e1d
-vendor/lib/libfastcvopt.so|882be611d5b2d4bbf0731c379b80341c477fcd4c
-vendor/lib64/libadsp_default_listener.so|686134d7c74a39eb26bc80c4598e61596e9e0765
-vendor/lib64/libadsprpc.so|57b9dc246a4de1907fd2129fd4d5cfbcf90e3684
-vendor/lib64/libfastcvadsp_stub.so|d28fe888b94579428d368f3adbadc59febc280b0
-vendor/lib64/libfastcvopt.so|639a27bff28e8b7cb463f0d34327298b5863c5af
+# ADSP - from deen_sprout - PPKS29.68-16-33-3
+vendor/bin/adsprpcd|3d1e7e14dfc2f2468a06e0af9c0d34f4bda28d4b
+vendor/lib/libadsp_default_listener.so|d9de89d55eba2d35a7583584b51335a663705fa7
+vendor/lib/libadsprpc.so|7e5c1e4d18cb8053087baaf97a1e9eecf383d88b
+vendor/lib/libfastcvadsp_stub.so|6b50fd7d53811b51e06fedd87c12a794d0c2f645
+vendor/lib/libfastcvopt.so|b36b3c6805e8fc3c9cc1d0465d53d0f6cd587336
+vendor/lib64/libadsp_default_listener.so|f7ea94537c66dfa11e1235064d43c8f56c3b3c51
+vendor/lib64/libadsprpc.so|f8e157e472e5d77c7198d6f901fb5dc3fd2db5d0
+vendor/lib64/libfastcvadsp_stub.so|ad72fe745a7a8f4b3a355cc0aaf177c29301f29f
+vendor/lib64/libfastcvopt.so|8bf629759f67073a0c310c25452e8610825f78cc
 
-# ADSP modules - from deen_sprout - OPKS28.63-18-3
+# ADSP modules - from deen_sprout - PPKS29.68-16-33-3
 vendor/lib/rfsa/adsp/libapps_mem_heap.so|5c82ad9cfe3f30105d899e2a4e90cc7566f81252
 vendor/lib/rfsa/adsp/libdspCV_skel.so|628985174b0088bed21c866d7984d23855e5e150
-vendor/lib/rfsa/adsp/libexternal_dog_skel.so|02b69c54437fb5a6f7ad88c3f58e7c4adfea9ede
 vendor/lib/rfsa/adsp/libfastcvadsp.so|9818625bfa018f517e32a8f4a1e7fb4b255e5049
 vendor/lib/rfsa/adsp/libfastcvadsp_skel.so|1ff4a48009e88435d93fd2b9b0c5ea59cedbb4f7
 vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so|3e9c52069ff07e50191d3b3afb33b30409241ab6
@@ -20,19 +19,17 @@ vendor/lib/rfsa/adsp/libscveT2T_skel.so|91b9200dbb982abf0d6b440668252d892a616f66
 # ADSP modules
 vendor/lib/rfsa/adsp/tas2560_TI.bin
 
-# Audio - from deen_sprout - OPKS28.63-18-3
-vendor/lib/libacdb-fts.so|917343b6b6d238744a7e58113bcdac21c9c109a3
-vendor/lib/libacdbloader.so|995d6b9227cfe086150e0704d5aa05e4613559bd
-vendor/lib/libacdbrtac.so|fc49c1c53db2007f1efefa85fe566de5ba1845f8
-vendor/lib/libacdbmapper.so|39f543a2a3d53363e40c1d538e8bb2d0980b8b1e
-vendor/lib/libadiertac.so|1ecc56b613db58565f088c1bc29238f8d6ac6f00
-vendor/lib/libaudcal.so|a02a7e20da90a20214daf78b45809590d546a291
-vendor/lib64/libacdb-fts.so|32bc3472763a5b39ab6657339c97ac95147227b2
-vendor/lib64/libacdbloader.so|593ff62bd9210bd7e6edf6d2ba8c9fde71401f99
-vendor/lib64/libacdbrtac.so|ee17958a3a86e3b21e6c325a7bb5388313cfcb24
-vendor/lib64/libacdbmapper.so|e3c2e065273c9f7d6bbd9649b5067c0462388243
-vendor/lib64/libadiertac.so|70556f7b724dbe66453e4211e57bae44b5740309
-vendor/lib64/libaudcal.so|1d78c919b6ed472a08425668c6a5a8b17dd90fda
+# Audio - from deen_sprout - PPKS29.68-16-33-3
+vendor/lib/libacdb-fts.so|010d1cc4e07ce0e6ca489bfb310d00f3112e9ff9
+vendor/lib/libacdbloader.so|ca55798714f6c877ee499e4b676ab0d0ec62112d
+vendor/lib/libacdbrtac.so|bfebd31e1ae1ad69bdb0f852cf769cd0df0fa89d
+vendor/lib/libadiertac.so|e1e2f8370431717ede77b55b412bdba9f8793c97
+vendor/lib/libaudcal.so|4dff962fe34f6e8fcb53c8248ec72229212e546d
+vendor/lib64/libacdb-fts.so|f6396f69d61216d0eeb1218b700f40e7d4bbc6c7
+vendor/lib64/libacdbloader.so|b5ce7e58fedc7dd524067e249881c3f104a9a274
+vendor/lib64/libacdbrtac.so|2e44a45a2f61c621d4c746acc83139718d18ceef
+vendor/lib64/libadiertac.so|71d606669c19e567283751ce0ecdf757792adab3
+vendor/lib64/libaudcal.so|fdb34621e3d4433bcdc047ad536f0dac3a85b0e7
 
 # Audio ACDB
 vendor/etc/acdbdata/Bluetooth_cal.acdb
@@ -43,18 +40,14 @@ vendor/etc/acdbdata/Hdmi_cal.acdb
 vendor/etc/acdbdata/Headset_cal.acdb
 vendor/etc/acdbdata/Speaker_cal.acdb
 
-# Bluetooth - from deen_sprout - OPKS28.63-18-3
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|403ecbda275d609cc76b899f715e80d21980117b
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|1a2dc1c2d217f47b9c99a0afa9e4912abd32e381
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|22401ad759d8ce81368f3fa49b2c136b5a667dff
-vendor/lib64/libbtnv.so|7281ed854e2f80b63ec66c372f512ce3248d88a1
-vendor/lib64/libbt-hidlclient.so|cb4cdb9fa2ed29ba3603cf914caffe10f75f44ab
-vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so|73f3ce86adce194fcdfc5909cc79efcda8a407d9
-vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so|d49d27f9a9003434ca673d0e02f2fb2b16316d4f
-
-# Bluetooth (aptX) - from deen_sprout - OPKS28.63-18-3
-vendor/lib64/libaptXHD_encoder.so|76eb03998f9b4f98029a4408076685892726e45a
-vendor/lib64/libaptX_encoder.so|a407a92a6eb467886c3970629ebcab4db95b7600
+# Bluetooth - from deen_sprout - PPKS29.68-16-33-3
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|063da7375148fdd56930a54ea8d3e276725e62df
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|1ee6aaa189956b7dfb02b5b0de513d2c75f542c1
+vendor/lib64/libbtnv.so|f467a39938b8e76e3dea295ef412e69b6402254f
+vendor/lib64/libbt-hidlclient.so|63d64d0e63108780c4e9c097d76fde4626f4b5d9
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|e19f0b918d13e06451d7b6b0bc105e5ae64eed8f
+vendor/lib64/com.qualcomm.qti.ant@1.0.so|ba5bbae54e7790cff99fa91709fc2e0fc399efc7
 
 # Motorola Camera - from aljeter - PPP29.55-25
 lib/motorola.hardware.camera.device@1.0.so|51afafb043bb3fce3509938103e6e6f6f792c7bb
@@ -755,8 +748,8 @@ vendor/lib/libmmcamera_s5k3p3.so
 vendor/lib/libmmcamera_s5k4h7.so
 vendor/lib/libmmcamera_s5k4h8.so
 
-# Charger - from deen_sprout - OPKS28.63-18-3
-vendor/bin/charge_only_mode|4c1e451b4356575e595c9f8dd49e93373d9e7990
+# Charger - from deen_sprout - PPKS29.68-16-33-3
+vendor/bin/charge_only_mode|2eca690757a6599e1b9593df800771a44fca87f1
 
 # CNE - from tissot - OPM1.171019.026
 etc/cne/SwimConfig.xml|68dedcca1c2ac18cf81fdee1854de16a3a60dd02
@@ -1197,18 +1190,18 @@ vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|6ce2116c91d09258a2a5d08
 # Sensors (laser)
 vendor/lib/sensors.hal.tof.so
 
-# Thermal - from deen_sprout - OPKS28.63-18-3
-vendor/bin/thermal-engine|c118eb02c03a0fbbccf61ff4573fbb5cbfd1dfd9
-vendor/lib/libthermalclient.so|a811a1b0051c4eeea30655e52bc5b31033d95315
-vendor/lib64/hw/thermal.msm8953.so:vendor/lib64/hw/thermal.msm8937.so|a64ab36845df3d17de1d5378b547b77c9d759485
-vendor/lib64/libthermalclient.so|539697d186f9eabe55d531687573601a7d1e8b7d
-vendor/lib64/libthermalioctl.so|d4ff9cf91a14f2ab21abc6be0ec24915bf9982d8
+# Thermal - from deen_sprout - PPKS29.68-16-33-3
+vendor/bin/thermal-engine|676d4cdfb4c97f6ad1d9f22f79844ae80e834c2b
+vendor/lib/libthermalclient.so|b41ea4c90353b8e057f774979d8ce5d3a006f70c
+vendor/lib64/hw/thermal.msm8953.so:vendor/lib64/hw/thermal.msm8937.so|d469d5f17b3ee397dd1c5c91d6a936db3e9b4bfd
+vendor/lib64/libthermalclient.so|e1123e8b39a39d4907092271922e47190e19d1c5
+vendor/lib64/libthermalioctl.so|1ce39d2a088f8e943be9a4c4b6d3c212a9881d95
 
-# Time services - from deen_sprout - OPKS28.63-18-3
--vendor/app/TimeService/TimeService.apk|4dff78fd288487084e07c62833e2a123182b1454
-vendor/bin/time_daemon|6a5381a475aece22c480adb4523e979330b1f45f
-vendor/lib/libtime_genoff.so|267516e23fe515013b6ef4e2f7edd0049fb75466
-vendor/lib64/libtime_genoff.so|7683a85cae9f17cd535e8960fceda1d6831074a0
+# Time services - from deen_sprout - PPKS29.68-16-33-3
+-vendor/app/TimeService/TimeService.apk|2cdac463ea1e295cf1c3ae08974c37cad2c9f784
+vendor/bin/time_daemon|e7f801aeb814ac2760b0bfa57a3261e0c415a16d
+vendor/lib/libtime_genoff.so|4ca1098498c00323d755af303d9a4382cefd5aff
+vendor/lib64/libtime_genoff.so|63bc574e88ccea12fcb8872a229e407f12307083
 
 # Widevine - from deen_sprout - PPKS29.68-16-33-3
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine|fe96d4602429302df1b7917d31f39bf29937a24c
@@ -1217,8 +1210,8 @@ vendor/lib64/mediadrm/libwvdrmengine.so|22ded05457d194ecdb4bb4e8228dc6d1efe9bb6b
 vendor/lib64/liboemcrypto.so|62d16f538f9f7b6453915bc1ce52d6c59526d747
 vendor/lib64/libwvhidl.so|5fc3e2c75a2629dffeaca9fb7c98b8bf6d7ddc78
 
-# WIFI - from deen_sprout - OPKS28.63-18-3
-vendor/bin/cnss-daemon|23c368f34a27997d42bd9cddb54faf45e76b4395
+# WIFI - from deen_sprout - PPKS29.68-16-33-3
+vendor/bin/cnss-daemon|e07e36d89bb7e62c6183f36e9f4531a318afc37d
 
-# Misc - from deen_sprout - OPKS28.63-18-3
-vendor/lib/libmot_afd.so|b1641427784b1b0374e5b0d4a7b50c16d15656a9
+# Misc - from deen_sprout - PPKS29.68-16-33-3
+vendor/lib/libmot_afd.so|b5a53df1a1a0f74aba81ac43c9b1e7ff518e31fe
