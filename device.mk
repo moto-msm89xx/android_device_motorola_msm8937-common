@@ -267,6 +267,11 @@ PRODUCT_PACKAGES += \
     libsensorndkbridge \
     libxml2
 
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.2 \
+    android.hardware.radio.config@1.0 \
+    android.hardware.secure_element@1.0
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -324,7 +329,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libgpu_mapper_shim \
     libjustshoot_shim \
-    libqsapshim_vendor \
+    libqsapshim \
     libshim_ril
 
 # Thermal
