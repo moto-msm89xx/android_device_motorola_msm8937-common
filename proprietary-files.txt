@@ -1134,7 +1134,7 @@ vendor/bin/tftp_server|ff4d12b015f53b1b139a3cc10e4ca3004450f34c
 vendor/bin/hw/qcrild|a6589c8e8d3a20b604811f6b4c4457cf4d2c96b2
 vendor/etc/data/dsi_config.xml|f4861831fcb21d43e2a9ca12519155ebb8ac1407
 vendor/etc/data/netmgr_config.xml|23ecb12d506ac0334e0ab8e498cda3b07b478fe0
-vendor/etc/init/qcrild.rc|70957d1fa7c900097cb2d291b5c962ff4e4af621
+vendor/etc/init/qcrild.rc|fd5c77effea7d3c1220abbd51bd8339e1210ac50
 vendor/lib/libmdmdetect.so|ec7f736d0d80b594ed162744f85a686e6437c30f
 vendor/lib/libqcmaputils.so|d7b6183716bebb58ede8ef6c22e8183c1b70c673
 vendor/lib/libqrtr.so|d66a7e48e4058cdf490315e97d56155d904a3cfb
