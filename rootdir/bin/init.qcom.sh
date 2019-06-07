@@ -28,6 +28,7 @@
 #
 
 target=`getprop ro.board.platform`
+low_ram=`getprop ro.config.low_ram`
 if [ -f /sys/devices/soc0/soc_id ]; then
     platformid=`cat /sys/devices/soc0/soc_id`
 else
@@ -65,6 +66,18 @@ start_charger_monitor()
 		chmod 0664 /sys/class/power_supply/battery/voltage_min
 		chmod 0664 /sys/module/qpnp_charger/parameters/charger_monitor
 		start charger_monitor
+	fi
+}
+
+start_msm_irqbalance_8939()
+{
+	if [ -f /vendor/bin/msm_irqbalance ]; then
+		case "$platformid" in
+		    "239" | "293" | "294" | "295" | "304" | "313" |"353")
+			start vendor.msm_irqbalance;;
+		    "349" | "350" )
+			start vendor.msm_irqbal_lb;;
+		esac
 	fi
 }
 
@@ -126,50 +139,49 @@ case "$target" in
         else
              hw_platform=`cat /sys/devices/system/soc/soc0/hw_platform`
         fi
-        case "$soc_id" in
-             "294" | "295" | "303" | "307" | "308" | "309" | "313" | "320")
-                  case "$hw_platform" in
-                       "Surf")
+	if [ "$low_ram" != "true" ]; then
+             case "$soc_id" in
+                  "294" | "295" | "303" | "307" | "308" | "309" | "313" | "320" | "353" | "354" | "363" | "364")
+                       case "$hw_platform" in
+                            "Surf")
                                     setprop qemu.hw.mainkeys 0
                                     ;;
-                       "MTP")
+                            "MTP")
                                     setprop qemu.hw.mainkeys 0
                                     ;;
-                       "RCM")
+                            "RCM")
                                     setprop qemu.hw.mainkeys 0
                                     ;;
-                       "QRD")
+                            "QRD")
                                     setprop qemu.hw.mainkeys 0
                                     ;;
-                  esac
-                  ;;
-       esac
+                       esac
+                       ;;
+             esac
+        fi
         ;;
 esac
 
 #
-# Copy qcril.db if needed for RIL
-#
-start_copying_prebuilt_qcril_db
-echo 1 > /data/vendor/radio/db_check_done
-
-#
 # Make modem config folder and copy firmware config to that folder for RIL
 #
-if [ -f /data/vendor/radio/ver_info.txt ]; then
-    prev_version_info=`cat /data/vendor/radio/ver_info.txt`
+if [ -f /data/vendor/modem_config/ver_info.txt ]; then
+    prev_version_info=`cat /data/vendor/modem_config/ver_info.txt`
 else
     prev_version_info=""
 fi
 
 cur_version_info=`cat /vendor/firmware_mnt/verinfo/ver_info.txt`
 if [ ! -f /vendor/firmware_mnt/verinfo/ver_info.txt -o "$prev_version_info" != "$cur_version_info" ]; then
-    chmod g+w -R /data/vendor/modem_config/
-    rm -rf /data/vendor/radio/modem_config
+    # add W for group recursively before delete
+    chmod g+w -R /data/vendor/modem_config/*
+    rm -rf /data/vendor/modem_config/*
     # preserve the read only mode for all subdir and files
-    cp --preserve=m -d /vendor/firmware_mnt/image/modem_pr/mcfg/configs/* /data/vendor/radio/modem_config
-    chown -hR radio.radio /data/vendor/radio/modem_config
-    cp --preserve=m -d /vendor/firmware_mnt/verinfo/ver_info.txt /data/vendor/radio/ver_info.txt
+    cp --preserve=m -dr /vendor/firmware_mnt/image/modem_pr/mcfg/configs/* /data/vendor/modem_config
+    cp --preserve=m -d /vendor/firmware_mnt/verinfo/ver_info.txt /data/vendor/modem_config/
+    cp --preserve=m -d /vendor/firmware_mnt/image/modem_pr/mbn_ota.txt /data/vendor/modem_config/
+    # the group must be root, otherwise this script could not add "W" for group recursively
+    chown -hR radio.root /data/vendor/modem_config/*
 fi
 chmod g-w /data/vendor/modem_config
 setprop ro.vendor.ril.mbn_copy_completed 1
