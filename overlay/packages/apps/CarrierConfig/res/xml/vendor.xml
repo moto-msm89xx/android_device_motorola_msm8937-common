@@ -4,8 +4,30 @@
         <boolean name="allow_video_call_in_low_battery" value="true" />
         <boolean name="default_carrierconfig_loaded" value="true" />
         <boolean name="show_apn_setting_cdma_bool" value="true" />
+        <boolean name="show_ims_registration_status_bool" value="true" />
         <boolean name="world_phone_bool" value="true" />
     </carrier_config>
+    <carrier_config mcc="001" customerid="verizon">
+        <boolean name="carrier_volte_provisioning_required_bool" value="true" />
+        <boolean name="carrier_allow_turnoff_ims_bool" value="false" />
+        <boolean name="carrier_volte_tty_supported_bool" value="true" />
+        <boolean name="rtt_supported_bool" value="true" />
+        <boolean name="support_pause_ims_video_calls_bool" value="true" />
+        <boolean name="editable_wfc_mode_bool" value="false" />
+        <int name="carrier_default_wfc_ims_mode_int" value="1" />
+        <boolean name="editable_wfc_roaming_mode_bool" value="true" />
+        <int name="carrier_default_wfc_ims_roaming_mode_int" value="1" />
+        <boolean name="allow_video_call_in_low_battery" value="true" />
+        <boolean name="carrier_allow_vce_bool" value="true" />
+        <boolean name="carrier_wfc_mdn_required_bool" value="true" />
+        <boolean name="downgrade_video_call_when_mobile_data_off" value="false" />
+        <boolean name="moto_auto_resume_holding_call" value="true" />
+        <boolean name="use_rcs_presence_bool" value="true" />
+        <boolean name="show_iccid_in_sim_status_bool" value="true" />
+    </carrier_config>
+    <carrier_config mcc="001" customerid="sprint">
+        <boolean name="carrier_volte_available_bool" value="false" />
+        <boolean name="carrier_vt_available_bool" value="false" />
     <carrier_config mcc="310" mnc="120">
         <boolean name="sprint_mwi_quirk" value="true" />
     </carrier_config>
@@ -18,25 +40,6 @@
     <carrier_config mcc="312" mnc="530">
         <boolean name="sprint_mwi_quirk" value="true" />
     </carrier_config>
-    <carrier_config mcc="001" customerid="verizon">
-        <boolean name="carrier_volte_provisioning_required_bool" value="true" />
-        <boolean name="carrier_allow_turnoff_ims_bool" value="false" />
-        <boolean name="carrier_volte_tty_supported_bool" value="true" />
-        <boolean name="support_pause_ims_video_calls_bool" value="true" />
-        <boolean name="editable_wfc_mode_bool" value="false" />
-        <int name="carrier_default_wfc_ims_mode_int" value="1" />
-        <boolean name="editable_wfc_roaming_mode_bool" value="true" />
-        <int name="carrier_default_wfc_ims_roaming_mode_int" value="1" />
-        <boolean name="allow_video_call_in_low_battery" value="true" />
-        <boolean name="carrier_allow_vce_bool" value="true" />
-        <boolean name="carrier_wfc_mdn_required_bool" value="true" />
-        <boolean name="downgrade_video_call_when_mobile_data_off" value="false" />
-        <boolean name="moto_auto_resume_holding_call" value="true" />
-        <boolean name="use_rcs_presence_bool" value="true" />
-    </carrier_config>
-    <carrier_config mcc="001" customerid="sprint">
-        <boolean name="carrier_volte_available_bool" value="false" />
-        <boolean name="carrier_vt_available_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="001" carrierid="att">
         <boolean name="editable_wfc_mode_bool" value="false" />
@@ -47,6 +50,8 @@
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
         <boolean name="carrier_volte_tty_supported_bool" value="false" />
+        <boolean name="ignore_data_enabled_changed_for_video_calls" value="true" />
+        <boolean name="vilte_data_is_metered_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="202">
         <int name="maxImageHeight" value="1944" />
@@ -68,7 +73,6 @@
         <int name="maxImageHeight" value="1944" />
         <int name="maxImageWidth" value="2592" />
         <int name="recipientLimit" value="20" />
-        <int name="smsToMmsTextThreshold" value="6" />
     </carrier_config>
     <carrier_config mcc="212">
         <int name="maxImageHeight" value="1944" />
@@ -410,12 +414,6 @@
         <int name="recipientLimit" value="20" />
         <int name="smsToMmsTextThreshold" value="6" />
         <boolean name="moto_enable_service_dialing_number" value="true" />
-        <string-array name="carrier_additional_cbs_channels_strings" num="4">
-            <item value="919:emergency=true" />
-            <item value="4370:emergency=true" />
-            <item value="4372:emergency=true" />
-            <item value="4373:emergency=true" />
-        </string-array>
     </carrier_config>
     <carrier_config mcc="338">
         <int name="maxImageWidth" value="2592" />
@@ -792,10 +790,6 @@
         <int name="maxImageWidth" value="2592" />
         <int name="recipientLimit" value="20" />
         <int name="smsToMmsTextThreshold" value="6" />
-        <string-array name="carrier_additional_cbs_channels_strings" num="2">
-            <item value="911:emergency=true,type=other" />
-            <item value="919:emergency=true,type=other" />
-        </string-array>
     </carrier_config>
     <carrier_config mcc="467">
         <int name="maxImageHeight" value="1944" />
@@ -1367,13 +1361,6 @@
         <int name="maxImageHeight" value="1944" />
         <int name="maxImageWidth" value="2592" />
         <boolean name="moto_enable_service_dialing_number" value="true" />
-        <string-array name="carrier_additional_cbs_channels_strings" num="5">
-            <item value="919:emergency=true" />
-            <item value="4370:emergency=true" />
-            <item value="4380-4383:emergency=true" />
-            <item value="519:emergency=true" />
-            <item value="4396-4399:emergency=true" />
-        </string-array>
     </carrier_config>
     <carrier_config mcc="722">
         <int name="maxImageHeight" value="1944" />
@@ -1401,10 +1388,6 @@
         <int name="recipientLimit" value="20" />
         <int name="smsToMmsTextThreshold" value="6" />
         <boolean name="moto_enable_service_dialing_number" value="true" />
-        <string-array name="carrier_additional_cbs_channels_strings" num="2">
-            <item value="919:emergency=true" />
-            <item value="4370:emergency=true" />
-        </string-array>
     </carrier_config>
     <carrier_config mcc="732">
         <int name="maxImageHeight" value="1944" />
