@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <device name="Android">
     <item name="none">0</item>
-    <item name="screen.on">79.469</item>
-    <item name="screen.full">187.191</item>
-    <item name="wifi.on">0.632</item>
-    <item name="wifi.active">70.226</item>
-    <item name="wifi.scan">48.42</item>
-    <item name="camera.flashlight">103.532</item>
-    <item name="camera.avg">443.782</item>
-    <item name="gps.on">75.64</item>
-    <item name="radio.active">386.311</item>
-    <item name="radio.scanning">32.937</item>
+    <item name="screen.on">95.083</item>
+    <item name="screen.full">262.600</item>
+    <item name="wifi.on">0.954</item>
+    <item name="wifi.active">38.527</item>
+    <item name="wifi.scan">9.851</item>
+    <item name="camera.avg">444.487</item>
+    <item name="camera.flashlight">104.347</item>
+    <item name="gps.on">24.470</item>
+    <item name="radio.active">267.496</item>
+    <item name="radio.scanning">49.831</item>
     <array name="radio.on">
-        <value>30.1</value>
-        <value>30</value>
-        <value>25</value>
+        <value>21</value>
         <value>20</value>
         <value>15</value>
         <value>10</value>
         <value>5</value>
-        <value>1.3</value>
     </array>
     <array name="cpu.clusters.cores">
         <value>4</value>
@@ -33,27 +30,27 @@
         <value>1344000</value>
         <value>1401000</value>
     </array>
+    <array name="cpu.active.cluster0">
+        <value>132.637</value>
+        <value>134.779</value>
+        <value>150.221</value>
+        <value>151.910</value>
+        <value>169.840</value>
+        <value>186.793</value>
+    </array>
     <array name="cpu.speeds.cluster1">
         <value>768000</value>
         <value>902400</value>
         <value>998400</value>
         <value>1094400</value>
     </array>
-    <array name="cpu.active.cluster0">
-        <value>118.434</value>
-        <value>177.981</value>
-        <value>218.685</value>
-        <value>227.246</value>
-        <value>255.368</value>
-        <value>292.237</value>
+    <array name="cpu.active.cluster1">
+        <value>96.002</value>
+        <value>99.958</value>
+        <value>93.509</value>
+        <value>135.591</value>
     </array>
-    <array name="cpu.active.cluster0">
-        <value>145.062</value>
-        <value>178.358</value>
-        <value>179.853</value>
-        <value>182.287</value>
-    </array>
-    <item name="cpu.idle">3.663</item>
-    <item name="cpu.awake">1.719</item>
+    <item name="cpu.idle">4.891</item>
+    <item name="cpu.awake">2.291</item>
     <item name="battery.capacity">5000</item>
 </device>
