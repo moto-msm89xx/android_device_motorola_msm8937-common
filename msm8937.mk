@@ -5,10 +5,9 @@
 #
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/motorola/hannah/hannah-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/msm8937-common/msm8937-common-vendor.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1440
@@ -200,7 +199,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.hannah
+    android.hardware.light@2.0-service.motorola_msm8937
 
 # LineageActions
 PRODUCT_PACKAGES += \
