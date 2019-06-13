@@ -5,6 +5,8 @@
 
 # Camera
 /dev/laser                                               u:object_r:laser_device:s0
+/sys/devices/virtual/input/input7/enable_ps_sensor       u:object_r:sysfs_laser:s0
+/sys/devices/soc/1b00000.qcom,msm-cam/media0/model       u:object_r:sysfs_camera_device:s0
 /(vendor|system/vendor)/bin/hw/motorola\.hardware\.camera\.provider@2\.4-service u:object_r:hal_camera_default_exec:s0
 
 # Capsense
@@ -29,12 +31,11 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-ets u:object_r:hal_fingerprint_default_exec:s0
 
 # Fsg
+/fsg                                                     u:object_r:fsg_firmware_file:s0
 /(vendor|system/vendor)/fsg                              u:object_r:fsg_firmware_file:s0
 
-
 # Init scripts
-/(vendor|system/vendor)/bin/init\.mmi\.(boot|laser|touch|usb)\.sh u:object_r:qti_init_shell_exec:s0
-/(vendor|system/vendor)/bin/init\.oem\.hw\.sh            u:object_r:qti_init_shell_exec:s0
+/(vendor|system/vendor)/bin/init\.mmi\.(laser|usb)\.sh u:object_r:qti_init_shell_exec:s0
 
 # Input devices
 /(vendor|system/vendor)/usr/idc(/.*)?                    u:object_r:idc_file:s0
@@ -45,8 +46,7 @@
 /sys/devices/soc/leds-atc-20/leds(/.*)?                  u:object_r:sysfs_leds:s0
 
 # Radio
-/data/misc/cutback(/.*)?                                 u:object_r:cutback_ipc_file:s0
-/(vendor|system/vendor)/radio(/.*)?                      u:object_r:radio_data_file:s0
+/data/vendor/misc/cutback(/.*)?                          u:object_r:cutback_ipc_file:s0
 
 # Rmts
 /sys/kernel/debug/rmt_storage(/.*)?                      u:object_r:debugfs_rmt:s0
