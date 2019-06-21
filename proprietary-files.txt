@@ -913,6 +913,30 @@ vendor/lib64/librs_adreno_sha1.so|35c26aecafd9a12d84ff6f89b1891699c19eb88f
 vendor/lib64/librs_adreno.so|5b853ae3692fc3d8cf7c5b63d45320533c194cde
 vendor/lib64/libRSDriver_adreno.so|eb72d1cabfb31ee3362c9832a40b265e42858dc9
 
+# Graphics a308 - from riva - OPM1.171019.026
+vendor/lib/egl/eglsubAndroid.so|c150a8a1f70040da86b083fd95403b312675d4e6
+vendor/lib/egl/libEGL_adreno.so:vendor/lib/egl/libEGL_adreno_8917.so|095c0ca2f5d3b0da4c8bdc370cd53244e859a1ee
+vendor/lib/egl/libESXEGL_adreno.so|863ba76e8f0f821706b03d3a9aff61c15227fce7
+vendor/lib/egl/libESXGLESv1_CM_adreno.so|6f7e122fc9fd42cc0840068d52fb3c678ee674d0
+vendor/lib/egl/libESXGLESv2_adreno.so|58108938bfcfd7bab8274624b28c820f3a959223
+vendor/lib/egl/libGLESv1_CM_adreno.so:vendor/lib/egl/libGLESv1_CM_adreno_8917.so|0f3ab19a2572658f78826bfa6fe6149b0554fa9f
+vendor/lib/egl/libGLESv2_adreno.so:vendor/lib/egl/libGLESv2_adreno_8917.so|2f7b8abc7def59c607b58a03e091d92427c0da25
+vendor/lib/egl/libRBEGL_adreno.so|b26e896f576b86cc2e8d69f49c48f37302337075
+vendor/lib/egl/libRBGLESv1_CM_adreno.so|10c18d6ad691bbaa751c805e4722daae47c467a1
+vendor/lib/egl/libRBGLESv2_adreno.so|cf95caaf03ccd599b0d360a6c1f3b2d9af6f2e34
+vendor/lib/libsc-a3xx.so|99f7d81029e1d4d6f5e074cb9ad98fc750457348
+vendor/lib64/egl/eglsubAndroid.so|4051c7f7283b0463dc31b39a1f0e64340befd414
+vendor/lib64/egl/libEGL_adreno.so:vendor/lib64/egl/libEGL_adreno_8917.so|4f2537cca19b11e6aa7f85b3c3ceeebfa1bcb423
+vendor/lib64/egl/libESXEGL_adreno.so|0b414e24e3503e738c027ae4766deb5f7a7943fb
+vendor/lib64/egl/libESXGLESv1_CM_adreno.so|9935dbf58dcfe01c52e1e42c770dddb5725a309e
+vendor/lib64/egl/libESXGLESv2_adreno.so|175bd05582b5389dad054a5ac97c7a82a5ab96af
+vendor/lib64/egl/libGLESv1_CM_adreno.so:vendor/lib64/egl/libGLESv1_CM_adreno_8917.so|f4f2adb5226ce167c66c5dc633ff8d51848aed6e
+vendor/lib64/egl/libGLESv2_adreno.so:vendor/lib64/egl/libGLESv2_adreno_8917.so|63d49ecefb4630a76b32dab2edd7715d2bba2221
+vendor/lib64/egl/libRBEGL_adreno.so|27d28a3a4a8afde7aaa49fc2ffea24eab6903bb2
+vendor/lib64/egl/libRBGLESv1_CM_adreno.so|c3a83c0dcbc9e7e377890539eedfaae461eeba44
+vendor/lib64/egl/libRBGLESv2_adreno.so|88951c34481d835e644d3fca5290d45a32cf4d39
+vendor/lib64/libsc-a3xx.so|b5adb05d08af30107dcb7cad11abf447322235c8
+
 # Graphics - (DRM) - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 vendor/lib/libsdedrm.so|528ebbb624dd6cfc147d4e91c2d2f132137ff38a
 vendor/lib64/libsdedrm.so|822169719a3c12edeffa9b18367b35830d6443bf
