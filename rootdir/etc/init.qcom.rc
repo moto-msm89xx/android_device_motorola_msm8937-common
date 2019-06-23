@@ -428,18 +428,10 @@ service port-bridge /system/vendor/bin/port-bridge
 service netmgrd /system/vendor/bin/netmgrd
     class main
 
-service ipacm-diag /system/vendor/bin/ipacm-diag
-    class main
-    user radio
-    socket ipacm_log_file dgram 660 radio radio
-    group radio diag oem_2901
-    disabled
-
 service ipacm /system/vendor/bin/ipacm
     class main
     user radio
     group radio inet
-    disabled
 
 service qti /system/vendor/bin/qti
     class main
