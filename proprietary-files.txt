@@ -1233,19 +1233,18 @@ vendor/lib64/libmotext_inf.so|2536b56abc964b16a1e97d1c2a74f8cb66d3e3ac
 vendor/lib64/libmdmcutback.so|6810e37550be62abdf080748e883c15e45f0fe16
 vendor/lib64/libqmimotext.so|160f0764206620bc3096ec3379d0c26aee2b9468
 
-# Postprocessing - from deen_sprout - OPKS28.63-18-3
+# Postprocessing - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 etc/permissions/com.qti.snapdragon.sdk.display.xml|0bff16d681e75f203c1e11ff33afba82490e49b3
-framework/com.qti.snapdragon.sdk.display.jar|907442503a68e9f1d00a9da1e78874a553812bff
--vendor/app/colorservice/colorservice.apk|3cd29661d4f34705f1d5e0b0c6cd85ca5eb42422
-vendor/bin/hw/vendor.display.color@1.0-service|fec0d808fa0b795bf3afe8cad8afa06dcc3bf6e1
-vendor/bin/mm-pp-dpps|1e0e53271c2c0ea004aac5c12a88376d2ff143e0
+framework/com.qti.snapdragon.sdk.display.jar|db5b8dd09100aab238b5972192f5ab944f38208c
+vendor/bin/hw/vendor.display.color@1.0-service|2dbbb46a62ac5cf8d3a084c8350457442f5741eb
+vendor/bin/mm-pp-dpps|c281ee28274eeff6273091ae07aa1856a0c160db
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
-vendor/lib/libdisp-aba.so|bed3c712edf60d28e08c8bfb51af0059ee86e48e
-vendor/lib/vendor.display.color@1.0_vendor.so|edcd7b3cc048de0f916653fda7adac33a70cfb99
-vendor/lib/vendor.display.postproc@1.0_vendor.so|b5dcfe8ba5dc4e583671cc6d69d0ae22a6edecb4
-vendor/lib64/libdisp-aba.so|f6b5909f917ddcb791c25c99e5cc35414709d6ae
-vendor/lib64/vendor.display.color@1.0_vendor.so|ff74f41b12060413ba1219db563bcb8484d72188
-vendor/lib64/vendor.display.postproc@1.0_vendor.so|18f919c76742d6eccf115262921f44fa773958a4
+vendor/lib/libdisp-aba.so|1779aa9d99a04db3ab1b5546bd243ba3ecfc1bb5
+vendor/lib/vendor.display.color@1.0.so|a4da7352135120a3f1dc6c73edecec87bea5c1a5
+vendor/lib/vendor.display.postproc@1.0.so|fb2b2af0f4811769424d68898f5ea323372ba0e5
+vendor/lib64/libdisp-aba.so|2b9a85de013e956f1adfaf00146a865efb7077c4
+vendor/lib64/vendor.display.color@1.0.so|ec75654927c63b74c7f8d0760fa463f0e8287f25
+vendor/lib64/vendor.display.postproc@1.0.so|b95e9f990a207d5c62db4d66f5aaf088adc02ba8
 
 # Sensors - from daisy_sprout - PKQ1.180917.001/V10.0.1.0.PDLMIFJ
 vendor/bin/capsense_reset|4b5c900b12d15402df8f5f7b9e199f8e63b3f307
