@@ -292,11 +292,8 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
-    init.mmi.boot.sh \
     init.mmi.laser.sh \
-    init.mmi.touch.sh \
     init.mmi.usb.sh \
-    init.oem.hw.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.sensors.sh \
