@@ -811,7 +811,7 @@
 
     <path name="handset">
 	<!--TAS2560 Handset case-->
-	<ctl name="DAC Playback Volume" value="0" />
+	<ctl name="DAC Playback Volume" value="15" />
     </path>
 
     <path name="handset-mic">
@@ -919,8 +919,8 @@
     <path name="speaker-and-headphones">
         <path name="speaker" />
         <path name="headphones" />
-        <ctl name="RX1 Digital Volume" value="76" />
-        <ctl name="RX2 Digital Volume" value="76" />
+        <ctl name="RX1 Digital Volume" value="84" />
+        <ctl name="RX2 Digital Volume" value="84" />
     </path>
 
     <path name="afe-proxy">
