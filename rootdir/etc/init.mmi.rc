@@ -242,6 +242,12 @@ on charger
     class_stop main
     class_stop late_start
 
+on moto-charger
+    setprop ro.board.platform msm8937
+    trigger firmware_mounts_complete
+    start vendor.charge_only_mode
+    start vendor.thermal-com
+
 service vendor.mmi-boot-sh /vendor/bin/init.mmi.boot.sh
     class core
     user root
