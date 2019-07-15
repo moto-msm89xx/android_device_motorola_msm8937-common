@@ -53,6 +53,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.HAL3.enabled=1 \
     persist.vendor.qti.telephony.vt_cam_interface=1
 
+# Charger
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.charger.enable_suspend=true
+
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.cnd.iwlan=1 \
