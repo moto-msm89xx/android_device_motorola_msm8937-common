@@ -22,7 +22,7 @@
         <value>4</value>
         <value>4</value>
     </array>
-    <array name="cpu.speeds.cluster0">
+    <array name="cpu.core_speeds.cluster0">
         <value>960000</value>
         <value>1094400</value>
         <value>1209600</value>
@@ -30,7 +30,7 @@
         <value>1344000</value>
         <value>1401000</value>
     </array>
-    <array name="cpu.active.cluster0">
+    <array name="cpu.core_power.cluster0">
         <value>132.637</value>
         <value>134.779</value>
         <value>150.221</value>
@@ -38,19 +38,19 @@
         <value>169.840</value>
         <value>186.793</value>
     </array>
-    <array name="cpu.speeds.cluster1">
+    <array name="cpu.core_speeds.cluster1">
         <value>768000</value>
         <value>902400</value>
         <value>998400</value>
         <value>1094400</value>
     </array>
-    <array name="cpu.active.cluster1">
+    <array name="cpu.core_power.cluster1">
         <value>96.002</value>
         <value>99.958</value>
         <value>93.509</value>
         <value>135.591</value>
     </array>
-    <item name="cpu.idle">4.891</item>
-    <item name="cpu.awake">2.291</item>
+    <item name="cpu.suspend">4.891</item>
+    <item name="cpu.idle">2.291</item>
     <item name="battery.capacity">5000</item>
 </device>
