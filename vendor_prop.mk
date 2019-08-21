@@ -92,7 +92,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Fm
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.fm.transmitter=false
+    ro.fm.transmitter=false \
+    ro.vendor.fm.use_audio_session=true
 
 # GPU
 PRODUCT_PROPERTY_OVERRIDES += \
