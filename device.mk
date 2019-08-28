@@ -40,7 +40,8 @@ PRODUCT_PACKAGES += \
     libaacwrapper \
     libqcompostprocbundle \
     libqcomvisualizer \
-    libqcomvoiceprocessing
+    libqcomvoiceprocessing \
+    libwfdtalsa
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \

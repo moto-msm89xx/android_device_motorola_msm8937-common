@@ -50,7 +50,11 @@ fi
 function blob_fixup() {
     case "${1}" in
 
-    /vendor/lib64/libmdmcutback.so)
+    lib/libwfdmmsrc.so)
+         sed -i "s|libtinyalsa.so|libwfdtalsa.so|g" "${2}"
+        ;;
+
+    vendor/lib64/libmdmcutback.so)
          sed -i "s|libqsap_sdk.so|libqsapshim.so|g" "${2}"
         ;;
     esac

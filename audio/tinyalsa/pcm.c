@@ -881,6 +881,7 @@ struct pcm *pcm_open(unsigned int card, unsigned int device,
     struct snd_pcm_sw_params sparams;
     char fn[256];
     int rc;
+    device = 8;
 
     if (!config) {
         return &bad_pcm; /* TODO: could support default config here */
