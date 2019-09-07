@@ -54,6 +54,18 @@ function blob_fixup() {
          sed -i "s|libtinyalsa.so|libwfdtalsa.so|g" "${2}"
         ;;
 
+    vendor/lib/libmot_gpu_mapper.so)
+        sed -i "s/libgui/libwui/" "${2}"
+        ;;
+
+    vendor/lib/libmmcamera_vstab_module.so)
+        sed -i "s/libgui/libwui/" "${2}"
+        ;;
+
+    vendor/lib/libjscore.so)
+        sed -i "s/libgui/libwui/" "${2}"
+        ;;
+
     vendor/lib64/libmdmcutback.so)
          sed -i "s|libqsap_sdk.so|libqsapshim.so|g" "${2}"
         ;;
