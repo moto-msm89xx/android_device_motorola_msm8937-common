@@ -7,7 +7,6 @@
 /dev/laser                                               u:object_r:laser_device:s0
 /sys/devices/virtual/input/input7/enable_ps_sensor       u:object_r:sysfs_laser:s0
 /sys/devices/soc/1b00000.qcom,msm-cam/media0/model       u:object_r:sysfs_camera_device:s0
-/(vendor|system/vendor)/bin/hw/motorola\.hardware\.camera\.provider@2\.4-service u:object_r:hal_camera_default_exec:s0
 
 # Capsense
 /sys/class/capsense(/.*)?                                u:object_r:sysfs_capsense:s0
