@@ -34,10 +34,6 @@ vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
 vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
 
-# AptX
-system/lib64/libaptXHD_encoder.so
-system/lib64/libaptX_encoder.so
-
 # Audio
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
@@ -64,6 +60,10 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|a6fa0b97864e41f36c7d8
 vendor/lib64/libbtnv.so|f467a39938b8e76e3dea295ef412e69b6402254f
 vendor/lib64/libbt-hidlclient.so|e7cc68021ff2a38728a50c92914420ba61d2c5c3
 vendor/lib64/vendor.qti.hardware.fm@1.0.so|b72b6bc0f79ef8289f4b543910e7e2d91961831f
+
+# Bluetooth (aptX) - from crosshatch - RQ3A.210605.005
+system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
 # Camera
 vendor/lib/libmot_gpu_mapper.so|9f4d96542314976a8384f686a2a4c49d321999fe
