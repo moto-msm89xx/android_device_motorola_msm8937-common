@@ -23,11 +23,7 @@
 /data/fpc(/.*)?                                          u:object_r:fingerprint_data_file:s0
 /data/fpc/socket                                         u:object_r:fingerprint_socket:s0
 
-# Firmware
-/firmware                                                u:object_r:firmware_file:s0
-
 # Fsg
-/fsg                                                     u:object_r:fsg_firmware_file:s0
 /(vendor|system/vendor)/fsg                              u:object_r:fsg_firmware_file:s0
 
 # Health
