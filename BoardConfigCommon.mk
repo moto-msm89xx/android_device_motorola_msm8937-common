@@ -158,7 +158,6 @@ LZMA_RAMDISK_TARGETS := recovery
 TARGET_EXFAT_DRIVER := sdfat
 
 # Power
-TARGET_HAS_NO_WLAN_STATS := true
 TARGET_USES_INTERACTION_BOOST := true
 
 # Qualcomm support
