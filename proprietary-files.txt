@@ -854,7 +854,7 @@ lib64/libFileMux.so|8d07dde58a8b629ccce4dd9c778e76a6513ca555
 lib64/libmmparser_lite.so|bea6788f2f0924c74a3bb7c1fdd24bc59202550c
 lib64/libmmosal.so|9ceff2581e86d32bc2795dffb96ebe4bdc88f2f7
 lib64/libwfdclient.so|ef47176ace77a2e90a7c45515280b36591168ecc
-lib64/libwfdnative.so|279271166b8840084b93f34cebaf4242b00090d3
+lib64/libwfdnative.so|0c7ad115f8ad8acb0f7609268e37b9df4ddc7922
 -priv-app/WfdService/WfdService.apk|311d2726d96beba2baa28b6c73dcb6f8a3d99d40
 vendor/bin/wifidisplayhalservice|53f17ca800499f18514c4a68bff571491404ead6
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|04e463342cbba4c0e9c311a18238f95dec9359fd
