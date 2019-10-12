@@ -93,8 +93,15 @@ function blob_fixup() {
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
 
+ONLY_BOARD_COMMON=
+ONLY_DEVICE_COMMON=
+
 while [ "$1" != "" ]; do
     case $1 in
+        --only-board-common )   ONLY_BOARD_COMMON=false
+                                ;;
+        --only-device-common )  ONLY_DEVICE_COMMON=false
+                                ;;
         -n | --no-cleanup )     CLEAN_VENDOR=false
                                 ;;
         -s | --section )        shift
@@ -111,12 +118,14 @@ if [ -z "$SRC" ]; then
     SRC=adb
 fi
 
-# Initialize the helper
-setup_vendor "${BOARD_COMMON}" "${VENDOR}" "${LINEAGE_ROOT}" true "${CLEAN_VENDOR}"
+if [ -z "${ONLY_DEVICE_COMMON}" ]; then
+    # Initialize the helper
+    setup_vendor "${BOARD_COMMON}" "${VENDOR}" "${LINEAGE_ROOT}" true "${CLEAN_VENDOR}"
 
-extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${SECTION}"
+    extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${SECTION}"
+fi
 
-if [ -s "${MY_DIR}/../${DEVICE_COMMON}/proprietary-files.txt" ];then
+if [ -z "${ONLY_BOARD_COMMON}" ] && [ -s "${MY_DIR}/../${DEVICE_COMMON}/proprietary-files.txt" ];then
     # Reinitialize the helper for device common
     source "${MY_DIR}/../${DEVICE_COMMON}/extract-files.sh"
     setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${LINEAGE_ROOT}" false "${CLEAN_VENDOR}"
@@ -124,7 +133,7 @@ if [ -s "${MY_DIR}/../${DEVICE_COMMON}/proprietary-files.txt" ];then
     extract "${MY_DIR}/../${DEVICE_COMMON}/proprietary-files.txt" "${SRC}" "${SECTION}"
 fi
 
-if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
+if [ -z "${ONLY_BOARD_COMMON}" ] && [ -z "${ONLY_DEVICE_COMMON}" ] && [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
     source "${MY_DIR}/../${DEVICE}/extract-files.sh"
     setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" false "${CLEAN_VENDOR}"
