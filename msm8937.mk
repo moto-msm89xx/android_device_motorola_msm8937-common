@@ -317,13 +317,6 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.syspart_fixup.sh
 
-# RCS
-PRODUCT_PACKAGES += \
-    rcs_service_aidl \
-    rcs_service_aidl.xml \
-    rcs_service_api \
-    rcs_service_api.xml
-
 # Recovery
 TARGET_RECOVERY_DENSITY := xhdpi
 
