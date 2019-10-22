@@ -65,9 +65,6 @@ QCOM_BT_READ_ADDR_FROM_PROP := true
 # Boot animation
 TARGET_BOOTANIMATION_HALF_RES := true
 
-# Camera
-USE_DEVICE_SPECIFIC_CAMERA := true
-
 # Charger
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_NO_CHARGER_LED := true
@@ -84,7 +81,6 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # GPS
 LOC_HIDL_VERSION := 3.0
-USE_DEVICE_SPECIFIC_GPS := true
 
 # GPU
 TARGET_DISABLE_POSTRENDER_CLEANUP := true
