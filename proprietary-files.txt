@@ -1065,6 +1065,11 @@ vendor/lib64/libkeymasterdeviceutils.so|3b4d1b97549b15d85254739613fc8d772f716806
 vendor/lib64/libkeymasterprovision.so|7ad925d46a558a8c086a61e022eef328b2516f43
 vendor/lib64/libkeymasterutils.so|4c8273711b5ba1a503d4581f661ed20a1578810d
 
+# Listen - from TA-1000_00CN - PKQ1.181105.001
+vendor/lib/hw/sound_trigger.primary.msm8937.so|43e9806f0196c173ce8ac31f70ac6b2293a75264
+vendor/lib/libadpcmdec.so|eeaef8dd6cad3da613860bb263f192cda56c60b6
+vendor/lib/libsmwrapper.so|0df4be18901fffaa0a7ceecad87b2a29259d5672
+
 # Media - from D1C - PKQ1.181105.001
 lib/extractors/libmmparser.so|38b2f3c27525efb61d570bb0af2813d0cb673f99
 lib/libFileMux.so|5961dd16c9c6808e8321abf4b0266a9926ef327b
