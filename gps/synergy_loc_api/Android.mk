@@ -20,8 +20,6 @@ endif
 LOCAL_SHARED_LIBRARIES := \
     libutils \
     libcutils \
-    libqmi_cci \
-    libqmi_common_so \
     libloc_core \
     libgps.utils \
     libdl \
