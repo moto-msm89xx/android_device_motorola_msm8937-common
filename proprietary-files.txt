@@ -170,31 +170,46 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|4b3afedf461fba7f06a31153d4
 # Gatekeeper - from deen_sprout - QPKS30.54-22-11
 vendor/lib64/hw/gatekeeper.msm8953.so:vendor/lib64/hw/gatekeeper.msm8937.so|1086e5dcda7aa2bed7ac015f7850095f6199a1c2
 
-# GPS - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
-vendor/bin/hw/vendor.qti.gnss@1.0-service|049201d8e22064b87eb52df208d8cda7066d140a
-vendor/bin/loc_launcher|23a4470552c0c418662a7d91fa7f593bee767459
-vendor/bin/lowi-server|f83f6ab9b978c618c87d2b5c66854533d0e3a66f
-vendor/bin/xtra-daemon|f4fdd2d7fc56472066b05899340eb19ff67d54b4
-vendor/etc/init/vendor.qti.gnss@1.0-service.rc|98655e2adc2158a052b0ecf06b065535f0a2aac7
-vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so|86406bdc49ee29ffc49f0c92be4793071874f3bc
-vendor/lib64/libdataitems.so|2ae06cb5a687fdf2c5a533a17d9529a1984b2803
-vendor/lib64/libDRPlugin.so|d60dffb3751b5095ead2747610c6d022d052a560
-vendor/lib64/libdrplugin_client.so|ba6de3e6a872ec53d7b4e11bd5b9371428a26909
-vendor/lib64/libevent_observer.so|9f51c7267f4396c5ffedfce0dd5e1007041aeba8
-vendor/lib64/libflp.so|24f95f8b568c393d8b51d7376a62b8e9151f9b9d
-vendor/lib64/libgeofence.so|c7250877898a17f4bfdc244f613dd1e1a9397cb6
-vendor/lib64/libizat_client_api.so|853e4ccd91718edac986f755fc9800603d3a284a
-vendor/lib64/libizat_core.so|381f72f4c0030f88e5acaf6a3498d9036fb30215
-vendor/lib64/liblbs_core.so|2dcf1cfffcc3db13b06c90feec6d81a7a8f7d428
-vendor/lib64/libloc_api_v02.so|e3dafec13d58ad2c1d7dfe5aad14371d5f47e295
-vendor/lib64/libloc_ds_api.so|158c9d75eb01b7ae55877ee9e9c9046ad3cafea8
-vendor/lib64/liblocationservice.so|f9e6a94c260abafa857d2bcc96f23adef56527e7
-vendor/lib64/liblocationservice_glue.so|d423896f97fa4a1c3f9fecda11df97baf3fa0969
-vendor/lib64/liblowi_client.so|34f65f866c950733c72d5a4f0de00580d2ac3cf5
-vendor/lib64/libulp2.so|275cb2f94d8b59fe8bfd8a28a5c1c39994c4569c
-vendor/lib64/libxtadapter.so|d404e8c5c6e14a556926ba772ca99aa51cbd6a36
-vendor/lib64/libxtwifi_ulp_adaptor.so|58b20fbdbb500add11784acce0808c7198c96c34
-vendor/lib64/vendor.qti.gnss@1.0.so|90b465adc4542f16fbdd935d0592df73d778909b
+# GPS - from deen_sprout - QPKS30.54-22-12
+vendor/bin/garden_app|76c7fc19b1d0e9109cd09275a1b629d33cec0b7c
+vendor/bin/loc_launcher|0dc442294ee535527f548a467f308264700c72bc
+vendor/bin/lowi-server|1fe78b543c14196169ab411acfd9dabbfb4636dd
+vendor/bin/xtra-daemon|20ec9dc7d1785a1789e57cf55f8b49b79fde374c
+vendor/bin/xtwifi-client|7d737eca493d57e29cb44e0bc658dda93fc44fe4
+vendor/bin/xtwifi-inet-agent|58749dc8fc9fdce0c184f3689d50299734b0f988
+vendor/etc/vintf/manifest/vendor.qti.gnss@3.0-service.xml|9b2f6691d6c224bcb9ab9a0d57adfb9e52f1b53e
+vendor/lib/hw/vendor.qti.gnss@3.0-impl.so|fe3e1087d3d17d70290abe5fc72f6dc9b4390506
+vendor/lib/vendor.qti.gnss@1.0.so|95b31930d06322f3b0e8446fa2c7af353e9b75f3
+vendor/lib/vendor.qti.gnss@1.1.so|88f49d85ee21b41fe31b29e4580dd0cde358fef2
+vendor/lib/vendor.qti.gnss@1.2.so|6a32cd328650c95cf372dd8952381cc892e5e470
+vendor/lib/vendor.qti.gnss@2.0.so|13bd2f620dfe250e9d24ec49e41f3e5ebda1e1e3
+vendor/lib/vendor.qti.gnss@2.1.so|d17de11245cdde60fb8ff3cb3b7451e667c32f36
+vendor/lib/vendor.qti.gnss@3.0-service.so|0314d2475205271170fcb6aa950d0b5f964327df
+vendor/lib/vendor.qti.gnss@3.0.so|d28249c21fe678d245d2693ab5a76f143af32ac0
+vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so|df1bf581cdda4cd321abde79b2c3373fb7a72ac5
+vendor/lib64/libloc_api_v02.so|3735ffe88884d6b049119422909a78a95ca52641
+vendor/lib64/libdataitems.so|459f1f966289a8e15baa2c498ab7a21b01cb6919
+vendor/lib64/libgarden.so|119d5635a554f1337a72cce2926b1e5c97b0d892
+vendor/lib64/libgarden_haltests_e2e.so|f1a9d55b56ded4cb7a145a20831349e28073c6d8
+vendor/lib64/libgdtap.so|f5151c6425312d37c1eeb78cce1f92b71ae79e10
+vendor/lib64/libizat_client_api.so|a7cc9e5d5190ac38ca1f197fae2f5a811f9443cb
+vendor/lib64/libizat_core.so|fe74fb6cd3320ff8c938eb6b35b8f206b7265a4b
+vendor/lib64/liblbs_core.so|b85d06403db7a94782c6c200948ec8ec2575bb8e
+vendor/lib64/liblocationservice_glue.so|b552891b1aaead7ed47bb8d249322db3af6dc77d
+vendor/lib64/liblocationservice.so|1b9792266bca7e70fd73cf50e0368ad3b2df9aea
+vendor/lib64/liblowi_client.so|7ca8773ca8f686459dee81d532e887d3beda53e0
+vendor/lib64/liblowi_wifihal.so|1a5b086558927837302965e68731000f5ddc37db
+vendor/lib64/libpdmapper.so|11927a7af4ade04ba99413092f9f63be8c466f1b
+vendor/lib64/libqdma_file_agent.so|8bb728b595a3bac39cdbd3c456d523f35a10ef1d
+vendor/lib64/libslimclient.so|03aec900d92b75ed1ed2bae06988f420d37c1b7b
+vendor/lib64/libxtadapter.so|5085a7d7986abc5f64b67ad42065d326662d0c2c
+vendor/lib64/vendor.qti.gnss@1.0.so|b59e91a5db5cb5e8604ad845fd426a365942d7c0
+vendor/lib64/vendor.qti.gnss@1.1.so|7582f474dc07a27528abdaf44f1cd91919d3ace9
+vendor/lib64/vendor.qti.gnss@1.2.so|57bf3165fd6f4584b56c6c1c187d37d76692f021
+vendor/lib64/vendor.qti.gnss@2.0.so|f54a2600bfcb9ccbe37e360450af76c3bdc21a82
+vendor/lib64/vendor.qti.gnss@2.1.so|ae988430b62ea8f15708c70bc570eca336de1c9a
+vendor/lib64/vendor.qti.gnss@3.0-service.so|8a6d029dc302a8de77adf296f78e4b0a20ba3ed7
+vendor/lib64/vendor.qti.gnss@3.0.so|af6174df8e452db8e5200aa713333068aaf1ad9a
 
 # Graphics - from X00RD - QKQ1.191002.002-17.07.2003.405-20200330
 lib/libsdm-disp-apis.so:vendor/lib/libsdm-disp-apis.so|5b006423286008ba9b54b8c29e9ce2ab4b6fa14d
