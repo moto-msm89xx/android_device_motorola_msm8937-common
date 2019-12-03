@@ -192,6 +192,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.qmi.adb_logmask=0 \
     persist.data.netmgrd.qos.enable=true \
     persist.data.iwlan.enable=true \
+    ro.telephony.iwlan_operation_mode=legacy \
     ro.build.vendorprefix=/vendor \
     persist.sys.fflag.override.settings_network_and_internet_v2=true
 
