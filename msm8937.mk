@@ -306,11 +306,6 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils \
     qti_telephony_utils.xml
 
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.1 \
-    android.hardware.radio.config@1.0 \
-    android.hardware.secure_element@1.0
-
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
