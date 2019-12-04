@@ -555,11 +555,11 @@ vendor/lib64/hw/thermal.msm8953.so:vendor/lib64/hw/thermal.msm8937.so|d469d5f17b
 vendor/lib64/libthermalclient.so|e1123e8b39a39d4907092271922e47190e19d1c5
 vendor/lib64/libthermalioctl.so|1ce39d2a088f8e943be9a4c4b6d3c212a9881d95
 
-# Time services - from deen_sprout - PPKS29.68-16-36-13
--vendor/app/TimeService/TimeService.apk|2cdac463ea1e295cf1c3ae08974c37cad2c9f784
-vendor/bin/time_daemon|e7f801aeb814ac2760b0bfa57a3261e0c415a16d
-vendor/lib/libtime_genoff.so|4ca1098498c00323d755af303d9a4382cefd5aff
-vendor/lib64/libtime_genoff.so|63bc574e88ccea12fcb8872a229e407f12307083
+# Time services - from deen_sprout - QPKS30.54-22-11
+-vendor/app/TimeService/TimeService.apk|e6f12353d3e19e6ec847ed4e3d40b41bc4cbc276
+vendor/bin/time_daemon|3396fed0c9677b7fab9531adec0c77e2f67adc4b
+vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
+vendor/lib64/libtime_genoff.so|6310211236e71049a06023c1133893d64a336bfb
 
 # Widevine - from deen_sprout - PPKS29.68-16-36-13
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine|b204f43ca6aaf97527127773ed98558c9a73e7b7
