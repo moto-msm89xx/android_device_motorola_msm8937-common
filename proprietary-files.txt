@@ -35,17 +35,23 @@ vendor/lib/rfsa/adsp/libscveT2T_skel.so|91b9200dbb982abf0d6b440668252d892a616f66
 lib64/libaptXHD_encoder.so|c4ad4d6d7615f7df3ea1a4be5c6dae8a8c8ee8b1
 lib64/libaptX_encoder.so|22f5749edb5099526788c22708099a7791dd837f
 
-# Audio - from deen_sprout - PPKS29.68-16-36-13
-vendor/lib/libacdb-fts.so|010d1cc4e07ce0e6ca489bfb310d00f3112e9ff9
-vendor/lib/libacdbloader.so|ca55798714f6c877ee499e4b676ab0d0ec62112d
-vendor/lib/libacdbrtac.so|bfebd31e1ae1ad69bdb0f852cf769cd0df0fa89d
-vendor/lib/libadiertac.so|e1e2f8370431717ede77b55b412bdba9f8793c97
-vendor/lib/libaudcal.so|4dff962fe34f6e8fcb53c8248ec72229212e546d
-vendor/lib64/libacdb-fts.so|f6396f69d61216d0eeb1218b700f40e7d4bbc6c7
-vendor/lib64/libacdbloader.so|b5ce7e58fedc7dd524067e249881c3f104a9a274
-vendor/lib64/libacdbrtac.so|2e44a45a2f61c621d4c746acc83139718d18ceef
-vendor/lib64/libadiertac.so|71d606669c19e567283751ce0ecdf757792adab3
-vendor/lib64/libaudcal.so|fdb34621e3d4433bcdc047ad536f0dac3a85b0e7
+# Audio - from deen_sprout - QPKS30.54-22-11
+vendor/lib/libacdb-fts.so|2c6ae252272c705708f97edcaebab83d9ca98fe5
+vendor/lib/libacdbloader.so|313c9f4637b7f6adf2db0a6bcb0471cf77fd6f11
+vendor/lib/libacdbrtac.so|2072fa1579843115dd3c0eab3b9a806dd77242bc
+vendor/lib/libadiertac.so|9b19b5ed70a93b9f6047edb89d499d42bd961daa
+vendor/lib/libaudcal.so|547166de11311e4a8f6a0155ce19ca1ab75d6a8d
+vendor/lib/libaudioalsa.so|47d35e65b3d3597f8a4a51ed8fbea23cbdad300f
+vendor/lib/libaudioparsers.so|fd30fd087109d10aa0adafb9bebc7bdce57c86f9
+vendor/lib/libqtigef.so|9dd9fbc38ca6e9f783d4e5a914a0af6f5f838728
+vendor/lib64/libacdb-fts.so|b51db196d11396105dd02e243a9bfd583899fb9d
+vendor/lib64/libacdbloader.so|50f925c79290758295fbff6eb38f950c6370dcb1
+vendor/lib64/libacdbrtac.so|92a28beec61c77d1b3af20d5a0da0b81e0eb3440
+vendor/lib64/libadiertac.so|b2befcd8574817efeb123df7cc71ae7c4fda2cb0
+vendor/lib64/libaudcal.so|5704312aee8cae2d9c45c3fab0307fe254984cd2
+vendor/lib64/libaudioalsa.so|8ae4dad90c67e1f8ff2ba40a5eec4e70a317fb6a
+vendor/lib64/libaudioparsers.so|b0a2920b723e151f9a6cd2f5dea332ff5519e6b7
+vendor/lib64/libqtigef.so|fc33ea757a968dc33d1bd1aeae1f6ea6b1c38ddf
 
 # Bluetooth - from deen_sprout - PPKS29.68-16-36-13
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|063da7375148fdd56930a54ea8d3e276725e62df
