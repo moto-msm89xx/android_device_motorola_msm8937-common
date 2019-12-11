@@ -53,14 +53,21 @@ vendor/lib64/libaudioalsa.so|8ae4dad90c67e1f8ff2ba40a5eec4e70a317fb6a
 vendor/lib64/libaudioparsers.so|b0a2920b723e151f9a6cd2f5dea332ff5519e6b7
 vendor/lib64/libqtigef.so|fc33ea757a968dc33d1bd1aeae1f6ea6b1c38ddf
 
-# Bluetooth - from deen_sprout - PPKS29.68-16-36-13
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|063da7375148fdd56930a54ea8d3e276725e62df
+# Bluetooth - from deen_sprout - QPKS30.54-22-11
+lib64/libbtconfigstore.so|98e994c017e77c9bd5fa08691720683ea9560f0b
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|26e46c3f6d08733140f61e65580748b1b531eda8
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|a6fa0b97864e41f36c7d859612d2b24c14bc1597
-vendor/lib64/libbtnv.so|f467a39938b8e76e3dea295ef412e69b6402254f
-vendor/lib64/libbt-hidlclient.so|e7cc68021ff2a38728a50c92914420ba61d2c5c3
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|b72b6bc0f79ef8289f4b543910e7e2d91961831f
-vendor/lib64/com.qualcomm.qti.ant@1.0.so|ce9b89df917622cf1e0e58aa3b3be6e410c4c2d7
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|09a509c9ef54bff1304d1bb24819c0ae56023bf8
+vendor/lib64/libbtnv.so|be5832e40529d945109ee43efcbb35d9bf8e3176
+vendor/lib64/libbt-hidlclient.so|ea11128e21eef7b663aab92353f739df02501145
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|b7358cd2a52e6e0798efa01f9595f8b8e8f7b152
+vendor/lib64/com.qualcomm.qti.ant@1.0.so|4b62afdda74f01a09b62ca0b754c3693f97b3ba0
+
+# Bluetooth Audio - from deen_sprout - QPKS30.54-22-11
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|0ce8a5f0d3a52d277c0b4eec0d56dc949e05acd7
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|4fa977be4cca13af037b01a2879f65b8d1f91116
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|3ecb3cfe2778d20ad16befc730b68a3616a023e5
+vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so|c9306b73813f8408361cc08284dfc2e22a4ff67a
 
 # Motorola Camera - from aljeter - PPP29.55-25
 lib/motorola.hardware.camera.device@1.0.so:vendor/lib/motorola.hardware.camera.device@1.0.so|51afafb043bb3fce3509938103e6e6f6f792c7bb
