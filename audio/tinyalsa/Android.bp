@@ -1,0 +1,11 @@
+cc_library {
+    name: "libtinyalsa",
+    host_supported: true,
+    srcs: [
+        "mixer.c",
+        "pcm.c",
+    ],
+    cflags: ["-Werror", "-Wno-macro-redefined"],
+    export_include_dirs: ["include"],
+    local_include_dirs: ["include"],
+}
