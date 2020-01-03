@@ -586,7 +586,7 @@ vendor/lib64/libthermalclient.so|d6949c31ddb0603ea3f87f12ba7abadfc5ff5417
 vendor/lib64/libthermalioctl.so|4d6db40301e89c3fdea739e0a50d0f9f47bbfd7f
 
 # Time services - from deen_sprout - QPKS30.54-22-11
--vendor/app/TimeService/TimeService.apk|e6f12353d3e19e6ec847ed4e3d40b41bc4cbc276
+-vendor/app/TimeService/TimeService.apk;:timeservice_app_cert-legacy-um|e6f12353d3e19e6ec847ed4e3d40b41bc4cbc276
 vendor/bin/time_daemon|3396fed0c9677b7fab9531adec0c77e2f67adc4b
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 vendor/lib64/libtime_genoff.so|6310211236e71049a06023c1133893d64a336bfb
