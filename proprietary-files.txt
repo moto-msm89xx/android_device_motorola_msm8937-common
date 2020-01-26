@@ -1301,7 +1301,7 @@ etc/init/wfdservice.rc|311bfdd1675e56499662f39455536b75b78477bb
 etc/wfdconfig.xml|dd403c43effdf6478167b340bc9a91dd302276c6
 etc/wfdconfigsink.xml|f180a45f69fa2ff01dbaf98c905cff1e9eba903e
 -framework/WfdCommon.jar|3291ce29c033fb9482011767ebebc52c6cf8c265
-lib/com.qualcomm.qti.wifidisplayhal@1.0.so|93487a83a35f0fa3fe37445edd3ff22fcc52e4fc
+lib/com.qualcomm.qti.wifidisplayhal@1.0.so:vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so|93487a83a35f0fa3fe37445edd3ff22fcc52e4fc
 lib/libmmrtpdecoder.so|adb55936e63ff087a9e3458070515e1ab7dbe178
 lib/libmmrtpencoder.so|9a85d450a8633207f7a499962c5821d1a3fec2b8
 lib/libwfdavenhancements.so|56e9d0050d3840bb3b27ce00425bfd67daac01c0
