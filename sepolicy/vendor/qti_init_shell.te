@@ -1,2 +1,0 @@
-allow qti_init_shell kmsg_device:chr_file { open write };
-set_prop(qti_init_shell, rmnet_prop)
