@@ -33,8 +33,8 @@
 /(vendor|system/vendor)/bin/init\.mmi\.(laser|usb)\.sh u:object_r:qti_init_shell_exec:s0
 
 # Input devices
-/(vendor|system/vendor)/usr/idc(/.*)?                    u:object_r:idc_file:s0
-/(vendor|system/vendor)/usr/keylayout(/.*)?              u:object_r:keylayout_file:s0
+/(vendor|system/vendor)/usr/idc(/.*)?                    u:object_r:vendor_idc_file:s0
+/(vendor|system/vendor)/usr/keylayout(/.*)?              u:object_r:vendor_keylayout_file:s0
 
 # Lights
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.msm8937 u:object_r:hal_light_default_exec:s0
