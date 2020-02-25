@@ -1,6 +1,14 @@
 [
    {
+    "repository": "android_kernel_motorola_msm8937",
+    "target_path": "kernel/motorola/msm8937"
+   },
+   {
     "repository": "android_packages_resources_devicesettings",
     "target_path": "packages/resources/devicesettings"
+   },
+   {
+    "repository": "android_system_qcom",
+    "target_path": "system/qcom"
    }
 ]
