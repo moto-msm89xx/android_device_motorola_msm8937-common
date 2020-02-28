@@ -309,7 +309,7 @@ PRODUCT_PACKAGES += \
     fstab_ramdisk.qcom \
     init.mmi.overlay.rc \
     init.mmi.rc \
-    init.mmi.usb.rc \
+    init.msm.usb.configfs.rc \
     init.oem.rc \
     init.qcom.rc \
     init.recovery.qcom.rc \
