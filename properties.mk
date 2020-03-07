@@ -43,8 +43,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bt.le_dev_pwr_class=1 \
     ro.bluetooth.hfp.ver=1.6 \
     ro.qualcomm.bt.hci_transport=smd \
-    vendor.bluetooth.soc=smd \
     vendor.qcom.bluetooth.soc=smd
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    vendor.bluetooth.soc=smd
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -56,9 +58,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.cne.feature=1 \
     persist.cne.logging.qxdm=3974 \
     persist.sys.cnd.iwlan=1
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.vendor.cne.feature=1
 
 # core control
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -112,7 +116,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true \
     vendor.display.disable_rotator_split=1 \
     vendor.display.disable_skip_validate=1 \
-    vendor.display.enable_default_color_mode=1 \
     vendor.display.perf_hint_window=50 \
     vendor.gralloc.enable_fb_ubwc=1
 
@@ -135,12 +138,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
     ro.vendor.qti.sys.fw.bg_apps_limit=60
 
+# QTI
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.va_aosp.support=1
+
+PRODUCT_ODM_PROPERTIES += \
+    ro.vendor.qti.va_odm.support=1
+
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
     rild.libargs=-d /dev/smd0 \
-    ril.subscription.types=NV,RUIM \
-    DEVICE_PROVISIONED=1 \
     persist.vendor.radio.no_wait_for_card=1 \
     persist.vendor.radio.dfr_mode_set=1 \
     persist.vendor.radio.relay_oprt_change=1 \
@@ -177,10 +185,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.qmi.adb_logmask=0 \
     persist.data.netmgrd.qos.enable=true \
     persist.data.iwlan.enable=true \
-    telephony.lteOnCdmaDevice=1 \
     ro.build.vendorprefix=/vendor
 
-#,Sensors
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    DEVICE_PROVISIONED=1 \
+    ril.subscription.types=NV,RUIM \
+    telephony.lteOnCdmaDevice=1 \
+
+# Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.sar_sensor=1 \
     ro.mot.sensors.glance_approach=false \
@@ -192,7 +204,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.cmc=false \
     ro.vendor.sensors.pedometer=false
 
-# TimeService
+# Time Service
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
 
@@ -215,6 +227,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.usb.ptp=2e83 \
     ro.usb.ptp_adb=2e84
 
-# WIFI
+# Wi-Fi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
