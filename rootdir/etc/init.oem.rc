@@ -112,6 +112,19 @@ on property:ro.boot.hardware.sku=XT1924-8
     setprop persist.rcs.presence.provision 0
     setprop ro.hw.ecompass true
 
+on property:ro.boot.hardware.sku=XT1924-9
+    setprop ro.opengles.version 196610
+    setprop ro.product.model XT1924-9
+    setprop ro.product.name ahannah
+    setprop dalvik.vm.dex2oat-threads 6
+    setprop persist.vendor.audio.fluence.speaker false
+    setprop ro.hw.ecompass false
+    setprop ro.mot.sensors.chopchop false
+    setprop ro.mot.sensors.camgest false
+    setprop ro.vendor.sensors.gravity false
+    setprop ro.vendor.sensors.laccel false
+    setprop ro.vendor.sensors.amd false
+
 on property:ro.vendor.hw.dualsim=true
     setprop ro.vendor.radio.imei.sv 6
     setprop ro.telephony.default_network 10,0
