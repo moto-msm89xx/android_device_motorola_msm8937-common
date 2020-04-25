@@ -198,6 +198,7 @@ BOARD_KERNEL_CMDLINE += dm=\"system none ro,0 1 android-verity /dev/mmcblk0p55\"
 
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+BOARD_VNDK_VERSION := current
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
