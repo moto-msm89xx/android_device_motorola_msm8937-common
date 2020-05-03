@@ -79,7 +79,7 @@ vendor/lib/libgralloc1.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
-vendor/lib/libjscore.so|db65e9b2296481f7705bc930155806f58557f954
+vendor/lib/libjscore.so|bffdc687f62576a35e768eb5a311ac12399a46a4
 vendor/lib/libjustshoot.so
 vendor/lib/libmm-qcamera.so
 vendor/lib/libmmcamera2_c2d_module.so
