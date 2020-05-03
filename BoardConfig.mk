@@ -59,7 +59,6 @@ USE_XML_AUDIO_POLICY_CONF := 1
 # Bionic
 TARGET_LD_SHIM_LIBS := \
     /vendor/lib/libjustshoot.so|libjustshoot_shim.so \
-    /vendor/lib/libmot_gpu_mapper.so|libgpu_mapper_shim.so \
     /vendor/lib64/libsensorndkbridge.so|libshim_ril.so
 
 # Bluetooth

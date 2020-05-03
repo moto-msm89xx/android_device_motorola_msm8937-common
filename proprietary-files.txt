@@ -131,7 +131,7 @@ vendor/lib/libmpbase.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
 vendor/lib/libmot-qc-fd-offline.so
-vendor/lib/libmot_gpu_mapper.so
+vendor/lib/libmot_gpu_mapper.so|518baf0a27c2061cc98b884fe4a0291f327ba9ec
 vendor/lib/libmot_lux_standardization.so
 vendor/lib/libmotocalibration.so
 vendor/lib/libmotimager_utils.so

@@ -346,7 +346,6 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libgpu_mapper_shim \
     libjustshoot_shim \
     libqsapshim \
     libshim_ril
