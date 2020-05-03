@@ -58,8 +58,7 @@ USE_XML_AUDIO_POLICY_CONF := 1
 
 # Bionic
 TARGET_LD_SHIM_LIBS := \
-    /vendor/lib/libjustshoot.so|libjustshoot_shim.so \
-    /vendor/lib64/libsensorndkbridge.so|libshim_ril.so
+    /vendor/lib/libjustshoot.so|libjustshoot_shim.so
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth

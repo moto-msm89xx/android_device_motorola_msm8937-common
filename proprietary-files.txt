@@ -1236,6 +1236,7 @@ vendor/lib64/libicuuc_vendor.so|759642257558a5a4a0614a6cd1057515d2225b87
 vendor/lib64/libmotext_inf.so|2536b56abc964b16a1e97d1c2a74f8cb66d3e3ac
 vendor/lib64/libmdmcutback.so|6810e37550be62abdf080748e883c15e45f0fe16
 vendor/lib64/libqmimotext.so|160f0764206620bc3096ec3379d0c26aee2b9468
+vendor/lib64/libsensorndkbridge.so|ae0cb7854999f234b7f80b000c42c180a2bc06fe
 
 # Postprocessing - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 etc/permissions/com.qti.snapdragon.sdk.display.xml|0bff16d681e75f203c1e11ff33afba82490e49b3

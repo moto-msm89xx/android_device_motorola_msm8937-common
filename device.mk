@@ -287,7 +287,6 @@ PRODUCT_COPY_FILES += \
 # RIL
 PRODUCT_PACKAGES += \
     librmnetctl \
-    libsensorndkbridge \
     libxml2
 
 PRODUCT_PACKAGES += \
@@ -348,8 +347,7 @@ PRODUCT_COPY_FILES += \
 # Shims
 PRODUCT_PACKAGES += \
     libjustshoot_shim \
-    libqsapshim \
-    libshim_ril
+    libqsapshim
 
 # Thermal
 PRODUCT_PACKAGES += \
