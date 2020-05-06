@@ -184,7 +184,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #,Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.sar_sensor=1 \
-    ro.hardware.sensors=hannah \
     ro.mot.sensors.glance_approach=false \
     ro.vendor.sensors.pmd=false \
     ro.vendor.sensors.rmd=false \
