@@ -26,7 +26,7 @@ source "${HELPER}"
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${LINEAGE_ROOT}" true
 
 # Copyright headers and guards
-write_headers "hannah james"
+write_headers "hannah james montana"
 
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
