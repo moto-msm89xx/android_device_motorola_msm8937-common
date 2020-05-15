@@ -87,8 +87,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Fingerprint
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.qfp=false \
-    ro.fpsensor.position=1
+    persist.qfp=false
 
 # Fm
 PRODUCT_PROPERTY_OVERRIDES += \
