@@ -147,15 +147,6 @@ vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so|082ed7aabe19fd357d03f22045a1
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|15460dcdadee96d7e39b28d2b8bcac61b4e8d80a
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|95e3c11e8877b3716791e1b93d5f905208ca32ef
 
-# Fingerprint - from deen_sprout - PPKS29.68-16-36-13
-lib64/vendor.egistec.hardware.fingerprint@2.0.so|c80d9fd74a5cd3974530cec87561a36748b0c22d
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-ets|cd2be55c8cb8c66316775dd1148468a0635c7fd5
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-ets.rc|dbc7ba996d78e8470add38aca9b2966f703beb15
-vendor/etc/init/init.ets.rc|68e5d6b5dbfcbd329c22b478ad7217e1315db981
-vendor/lib64/libets_fp_et5.so|536e9097b3f188b90c78882e8e72f3e2f8125666
-vendor/lib64/libets_teeclient.so|1021ffc65bd48e405a7c05c1cb3025317f5157c1
-vendor/lib64/vendor.egistec.hardware.fingerprint@2.0_vendor.so|70611a99139820e21ccdf218940eb68242cd482c
-
 # Gatekeeper - from deen_sprout - PPKS29.68-16-36-13
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|eeb4ba9eacb57c958051a47d307968254ee081d0
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
