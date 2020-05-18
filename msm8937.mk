@@ -290,7 +290,6 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
-    init.mmi.laser.sh \
     init.mmi.usb.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \

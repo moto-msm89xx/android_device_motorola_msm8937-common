@@ -27,28 +27,3 @@ on boot
 
 on property:sys.boot_completed=1
   start capsense_reset
-
-on boot
-
-   # Change ownership and permission for laser_sensor
-   chown system system /sys/kernel/range/enable_sar
-   chmod 0660 /sys/kernel/range/enable_sar
-   chown system system /sys/kernel/range/set_delay_ms
-   chmod 0660 /sys/kernel/range/set_delay_ms
-   chown system system /sys/kernel/range/near
-   chmod 0660 /sys/kernel/range/near
-   chown system system /sys/class/input/input7/enable_ps_sensor
-   chmod 0660 /sys/class/input/input7/enable_ps_sensor
-   chown system system /sys/class/input/input7/set_delay_ms
-   chmod 0660 /sys/class/input/input7/set_delay_ms
-   chown system system /sys/class/input/input7/xtalk
-   chmod 0660 /sys/class/input/input7/xtalk
-   chown system system /sys/class/input/input7/do_flush
-   chmod 0660 /sys/class/input/input7/do_flush
-   chown system system /sys/class/input/input7/offset
-   chmod 0660 /sys/class/input/input7/offset
-
-service mmi-laser-sh /vendor/bin/init.mmi.laser.sh
-    class core
-    user root
-    oneshot
