@@ -137,12 +137,12 @@ on boot
     chown system system /sys/module/ccid_bridge/parameters/bulk_msg_timeout
 
     # Allow access to emmc rawdump block partition and dload sysfs node
-    chown root system /dev/block/bootdevice/by-name/rawdump -p /dev/block/
-    chmod 0660 /dev/block/bootdevice/by-name/rawdump -p /dev/block/
+    chown root system /dev/block/bootdevice/by-name/rawdump
+    chmod 0660 /dev/block/bootdevice/by-name/rawdump
     chown root system /sys/kernel/dload/emmc_dload
     chmod 0660 /sys/kernel/dload/emmc_dload
-    chown root system /dev/block/bootdevice/by-name/ramdump -p /dev/block/
-    chmod 0660 /dev/block/bootdevice/by-name/ramdump -p /dev/block/
+    chown root system /dev/block/bootdevice/by-name/ramdump
+    chmod 0660 /dev/block/bootdevice/by-name/ramdump
     chown root system /sys/kernel/dload/dload_mode
     chmod 0660 /sys/kernel/dload/dload_mode
 
@@ -212,10 +212,6 @@ on post-fs-data
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
     mkdir /data/misc/dhcp 0750 dhcp system
-
-    #create port-bridge log dir
-    mkdir /data/vendor/port_bridge 0770 radio radio
-    chmod 0770 /data/vendor/port_bridge
 
     #create netmgr log dir
     mkdir /data/vendor/netmgr 0770 radio radio
@@ -418,13 +414,6 @@ on property:vendor.hw.fm.init=0
 on property:vendor.hw.fm.init=1
     write /sys/module/radio_iris_transport/parameters/fmsmd_set 1
 
-service port-bridge /system/vendor/bin/port-bridge
-    class main
-    user radio system
-    group radio system inet
-    disabled
-    oneshot
-
 service vendor.netmgrd /system/vendor/bin/netmgrd
     class main
 
@@ -446,6 +435,10 @@ service vendor.sensors.qti /vendor/bin/sensors.qti
     # register QMI services
     capabilities NET_BIND_SERVICE
     disabled
+
+on property:ro.use_data_netmgrd=false
+    # netmgr not supported on specific target
+    stop netmgrd
 
 # Adjust socket buffer to enlarge TCP receive window for high bandwidth
 # but only if ro.data.large_tcp_window_size property is set.
