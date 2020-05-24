@@ -95,12 +95,15 @@ CLEAN_VENDOR=true
 
 ONLY_BOARD_COMMON=
 ONLY_DEVICE_COMMON=
+ONLY_TARGET=
 
 while [ "$1" != "" ]; do
     case $1 in
         --only-board-common )   ONLY_BOARD_COMMON=false
                                 ;;
         --only-device-common )  ONLY_DEVICE_COMMON=false
+                                ;;
+        --only-target )         ONLY_TARGET=true
                                 ;;
         -n | --no-cleanup )     CLEAN_VENDOR=false
                                 ;;
@@ -118,14 +121,14 @@ if [ -z "$SRC" ]; then
     SRC=adb
 fi
 
-if [ -z "${ONLY_DEVICE_COMMON}" ]; then
+if [ -z "${ONLY_TARGET}" ] && [ -z "${ONLY_DEVICE_COMMON}" ]; then
     # Initialize the helper
     setup_vendor "${BOARD_COMMON}" "${VENDOR}" "${LINEAGE_ROOT}" true "${CLEAN_VENDOR}"
 
     extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${SECTION}"
 fi
 
-if [ -z "${ONLY_BOARD_COMMON}" ] && [ -s "${MY_DIR}/../${DEVICE_COMMON}/proprietary-files.txt" ];then
+if [ -z "${ONLY_BOARD_COMMON}" ] && [ -z "${ONLY_TARGET}" ] && [ -s "${MY_DIR}/../${DEVICE_COMMON}/proprietary-files.txt" ];then
     # Reinitialize the helper for device common
     source "${MY_DIR}/../${DEVICE_COMMON}/extract-files.sh"
     setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${LINEAGE_ROOT}" false "${CLEAN_VENDOR}"
