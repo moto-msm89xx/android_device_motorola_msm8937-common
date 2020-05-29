@@ -1,6 +1,5 @@
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
-    audio.deep_buffer.media=true \
     audio.offload.min.duration.secs=60 \
     audio.offload.video=true \
     persist.vendor.audio.dualmic.config=endfire \
