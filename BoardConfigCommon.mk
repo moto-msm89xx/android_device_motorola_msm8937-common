@@ -165,7 +165,11 @@ BOARD_USES_QCOM_HARDWARE := true
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 
 # Recovery
+ifeq ($(PRODUCT_FULL_TREBLE_OVERRIDE), true)
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab_legacy.qcom
+else
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
+endif
 
 # RIL
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
