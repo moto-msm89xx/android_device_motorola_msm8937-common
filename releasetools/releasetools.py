@@ -21,7 +21,9 @@ def FullOTA_InstallEnd(info):
   ReplaceDeviceConfig(info)
 
 def ReplaceDeviceConfig(info):
+  info.script.AppendExtra('mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/system", "/system_root");');
   info.script.Mount("/vendor")
   info.script.AppendExtra('ui_print("Check device");')
   info.script.AppendExtra('run_program("/sbin/sh", "/tmp/install/bin/check_device.sh");')
+  info.script.AppendExtra('unmount("/system_root");');
   info.script.Unmount("/vendor")
