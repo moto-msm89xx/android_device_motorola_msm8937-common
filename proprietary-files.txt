@@ -39,8 +39,8 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so|b72b6bc0f79ef8289f4b543910e7e2d919618
 vendor/lib64/com.qualcomm.qti.ant@1.0.so|ce9b89df917622cf1e0e58aa3b3be6e410c4c2d7
 
 # Motorola Camera - from aljeter - PPP29.55-25
-lib/motorola.hardware.camera.device@1.0.so|51afafb043bb3fce3509938103e6e6f6f792c7bb
-lib/motorola.hardware.camera.provider@2.4.so|d8b540c4690b8d9253dc6a49e1189abf67017a2c
+lib/motorola.hardware.camera.device@1.0.so:vendor/lib/motorola.hardware.camera.device@1.0.so|51afafb043bb3fce3509938103e6e6f6f792c7bb
+lib/motorola.hardware.camera.provider@2.4.so:vendor/lib/motorola.hardware.camera.provider@2.4.so|d8b540c4690b8d9253dc6a49e1189abf67017a2c
 vendor/lib/motcamera.device@1.0-impl.so|1b37e7763ddab908d2e33691bf34bc7013b99b4b
 vendor/bin/hw/motorola.hardware.camera.provider@2.4-service|01bd4b9c30dd944ad8572b46a92db23f97fc0c25
 vendor/etc/init/motorola.hardware.camera.provider@2.4-service_delayed.rc|200e7e3e8f2d7011bcc8b9ba3be22099b732e665
