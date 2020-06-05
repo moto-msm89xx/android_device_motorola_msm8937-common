@@ -1,6 +1,4 @@
 on init
-    mkdir /oem 0550 root root
-
     # Set Hardware properties
     setprop ro.vendor.hw.dualsim ${ro.boot.dualsim}
     setprop ro.vendor.hw.radio ${ro.boot.radio}

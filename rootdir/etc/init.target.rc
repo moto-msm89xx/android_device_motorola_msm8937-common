@@ -29,11 +29,6 @@
 
 import /vendor/etc/init/hw/init.mmi.rc
 
-on early-init
-    mkdir /firmware 0771 system system
-    mkdir /system 0777 root root
-    mkdir /dsp 0771 media media
-
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
