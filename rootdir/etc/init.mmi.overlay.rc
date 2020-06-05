@@ -1,4 +1,4 @@
-service capsense_reset /system/vendor/bin/capsense_reset
+service capsense_reset /vendor/bin/capsense_reset
 	class core
 	user system
 	group system
