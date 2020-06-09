@@ -50,10 +50,6 @@ fi
 function blob_fixup() {
     case "${1}" in
 
-    lib/libwfdmmsrc.so)
-         sed -i "s|libtinyalsa.so|libwfdtalsa.so|g" "${2}"
-        ;;
-
     vendor/lib/libjustshoot.so)
         patchelf --add-needed libjustshoot_shim.so "${2}"
         ;;
