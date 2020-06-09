@@ -78,11 +78,6 @@ function 8917_sched_dcvs_hmp()
     echo 3 > /sys/devices/system/cpu/cpu2/sched_mostly_idle_nr_run
     echo 3 > /sys/devices/system/cpu/cpu3/sched_mostly_idle_nr_run
 
-    echo 0 > /sys/devices/system/cpu/cpu0/sched_prefer_idle
-    echo 0 > /sys/devices/system/cpu/cpu1/sched_prefer_idle
-    echo 0 > /sys/devices/system/cpu/cpu2/sched_prefer_idle
-    echo 0 > /sys/devices/system/cpu/cpu3/sched_prefer_idle
-
     echo 1 > /sys/devices/system/cpu/cpu0/online
     echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
     echo "19000 1094400:39000" > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
@@ -126,14 +121,6 @@ function 8937_sched_dcvs_hmp()
     echo 3 > /sys/devices/system/cpu/cpu6/sched_mostly_idle_nr_run
     echo 3 > /sys/devices/system/cpu/cpu7/sched_mostly_idle_nr_run
 
-    echo 0 > /sys/devices/system/cpu/cpu0/sched_prefer_idle
-    echo 0 > /sys/devices/system/cpu/cpu1/sched_prefer_idle
-    echo 0 > /sys/devices/system/cpu/cpu2/sched_prefer_idle
-    echo 0 > /sys/devices/system/cpu/cpu3/sched_prefer_idle
-    echo 0 > /sys/devices/system/cpu/cpu4/sched_prefer_idle
-    echo 0 > /sys/devices/system/cpu/cpu5/sched_prefer_idle
-    echo 0 > /sys/devices/system/cpu/cpu6/sched_prefer_idle
-    echo 0 > /sys/devices/system/cpu/cpu7/sched_prefer_idle
     # enable governor for perf cluster
     echo 1 > /sys/devices/system/cpu/cpu0/online
     echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
