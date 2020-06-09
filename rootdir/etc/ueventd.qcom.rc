@@ -254,8 +254,8 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/hidraw1              0660   root       oem_5004
 
 # IIO (dynamic sensors)
-/sys/devices/iio_sysfs_trigger/add_trigger          0220    system      system
-/sys/devices/iio_sysfs_trigger/remove_trigger       0220    system      system
+/sys/devices/iio_sysfs_trigger	add_trigger          0220    system      system
+/sys/devices/iio_sysfs_trigger	remove_trigger       0220    system      system
 
 # Laser device
 /dev/laser                0660   system     camera
