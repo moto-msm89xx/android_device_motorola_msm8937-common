@@ -76,6 +76,9 @@ static inline const char *BtmGetDefaultName()
 /* Enable HFP WBS feature */
 #define BTIF_HF_CLIENT_WBS_INCLUDED TRUE
 
+/* Prefer non-WBS SCO */
+#define BTIF_HF_WBS_PREFERRED FALSE
+
 #pragma pop_macro("PROPERTY_VALUE_MAX")
 
 #endif
