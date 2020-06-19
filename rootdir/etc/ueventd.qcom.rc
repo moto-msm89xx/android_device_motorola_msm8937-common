@@ -227,6 +227,9 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/bus/pci/drivers/wil6210* 0000:01:00.0/net/wigig0/gro_flush_timeout 0660 system system
 /sys/devices/virtual/net/bond0 queues/rx-0/rps_cpus 0660 system system
 
+#nfc permissions
+/dev/pn544                0660    nfc         nfc
+
 # SSR devices
 /dev/subsys_*         0640   system     system
 
