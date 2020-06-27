@@ -54,7 +54,6 @@ vendor/lib64/libaudioparsers.so|b0a2920b723e151f9a6cd2f5dea332ff5519e6b7
 vendor/lib64/libqtigef.so|fc33ea757a968dc33d1bd1aeae1f6ea6b1c38ddf
 
 # Bluetooth - from deen_sprout - QPKS30.54-22-11
-lib64/libbtconfigstore.so|98e994c017e77c9bd5fa08691720683ea9560f0b
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|26e46c3f6d08733140f61e65580748b1b531eda8
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|09a509c9ef54bff1304d1bb24819c0ae56023bf8
@@ -65,9 +64,7 @@ vendor/lib64/com.qualcomm.qti.ant@1.0.so|4b62afdda74f01a09b62ca0b754c3693f97b3ba
 
 # Bluetooth Audio - from deen_sprout - QPKS30.54-22-11
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|0ce8a5f0d3a52d277c0b4eec0d56dc949e05acd7
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|4fa977be4cca13af037b01a2879f65b8d1f91116
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|3ecb3cfe2778d20ad16befc730b68a3616a023e5
-vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so|c9306b73813f8408361cc08284dfc2e22a4ff67a
 
 # Motorola Camera - from aljeter - PPP29.55-25
 lib/motorola.hardware.camera.device@1.0.so:vendor/lib/motorola.hardware.camera.device@1.0.so|51afafb043bb3fce3509938103e6e6f6f792c7bb
