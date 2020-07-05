@@ -1,13 +1,19 @@
-# ADSP - from deen_sprout - PPKS29.68-16-36-13
-vendor/bin/adsprpcd|3d1e7e14dfc2f2468a06e0af9c0d34f4bda28d4b
-vendor/lib/libadsp_default_listener.so|d9de89d55eba2d35a7583584b51335a663705fa7
-vendor/lib/libadsprpc.so|7e5c1e4d18cb8053087baaf97a1e9eecf383d88b
-vendor/lib/libfastcvadsp_stub.so|6b50fd7d53811b51e06fedd87c12a794d0c2f645
-vendor/lib/libfastcvopt.so|b36b3c6805e8fc3c9cc1d0465d53d0f6cd587336
-vendor/lib64/libadsp_default_listener.so|f7ea94537c66dfa11e1235064d43c8f56c3b3c51
-vendor/lib64/libadsprpc.so|f8e157e472e5d77c7198d6f901fb5dc3fd2db5d0
-vendor/lib64/libfastcvadsp_stub.so|ad72fe745a7a8f4b3a355cc0aaf177c29301f29f
-vendor/lib64/libfastcvopt.so|8bf629759f67073a0c310c25452e8610825f78cc
+# ADSP - from deen_sprout - QPKS30.54-22-11
+vendor/bin/adsprpcd|a5e878691577485c9f7ee33dfe02384a13f0a265
+vendor/lib/libadspd.so|1058e9bf5ffb8d9ab5c5181afd503937007a15ac
+vendor/lib/libadsprpc.so|e00e8dcb88e9b204fd90bb2c32afcc7fa28dbad1
+vendor/lib/libadsp_default_listener.so|c9a1ee00b32a93a9496ec84393afa0625e929eed
+vendor/lib/libfastcvadsp_stub.so|996345605e1d631151a6b4e9cd9f65b2c7e82dac
+vendor/lib/libfastcvopt.so|2df00c3827fe1db322084cb3935241f17d1532f4
+vendor/lib/libmdsprpc.so|642f74bfec1098397c7ee025e0744badbf14fc39
+vendor/lib/libsdsprpc.so|2963c73745b8b1ccab64260ce93e3679c7c66113
+vendor/lib64/libadspd.so|6a3e9f01ec2bef177e5d020eb353fce6039a0863
+vendor/lib64/libadsprpc.so|3dd28423f6b786584a1c80b2cdb6e22a1c00b0ae
+vendor/lib64/libadsp_default_listener.so|d7436ae6255671b4c3af533b5c89d91d75d5069e
+vendor/lib64/libfastcvadsp_stub.so|f101b66fa4a450b5af2e6aa9f7aaa28f9a876005
+vendor/lib64/libfastcvopt.so|f5e25aa055a57e23530b858bf7dd204a6009effc
+vendor/lib64/libmdsprpc.so|38de6a53d3c2ff60a253c7c6a0d3b46962e8e194
+vendor/lib64/libsdsprpc.so|1e89a33bae491abe4c81bb77c8fabf59bff4b853
 
 # ADSP modules - from deen_sprout - PPKS29.68-16-36-13
 vendor/lib/rfsa/adsp/libapps_mem_heap.so|5c82ad9cfe3f30105d899e2a4e90cc7566f81252
