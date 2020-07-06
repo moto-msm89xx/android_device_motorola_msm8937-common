@@ -420,7 +420,6 @@ vendor/lib/libidl.so|2d97511414eb72a585006d209c189efa25704b85
 vendor/lib/libqcci_legacy.so|8d260dd5d9c9f3c8d395aa76ac57f9f99f49a61e
 vendor/lib/libqdi.so|714e734af3fbdc5d7b95aa21c74cd8e6f364535b
 vendor/lib/libqdp.so|60f79f6da076552d90044f7167e6efbed23e4834
-vendor/lib/libqmi_cci.so|5bf4765dc9bc6cdf79823187eea0a2118a9eebe6
 vendor/lib/libqmi_client_helper.so|ab65cddedf661bf455bc19ec85665bfcef840c77
 vendor/lib/libqmi_client_qmux.so|ccc3cb224d1c09cfff932c590a9ff1fa07139ad9
 vendor/lib/libqmi_common_so.so|7cb3c3b53f16d7901b97d12214cf250cbaa403f6
@@ -435,7 +434,6 @@ vendor/lib64/libidl.so|11a1fa8582eca13cab2c3ae07320b5c3e6c3c08c
 vendor/lib64/libqcci_legacy.so|0dfbcec5f3eae9e74d708f78b921762110677e70
 vendor/lib64/libqdi.so|b1b65fdf86799e8cbadde7f0ff08211dec01a227
 vendor/lib64/libqdp.so|3c3ee776606de84e42ad5f6162d35e0372c8853f
-vendor/lib64/libqmi_cci.so|4e053ea843a7d1e6f9d9e281102db9bb3c9a78ee
 vendor/lib64/libqmi_client_helper.so|69b74fa683d59549c83e796fa1df1d2d301bae29
 vendor/lib64/libqmi_client_qmux.so|59e35cd3d499991a0fa32c99f2dd3e535da3c07c
 vendor/lib64/libqmi_common_so.so|6d2a0fe45dfc47249e0318b64209c73e6d8adfc2
@@ -443,6 +441,10 @@ vendor/lib64/libqmi_csi.so|19a21e8c0c6bb9b5d2dbd960fcfd2a50a7832c53
 vendor/lib64/libqmi_encdec.so|25b6d53c89a39fba2784ee66c66685db0a81f0c9
 vendor/lib64/libqmi.so|181f334e4ad421099879fea10d78767a9154d9e8
 vendor/lib64/libqmiservices.so|c4d5f3cec4ba4ea4d9944d8e6155a4d055ff595c
+
+# QMI - from deen_sprout - QPKS30.54-22-11
+vendor/lib/libqmi_cci.so|678eb1cb1f95ca04d901aea5989350f15dcb5c2a
+vendor/lib64/libqmi_cci.so|70fca1a42e7d170a6d4366845a70a9c290c45169
 
 # RIL - from deen_sprout - PPKS29.68-16-36-13
 -app/QtiTelephonyService/QtiTelephonyService.apk|fbe14d0a7c621e3721f27b58d91f917ed5834d87
