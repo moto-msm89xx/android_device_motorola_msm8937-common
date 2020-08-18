@@ -7,8 +7,8 @@
 
 cc_binary {
     defaults: ["hidl_defaults"],
-    name: "android.hardware.light@2.0-service.motorola_msm8937",
-    init_rc: ["android.hardware.light@2.0-service.motorola_msm8937.rc"],
+    name: "android.hardware.light@2.0-service.msm8937",
+    init_rc: ["android.hardware.light@2.0-service.msm8937.rc"],
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
 	"libhardware",

@@ -4,7 +4,7 @@
  * Copyright (C) 2019, Harshit Jain
  */
 
-#define LOG_TAG "android.hardware.light@2.0-service.motorola_msm8937"
+#define LOG_TAG "android.hardware.light@2.0-service.msm8937"
 
 /* dev-harsh1998: set page size to 32Kb for our hal */
 #include <hwbinder/ProcessState.h>
@@ -27,7 +27,7 @@ using android::status_t;
 #define DEFAULT_LGTHAL_HW_BINDER_SIZE_KB 32
 size_t getHWBinderMmapSize() {
     size_t value = 0;
-    value = property_get_int32("persist.vendor.motorola_msm8937.lighthal.hw.binder.size", DEFAULT_LGTHAL_HW_BINDER_SIZE_KB);
+    value = property_get_int32("persist.vendor.msm8937.lighthal.hw.binder.size", DEFAULT_LGTHAL_HW_BINDER_SIZE_KB);
     if (!value) value = DEFAULT_LGTHAL_HW_BINDER_SIZE_KB; // deafult to 1 page of 32 Kb
      return 1024 * value;
 }

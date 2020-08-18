@@ -38,7 +38,7 @@
 /(vendor|system/vendor)/usr/keylayout(/.*)?              u:object_r:keylayout_file:s0
 
 # Lights
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.motorola_msm8937 u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.msm8937 u:object_r:hal_light_default_exec:s0
 /sys/devices/soc/leds-atc-20/leds(/.*)?                  u:object_r:sysfs_leds:s0
 
 # Radio

@@ -175,7 +175,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.motorola_msm8937
+    android.hardware.light@2.0-service.msm8937
 
 # LineageActions
 PRODUCT_PACKAGES += \
