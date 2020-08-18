@@ -591,6 +591,8 @@ vendor/lib64/libtime_genoff.so|63bc574e88ccea12fcb8872a229e407f12307083
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine|b204f43ca6aaf97527127773ed98558c9a73e7b7
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|5a01d337c1d375ee24a6c8992ba91f54afb7637e
 vendor/lib64/mediadrm/libwvdrmengine.so|bfcb68f8ef8d977707724b2c8325f3bfe8878130
+vendor/lib64/libcpion.so|02fe6d6cc539de6e42778897dd66c32469cdc0e2
+vendor/lib64/libhdcpsrm.so|c6e99b08948ed4bbebdaba4889916ed5ea885a36
 vendor/lib64/liboemcrypto.so|ff5a371e193728fb11a8dc6005337b19b826e088
 vendor/lib64/libwvhidl.so|2ea72c61180143e66ad2cf42acbe6cac08f2b3f5
 
