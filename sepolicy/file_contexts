@@ -40,6 +40,7 @@
 # Lights
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.msm8937 u:object_r:hal_light_default_exec:s0
 /sys/devices/soc/leds-atc-20/leds(/.*)?                  u:object_r:sysfs_leds:s0
+/sys/devices/soc/1a00000.qcom,mdss_mdp/1a00000.qcom,mdss_mdp:qcom,mdss_fb_primary/leds(/.*)? u:object_r:sysfs_leds:s0
 
 # Radio
 /data/vendor/misc/cutback(/.*)?                          u:object_r:cutback_ipc_file:s0
