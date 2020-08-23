@@ -1,0 +1,1 @@
+allow healthd sysfs_healthd:file r_file_perms;

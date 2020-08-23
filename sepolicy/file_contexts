@@ -30,6 +30,10 @@
 /fsg                                                     u:object_r:fsg_firmware_file:s0
 /(vendor|system/vendor)/fsg                              u:object_r:fsg_firmware_file:s0
 
+# Health
+/sys/devices/soc/soc:qcom,bcl/power_supply/bcl/type u:object_r:sysfs_healthd:s0
+/sys/devices/soc/msm-bcl-19/power_supply/fg_adc/type u:object_r:sysfs_healthd:s0
+
 # Init scripts
 /(vendor|system/vendor)/bin/init\.mmi\.(laser|usb)\.sh u:object_r:qti_init_shell_exec:s0
 

@@ -16,6 +16,9 @@ type sysfs_devices_fingerprint, sysfs_type, fs_type;
 type fingerprint_data_file, file_type, data_file_type, core_data_file_type;
 type fingerprint_socket, file_type, data_file_type, core_data_file_type;
 
+# Health
+type sysfs_healthd, fs_type, sysfs_type, mlstrustedobject;
+
 # Input devices
 type idc_file, file_type, vendor_file_type;
 type keylayout_file, file_type, vendor_file_type;
