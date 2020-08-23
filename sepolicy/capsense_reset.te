@@ -7,4 +7,4 @@ allow capsense_reset capsense_reset_exec:file execute;
 allow capsense_reset sysfs_capsense:dir r_dir_perms;
 allow capsense_reset sysfs_capsense:file rw_file_perms;
 
-allow capsense_reset self:netlink_kobject_uevent_socket { create bind setopt };
+allow capsense_reset self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
