@@ -52,8 +52,8 @@ vendor/lib/hw/motorola.hardware.camera.provider@2.4-impl.so|a1ea1616ce72af2885b1
 vendor/lib/motorola.hardware.camera.device@1.0_vendor.so|f4af15944d8dfc8169edc7d579610ab3b1f88c22
 vendor/lib/motorola.hardware.camera.provider@2.4_vendor.so|3be5ac465a50e2426a834949c392b411e78fa6e5
 
-# Camera
-vendor/lib/libmot_gpu_mapper.so|df7f1c64994d1807b5f75045a0f55de457c77198
+# Camera - from aljeter - PPP29.55-35-18
+vendor/lib/libmot_gpu_mapper.so|523545af48b41736189eaaac8126f08c2a985355
 
 # Camera firmware
 vendor/firmware/cpp_firmware_v1_10_0.fw
