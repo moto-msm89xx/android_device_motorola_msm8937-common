@@ -1,3 +1,5 @@
+typeattribute mm-qcamerad data_between_core_and_vendor_violators;
+
 allow mm-qcamerad sysfs:dir r_dir_perms;
 allow mm-qcamerad sysfs:file r_file_perms;
 
@@ -6,6 +8,9 @@ allow mm-qcamerad sysfs_laser:file rw_file_perms;
 allow mm-qcamerad persist_camera_prop:property_service set;
 
 allow mm-qcamerad vendor_data_file:dir r_dir_perms;
+allow mm-qcamerad camera_data_file:dir search;
 
 allow mm-qcamerad fwk_sensor_hwservice:hwservice_manager find;
 allow mm-qcamerad hal_configstore_ISurfaceFlingerConfigs:hwservice_manager find;
+
+allow mm-qcamerad hal_configstore_default:binder call;
