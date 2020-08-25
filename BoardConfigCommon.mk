@@ -179,10 +179,6 @@ BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
 # Thermal
 USE_DEVICE_SPECIFIC_THERMAL := true
 
-# System as root
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-BOARD_KERNEL_CMDLINE += skip_initramfs rootwait ro init=/init root=/dev/dm-0
-
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 BOARD_VNDK_VERSION := current
