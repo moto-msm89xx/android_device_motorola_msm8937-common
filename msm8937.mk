@@ -306,6 +306,7 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    fstab_ramdisk.qcom \
     init.mmi.overlay.rc \
     init.mmi.rc \
     init.mmi.usb.rc \
