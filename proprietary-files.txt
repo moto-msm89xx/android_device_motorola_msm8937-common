@@ -31,9 +31,9 @@ vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so|3e9c52069ff07e50191d3b3afb33b
 vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so|944169db3ac67056b92ef4f850f69346958370b5
 vendor/lib/rfsa/adsp/libscveT2T_skel.so|91b9200dbb982abf0d6b440668252d892a616f66
 
-# AptX - from deen_sprout - PPKS29.68-16-36-13
-lib64/libaptXHD_encoder.so|c4ad4d6d7615f7df3ea1a4be5c6dae8a8c8ee8b1
-lib64/libaptX_encoder.so|22f5749edb5099526788c22708099a7791dd837f
+# AptX - from deen_sprout - QPKS30.54-22-11
+lib64/libaptXHD_encoder.so|fdbca5626fee8607d90bea2a6903eeebf396a7cf
+lib64/libaptX_encoder.so|01379a17d29c1bbc7f6b0325709940ca8cdd7ab8
 
 # Audio - from deen_sprout - QPKS30.54-22-11
 vendor/lib/libacdb-fts.so|2c6ae252272c705708f97edcaebab83d9ca98fe5
