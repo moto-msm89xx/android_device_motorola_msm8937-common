@@ -54,6 +54,10 @@ function blob_fixup() {
          sed -i "s|libtinyalsa.so|libwfdtalsa.so|g" "${2}"
         ;;
 
+    vendor/lib/libjustshoot.so)
+        patchelf --add-needed libjustshoot_shim.so "${2}"
+        ;;
+
     vendor/lib/libmot_gpu_mapper.so | vendor/lib/libmmcamera_vstab_module.so | vendor/lib/libjscore.so)
         sed -i "s/libgui/libwui/" "${2}"
         patchelf --remove-needed libstagefright.so "${2}"
