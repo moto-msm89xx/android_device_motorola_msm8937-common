@@ -66,9 +66,6 @@ vendor/lib64/com.qualcomm.qti.ant@1.0.so|4b62afdda74f01a09b62ca0b754c3693f97b3ba
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|0ce8a5f0d3a52d277c0b4eec0d56dc949e05acd7
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|3ecb3cfe2778d20ad16befc730b68a3616a023e5
 
-# Motorola Camera - from aljeter - PPP29.55-25
-lib/motorola.hardware.camera.device@1.0.so:vendor/lib/motorola.hardware.camera.device@1.0.so|51afafb043bb3fce3509938103e6e6f6f792c7bb
-
 # Camera
 vendor/lib/camera.device@1.0-impl.so|13a93ca1a2e58e813f32f0c6348f6c1ad7937454
 
