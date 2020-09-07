@@ -587,12 +587,12 @@ vendor/lib64/sensors.rp.so|45fa1cc519a5fbc7ad359f406f3d125cae54aadc
 vendor/lib64/sensors.ssc.so|60fd557a52a70580b3dda1662820ba315b8b7411
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|e87c7e158e0b12a2fe6abcc3fded9fcff91fa989
 
-# Thermal - from deen_sprout - PPKS29.68-16-36-13
-vendor/bin/thermal-engine|676d4cdfb4c97f6ad1d9f22f79844ae80e834c2b
-vendor/lib/libthermalclient.so|b41ea4c90353b8e057f774979d8ce5d3a006f70c
-vendor/lib64/hw/thermal.msm8953.so:vendor/lib64/hw/thermal.msm8937.so|d469d5f17b3ee397dd1c5c91d6a936db3e9b4bfd
-vendor/lib64/libthermalclient.so|e1123e8b39a39d4907092271922e47190e19d1c5
-vendor/lib64/libthermalioctl.so|1ce39d2a088f8e943be9a4c4b6d3c212a9881d95
+# Thermal - from deen_sprout - QPKS30.54-22-11
+vendor/bin/thermal-engine|c46250c2a0cba9066c3e366f305621bfa1536c41
+vendor/lib/libthermalclient.so|a93e6a36602ed296b25061d7efbbba47fc55e243
+vendor/lib64/hw/thermal.msm8953.so:vendor/lib64/hw/thermal.msm8937.so|4a233d37ab5fdf97935d50e0b77bba36592bf9d3
+vendor/lib64/libthermalclient.so|d6949c31ddb0603ea3f87f12ba7abadfc5ff5417
+vendor/lib64/libthermalioctl.so|4d6db40301e89c3fdea739e0a50d0f9f47bbfd7f
 
 # Time services - from deen_sprout - QPKS30.54-22-11
 -vendor/app/TimeService/TimeService.apk|e6f12353d3e19e6ec847ed4e3d40b41bc4cbc276
