@@ -569,23 +569,23 @@ vendor/lib64/libdisp-aba.so|2b9a85de013e956f1adfaf00146a865efb7077c4
 vendor/lib64/vendor.display.color@1.0.so|ec75654927c63b74c7f8d0760fa463f0e8287f25
 vendor/lib64/vendor.display.postproc@1.0.so|b95e9f990a207d5c62db4d66f5aaf088adc02ba8
 
-# Sensors - from deen_sprout - PPKS29.68-16-36-13
-vendor/bin/capsense_reset|4b5c900b12d15402df8f5f7b9e199f8e63b3f307
-vendor/bin/sensors.qti|5f962bb129099f282efd396a36c4e6bed5716dac
-vendor/lib/hw/activity_recognition.msm8953.so:vendor/lib/hw/activity_recognition.msm8937.so|eadca8d4e8c68387b056cb7b3e43b8058d7bd661
-vendor/lib/libsensor1.so|e8e9848a8d9e27f298d2789b365d962c2e7052ac
-vendor/lib/libsensor_reg.so|789af49787bf4f5fe6d99bd99bcced3a3f088ddc
-vendor/lib/sensor_calibrate.so|97424305830c1a3d4e8bf7a7123d3c957b6fc136
-vendor/lib/sensors.rp.so|e83666a495f3280e829e0046c7627d9782ac1577
-vendor/lib/sensors.ssc.so|57ba67c001cb4bcc818a2ad22ef1396d2f60c81d
-vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so|192824e6fd65b8341f21d4bfb1aa0c9e146a8bec
-vendor/lib64/hw/activity_recognition.msm8953.so:vendor/lib64/hw/activity_recognition.msm8937.so|de33d73d021b90586f9053069519c0bc66341ac1
-vendor/lib64/libsensor1.so|cde648fa8af9a5db982f396823a684039f94ac8c
-vendor/lib64/libsensor_reg.so|806c7abfa901028c55d37f4128e2a6de18b8a47b
-vendor/lib64/sensor_calibrate.so|efb71205c08557d2961eff9c7bff20ca89a816d0
-vendor/lib64/sensors.rp.so|45fa1cc519a5fbc7ad359f406f3d125cae54aadc
-vendor/lib64/sensors.ssc.so|60fd557a52a70580b3dda1662820ba315b8b7411
-vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|e87c7e158e0b12a2fe6abcc3fded9fcff91fa989
+# Sensors - from deen_sprout - QPKS30.54-22-11
+vendor/bin/capsense_reset|95cf79fc1dfdc7d95150fbe2c0d17c40f736b9a5
+vendor/bin/sensors.qti|5f43a818c4c682956bed031b4fc9583d42b7f70a
+vendor/lib/hw/activity_recognition.msm8953.so:vendor/lib/hw/activity_recognition.msm8937.so|0efb5841063ab548c708973563e26c366ac0060b
+vendor/lib/libsensor1.so|637aa4ec588533a3dcddb6ed95a7434f1f6b7d59
+vendor/lib/libsensor_reg.so|f81737c08759acc8add3ce87160f1ae24263546d
+vendor/lib/sensor_calibrate.so|53353469aa930cd298d6ff4a1981cc7cebb03d5e
+vendor/lib/sensors.rp.so|e35005a9a8e0aa574bb116490ff0240eb8b9a094
+vendor/lib/sensors.ssc.so|e69b474fd6e94e93b6684935455cc6c9ef5c2192
+vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so|82fae4500ad96d42ef48f9c0c9d00368c34480c5
+vendor/lib64/hw/activity_recognition.msm8953.so:vendor/lib64/hw/activity_recognition.msm8937.so|8888840ed6fa821c80f7d027a1f7c302ac4d1e44
+vendor/lib64/libsensor1.so|74faeeb9d8679fa1260bbc0cd7aa32cc859204cd
+vendor/lib64/libsensor_reg.so|fc6d0f4021f01ba0d0c2406e7a58dd1af4d21b19
+vendor/lib64/sensor_calibrate.so|47f475a83d6eb59f45a810299116893c91acf79e
+vendor/lib64/sensors.rp.so|c792a29071b6e8521e205b0d0e87a96401407618
+vendor/lib64/sensors.ssc.so|761d2b907b60176a8ef77e7f9296337b936a5351
+vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|4ca1d6dbe9acfbc762234b622ab2e7fa3328275d
 
 # Thermal - from deen_sprout - QPKS30.54-22-11
 vendor/bin/thermal-engine|c46250c2a0cba9066c3e366f305621bfa1536c41
