@@ -610,8 +610,8 @@ vendor/lib64/libhdcpsrm.so|e391eba82e82b4ce4ca24d015278e87de6a0d6c1
 vendor/lib64/liboemcrypto.so|d48b320505a2fd0864a7bf8add38c18e54f8a6bd
 vendor/lib64/libwvhidl.so|f9f9f8fcb735aed73d280d033158a9a793e6c911
 
-# WIFI - from deen_sprout - PPKS29.68-16-36-13
-vendor/bin/cnss-daemon|e07e36d89bb7e62c6183f36e9f4531a318afc37d
+# Wi-Fi - from deen_sprout - QPKS30.54-22-11
+vendor/bin/cnss-daemon|6ad61ace0fb3b72848f9714307e3ce7c2e0b1dde
 
 # WiFi Display - from D1C - PKQ1.181105.001
 bin/wfdservice|edeb291221024401cbae69c2fa4e58733b7efc4c
