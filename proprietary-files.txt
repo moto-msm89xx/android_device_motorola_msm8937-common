@@ -168,14 +168,11 @@ vendor/lib64/libssd.so|0e988e6ef7b1d356f4b92a26a61b96a840de1d20
 # DRM and SEE - from tissot - PKQ1.180917.001.V10.0.21.0.PDHMIXM
 vendor/lib/libQSEEComAPI.so|3a4de1c673d0e196c553fbfcec0ee4a3275915af
 
-# DRM - Qualcomm Trusted Execution Enviornment - from deen_sprout - PPKS29.68-16-36-13
-lib64/vendor.qti.hardware.qteeconnector@1.0.so|95e3c11e8877b3716791e1b93d5f905208ca32ef
-vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|da57c484142673cb23ce89701edb61a7f531ac60
+# DRM - Qualcomm Trusted Execution Enviornment - from deen_sprout - QPKS30.54-22-11
+vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|4d4f6f54c856ccdab0fbdda7a5064b24cf72fcd9
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
-vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|18cca9ebc325f445a966c07e94a2769697f6c1c9
-vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so|082ed7aabe19fd357d03f22045a147973888a966
-vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|15460dcdadee96d7e39b28d2b8bcac61b4e8d80a
-vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|95e3c11e8877b3716791e1b93d5f905208ca32ef
+vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|bc058b17763ed26f882d1042d2012f05022fa8f4
+vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|4b3afedf461fba7f06a31153d4047e52a6287dff
 
 # Gatekeeper - from deen_sprout - PPKS29.68-16-36-13
 vendor/lib64/hw/gatekeeper.msm8953.so:vendor/lib64/hw/gatekeeper.msm8937.so|c1b386547234815a0d6116b5e4756de66075cd3f
