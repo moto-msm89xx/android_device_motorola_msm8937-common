@@ -82,6 +82,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.hwc_set_default_colormode=true \
     ro.vendor.display.cabl=0 \
     vendor.display.enable_default_color_mode=1
 
