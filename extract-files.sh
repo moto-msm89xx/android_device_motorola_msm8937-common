@@ -88,6 +88,10 @@ function blob_fixup() {
     vendor/lib64/libmdmcutback.so)
         sed -i "s|libqsap_sdk.so|libqsapshim.so|g" "${2}"
         ;;
+
+    vendor/lib64/libril-qc-qmi-1.so)
+        patchelf --add-needed "libcutils_shim.so" "${2}"
+        ;;
     esac
 }
 
