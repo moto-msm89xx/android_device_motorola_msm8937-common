@@ -80,8 +80,6 @@ on post-fs
     verity_update_state
 
 on post-fs-data
-    setprop ro.vendor.build.fingerprint ${ro.product.vendor.brand}/${ro.product.vendor.name}/${ro.product.vendor.device}:${ro.vendor.build.version.release}/${ro.vendor.build.id}/${ro.vendor.build.version.incremental}:${ro.vendor.build.type}/${ro.vendor.build.tags}
-
     # Setup folders for security
     mkdir /mnt/vendor/persist/security 02770 drmrpc drmrpc
     mkdir /data/vendor/dbvc 0750 oem_5004 shell
@@ -271,10 +269,3 @@ on property:vendor.wifi.station=true
 
 on property:vendor.wifi.station=false
     write /sys/module/wlan/parameters/sar_sta disabled
-
-# androidboot.hardware.sku represents the SKU name being used for Regulatory approval (e.g. XT1101-01).
-# This property is used in AOSP for the Settings app to display an appropriate Regulatory E-Label
-# androidboot.product.hardware.sku represents a SKU name to assist the vendor image in determining
-# a unique HW form factor for purposes of determining a unique VINTF manifest
-on property:ro.boot.hardware.sku=*
-    setprop ro.boot.product.hardware.sku ${ro.boot.hardware.sku}
