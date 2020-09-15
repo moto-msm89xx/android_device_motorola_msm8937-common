@@ -146,21 +146,20 @@ vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|b1c83ea1046e5e356e0b0a74b99d7a3
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|cbc75b554051298020506d85427a1aa70346fbd5
 vendor/lib64/vendor.qti.latency@2.0.so|15e50ce40e210993343406947dd2c959920f40c8
 
-# DRM and SEE - from tissot - PKQ1.180917.001/V10.0.1.0.PDLMIFJ
-vendor/bin/qseecomd|0b63aa296bda66718dcd8f67468f38b00f6ad5de
-vendor/lib64/libGPreqcancel.so|942e96e6c1706b52e0b2f898c5947f16f8612994
-vendor/lib64/libGPreqcancel_svc.so|699c1d86af3a0fe58ff3b9cc927f001ed10ee745
-vendor/lib64/libQSEEComAPI.so|1e695dcc9197c685c294d426822d2cb4e4c9c592
-vendor/lib64/libStDrvInt.so|b2bdc1c8cc9d787f3df3522a1db6246695777bd2
-vendor/lib64/libdrmfs.so|4588763ec9617dd75485aad8bbfe58a604b47be8
-vendor/lib64/libdrmtime.so|17a1d94033305c746c4e9a8c10142db4546506a0
-vendor/lib64/libqisl.so|54d0ba8662dcc8bb664c2acc7315fb9bfffc773f
-vendor/lib64/librpmb.so|ba775205529284dc5d2233f11462037538f763af
-vendor/lib64/libsecureui_svcsock.so|ab9ec06666c6c63e4a30b2fe503e6088aab3629d
-vendor/lib64/libssd.so|0e988e6ef7b1d356f4b92a26a61b96a840de1d20
-
-# DRM and SEE - from tissot - PKQ1.180917.001.V10.0.21.0.PDHMIXM
-vendor/lib/libQSEEComAPI.so|3a4de1c673d0e196c553fbfcec0ee4a3275915af
+# DRM and SEE - from deen_sprout - QPKS30.54-22-11
+vendor/bin/qseecomd|889912b919630be51bb4fdc4857b3d060a737170
+vendor/lib/libQSEEComAPI.so|199f80aa6b940204fe1119aa196a3f939a2d499e
+vendor/lib64/libGPreqcancel.so|a5f7f9679fdd081c9b9ea8f5c4a3714761ca997c
+vendor/lib64/libGPreqcancel_svc.so|82ee3c978563896569468fdc006455b3f28f35e9
+vendor/lib64/libQSEEComAPI.so|597926ec6d1fca95a76f65f52659920c441d84c2
+vendor/lib64/libStDrvInt.so|46a4d0ae69d351c0977465aed8345b0ea535768d
+vendor/lib64/libdrmfs.so|bcae118bb9d2b07a2dae7fdcb30196293217e9ae
+vendor/lib64/libdrmtime.so|a8b04641f437e6235b3d708fe9ba486526f91ab2
+vendor/lib64/libqisl.so|491ac949ab488299c7a1ae4fe8257ec0a6f994b1
+vendor/lib64/librpmb.so|b74dce3afd27fee2caf7604032dad696211dd050
+vendor/lib64/libsecureui.so|dc3ccde15c3bdbc14da9fdc63dbf30973c5fe1b1
+vendor/lib64/libsecureui_svcsock.so|a7fdcd8001d4cdd9a30eb1ccc129324c398cc203
+vendor/lib64/libssd.so|33d717f793c2579e3bd17b5ce6534cb68c12887d
 
 # DRM - Qualcomm Trusted Execution Enviornment - from deen_sprout - QPKS30.54-22-11
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|4d4f6f54c856ccdab0fbdda7a5064b24cf72fcd9
@@ -168,8 +167,8 @@ vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|bc058b17763ed26f882d1042d2012f05022fa8f4
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|4b3afedf461fba7f06a31153d4047e52a6287dff
 
-# Gatekeeper - from deen_sprout - PPKS29.68-16-36-13
-vendor/lib64/hw/gatekeeper.msm8953.so:vendor/lib64/hw/gatekeeper.msm8937.so|c1b386547234815a0d6116b5e4756de66075cd3f
+# Gatekeeper - from deen_sprout - QPKS30.54-22-11
+vendor/lib64/hw/gatekeeper.msm8953.so:vendor/lib64/hw/gatekeeper.msm8937.so|1086e5dcda7aa2bed7ac015f7850095f6199a1c2
 
 # GPS - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 vendor/bin/hw/vendor.qti.gnss@1.0-service|049201d8e22064b87eb52df208d8cda7066d140a
@@ -354,8 +353,8 @@ vendor/etc/init/imsqmidaemon.rc|dda16d842b7c65296e97bc9921b723a43b152ba3
 vendor/etc/init/imsrcsd.rc|2dc42ff6e4b6dd389bd3bc9a7af30dec2f1a45df
 vendor/etc/init/ims_rtp_daemon.rc|b3c3a380204d7b1b3a58937db8c8e76c00ac8825
 
-# Keymaster - from deen_sprout - PPKS29.68-16-36-13
-vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8937.so|f0ca30001ee9440aa8f4916057af5a2d1019ea6b
+# Keymaster - from deen_sprout - QPKS30.54-22-11
+vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8937.so|9660e1c13a3589114cf18db58e5b3c3c9e14059b
 
 # Listen - from X00RD - QKQ1.191002.002-17.07.2003.405-20200330
 vendor/lib/hw/sound_trigger.primary.msm8937.so|305f7f8ba1ab05c464ef669cfaa6e5bd3432f73b
@@ -578,6 +577,11 @@ vendor/lib64/libthermalioctl.so|4d6db40301e89c3fdea739e0a50d0f9f47bbfd7f
 vendor/bin/time_daemon|3396fed0c9677b7fab9531adec0c77e2f67adc4b
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 vendor/lib64/libtime_genoff.so|6310211236e71049a06023c1133893d64a336bfb
+
+# TUI - from deen_sprout - QPKS30.54-22-11
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|05c0a47f24e38b14fc7c1ccfa64c585692277ee5
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|5d53f4123551317fe67cf6aadd7fc836b7b97076
 
 # Widevine - from deen_sprout - QPKS30.54-22-11
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine|924f17c49a87a4c209f8b44b8132da0111b350a7
