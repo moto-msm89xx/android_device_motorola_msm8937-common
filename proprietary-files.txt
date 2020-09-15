@@ -357,10 +357,23 @@ vendor/etc/init/ims_rtp_daemon.rc|b3c3a380204d7b1b3a58937db8c8e76c00ac8825
 # Keymaster - from deen_sprout - PPKS29.68-16-36-13
 vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8937.so|f0ca30001ee9440aa8f4916057af5a2d1019ea6b
 
-# Listen - from TA-1000_00CN - PKQ1.181105.001
-vendor/lib/hw/sound_trigger.primary.msm8937.so|43e9806f0196c173ce8ac31f70ac6b2293a75264
-vendor/lib/libadpcmdec.so|eeaef8dd6cad3da613860bb263f192cda56c60b6
-vendor/lib/libsmwrapper.so|0df4be18901fffaa0a7ceecad87b2a29259d5672
+# Listen - from X00RD - QKQ1.191002.002-17.07.2003.405-20200330
+vendor/lib/hw/sound_trigger.primary.msm8937.so|305f7f8ba1ab05c464ef669cfaa6e5bd3432f73b
+vendor/lib/libadpcmdec.so|be5fdf08a08b635816381e61b6bbf2874c62f613
+vendor/lib/libgcs-calwrapper.so|c1e42b5db0be908052f19de3c3bfc5cee6819363
+vendor/lib/libgcs-ipc.so|33104e481daf5cf97720a6da812b09ed30aacaa1
+vendor/lib/libgcs-osal.so|5d0d7939c429a558ecb539e67bc379b417980444
+vendor/lib/libgcs.so|5f65daa6f37c21bc4dc2c7cc42caaf7d338b70e3
+vendor/lib/liblistenjni.so|131a949c9e0d0baf31e179645b7edd86876b5761
+vendor/lib/liblistensoundmodel2.so|5f533ea9a7ea488dfc9f028b9a0a478e54255dd7
+vendor/lib/libsmwrapper.so|1ab31b5378265784145defa47d50435029cf5f57
+vendor/lib64/hw/sound_trigger.primary.msm8937.so|1a55a7258b7a9f4d9521f83298baa59a9dbb23f2
+vendor/lib64/libgcs-calwrapper.so|f8ea3485465c2bde8db75e79dc668598f2984214
+vendor/lib64/libgcs-ipc.so|008d8690fe30116526a91a90fde909f9f1f8a916
+vendor/lib64/libgcs-osal.so|c69df09e6521df8ae922893ec758014e978a52f7
+vendor/lib64/libgcs.so|9018cdd801432804794c1371873d4f50942d1027
+vendor/lib64/liblistenjni.so|eaef51960b85d8d6904d268f96e56508fe9aa0c6
+vendor/lib64/liblistensoundmodel2.so|dfbfb43e255a474d1cf0cecb14b10ad63ac126c2
 
 # Media - from D1C - PKQ1.181105.001
 vendor/lib/libAlacSwDec.so|339a78c17a0b7032e678a38deb523a0d403fdb41
