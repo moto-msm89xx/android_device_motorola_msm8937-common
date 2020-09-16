@@ -242,7 +242,6 @@ service vendor.charge_only_mode /vendor/bin/charge_only_mode
     user root
     group graphics system input
     disabled
-    seclabel u:r:healthd:s0
 
 service vendor.thermal-com /vendor/bin/thermal-engine --minimode
     class main
