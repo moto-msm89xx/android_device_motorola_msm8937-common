@@ -2,8 +2,9 @@ type charge_only, domain;
 type charge_only_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(charge_only)
 
-allow charge_only chargeonly_data_file:dir rw_dir_perms;
 allow charge_only chargeonly_data_file:file rw_file_perms;
+
+allow charge_only persist_chargeonly_file:file r_file_perms;
 
 # Write to /dev/kmsg
 allow charge_only kmsg_device:chr_file rw_file_perms;
@@ -28,6 +29,8 @@ allow charge_only sysfs_batteryinfo:file r_file_perms;
 
 allow charge_only sysfs_leds:file { read open write };
 
+allow charge_only sysfs_power:file write;
+
 # Read /sys/fs/pstore/console-ramoops
 # Don't worry about overly broad permissions for now, as there's
 # only one file in /sys/fs/pstore
@@ -44,3 +47,4 @@ allow charge_only proc_sysrq:file rw_file_perms;
 # charger needs to tell init to continue the boot
 # process when running in charger mode.
 set_prop(charge_only, system_prop)
+set_prop(charge_only, powerctl_prop)

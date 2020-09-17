@@ -10,6 +10,7 @@ type sysfs_capsense, sysfs_type, fs_type;
 
 # charge_only_mode
 type chargeonly_data_file, file_type, data_file_type;
+type persist_chargeonly_file, file_type, data_file_type;
 
 # Fingerprint
 type sysfs_devices_fingerprint, sysfs_type, fs_type;
