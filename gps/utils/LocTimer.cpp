@@ -34,7 +34,6 @@
 #include <errno.h>
 #include <sys/timerfd.h>
 #include <sys/epoll.h>
-#include <unistd.h>
 #include <log_util.h>
 #include <loc_timer.h>
 #include <LocTimer.h>
