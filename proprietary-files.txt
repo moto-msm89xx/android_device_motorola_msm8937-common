@@ -85,8 +85,8 @@ vendor/firmware/cpp_firmware_v1_5_2.fw
 vendor/firmware/cpp_firmware_v1_6_0.fw
 vendor/firmware/cpp_firmware_v1_8_0.fw
 
-# Charger - from deen_sprout - PPKS29.68-16-36-13
-vendor/bin/charge_only_mode|2eca690757a6599e1b9593df800771a44fca87f1
+# Charger - from deen_sprout - QPKS30.54-22-12
+vendor/bin/charge_only_mode|51198bf74aff994c60cf37c3c2640bb345922ecd
 
 # CNE - from deen_sprout - QPKS30.54-22-12
 product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml|75e8a824d368cd4172985c884796381327d950da
