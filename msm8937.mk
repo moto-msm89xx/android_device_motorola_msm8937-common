@@ -349,7 +349,6 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libjustshoot_shim \
     libqsapshim
 
 # Thermal
