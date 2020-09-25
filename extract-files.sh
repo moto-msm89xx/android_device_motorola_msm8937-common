@@ -54,17 +54,16 @@ function blob_fixup() {
         sed -i 's/xml version="2.0"/xml version="1.0"/' "${2}"
         ;;
 
-    vendor/lib/libjustshoot.so)
-        patchelf --add-needed libjustshoot_shim.so "${2}"
+    vendor/lib/libmmcamera2_sensor_modules.so)
+        sed -i 's|msm8953_mot_deen_camera.xml|msm8937_mot_camera_conf.xml|g' "${2}"
         ;;
 
-    vendor/lib/libmot_gpu_mapper.so | vendor/lib/libmmcamera_vstab_module.so | vendor/lib/libjscore.so)
+    vendor/lib/libmot_gpu_mapper.so | vendor/lib/libmmcamera_vstab_module.so)
         sed -i "s/libgui/libwui/" "${2}"
-        patchelf --remove-needed libstagefright.so "${2}"
         ;;
 
     vendor/lib64/libmdmcutback.so)
-         sed -i "s|libqsap_sdk.so|libqsapshim.so|g" "${2}"
+        sed -i "s|libqsap_sdk.so|libqsapshim.so|g" "${2}"
         ;;
     esac
 }

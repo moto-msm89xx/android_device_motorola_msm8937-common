@@ -14,16 +14,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-
-# Camera
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := justshoot_shim.cpp
-LOCAL_SHARED_LIBRARIES := libutils
-LOCAL_MODULE := libjustshoot_shim
-LOCAL_MODULE_TAGS := optional
-LOCAL_VENDOR_MODULE := true
-include $(BUILD_SHARED_LIBRARY)
-
 # RIL
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := libqsap_shim.c
