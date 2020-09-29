@@ -72,7 +72,7 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 # Camera
 vendor/bin/mm-qcamera-daemon
 vendor/lib/camera.device@1.0-impl.so|13a93ca1a2e58e813f32f0c6348f6c1ad7937454
-vendor/lib/hw/camera.msm8953.so:vendor/lib/hw/camera.msm8937.so
+vendor/lib/hw/camera.msm8953.so:vendor/lib/hw/camera.msm8937.so|533198568f463760412de847d742d1fb41ae8f8e
 vendor/lib/lib_mot_app6_metadata.so
 vendor/lib/lib_mot_led_calibration.so
 vendor/lib/lib_motsensorlistener.so
@@ -272,7 +272,7 @@ vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
 # Gatekeeper
-vendor/lib64/hw/gatekeeper.msm8953.so:vendor/lib64/hw/gatekeeper.msm8937.so
+vendor/lib64/hw/gatekeeper.msm8953.so:vendor/lib64/hw/gatekeeper.msm8937.so|3125e1bad9e8231df1628d909ba514b250835a7d
 
 # GPS
 vendor/bin/garden_app
@@ -484,7 +484,7 @@ vendor/lib64/vendor.qti.hardware.iop@1.0.so|3f738546cbdebf7d7a769568c4c5b43f3d8e
 vendor/lib64/vendor.qti.hardware.iop@2.0.so|f40ce3fe82f85dba57df0185cc42e491da585329
 
 # Keymaster
-vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8937.so
+vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8937.so|d8303e587ac8cd79205ddf5e0627edefbc281561
 
 # Listen - from X00RD - QKQ1.191002.002-17.07.2003.405-20200330
 vendor/lib/hw/sound_trigger.primary.msm8937.so|305f7f8ba1ab05c464ef669cfaa6e5bd3432f73b
@@ -724,13 +724,13 @@ vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|4c130641f85b8707acbc852eadc
 
 # Sensors
 vendor/bin/capsense_reset
-vendor/lib/hw/activity_recognition.msm8953.so:vendor/lib/hw/activity_recognition.msm8937.so
-vendor/lib64/hw/activity_recognition.msm8953.so:vendor/lib64/hw/activity_recognition.msm8937.so
+vendor/lib/hw/activity_recognition.msm8953.so:vendor/lib/hw/activity_recognition.msm8937.so|b3d9be075b7d7e896e0086e90baacc602445258b
+vendor/lib64/hw/activity_recognition.msm8953.so:vendor/lib64/hw/activity_recognition.msm8937.so|24e17b4c9f237b51e89fae26adc7cc573493514d
 
 # Thermal
 vendor/bin/thermal-engine
 vendor/lib/libthermalclient.so
-vendor/lib64/hw/thermal.msm8953.so:vendor/lib64/hw/thermal.msm8937.so
+vendor/lib64/hw/thermal.msm8953.so:vendor/lib64/hw/thermal.msm8937.so|4b06835e52677c923d58cb520bfb99ff9cd503c0
 vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
