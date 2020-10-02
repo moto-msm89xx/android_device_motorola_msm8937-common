@@ -103,6 +103,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.fm.transmitter=false \
     ro.vendor.fm.use_audio_session=true
 
+# FRP
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
 # GPU
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.egl.hw=0 \
