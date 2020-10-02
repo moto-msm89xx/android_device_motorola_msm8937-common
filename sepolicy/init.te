@@ -2,7 +2,7 @@ allow init fingerprint_device:chr_file { write ioctl };
 
 allow init fsg_firmware_file:dir mounton;
 allow init fsg_firmware_file:filesystem { relabelfrom mount };
-allow { fsg_firmware_file  }self:filesystem associate;
+allow { fsg_firmware_file }self:filesystem associate;
 
 allow init hwservicemanager:binder { call transfer };
 allow init hidl_base_hwservice:hwservice_manager add;

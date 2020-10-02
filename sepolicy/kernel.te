@@ -1,2 +1,4 @@
 allow kernel block_device:dir search;
-allow kernel debugfs_wlan:dir search;
+userdebug_or_eng(`
+  allow kernel debugfs_wlan:dir search;
+')
