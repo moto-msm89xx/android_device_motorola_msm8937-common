@@ -2,4 +2,4 @@
 r_dir_file(system_server, vendor_idc_file);
 r_dir_file(system_server, vendor_keylayout_file);
 
-allow system_server rild:binder { call };
+allow system_server rild:binder call;

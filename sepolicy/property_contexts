@@ -1,2 +1,1 @@
-persist.camera.daemon u:object_r:persist_camera_prop:s0
 vendor.rmnet_vnd.rps_mask u:object_r:rmnet_prop:s0
