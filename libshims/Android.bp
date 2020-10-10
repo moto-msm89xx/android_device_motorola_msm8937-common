@@ -7,3 +7,19 @@ cc_library {
     shared_libs: ["libcutils"],
     vendor: true,
 }
+
+cc_library {
+    name: "libcharging_shim",
+    srcs: ["memset_test.cpp"],
+    target: {
+        android_arm: {
+            srcs: ["memset32.S"],
+        },
+        android_arm64: {
+            srcs: ["android_memset.S"],
+        },
+    },
+    shared_libs: ["libcutils"],
+    static_libs: ["libgtest"],
+    vendor: true,
+}

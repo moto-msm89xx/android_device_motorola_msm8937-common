@@ -181,7 +181,7 @@ vendor/firmware/cpp_firmware_v1_6_0.fw
 vendor/firmware/cpp_firmware_v1_8_0.fw
 
 # Charger
-vendor/bin/charge_only_mode
+vendor/bin/charge_only_mode|a4c3a67b6f5180956bb2f41352dc4bc4ce7f13ef
 
 # CNE
 product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml

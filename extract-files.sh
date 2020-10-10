@@ -57,6 +57,10 @@ function blob_fixup() {
         sed -i 's/xml version="2.0"/xml version="1.0"/' "${2}"
         ;;
 
+    vendor/bin/charge_only_mode)
+        patchelf --add-needed libcharging_shim.so "${2}"
+        ;;
+
     vendor/lib/hw/activity_recognition.msm8937.so | vendor/lib64/hw/activity_recognition.msm8937.so)
         patchelf --set-soname activity_recognition.msm8937.so "${2}"
         ;;
