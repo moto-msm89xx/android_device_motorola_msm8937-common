@@ -1,10 +1,8 @@
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.deep_buffer.media=true \
-    audio.dolby.ds2.enabled=true \
     audio.offload.min.duration.secs=60 \
     audio.offload.video=true \
-    persist.speaker.prot.enable=false \
     persist.vendor.audio.dualmic.config=endfire \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicecomm=true \
@@ -14,9 +12,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.audio.sdk.fluencetype=fluence \
     ro.vendor.audio.sdk.ssr=false \
     vendor.audio_hal.period_size=240 \
+    vendor.audio.dolby.ds2.enabled=true \
     vendor.audio.hw.aac.encoder=false \
-    vendor.audio.offload.gapless.enabled=true \
     vendor.audio.playback.mch.downsample=true \
+    vendor.audio.offload.gapless.enabled=true \
     vendor.audio.offload.multiple.enabled=false \
     vendor.audio.offload.passthrough=false \
     vendor.audio.offload.track.enable=true \
@@ -39,10 +38,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    bluetooth.hfp.client=1 \
-    qcom.bt.le_dev_pwr_class=1 \
-    ro.bluetooth.hfp.ver=1.6 \
-    ro.qualcomm.bt.hci_transport=smd \
     vendor.qcom.bluetooth.soc=smd
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -51,7 +46,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     camera.disable_zsl_mode=1 \
-    persist.ts.rtmakeup=true \
     persist.vendor.camera.display.umax=1920x1080 \
     persist.vendor.camera.display.lmax=1280x720 \
     persist.vendor.camera.HAL3.enabled=1 \
@@ -59,8 +53,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.cne.logging.qxdm=3974 \
-    persist.sys.cnd.iwlan=1
+    persist.vendor.cnd.iwlan=1 \
+    persist.vendor.cne.logging.qxdm=3974
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.vendor.cne.feature=1
@@ -90,10 +84,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.hwc_set_default_colormode=true \
     ro.vendor.display.cabl=0 \
     vendor.display.enable_default_color_mode=1
-
-# DRM
-PRODUCT_PROPERTY_OVERRIDES += \
-    drm.service.enabled=true
 
 # Fingerprint
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -159,57 +149,44 @@ PRODUCT_ODM_PROPERTIES += \
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
-    rild.libargs=-d /dev/smd0 \
-    persist.vendor.radio.no_wait_for_card=1 \
-    persist.vendor.radio.dfr_mode_set=1 \
-    persist.vendor.radio.relay_oprt_change=1 \
-    persist.vendor.radio.oem_ind_to_both=0 \
-    persist.vendor.radio.qcril_uim_vcc_feature=1 \
-    persist.vendor.radio.0x9e_not_callname=1 \
-    persist.vendor.radio.mt_sms_ack=30 \
-    persist.vendor.radio.force_get_pref=1 \
-    persist.vendor.radio.is_wps_enabled=true \
-    persist.vendor.radio.custom_ecc=1 \
-    persist.vendor.radio.eri64_as_home=1 \
-    persist.vendor.radio.add_power_save=1 \
-    persist.vendor.radio.data_con_rprt=1 \
-    persist.vendor.radio.lte_vrte_ltd=1 \
-    persist.vendor.radio.cs_srv_type=1 \
-    persist.vendor.radio.sw_mbn_update=1 \
-    persist.vendor.radio.app_mbn_path=/fsg \
-    persist.vendor.radio.adb_log_on=0 \
-    persist.vendor.radio.apm_sim_not_pwdn=1 \
-    persist.vendor.radio.jbims=1 \
+    persist.vendor.data.iwlan.enable=true \
+    persist.vendor.ims.disableADBLogs=0 \
+    persist.vendor.ims.disableDebugDataPathLogs=0 \
     persist.vendor.ims.disableDebugLogs=0 \
     persist.vendor.ims.disableIMSLogs=0 \
-    persist.vendor.ims.disableDebugDataPathLogs=0 \
-    persist.vendor.ims.disableADBLogs=0 \
-    persist.vendor.ims.vt.enableadb=1 \
     persist.vendor.ims.disableQXDMLogs=1 \
-    persist.radio.msgtunnel.start=true \
-    persist.radio.calls.on.ims=true \
-    persist.radio.domain.ps=0 \
-    persist.rmnet.mux=enabled \
-    persist.radio.REVERSE_QMI=0 \
-    persist.radio.VT_USE_MDM_TIME=0 \
-    persist.vt.supported=1 \
-    persist.data.qmi.adb_logmask=0 \
-    persist.data.netmgrd.qos.enable=true \
-    persist.data.iwlan.enable=true \
-    ro.telephony.iwlan_operation_mode=legacy \
+    persist.vendor.ims.vt.enableadb=1 \
+    persist.vendor.radio.0x9e_not_callname=1 \
+    persist.vendor.radio.adb_log_on=0 \
+    persist.vendor.radio.add_power_save=1 \
+    persist.vendor.radio.apm_sim_not_pwdn=1 \
+    persist.vendor.radio.cs_srv_type=1 \
+    persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.data_con_rprt=1 \
+    persist.vendor.radio.dfr_mode_set=1 \
+    persist.vendor.radio.eri64_as_home=1 \
+    persist.vendor.radio.jbims=1 \
+    persist.vendor.radio.lte_vrte_ltd=1 \
+    persist.vendor.radio.msgtunnel.start=true \
+    persist.vendor.radio.mt_sms_ack=30 \
+    persist.vendor.radio.no_wait_for_card=1 \
+    persist.vendor.radio.oem_ind_to_both=0 \
+    persist.vendor.radio.qcril_uim_vcc_feature=1 \
+    persist.vendor.radio.relay_oprt_change=1 \
+    persist.vendor.radio.sw_mbn_update=1 \
+    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
     ro.build.vendorprefix=/vendor \
-    persist.sys.fflag.override.settings_network_and_internet_v2=true
+    ro.telephony.iwlan_operation_mode=legacy
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     DEVICE_PROVISIONED=1 \
+    persist.sys.fflag.override.settings_network_and_internet_v2=true \
     ril.subscription.types=NV,RUIM \
     telephony.lteOnCdmaDevice=1 \
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.sar_sensor=1 \
-    ro.mot.sensors.glance_approach=false \
+    persist.vendor.radio.sar_sensor=1 \
     ro.vendor.sensors.pmd=false \
     ro.vendor.sensors.rmd=false \
     ro.vendor.sdk.sensors.gestures=false \
@@ -217,10 +194,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.scrn_ortn=false \
     ro.vendor.sensors.cmc=false \
     ro.vendor.sensors.pedometer=false
-
-# Time Service
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.timed.enable=true
 
 # Trim properties
 PRODUCT_PROPERTY_OVERRIDES += \
