@@ -44,7 +44,7 @@ on boot
     write /sys/class/android_usb/android0/f_rndis_qc/max_pkt_per_xfer 1
     write /sys/module/g_android/parameters/mtp_rx_req_len 524288
     write /sys/module/g_android/parameters/mtp_tx_req_len 524288
-	write /sys/class/android_usb/f_mass_storage/lun/nofua 1
+    write /sys/class/android_usb/f_mass_storage/lun/nofua 1
 
     chown root system /sys/module/uvcvideo/parameters/quirks
     chmod 0660 /sys/module/uvcvideo/parameters/quirks
@@ -72,7 +72,7 @@ service vendor.mmi-usb-sh /vendor/bin/init.mmi.usb.sh
 
 #  Disable USB-SS in bp-tools
 on property:ro.bootmode=bp-tools
-   write /sys/module/dwc3_msm/parameters/disable_ss_switch 1
+    write /sys/module/dwc3_msm/parameters/disable_ss_switch 1
 
 # USB compositions
 # QC compositions for MSM8937

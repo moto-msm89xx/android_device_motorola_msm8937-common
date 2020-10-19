@@ -71,29 +71,29 @@ on post-fs-data
     mkdir /data/vendor/hbtp 0750 system system
     mkdir /data/misc/dts 0770 media audio
 
-#Create folder for mm-qcamera-daemon
+    #Create folder for mm-qcamera-daemon
     mkdir /data/vendor/camera 0770 camera camera
 
 #start camera server as daemon
-service qcamerasvr /vendor/bin/mm-qcamera-daemon
+service vendor.qcamerasvr /vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
 
 on init
-   write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
-   write /dev/cpuctl/cpu.rt_runtime_us 800000
-   write /dev/cpuctl/cpu.rt_period_us 1000000
-   mkdir /dev/cpuctl/bg_non_interactive
-   chown system system /dev/cpuctl/bg_non_interactive/tasks
-   chmod 0666 /dev/cpuctl/bg_non_interactive/tasks
-   # 5.0 %
-   write /dev/cpuctl/bg_non_interactive/cpu.shares 52
-   write /dev/cpuctl/bg_non_interactive/cpu.rt_runtime_us 700000
-   write /dev/cpuctl/bg_non_interactive/cpu.rt_period_us 1000000
+    write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
+    write /dev/cpuctl/cpu.rt_runtime_us 800000
+    write /dev/cpuctl/cpu.rt_period_us 1000000
+    mkdir /dev/cpuctl/bg_non_interactive
+    chown system system /dev/cpuctl/bg_non_interactive/tasks
+    chmod 0666 /dev/cpuctl/bg_non_interactive/tasks
+    # 5.0 %
+    write /dev/cpuctl/bg_non_interactive/cpu.shares 52
+    write /dev/cpuctl/bg_non_interactive/cpu.rt_runtime_us 700000
+    write /dev/cpuctl/bg_non_interactive/cpu.rt_period_us 1000000
 
-   # Drop write bit from cpu_min_freq so that libqti-perfd can't set it
-   chmod 0444 /sys/module/msm_performance/parameters/cpu_min_freq
+    # Drop write bit from cpu_min_freq so that libqti-perfd can't set it
+    chmod 0444 /sys/module/msm_performance/parameters/cpu_min_freq
   
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
@@ -103,23 +103,23 @@ on property:persist.usb.chgdisabled=0
     write /sys/class/power_supply/battery/charging_enabled 1
 
 service vendor.qseecomd /vendor/bin/qseecomd
-   class core
-   user root
-   group root
+    class core
+    user root
+    group root
 
-service thermal-engine /vendor/bin/thermal-engine
-   class main
-   user root
-   socket thermal-send-client stream 0666 system system
-   socket thermal-recv-client stream 0660 system system
-   socket thermal-recv-passive-client stream 0666 system system
-   socket thermal-send-rule stream 0660 system system
-   group root
-   writepid /dev/cpuset/system-background/tasks
+service vendor.thermal-engine /vendor/bin/thermal-engine
+    class main
+    user root
+    socket thermal-send-client stream 0666 system system
+    socket thermal-recv-client stream 0660 system system
+    socket thermal-recv-passive-client stream 0666 system system
+    socket thermal-send-rule stream 0660 system system
+    group root
+    writepid /dev/cpuset/system-background/tasks
 
 on boot
- # Add a cpuset for the camera daemon
- # We want all cores for camera
+    # Add a cpuset for the camera daemon
+    # We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
     write /dev/cpuset/camera-daemon/cpus 0-3
     write /dev/cpuset/camera-daemon/mems 0
@@ -127,7 +127,7 @@ on boot
     chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
     chmod 0660 /dev/cpuset/camera-daemon/tasks
 
-service ppd /vendor/bin/mm-pp-dpps
+service vendor.ppd /vendor/bin/mm-pp-dpps
     class hal
     user system
     group system graphics
@@ -136,7 +136,7 @@ service ppd /vendor/bin/mm-pp-dpps
 on property:init.svc.surfaceflinger=restarting
     restart vendor.hwcomposer-2-1
 
-service wcnss-service /vendor/bin/wcnss_service
+service vendor.wcnss-service /vendor/bin/wcnss_service
     class late_start
     user system
     group system wifi radio
@@ -145,10 +145,10 @@ service wcnss-service /vendor/bin/wcnss_service
 on charger
     setprop sys.usb.configfs 0
     setprop persist.sys.usb.config mass_storage
-    start qcom-post-boot
+    start vendor.qcom-post-boot
     setprop persist.sys.usb.config mass_storage
 
-service adsprpcd /vendor/bin/adsprpcd
+service vendor.adsprpcd /vendor/bin/adsprpcd
     class main
     user media
     group media
@@ -164,7 +164,7 @@ service vendor.per_proxy /vendor/bin/pm-proxy
     group system
     disabled
 
-on property:init.svc.per_mgr=running
+on property:init.svc.vendor.per_mgr=running
     start vendor.per_proxy
 
 on property:sys.shutdown.requested=*

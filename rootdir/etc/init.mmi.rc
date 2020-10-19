@@ -10,8 +10,6 @@ on early-boot
     write /sys/module/subsystem_restart/parameters/disable_restart_work 0x0
     write /proc/sys/kernel/poweroff_cmd "/system/bin/reboot -p"
 
-on early-init
-
 on init
     chown system log /sys/fs/pstore/console-ramoops-0
     chmod 0440 /sys/fs/pstore/console-ramoops-0
@@ -167,48 +165,48 @@ on post-fs-data
     mkdir /data/vendor/.fps 0770 system fingerp
 
 on boot
-   # restore default console_loglevel to KERN_DEBUG
-   # restore default_message_loglevel to KERN_WARNING
-   write /proc/sys/kernel/printk "7 4 1 7"
+    # restore default console_loglevel to KERN_DEBUG
+    # restore default_message_loglevel to KERN_WARNING
+    write /proc/sys/kernel/printk "7 4 1 7"
 
     # MOTO, NJH348, IKHALFMWK-1864, change system max tcp buffer sizes based on RAT changes
     # Define system changable TCP buffer max values
     chown system system /proc/sys/net/core/rmem_max
     chown system system /proc/sys/net/core/wmem_max
 
- # Change ownership and permission for leds backlight
-   chmod 0664 /sys/class/leds/lcd-backlight/brightness
-   chown system system /sys/class/leds/white/brightness
-   chmod 0664 /sys/class/leds/white/brightness
+    # Change ownership and permission for leds backlight
+    chmod 0664 /sys/class/leds/lcd-backlight/brightness
+    chown system system /sys/class/leds/white/brightness
+    chmod 0664 /sys/class/leds/white/brightness
 
-   # change permission of red leds
-   chown system system /sys/class/leds/red/brightness
-   chmod 0664 /sys/class/leds/red/brightness
+    # change permission of red leds
+    chown system system /sys/class/leds/red/brightness
+    chmod 0664 /sys/class/leds/red/brightness
 
-   # Change ownership and permission for vibrator
-   chown system system /sys/class/timed_output/vibrator/enable
-   chmod 0660 /sys/class/timed_output/vibrator/enable
-   chown system system /sys/class/leds/vibrator/state
-   chmod 0660 /sys/class/leds/vibrator/state
-   chown system system /sys/class/leds/vibrator/activate
-   chmod 0660 /sys/class/leds/vibrator/activate
-   chown system system /sys/class/leds/vibrator/duration
-   chmod 0660 /sys/class/leds/vibrator/duration
-   chown root oem_5020 /sys/bus/i2c/devices/2-005a/reduce
+    # Change ownership and permission for vibrator
+    chown system system /sys/class/timed_output/vibrator/enable
+    chmod 0660 /sys/class/timed_output/vibrator/enable
+    chown system system /sys/class/leds/vibrator/state
+    chmod 0660 /sys/class/leds/vibrator/state
+    chown system system /sys/class/leds/vibrator/activate
+    chmod 0660 /sys/class/leds/vibrator/activate
+    chown system system /sys/class/leds/vibrator/duration
+    chmod 0660 /sys/class/leds/vibrator/duration
+    chown root oem_5020 /sys/bus/i2c/devices/2-005a/reduce
 
-   # Change ownership of aov related sysfs entries
-   chown audio audio /sys/kernel/aov/trigger
-   chown audio audio /sys/kernel/aov/register
-   chown audio audio /sys/kernel/aov/event
+    # Change ownership of aov related sysfs entries
+    chown audio audio /sys/kernel/aov/trigger
+    chown audio audio /sys/kernel/aov/register
+    chown audio audio /sys/kernel/aov/event
 
-   # Quiet binder logs
-   write /sys/module/binder/parameters/debug_mask 0x5
+    # Quiet binder logs
+    write /sys/module/binder/parameters/debug_mask 0x5
 
-   # Clear cooldown state
-   mkdir /mnt/vendor/persist/chargeonly 0770 system system
-   write /mnt/vendor/persist/chargeonly/cooldown n
-   chown system system /mnt/vendor/persist/chargeonly/cooldown
-   chmod 0660 /mnt/vendor/persist/chargeonly/cooldown
+    # Clear cooldown state
+    mkdir /mnt/vendor/persist/chargeonly 0770 system system
+    write /mnt/vendor/persist/chargeonly/cooldown n
+    chown system system /mnt/vendor/persist/chargeonly/cooldown
+    chmod 0660 /mnt/vendor/persist/chargeonly/cooldown
 
 on charger
     trigger early-fs
@@ -233,10 +231,10 @@ on property:persist.vendor.qc.sub.rdump.on=*
 
 # translate MMI property in order to keep the consistent with QCOM
 on property:ro.vendor.hw.dualsim=true
-   setprop persist.radio.multisim.config dsds
+    setprop persist.radio.multisim.config dsds
 
 on property:ro.vendor.hw.dualsim=false
-   setprop persist.radio.multisim.config ""
+    setprop persist.radio.multisim.config ""
 
 service vendor.charge_only_mode /vendor/bin/charge_only_mode
     user root
