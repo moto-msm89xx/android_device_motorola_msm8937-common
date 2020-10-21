@@ -737,7 +737,7 @@ vendor/lib64/libthermalioctl.so
 # Time services
 -vendor/app/TimeService/TimeService.apk;:timeservice_app_cert-legacy-um
 vendor/bin/time_daemon
-vendor/etc/init/init.time_daemon.rc
+vendor/etc/init/init.time_daemon.rc|a89ed147a681b30ecf5e78dd2df6b18e1bf7a18b
 vendor/lib64/libtime_genoff.so
 
 # TUI
