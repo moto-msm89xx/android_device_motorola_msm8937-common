@@ -129,6 +129,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
+    media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
     vendor.mm.enable.qcom_parser=4643 \
     vendor.vidc.enc.narrow.searchrange=1 \
     vendor.vidc.enc.disable.pq=true \
