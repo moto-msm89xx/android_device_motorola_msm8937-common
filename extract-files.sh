@@ -70,10 +70,6 @@ function blob_fixup() {
         patchelf --set-soname keystore.msm8937.so "${2}"
         ;;
 
-    vendor/lib64/hw/thermal.msm8937.so)
-        patchelf --set-soname thermal.msm8937.so "${2}"
-        ;;
-
     vendor/lib/libmmcamera2_sensor_modules.so)
         sed -i 's|msm8953_mot_deen_camera.xml|msm8937_mot_camera_conf.xml|g' "${2}"
         ;;
