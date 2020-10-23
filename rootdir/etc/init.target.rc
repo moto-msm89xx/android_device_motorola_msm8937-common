@@ -137,7 +137,7 @@ on property:init.svc.surfaceflinger=restarting
     restart vendor.hwcomposer-2-1
 
 service vendor.wcnss-service /vendor/bin/wcnss_service
-    class late_start
+    class main
     user system
     group system wifi radio
     oneshot
