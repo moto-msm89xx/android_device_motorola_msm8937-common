@@ -53,6 +53,10 @@ function blob_fixup() {
         patchelf --remove-needed android.hidl.base@1.0.so "${2}"
         ;;
 
+    product/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml | product/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml)
+        sed -i 's|/system/framework|/system/product/framework|g' "${2}"
+        ;;
+
     product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml | product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
         sed -i 's/xml version="2.0"/xml version="1.0"/' "${2}"
         ;;
