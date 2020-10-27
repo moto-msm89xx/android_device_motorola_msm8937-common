@@ -1,2 +1,3 @@
 type fingerprint_device, dev_type;
 type laser_device, dev_type;
+type hid_gadget_device, dev_type, mlstrustedobject;
