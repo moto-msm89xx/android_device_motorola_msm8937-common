@@ -332,7 +332,7 @@ PRODUCT_PACKAGES += \
     init.qcom.syspart_fixup.sh
 
 # Recovery
-TARGET_RECOVERY_DENSITY := xhdpi
+TARGET_RECOVERY_DENSITY := hdpi
 
 # RenderScript
 PRODUCT_PACKAGES += \
