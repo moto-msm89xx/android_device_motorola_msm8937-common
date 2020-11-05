@@ -320,6 +320,7 @@ PRODUCT_PACKAGES += \
     init.mmi.usb.rc \
     init.oem.rc \
     init.qcom.rc \
+    init.qti.fm.rc \
     init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc
@@ -329,7 +330,8 @@ PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.sh \
-    init.qcom.syspart_fixup.sh
+    init.qcom.syspart_fixup.sh \
+    init.qti.fm.sh
 
 # Recovery
 TARGET_RECOVERY_DENSITY := hdpi
