@@ -71,7 +71,6 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 
 # Camera
 vendor/bin/mm-qcamera-daemon
-vendor/lib/camera.device@1.0-impl.so|13a93ca1a2e58e813f32f0c6348f6c1ad7937454
 vendor/lib/hw/camera.msm8953.so:vendor/lib/hw/camera.msm8937.so|533198568f463760412de847d742d1fb41ae8f8e
 vendor/lib/lib_mot_app6_metadata.so
 vendor/lib/lib_mot_led_calibration.so
