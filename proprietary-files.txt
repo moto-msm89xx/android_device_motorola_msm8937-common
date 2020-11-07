@@ -764,7 +764,7 @@ vendor/radio/qcril_database/upgrade/6_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/9_version_qcrildb.sql
 
 # RIL - from cmi - RKQ1.200710.002-V12.1.2.0.RJACNXM
-system_ext/framework/qti-telephony-common.jar|98951c48563c5846a58c9a3c4c254f32d0741f36
+system_ext/framework/qti-telephony-common.jar|10309d3b13841a5ae581ee2ce92325aa8bd1f8bf
 
 # Postprocessing - from X00RD - QKQ1.191002.002-17.07.2003.405-20200330
 vendor/bin/hw/vendor.display.color@1.0-service|dd461fbbbdc7175b8e1e37eba19bc1c48111b5b6
