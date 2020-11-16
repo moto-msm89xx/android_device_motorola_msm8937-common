@@ -25,9 +25,7 @@ import androidx.preference.SwitchPreference;
 import android.text.TextUtils;
 import android.view.MenuItem;
 
-import java.io.File;
-
-import org.lineageos.internal.util.FileUtils;
+import org.lineageos.settings.utils.FileUtils;
 
 public class ActionsPreferenceFragment extends PreferenceFragment {
 
