@@ -56,18 +56,14 @@ vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioparsers.so
 vendor/lib64/libqtigef.so
 
-# Bluetooth
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/libbtnv.so
-vendor/lib64/libbt-hidlclient.so
-vendor/lib64/vendor.qti.hardware.fm@1.0.so
-vendor/lib64/com.qualcomm.qti.ant@1.0.so
-
-# Bluetooth Audio
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
+# Bluetooth - from deen_sprout - PPKS29.68-16-36-13
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|063da7375148fdd56930a54ea8d3e276725e62df
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
+vendor/lib64/com.qualcomm.qti.ant@1.0.so|ce9b89df917622cf1e0e58aa3b3be6e410c4c2d7
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|a6fa0b97864e41f36c7d859612d2b24c14bc1597
+vendor/lib64/libbtnv.so|f467a39938b8e76e3dea295ef412e69b6402254f
+vendor/lib64/libbt-hidlclient.so|e7cc68021ff2a38728a50c92914420ba61d2c5c3
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|b72b6bc0f79ef8289f4b543910e7e2d91961831f
 
 # Camera
 vendor/bin/mm-qcamera-daemon
