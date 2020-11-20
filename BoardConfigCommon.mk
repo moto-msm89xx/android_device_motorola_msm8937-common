@@ -143,9 +143,6 @@ else
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 endif
 
-# RIL
-TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
-
 # SELinux
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
