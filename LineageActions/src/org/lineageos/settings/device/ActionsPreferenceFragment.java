@@ -27,8 +27,6 @@ import android.view.MenuItem;
 
 import java.io.File;
 
-import org.lineageos.internal.util.FileUtils;
-
 public class ActionsPreferenceFragment extends PreferenceFragment {
 
     @Override
