@@ -95,7 +95,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl:64 \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.composer@2.1-impl:64 \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.memtrack@1.0-impl \
@@ -150,7 +149,6 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.manager@1.0-java \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder \
@@ -218,7 +216,6 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
-    libOmxSwVencHevc \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
@@ -374,7 +371,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libwpa_client \
     libqsap_sdk \
-    libQWiFiSoftApCfg \
     wcnss_service \
     WifiOverlay
 
