@@ -125,7 +125,7 @@ vendor/lib/libmot_gpu_mapper.so|9f4d96542314976a8384f686a2a4c49d321999fe
 vendor/lib/libmotocalibration.so
 
 # Camera actuators - from deen_sprout - PPKS29.68-16-36-14
-vendor/lib/libactuator_dw9767_truly.so|c8665ac9b01ab5e177a74a1064f3c313b5090e50
+vendor/lib/libactuator_dw9767.so:vendor/lib/libactuator_dw9767_truly.so|c8665ac9b01ab5e177a74a1064f3c313b5090e50
 
 # Camera ISP
 vendor/lib/libmmcamera_isp_abf40.so
