@@ -23,6 +23,14 @@ source "${HELPER}"
 
 function blob_fixup() {
     case "${1}" in
+        system_ext/etc/permissions/qcrilhook.xml)
+            sed -i "s|/product/framework/|/system_ext/framework/|g" "${2}"
+            ;;
+
+        system_ext/etc/permissions/telephonyservice.xml)
+            sed -i "s|/system/product/framework/|/system_ext/framework/|g" "${2}"
+            ;;
+
         # memset shim
         vendor/bin/charge_only_mode)
             for LIBMEMSET_SHIM in $(grep -L "libmemset_shim.so" "${2}"); do
