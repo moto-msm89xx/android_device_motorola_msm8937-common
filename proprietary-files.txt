@@ -277,25 +277,25 @@ vendor/firmware/a530v3_seq.fw2|8963a53acc689725dee4b22881a4dd4b80e5def8
 vendor/firmware/a540_gpmu.fw2|3530f10b4825a3b08c79e0bcfaf6471ec8422f24
 
 # IMS
-product/lib64/com.qualcomm.qti.imscmservice@1.0.so
-product/lib64/com.qualcomm.qti.imscmservice@2.0.so
-product/lib64/com.qualcomm.qti.imscmservice@2.1.so
-product/lib64/com.qualcomm.qti.imscmservice@2.2.so
-product/lib64/com.qualcomm.qti.uceservice@2.0.so
-product/lib64/com.qualcomm.qti.uceservice@2.1.so
-product/lib64/lib-imscamera.so
-product/lib64/lib-imsvideocodec.so
-product/lib64/lib-imsvt.so
-product/lib64/lib-imsvtextutils.so
-product/lib64/lib-imsvtutils.so
-product/lib64/libdiag_system.so
-product/lib64/libimscamera_jni.so
-product/lib64/libimsmedia_jni.so
-product/lib64/vendor.qti.hardware.camera.device@1.0.so
-product/lib64/vendor.qti.ims.callinfo@1.0.so
-product/lib64/vendor.qti.ims.rcsconfig@1.0.so
-product/lib64/vendor.qti.imsrtpservice@2.0.so
-product/lib64/vendor.qti.imsrtpservice@2.1.so
+product/lib64/com.qualcomm.qti.imscmservice@1.0.so:system_ext/lib64/com.qualcomm.qti.imscmservice@1.0.so
+product/lib64/com.qualcomm.qti.imscmservice@2.0.so:system_ext/lib64/com.qualcomm.qti.imscmservice@2.0.so
+product/lib64/com.qualcomm.qti.imscmservice@2.1.so:system_ext/lib64/com.qualcomm.qti.imscmservice@2.1.so
+product/lib64/com.qualcomm.qti.imscmservice@2.2.so:system_ext/lib64/com.qualcomm.qti.imscmservice@2.2.so
+product/lib64/com.qualcomm.qti.uceservice@2.0.so:system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so
+product/lib64/com.qualcomm.qti.uceservice@2.1.so:system_ext/lib64/com.qualcomm.qti.uceservice@2.1.so
+product/lib64/lib-imscamera.so:system_ext/lib64/lib-imscamera.so
+product/lib64/lib-imsvideocodec.so:system_ext/lib64/lib-imsvideocodec.so
+product/lib64/lib-imsvt.so:system_ext/lib64/lib-imsvt.so
+product/lib64/lib-imsvtextutils.so:system_ext/lib64/lib-imsvtextutils.so
+product/lib64/lib-imsvtutils.so:system_ext/lib64/lib-imsvtutils.so
+product/lib64/libdiag_system.so:system_ext/lib64/libdiag_system.so
+product/lib64/libimscamera_jni.so:system_ext/lib64/libimscamera_jni.so
+product/lib64/libimsmedia_jni.so:system_ext/lib64/libimsmedia_jni.so
+product/lib64/vendor.qti.hardware.camera.device@1.0.so:system_ext/lib64/vendor.qti.hardware.camera.device@1.0.so
+product/lib64/vendor.qti.ims.callinfo@1.0.so:system_ext/lib64/vendor.qti.ims.callinfo@1.0.so
+product/lib64/vendor.qti.ims.rcsconfig@1.0.so:system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so
+product/lib64/vendor.qti.imsrtpservice@2.0.so:system_ext/lib64/vendor.qti.imsrtpservice@2.0.so
+product/lib64/vendor.qti.imsrtpservice@2.1.so:system_ext/lib64/vendor.qti.imsrtpservice@2.1.so
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
@@ -331,7 +331,7 @@ vendor/lib64/vendor.qti.imsrtpservice@2.1-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@2.1.so
 
 # IMS - from daisy - QKQ1.191002.002 V11.0.9.0.QDLMIXM
--product/priv-app/ims/ims.apk|9c4ca91e0ec7a567d22251d7ca0640abf13fdd7b
+-product/priv-app/ims/ims.apk:system_ext/priv-app/ims/ims.apk|9c4ca91e0ec7a567d22251d7ca0640abf13fdd7b
 
 # IOP - from X00RD - QKQ1.191002.002-17.07.2003.405-20200330
 vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so|c16cde136194fd07c75aaadb6be5a0dbd8b315a4
@@ -459,13 +459,13 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 
 # RIL
--product/app/datastatusnotification/datastatusnotification.apk
--product/app/QtiTelephonyService/QtiTelephonyService.apk
-product/etc/permissions/qcrilhook.xml
-product/etc/permissions/telephonyservice.xml
-product/framework/qcrilhook.jar
-product/framework/QtiTelephonyServicelibrary.jar
--product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-product/app/datastatusnotification/datastatusnotification.apk:system_ext/app/datastatusnotification/datastatusnotification.apk
+-product/app/QtiTelephonyService/QtiTelephonyService.apk:system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
+product/etc/permissions/qcrilhook.xml:system_ext/etc/permissions/qcrilhook.xml
+product/etc/permissions/telephonyservice.xml:system_ext/etc/permissions/telephonyservice.xml
+product/framework/qcrilhook.jar:system_ext/framework/qcrilhook.jar
+product/framework/QtiTelephonyServicelibrary.jar:system_ext/framework/QtiTelephonyServicelibrary.jar
+-product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk:system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/ATFWD-daemon
 vendor/bin/ipacm-diag
 vendor/bin/netmgrd
@@ -542,7 +542,7 @@ vendor/radio/qcril_database/upgrade/6_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/9_version_qcrildb.sql
 
 # RIL - from daisy - QKQ1.191002.002-V11.0.9.0.QDLMIXM
-product/framework/qti-telephony-common.jar|11d6b89b31a9bf65218b3676c2bbd296275b1932
+product/framework/qti-telephony-common.jar:system_ext/framework/qti-telephony-common.jar|11d6b89b31a9bf65218b3676c2bbd296275b1932
 
 # Postprocessing - from X00RD - QKQ1.191002.002-17.07.2003.405-20200330
 vendor/bin/hw/vendor.display.color@1.0-service|dd461fbbbdc7175b8e1e37eba19bc1c48111b5b6
