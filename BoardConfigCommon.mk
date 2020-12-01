@@ -155,6 +155,7 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 
 # Treble
 BOARD_VNDK_VERSION := current
+TARGET_VNDK_USE_CORE_VARIANT := true
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
