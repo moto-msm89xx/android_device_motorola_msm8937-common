@@ -46,10 +46,6 @@ function blob_fixup() {
             "${PATCHELF}" --set-soname gatekeeper.msm8937.so "${2}"
             ;;
 
-        vendor/lib64/hw/keystore.msm8937.so)
-            "${PATCHELF}" --set-soname keystore.msm8937.so "${2}"
-            ;;
-
         vendor/lib/libactuator_dw9767_truly.so)
             "${PATCHELF}" --set-soname libactuator_dw9767_truly.so "${2}"
             ;;
