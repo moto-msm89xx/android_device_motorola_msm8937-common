@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b51e2bf_709948a5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2020-12-16T06:13:58Z",
+      "side": 1,
+      "message": "ap mac overlay is separate commit",
+      "revId": "0569676c73b6944534c35a94eb9a9a680aff14f0",
+      "serverId": "8d3f43dd-8d31-4d94-8c52-7caa3c9c30ed"
+    }
+  ]
+}
