@@ -9,6 +9,7 @@ cc_binary {
     defaults: ["hidl_defaults"],
     name: "android.hardware.light@2.0-service.msm8937",
     init_rc: ["android.hardware.light@2.0-service.msm8937.rc"],
+    vintf_fragments: ["android.hardware.light@2.0-service.msm8937.xml"],
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
 	"libhardware",
