@@ -174,6 +174,7 @@ bool GnssAPIClient::gnssSetPositionMode(IGnss::GnssPositionMode mode,
         // For MSA, we always treat it as SINGLE mode.
         mTrackingOptions.minInterval = SINGLE_SHOT_MIN_TRACKING_INTERVAL_MSEC;
     }
+    mTrackingOptions.minDistance = preferredAccuracyMeters;
     if (mode == IGnss::GnssPositionMode::STANDALONE)
         mTrackingOptions.mode = GNSS_SUPL_MODE_STANDALONE;
     else if (mode == IGnss::GnssPositionMode::MS_BASED)
@@ -331,17 +332,16 @@ void GnssAPIClient::onCapabilitiesCb(LocationCapabilitiesMask capabilitiesMask)
         }
     }
     if (gnssCbIface != nullptr) {
-        IGnssCallback::GnssSystemInfo gnssInfo = { .yearOfHw = 2015 };
-
-        if (capabilitiesMask & LOCATION_CAPABILITIES_GNSS_MEASUREMENTS_BIT) {
-            gnssInfo.yearOfHw++; // 2016
-            if (capabilitiesMask & LOCATION_CAPABILITIES_DEBUG_NMEA_BIT) {
-                gnssInfo.yearOfHw++; // 2017
-                if (capabilitiesMask & LOCATION_CAPABILITIES_CONSTELLATION_ENABLEMENT_BIT ||
-                    capabilitiesMask & LOCATION_CAPABILITIES_AGPM_BIT) {
-                    gnssInfo.yearOfHw++; // 2018
-                }
-            }
+        IGnssCallback::GnssSystemInfo gnssInfo;
+        if (capabilitiesMask & LOCATION_CAPABILITIES_CONSTELLATION_ENABLEMENT_BIT ||
+            capabilitiesMask & LOCATION_CAPABILITIES_AGPM_BIT) {
+            gnssInfo.yearOfHw = 2018;
+        } else if (capabilitiesMask & LOCATION_CAPABILITIES_DEBUG_NMEA_BIT) {
+            gnssInfo.yearOfHw = 2017;
+        } else if (capabilitiesMask & LOCATION_CAPABILITIES_GNSS_MEASUREMENTS_BIT) {
+            gnssInfo.yearOfHw = 2016;
+        } else {
+            gnssInfo.yearOfHw = 2015;
         }
         LOC_LOGV("%s:%d] set_system_info_cb (%d)", __FUNCTION__, __LINE__, gnssInfo.yearOfHw);
         auto r = gnssCbIface->gnssSetSystemInfoCb(gnssInfo);
@@ -541,7 +541,7 @@ static void convertGnssSvStatus(GnssSvNotification& in, IGnssCallback::GnssSvSta
     }
     for (size_t i = 0; i < out.numSvs; i++) {
         IGnssCallback::GnssSvInfo& info = out.gnssSvList[i];
-        convertGnssSvid(in.gnssSvs[i], info.svid);
+        info.svid = in.gnssSvs[i].svId;
         convertGnssConstellationType(in.gnssSvs[i].type, info.constellation);
         info.cN0Dbhz = in.gnssSvs[i].cN0Dbhz;
         info.elevationDegrees = in.gnssSvs[i].elevation;
