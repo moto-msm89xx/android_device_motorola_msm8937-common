@@ -1,4 +1,4 @@
-/* Copyright (c) 2019-2020, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2019, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -1246,10 +1246,7 @@ SynergyLocApi::SynergyLocApi(LOC_API_ADAPTER_EVENT_MASK_T exMask,
             }
         }
     } else {
-        char *errorDll = dlerror();
-
-        LOC_LOGe("dlopen for %s failed, handle %p error: %s", libName, handle,
-             ((nullptr != errorDll) ? errorDll : "No Error"))
+        LOC_LOGe("dlopen for %s failed, handle %p error: %s", libName, handle, dlerror())
     }
 
     sllReqIf = &sllDefultReq;
@@ -1664,9 +1661,7 @@ SynergyLocApi::deleteAidingData(const GnssAidingData& data, LocApiResponse *adap
         } else {
             err = LOCATION_ERROR_NOT_SUPPORTED;
         }
-        if (adapterResponse != NULL) {
-            adapterResponse->returnToSender(err);
-        }
+        adapterResponse->returnToSender(err);
     }));
 }
 
@@ -2358,12 +2353,10 @@ void SynergyLocApi::installAGpsCert(const LocDerEncodedCertificate* pData,
    @dependencies
        None.
 */
-void SynergyLocApi::setConstrainedTuncMode(bool enabled,
-                                           float tuncConstraint,
-                                           uint32_t energyBudget,
-                                           LocApiResponse* adapterResponse) {
+LocationError SynergyLocApi::setConstrainedTuncMode(bool enabled,
+                                                float tuncConstraint,
+                                                uint32_t energyBudget) {
 
-    sendMsg(new LocApiMsg([this, enabled, tuncConstraint, energyBudget, adapterResponse] () {
     LocationError err = LOCATION_ERROR_GENERAL_FAILURE;
     enum loc_api_adapter_err rtv = LOC_API_ADAPTER_ERR_SUCCESS;
 
@@ -2377,10 +2370,7 @@ void SynergyLocApi::setConstrainedTuncMode(bool enabled,
     } else {
         err = LOCATION_ERROR_NOT_SUPPORTED;
     }
-    if (adapterResponse != NULL) {
-        adapterResponse->returnToSender(err);
-    }
-    }));
+    return err;
 }
 
 
@@ -2395,9 +2385,8 @@ void SynergyLocApi::setConstrainedTuncMode(bool enabled,
    @dependencies
        None.
 */
-void SynergyLocApi::setPositionAssistedClockEstimatorMode(bool enabled,
-                                                          LocApiResponse* adapterResponse) {
-    sendMsg(new LocApiMsg([this, enabled, adapterResponse] () {
+LocationError SynergyLocApi::setPositionAssistedClockEstimatorMode(bool enabled) {
+
     LocationError err = LOCATION_ERROR_GENERAL_FAILURE;
     enum loc_api_adapter_err rtv = LOC_API_ADAPTER_ERR_SUCCESS;
 
@@ -2410,11 +2399,7 @@ void SynergyLocApi::setPositionAssistedClockEstimatorMode(bool enabled,
     } else {
         err = LOCATION_ERROR_NOT_SUPPORTED;
     }
-
-    if (adapterResponse != NULL) {
-            adapterResponse->returnToSender(err);
-        }
-    }));
+    return err;
 }
 
 
@@ -2653,25 +2638,20 @@ void SynergyLocApi::getBlacklistSv() {
         None.
 */
 void
-SynergyLocApi::setConstellationControl(const GnssSvTypeConfig& config,
-                                       LocApiResponse *adapterResponse) {
+SynergyLocApi::setConstellationControl(const GnssSvTypeConfig& config) {
 
-    sendMsg(new LocApiMsg([this, config, adapterResponse] () {
-        LocationError err = LOCATION_ERROR_GENERAL_FAILURE;
+    sendMsg(new LocApiMsg([this, config] () {
         enum loc_api_adapter_err rtv = LOC_API_ADAPTER_ERR_SUCCESS;
 
         if ((nullptr != sllReqIf) && (nullptr != sllReqIf->sllSetConstellationControl)) {
             rtv = sllReqIf->sllSetConstellationControl(config, (void *)this);
-            if (LOC_API_ADAPTER_ERR_SUCCESS == rtv) {
-                err = LOCATION_ERROR_SUCCESS;
-            } else {
+            if (LOC_API_ADAPTER_ERR_SUCCESS != rtv) {
                LOC_LOGe ("Error: %d", rtv);
             }
         }
-        if (adapterResponse != NULL) {
-            adapterResponse->returnToSender(err);
-        }
+
     }));
+
 }
 
 /**
@@ -2715,21 +2695,15 @@ SynergyLocApi::getConstellationControl() {
         None.
 */
 void
-SynergyLocApi::resetConstellationControl(LocApiResponse *adapterResponse) {
-    sendMsg(new LocApiMsg([this, adapterResponse] () {
+SynergyLocApi::resetConstellationControl() {
+    sendMsg(new LocApiMsg([this] () {
         enum loc_api_adapter_err rtv = LOC_API_ADAPTER_ERR_SUCCESS;
-        LocationError err = LOCATION_ERROR_GENERAL_FAILURE;
 
         if ((nullptr != sllReqIf) && (nullptr != sllReqIf->sllResetConstellationControl)) {
             rtv = sllReqIf->sllResetConstellationControl((void *)this);
-            if (LOC_API_ADAPTER_ERR_SUCCESS == rtv) {
-                err = LOCATION_ERROR_SUCCESS;
-            } else {
+            if (LOC_API_ADAPTER_ERR_SUCCESS != rtv) {
                LOC_LOGe ("Error: %d", rtv);
             }
-        }
-        if (adapterResponse != NULL) {
-            adapterResponse->returnToSender(err);
         }
     }));
 }

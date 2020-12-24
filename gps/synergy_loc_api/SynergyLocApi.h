@@ -155,12 +155,9 @@ public:
     virtual void getWwanZppFix();
     virtual void getBestAvailableZppFix();
     virtual LocationError setGpsLockSync(GnssConfigGpsLock lock);
-    virtual void setConstrainedTuncMode(bool enabled,
-                                        float tuncConstraint,
-                                        uint32_t energyBudget,
-                                        LocApiResponse* adapterResponse=nullptr);
-    virtual void setPositionAssistedClockEstimatorMode(bool enabled,
-                                                       LocApiResponse* adapterResponse=nullptr);
+    virtual LocationError setConstrainedTuncMode(bool enabled, float tuncConstraint,
+            uint32_t powerBudget);
+    virtual LocationError setPositionAssistedClockEstimatorMode(bool enabled);
     virtual LocationError getGnssEnergyConsumed();
     virtual void requestForAidingData(GnssAidingDataSvMask svDataMask);
 
@@ -186,10 +183,10 @@ public:
     virtual LocationError setBlacklistSvSync(const GnssSvIdConfig& config);
     virtual void setBlacklistSv(const GnssSvIdConfig& config);
     virtual void getBlacklistSv();
-    virtual void setConstellationControl(const GnssSvTypeConfig& config,
-                                         LocApiResponse *adapterResponse=nullptr);
+    virtual void setConstellationControl(const GnssSvTypeConfig& config);
     virtual void getConstellationControl();
-    virtual void resetConstellationControl(LocApiResponse *adapterResponse=nullptr);
+    virtual void resetConstellationControl();
+
 };
 
 extern "C" LocApiBase* getLocApi(LOC_API_ADAPTER_EVENT_MASK_T exMask,
