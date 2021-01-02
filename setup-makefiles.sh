@@ -1,11 +1,24 @@
 #!/bin/bash
 #
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2017-2018 The LineageOS Project
 #
-# SPDX-License-Identifier: Apache-2.0
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #
 
 set -e
+
+# Override anything that may come from the calling environment
+BOARD=msm8937
 
 INITIAL_COPYRIGHT_YEAR=2019
 
@@ -22,17 +35,34 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
-# Initialize the helper for common
-setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${LINEAGE_ROOT}" true
+# Store device common variable for later usage
+DEVICE_COMMON_ORIGINAL="${DEVICE_COMMON}"
+DEVICE_COMMON="${BOARD_COMMON}"
 
-# Copyright headers and guards
-write_headers "ahannah cedric hannah james montana rhannah"
+# Initialize the helper
+setup_vendor "${BOARD_COMMON}" "${VENDOR}" "${LINEAGE_ROOT}" true
 
-# The standard common blobs
-write_makefiles "${MY_DIR}/proprietary-files.txt" true
+# Copyright headers and common guards
+write_headers "${BOARD}" "TARGET_BOARD_PLATFORM"
 
-# Finish
+write_makefiles "${MY_DIR}/common-proprietary-files.txt"
+
 write_footers
+
+# Restore device common variable to original one
+DEVICE_COMMON="${DEVICE_COMMON_ORIGINAL}"
+
+if [ -s "${MY_DIR}/../${DEVICE_COMMON}/proprietary-files.txt" ]; then
+    # Reinitialize the helper for device common
+    setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${LINEAGE_ROOT}" true
+
+    # Copyright headers and guards
+    write_headers "${DEVICE_COMMON_GUARDS}"
+
+    write_makefiles "${MY_DIR}/../${DEVICE_COMMON}/proprietary-files.txt"
+
+    write_footers
+fi
 
 if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
@@ -42,9 +72,7 @@ if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
     # Copyright headers and guards
     write_headers
 
-    # The standard device blobs
-    write_makefiles "${MY_DIR}/../${DEVICE}/proprietary-files.txt" true
+    write_makefiles "${MY_DIR}/../${DEVICE}/proprietary-files.txt"
 
-    # Finish
     write_footers
 fi
