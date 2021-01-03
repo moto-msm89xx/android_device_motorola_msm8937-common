@@ -4,6 +4,10 @@
     "target_path": "external/bson"
    },
    {
+    "repository": "android_hardware_motorola",
+    "target_path": "hardware/motorola"
+   },
+   {
     "repository": "android_kernel_motorola_msm8953",
     "target_path": "kernel/motorola/msm8953"
    },

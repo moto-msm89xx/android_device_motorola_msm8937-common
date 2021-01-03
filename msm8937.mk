@@ -183,12 +183,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.msm8937
 
-# LineageActions
-ifeq ($(filter ahannah rhannah,$(TARGET_DEVICE)),)
-PRODUCT_PACKAGES += \
-    LineageActions
-endif
-
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sysfs
@@ -201,6 +195,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
+
+# MotoActions
+ifeq ($(filter ahannah rhannah,$(TARGET_DEVICE)),)
+PRODUCT_PACKAGES += \
+    MotoActions
+endif
 
 # OMX
 PRODUCT_PACKAGES += \
