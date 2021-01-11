@@ -522,27 +522,27 @@ vendor/lib64/libgcs.so|9018cdd801432804794c1371873d4f50942d1027
 vendor/lib64/liblistenjni.so|eaef51960b85d8d6904d268f96e56508fe9aa0c6
 vendor/lib64/liblistensoundmodel2.so|dfbfb43e255a474d1cf0cecb14b10ad63ac126c2
 
-# Media - from D1C - PKQ1.181105.001
-vendor/lib/libAlacSwDec.so|339a78c17a0b7032e678a38deb523a0d403fdb41
-vendor/lib/libApeSwDec.so|013abb41d28f28bac9904562049c4460add11a47
-vendor/lib/libFlacSwDec.so|ff125da726e44764cf1f249f9214022f1c723ce6
-vendor/lib/libOmxAacDec.so|812fb8b8f5a3af2c5844c61d19dfc252b367b020
-vendor/lib/libOmxAlacDec.so|b107909a3e897514a263bceae47592bb91b66ca9
-vendor/lib/libOmxAlacDecSw.so|03f59d661995d701c8e8f196a7764ac9d08dfdb0
-vendor/lib/libOmxAmrDec.so|dac4e2d8904469163c414ec98c1f4467e2c99ee0
-vendor/lib/libOmxAmrwbplusDec.so|a65cc7b188305a17e3518d29ae8c226d203c7e6e
-vendor/lib/libOmxApeDec.so|a8a3dae550fedae9ee46673fe89608ac733caeb2
-vendor/lib/libOmxApeDecSw.so|7c8e2c3fd64ab57a5569035864cd32e6f9c756ad
-vendor/lib/libOmxEvrcDec.so|e12ba037b1186b4501d27d9faa27343419f59c75
-vendor/lib/libOmxQcelp13Dec.so|e498d31e1bec45c27b4944aa38b29eb7dad5b758
-vendor/lib/libOmxVpp.so|3f9f511b8697789715070935639f4534e91126f3
-vendor/lib/libOmxWmaDec.so|d6e4ba56e73be8c67aed216aafb8d2771443524f
-vendor/lib/libvpplibrary.so|d7dad7b2278905892f8d67df4f51c455567d7c64
-vendor/lib/libvqzip.so|0b906db131e99cd5460b8a72d05e86721243de95
-
-# Media - from D1C - PKQ1.181105.001
--vendor/lib/libMpeg4SwEncoder.so|ac4aaba9259a4868ad29a96c07a5814e1f569d47
--vendor/lib/libOmxSwVencMpeg4.so|ed4200c66e3a185dd13952b3ccf6cc2524ded519
+# Media - from X00RD - QKQ1.191002.002-17.07.2003.405-20200330
+vendor/lib/libI420colorconvert.so|83ca4c3ec98711e5819832fd31203f048ebb6a4c
+vendor/lib/libmm-color-convertor.so|d80be4a5752783413ddbec6aa5ce49bff25aaccd
+-vendor/lib/libMpeg4SwEncoder.so|4724c498d1949dbcd19d73b8ef7279d49f09b0d9
+vendor/lib/libOmxAacDec.so|7fa49ad2961870ee513de3bbd7deb297220f4ec7
+vendor/lib/libOmxAlacDec.so|c48083bcac481d250d20e803821e4a2a1ff96734
+vendor/lib/libOmxAlacDecSw.so|960ccf1a587fe26be01d988719b3ac8786ce6ea5
+vendor/lib/libOmxAmrDec.so|1ca161c1278bc034ba20bf5e201f1bac24f86c68
+vendor/lib/libOmxAmrwbplusDec.so|d0c6616a5520ae1c051ac866db7934f082e2cbf2
+vendor/lib/libOmxApeDec.so|e8c4861a7d00bb884302dfb3071ba5b44f0b5d24
+vendor/lib/libOmxApeDecSw.so|1d848a624d321f2f9b12659701d3ebbe3798ed17
+vendor/lib/libOmxDsdDec.so|50e2ed98e1a80b3c29aac057027817a8122248d2
+vendor/lib/libOmxEvrcDec.so|2a5381e9afaabd6df64a2134089f5f7c89a5aef1
+vendor/lib/libOmxG711Dec.so|200a567dfb791ef30a57eacf678f034b2f0135aa
+vendor/lib/libOmxQcelp13Dec.so|0b25914078124f5375062928cccaec2ae98c9c25
+-vendor/lib/libOmxSwVdec.so|30a6eeebd47fbe17aecc92af7fd3dee8848e8bc1
+-vendor/lib/libOmxSwVencMpeg4.so|eda2bef01841815a7a165ea2280c88cf0e080045
+vendor/lib/libOmxVideoDSMode.so|426ef97cc3593e5e82cd7903e9afbc97f1aa3e38
+vendor/lib/libOmxWmaDec.so|215a6d23c0809915f9bf2d1a9abecba350ee833e
+vendor/lib/libvpplibrary.so|f56eb55759f2a1d1d88f6e6ee2d50bf2d1df1edd
+vendor/lib/libvqzip.so|24e5eb30e5a2cdb544c8688d81d7cc75a1d85eaf
 
 # Perf - from X00RD - QKQ1.191002.002-17.07.2003.405-20200330
 lib/libqti-perfd-client_system.so|c021b1c1065161a15c2202747ef6738e89cd1b7b
