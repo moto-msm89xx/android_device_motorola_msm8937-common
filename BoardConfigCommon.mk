@@ -12,7 +12,6 @@ TARGET_NO_BOOTLOADER := true
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8937
-TARGET_BOARD_SUFFIX := _64
 
 # Architecture
 TARGET_ARCH := arm64
