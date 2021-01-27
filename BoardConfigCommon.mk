@@ -67,7 +67,6 @@ TARGET_BOOTANIMATION_HALF_RES := true
 
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
-TARGET_USES_QTI_CAMERA_DEVICE := true
 
 # Charger
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
