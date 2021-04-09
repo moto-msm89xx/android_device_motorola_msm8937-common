@@ -7,7 +7,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/motorola/msm8937-common/msm8937-common-vendor.mk)
+$(call inherit-product, vendor/motorola/msm8937-common/msm8937-common-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
