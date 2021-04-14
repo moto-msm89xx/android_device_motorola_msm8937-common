@@ -293,6 +293,7 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    CarrierConfigOverlay \
     librmnetctl \
     libsensorndkbridge \
     qti-telephony-hidl-wrapper \
