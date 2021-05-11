@@ -29,7 +29,7 @@
 /sys/devices/soc/msm-bcl-19/power_supply/fg_adc/type u:object_r:sysfs_healthd:s0
 
 # Init scripts
-/(vendor|system/vendor)/bin/init\.mmi\.(laser|usb)\.sh u:object_r:vendor_qti_init_shell_exec:s0
+/(vendor|system/vendor)/bin/init\.mmi\.laser\.sh u:object_r:vendor_qti_init_shell_exec:s0
 
 # Input devices
 /(vendor|system/vendor)/usr/idc(/.*)?                    u:object_r:vendor_idc_file:s0
