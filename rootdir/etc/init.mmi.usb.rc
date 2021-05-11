@@ -64,12 +64,6 @@ on fs
     write /sys/class/android_usb/android0/f_ffs/aliases adb
     setprop sys.usb.ffs.aio_compat 1
 
-service vendor.mmi-usb-sh /vendor/bin/init.mmi.usb.sh
-    class late_start
-    user root
-    group system
-    oneshot
-
 #  Disable USB-SS in bp-tools
 on property:ro.bootmode=bp-tools
     write /sys/module/dwc3_msm/parameters/disable_ss_switch 1
