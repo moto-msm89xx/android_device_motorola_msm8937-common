@@ -49,6 +49,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     camera.disable_zsl_mode=1 \
+    persist.camera.HAL3.enabled=1 \
     persist.vendor.camera.display.umax=1920x1080 \
     persist.vendor.camera.display.lmax=1280x720 \
     persist.vendor.camera.HAL3.enabled=1 \
