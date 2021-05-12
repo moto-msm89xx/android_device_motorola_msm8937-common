@@ -38,28 +38,11 @@ function blob_fixup() {
             "${PATCHELF}" --set-soname activity_recognition.msm8937.so "${2}"
             ;;
 
-        vendor/lib/hw/camera.msm8937.so)
-            "${PATCHELF}" --set-soname camera.msm8937.so "${2}"
-            ;;
-
         vendor/lib64/hw/gatekeeper.msm8937.so)
             "${PATCHELF}" --set-soname gatekeeper.msm8937.so "${2}"
             ;;
 
-        vendor/lib/libactuator_dw9767_truly.so)
-            "${PATCHELF}" --set-soname libactuator_dw9767_truly.so "${2}"
-            ;;
-
-        # Fix camera recording
-        vendor/lib/libmmcamera2_pproc_modules.so)
-            sed -i "s/ro.product.manufacturer/ro.product.nopefacturer/" "${2}"
-            ;;
-
-        vendor/lib/libmmcamera2_sensor_modules.so)
-            sed -i 's|msm8953_mot_deen_camera.xml|msm8937_mot_camera_conf.xml|g' "${2}"
-            ;;
-
-        vendor/lib/libmot_gpu_mapper.so | vendor/lib/libmmcamera_vstab_module.so)
+        vendor/lib/libmot_gpu_mapper.so)
             sed -i "s/libgui/libwui/" "${2}"
             ;;
 

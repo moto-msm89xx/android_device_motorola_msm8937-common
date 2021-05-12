@@ -339,6 +339,7 @@ PRODUCT_PACKAGES += \
 # Shims
 PRODUCT_PACKAGES += \
     libcutils_shim \
+    libjustshoot_shim \
     libmemset_shim \
     libqsapshim
 
