@@ -1,3 +1,14 @@
+cc_library_shared {
+    name: "libjustshoot_shim",
+    vendor: true,
+    srcs: [
+        "justshoot_shim.cpp",
+    ],
+    shared_libs: [
+        "libutils",
+    ],
+}
+
 cc_library {
     name: "libmemset_shim",
     vendor: true,
