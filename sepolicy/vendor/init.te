@@ -1,7 +1,8 @@
 allow init fingerprint_device:chr_file { write ioctl };
 
+allow init firmware_file:filesystem getattr;
 allow init fsg_firmware_file:dir mounton;
-allow init fsg_firmware_file:filesystem { relabelfrom mount };
+allow init fsg_firmware_file:filesystem { getattr relabelfrom mount };
 allow { fsg_firmware_file }self:filesystem associate;
 
 allow init hwservicemanager:binder { call transfer };
