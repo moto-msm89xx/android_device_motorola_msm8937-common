@@ -1,1 +1,2 @@
+dontaudit qti_init_shell self:capability dac_override;
 allow vendor_qti_init_shell kmsg_device:chr_file { open write };
