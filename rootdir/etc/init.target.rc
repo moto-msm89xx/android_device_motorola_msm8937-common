@@ -65,6 +65,10 @@ on late-fs
     # Mount RW partitions which need run fsck
     mount_all /vendor/etc/fstab.qcom --late
 
+on post-fs
+    # Wait qseecomd started
+    wait_for_prop sys.listeners.registered true
+
 on post-fs-data
     mkdir /mnt/vendor/persist/data/sfs 0700 system system
     mkdir /mnt/vendor/persist/data/tz 0700 system system
@@ -81,6 +85,11 @@ service vendor.qcamerasvr /vendor/bin/mm-qcamera-daemon
     group camera system inet input graphics
 
 on init
+    # We have vendor/ as early mount so we can start qseecomd earlier
+    # early mount partions e.g. vendor/ will be mounted in init first stage
+    # see b/27805372
+    start vendor.qseecomd
+
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
     write /dev/cpuctl/cpu.rt_runtime_us 800000
     write /dev/cpuctl/cpu.rt_period_us 1000000
