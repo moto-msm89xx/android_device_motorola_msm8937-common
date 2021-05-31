@@ -6,6 +6,20 @@ import /vendor/etc/init/hw/init.mmi.usb.rc
 
 import /vendor/etc/init/hw/init.oem.rc
 
+on post-fs
+    rm /cache/boot_lc_full.txt
+    start boot_lc
+
+service boot_lc /system/bin/logcat -b all -D -f /cache/boot_lc_full.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on property:sys.boot.completed=1
+    stop boot_lc
+
 on early-boot
     write /sys/module/subsystem_restart/parameters/disable_restart_work 0x0
     write /proc/sys/kernel/poweroff_cmd "/system/bin/reboot -p"
