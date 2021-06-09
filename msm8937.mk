@@ -316,8 +316,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
-    init.qcom.sh \
-    init.qcom.syspart_fixup.sh
+    init.qcom.sh
 
 # Recovery
 TARGET_RECOVERY_DENSITY := xhdpi
