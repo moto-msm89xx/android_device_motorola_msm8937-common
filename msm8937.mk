@@ -34,7 +34,6 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8937 \
     audio.r_submix.default \
     audio.usb.default \
-    libaacwrapper \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing
@@ -202,10 +201,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
-
-# Net
-PRODUCT_PACKAGES += \
-    libnl
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -391,7 +386,3 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_wlan_dictionary.dat:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_wlan_dictionary.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_wlan_nv.bin
-
-# WiFi Display
-PRODUCT_BOOT_JARS += \
-    WfdCommon
