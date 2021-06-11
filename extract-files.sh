@@ -23,10 +23,6 @@ source "${HELPER}"
 
 function blob_fixup() {
     case "${1}" in
-        lib64/libwfdnative.so)
-            "${PATCHELF}" --remove-needed android.hidl.base@1.0.so "${2}"
-            ;;
-
         # memset shim
         vendor/bin/charge_only_mode)
             for LIBMEMSET_SHIM in $(grep -L "libmemset_shim.so" "${2}"); do
