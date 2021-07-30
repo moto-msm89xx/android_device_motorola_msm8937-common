@@ -467,7 +467,6 @@ product/framework/qcrilhook.jar:system_ext/framework/qcrilhook.jar
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk:system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/ATFWD-daemon
 vendor/bin/ipacm-diag
-vendor/bin/netmgrd
 vendor/bin/port-bridge
 vendor/bin/qmi_motext_hook
 vendor/bin/rmt_storage
@@ -526,6 +525,9 @@ vendor/radio/qcril_database/upgrade/5_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/6_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/9_version_qcrildb.sql
+
+# RIL - from daisy - QKQ1.191002.002 V11.0.21.0.QDLMIXM
+vendor/bin/netmgrd|8752fb8cb74bd402a13ff291b7d2074415350984
 
 # Sensors
 vendor/bin/capsense_reset
