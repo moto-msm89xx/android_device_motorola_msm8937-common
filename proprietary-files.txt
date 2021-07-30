@@ -535,11 +535,11 @@ vendor/bin/capsense_reset
 vendor/lib/hw/activity_recognition.msm8953.so:vendor/lib/hw/activity_recognition.msm8937.so|b3d9be075b7d7e896e0086e90baacc602445258b
 vendor/lib64/hw/activity_recognition.msm8953.so:vendor/lib64/hw/activity_recognition.msm8937.so|24e17b4c9f237b51e89fae26adc7cc573493514d
 
-# Thermal
-vendor/bin/thermal-engine
-vendor/lib/libthermalclient.so
-vendor/lib64/libthermalclient.so
-vendor/lib64/libthermalioctl.so
+# Thermal - from dpl_sprout - RKQ1.200928.002
+vendor/bin/thermal-engine|bacf88c801ba037e1e1d2671937404184eb8964b
+vendor/etc/init/init_thermal-engine.rc|f0d14aa4734b2e8afd61a4eed73238187b268f48
+vendor/lib/libthermalclient.so|61becb3664bb8b445cec53c2f173af82ed1ad7ae
+vendor/lib64/libthermalclient.so|8f2411404f56c6d15e6a185124bbc7f8c2adf195
 
 # Time services
 -vendor/app/TimeService/TimeService.apk
