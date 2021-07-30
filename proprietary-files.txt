@@ -383,6 +383,15 @@ vendor/lib/libvqzip.so|0b906db131e99cd5460b8a72d05e86721243de95
 -vendor/lib/libMpeg4SwEncoder.so|ac4aaba9259a4868ad29a96c07a5814e1f569d47
 -vendor/lib/libOmxSwVencMpeg4.so|ed4200c66e3a185dd13952b3ccf6cc2524ded519
 
+# Perf - from dpl_sprout - QKQ1.191008.001
+vendor/etc/perf/commonresourceconfigs.xml|1f8b94ca8dcdc0afd66d9e9b0fcef15fdb67f5d0
+vendor/etc/perf/perf-profile0.conf|02204355bf29ceb0460cd53e6716552bb9d9b05f
+vendor/etc/perf/perf-profile1.conf|5ce649b26b71048734b797af7340d9f7f7b83ca0
+vendor/etc/perf/perfboostsconfig.xml|47d961fe2a6395afafda64509fd73438f6e517c8
+vendor/etc/perf/perfconfigstore.xml|b6bd028c054d7e50ebef81dc1cd34b58e91e6890
+vendor/etc/perf/targetconfig.xml|6106b22017b4e759c5804d12f439d2d09d567706
+vendor/etc/perf/targetresourceconfigs.xml|1817b8766a5b70c40c302f0add16a783fde135a4
+
 # Perf - from X00RD - QKQ1.191002.002-17.07.2003.405-20200330
 system/lib/libqti-perfd-client_system.so|c021b1c1065161a15c2202747ef6738e89cd1b7b
 system/lib/libqti-util_system.so|3df0aa4365a085ab64ff1ae226bf724d0815aa25
@@ -393,13 +402,6 @@ system/lib64/libqti_performance.so|2a6bfefe6eb7a68f0774774f5de7f363885c3d87
 vendor/bin/hw/vendor.qti.hardware.perf@2.0-service|ed731317514e1992ac919a49a1f98e14e7a60eff
 vendor/bin/msm_irqbalance|b5e55b4b0934b65b7dd5d2201f9a70f6f77a4e7c
 vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc|cc8658db5e19f8e5e575fb986e7d38147e675f8d
-vendor/etc/perf/commonresourceconfigs.xml|d9fc3b49481536d6c7a25eb13f9f1d52d3ee8ff1
-vendor/etc/perf/perf-profile0.conf|02204355bf29ceb0460cd53e6716552bb9d9b05f
-vendor/etc/perf/perf-profile1.conf|5ce649b26b71048734b797af7340d9f7f7b83ca0
-vendor/etc/perf/perfboostsconfig.xml|3ccf3e4eb4ddfad12b8cfbe6fe62b14e970d8fe5
-vendor/etc/perf/perfconfigstore.xml|b6bd028c054d7e50ebef81dc1cd34b58e91e6890
-vendor/etc/perf/targetconfig.xml|6106b22017b4e759c5804d12f439d2d09d567706
-vendor/etc/perf/targetresourceconfigs.xml|1817b8766a5b70c40c302f0add16a783fde135a4
 vendor/lib/libperfgluelayer.so|3c58ba816cf4480357b1ed934d2b44f17d00449f
 vendor/lib/libqti-perfd-client.so|eb81a99bab35f29b7977bde878ea2a29e2abe18c
 vendor/lib/libqti-perfd.so|bc6f03e63c9172c256c4b87ffd045667168adb1c
