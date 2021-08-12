@@ -30,9 +30,14 @@
 #ifndef __LOG_UTIL_H__
 #define __LOG_UTIL_H__
 
+#include <stdbool.h>
+#include <loc_pla.h>
+
 #if defined (USE_ANDROID_LOGGING) || defined (ANDROID)
 // Android and LE targets with logcat support
 #include <utils/Log.h>
+#include <unistd.h>
+#include <sys/syscall.h>
 
 #elif defined (USE_GLIB)
 // LE targets with no logcat support
@@ -41,6 +46,7 @@
 #include <sys/types.h>
 #include <sys/time.h>
 #include <unistd.h>
+#include <sys/syscall.h>
 
 #ifndef LOG_TAG
 #define LOG_TAG "GPS_UTILS"
@@ -90,18 +96,20 @@ typedef struct loc_logger_s
 {
   unsigned long  DEBUG_LEVEL;
   unsigned long  TIMESTAMP;
+  bool           LOG_BUFFER_ENABLE;
 } loc_logger_s_type;
+
 
 /*=============================================================================
  *
  *                               EXTERNAL DATA
  *
  *============================================================================*/
-extern loc_logger_s_type loc_logger;
 
 // Logging Improvements
 extern const char *loc_logger_boolStr[];
 
+extern loc_logger_s_type loc_logger;
 extern const char *boolStr[];
 extern const char VOID_RET[];
 extern const char FROM_AFW[];
@@ -112,13 +120,74 @@ extern const char EXIT_TAG[];
 extern const char ENTRY_TAG[];
 extern const char EXIT_ERROR_TAG[];
 
+#define BUILD_TYPE_PROP_NA 0
+#define BUILD_TYPE_PROP_USER 1
+#define BUILD_TYPE_PROP_USERDEBUG 2
+#define BUILD_TYPE_PROP_INVALID 3
+extern int build_type_prop;
+
 /*=============================================================================
  *
  *                        MODULE EXPORTED FUNCTIONS
  *
  *============================================================================*/
-extern void loc_logger_init(unsigned long debug, unsigned long timestamp);
+inline void loc_logger_init(unsigned long debug, unsigned long timestamp)
+{
+    loc_logger.DEBUG_LEVEL = debug;
+
+    if (BUILD_TYPE_PROP_NA == build_type_prop) {
+        char value[PROPERTY_VALUE_MAX] = "NA";
+        property_get("ro.build.type", value, "userdebug");
+        if (0 == strcmp(value, "user")) {
+            build_type_prop = BUILD_TYPE_PROP_USER;
+        } else if (0 == strcmp(value, "userdebug")) {
+            build_type_prop = BUILD_TYPE_PROP_USERDEBUG;
+        } else {
+            build_type_prop = BUILD_TYPE_PROP_INVALID;
+        }
+    }
+
+    if (BUILD_TYPE_PROP_USER == build_type_prop) {
+        // force user builds to 2 or less
+        if (loc_logger.DEBUG_LEVEL > 2) {
+            loc_logger.DEBUG_LEVEL = 2;
+        }
+     }
+
+    loc_logger.TIMESTAMP = timestamp;
+}
+
+inline void log_buffer_init(bool enabled) {
+    loc_logger.LOG_BUFFER_ENABLE = enabled;
+}
+
 extern char* get_timestamp(char* str, unsigned long buf_size);
+extern void log_buffer_insert(char *str, unsigned long buf_size, int level);
+
+/*=============================================================================
+ *
+ *                          LOGGING BUFFER MACROS
+ *
+ *============================================================================*/
+#ifndef LOG_NDEBUG
+#define LOG_NDEBUG 0
+#endif
+#define TOTAL_LOG_LEVELS 5
+#define LOGGING_BUFFER_MAX_LEN 1024
+#define IF_LOG_BUFFER_ENABLE if (loc_logger.LOG_BUFFER_ENABLE)
+#define INSERT_BUFFER(flag, level, format, x...)                                              \
+{                                                                                             \
+    IF_LOG_BUFFER_ENABLE {                                                                    \
+        if (flag == 0) {                                                                      \
+            char timestr[32];                                                                 \
+            get_timestamp(timestr, sizeof(timestr));                                          \
+            char log_str[LOGGING_BUFFER_MAX_LEN];                                             \
+            snprintf(log_str, LOGGING_BUFFER_MAX_LEN, "%s %d %ld %s :" format "\n",           \
+                    timestr, getpid(), syscall(SYS_gettid), LOG_TAG==NULL ? "": LOG_TAG, ##x);\
+            log_buffer_insert(log_str, sizeof(log_str), level);                               \
+        }                                                                                     \
+    }                                                                                         \
+}
 
 #ifndef DEBUG_DMN_LOC_API
 
@@ -133,11 +202,11 @@ extern char* get_timestamp(char* str, unsigned long buf_size);
 #define IF_LOC_LOGD if((loc_logger.DEBUG_LEVEL >= 4) && (loc_logger.DEBUG_LEVEL <= 5))
 #define IF_LOC_LOGV if((loc_logger.DEBUG_LEVEL >= 5) && (loc_logger.DEBUG_LEVEL <= 5))
 
-#define LOC_LOGE(...) IF_LOC_LOGE { ALOGE(__VA_ARGS__); }
-#define LOC_LOGW(...) IF_LOC_LOGW { ALOGW(__VA_ARGS__); }
-#define LOC_LOGI(...) IF_LOC_LOGI { ALOGI(__VA_ARGS__); }
-#define LOC_LOGD(...) IF_LOC_LOGD { ALOGD(__VA_ARGS__); }
-#define LOC_LOGV(...) IF_LOC_LOGV { ALOGV(__VA_ARGS__); }
+#define LOC_LOGE(...) IF_LOC_LOGE { ALOGE(__VA_ARGS__); INSERT_BUFFER(LOG_NDEBUG, 0, __VA_ARGS__);}
+#define LOC_LOGW(...) IF_LOC_LOGW { ALOGW(__VA_ARGS__); INSERT_BUFFER(LOG_NDEBUG, 1, __VA_ARGS__);}
+#define LOC_LOGI(...) IF_LOC_LOGI { ALOGI(__VA_ARGS__); INSERT_BUFFER(LOG_NDEBUG, 2, __VA_ARGS__);}
+#define LOC_LOGD(...) IF_LOC_LOGD { ALOGD(__VA_ARGS__); INSERT_BUFFER(LOG_NDEBUG, 3, __VA_ARGS__);}
+#define LOC_LOGV(...) IF_LOC_LOGV { ALOGV(__VA_ARGS__); INSERT_BUFFER(LOG_NDEBUG, 4, __VA_ARGS__);}
 
 #else /* DEBUG_DMN_LOC_API */
 
