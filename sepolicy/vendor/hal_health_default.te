@@ -1,1 +1,0 @@
-allow hal_health_default sysfs_healthd:file r_file_perms;

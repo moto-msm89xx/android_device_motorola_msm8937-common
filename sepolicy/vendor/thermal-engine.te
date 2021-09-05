@@ -1,3 +1,2 @@
-allow thermal-engine thermal_device:chr_file { ioctl };
 r_dir_file(thermal-engine, sysfs)
 r_dir_file(thermal-engine, sysfs_vadc_dev)
