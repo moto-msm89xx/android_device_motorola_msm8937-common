@@ -2,9 +2,6 @@ type debugfs_rmt, debugfs_type, fs_type;
 type debugfs_wlan, debugfs_type, fs_type;
 type fsg_firmware_file, file_type, vendor_file_type, contextmount_type;
 
-# Camera
-type sysfs_camera_device, sysfs_type, fs_type;
-
 # Capsense
 type sysfs_capsense, sysfs_type, fs_type;
 
@@ -15,9 +12,6 @@ type chargeonly_data_file, file_type, data_file_type;
 type sysfs_devices_fingerprint, sysfs_type, fs_type;
 type fingerprint_data_file, file_type, data_file_type, core_data_file_type;
 type fingerprint_socket, file_type, data_file_type, core_data_file_type;
-
-# Health
-type sysfs_healthd, fs_type, sysfs_type, mlstrustedobject;
 
 # Radio
 type cutback_ipc_file, file_type, data_file_type;
