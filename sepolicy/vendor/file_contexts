@@ -6,12 +6,8 @@
 # Camera
 /dev/laser                                               u:object_r:laser_device:s0
 /sys/devices/virtual/input/input7/enable_ps_sensor       u:object_r:sysfs_laser:s0
-/sys/devices/soc/1b00000.qcom,msm-cam/media0/model       u:object_r:sysfs_camera_device:s0
 
 # Capsense
-/sys/class/capsense(/.*)?                                u:object_r:sysfs_capsense:s0
-/sys/class/input/input5/capsense_top(/.*)?               u:object_r:sysfs_capsense:s0
-/sys/class/input/input6/capsense_bottom(/.*)?            u:object_r:sysfs_capsense:s0
 /(vendor|system/vendor)/bin/capsense_reset               u:object_r:capsense_reset_exec:s0
 
 # Charge only mode
@@ -25,10 +21,6 @@
 # Fsg
 /(vendor|system/vendor)/fsg                              u:object_r:fsg_firmware_file:s0
 
-# Health
-/sys/devices/soc/soc:qcom,bcl/power_supply/bcl/type u:object_r:sysfs_healthd:s0
-/sys/devices/soc/msm-bcl-19/power_supply/fg_adc/type u:object_r:sysfs_healthd:s0
-
 # Init scripts
 /(vendor|system/vendor)/bin/init\.mmi\.laser\.sh u:object_r:vendor_qti_init_shell_exec:s0
 
@@ -38,14 +30,10 @@
 
 # Lights
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.msm8937 u:object_r:hal_light_default_exec:s0
-/sys/devices/soc/leds-atc-20/leds(/.*)?                  u:object_r:sysfs_leds:s0
-/sys/devices/soc/1a00000.qcom,mdss_mdp/1a00000.qcom,mdss_mdp:qcom,mdss_fb_primary/leds(/.*)? u:object_r:sysfs_leds:s0
+/sys/devices/platform/soc/1a00000.qcom,mdss_mdp/1a00000.qcom,mdss_mdp:qcom,mdss_fb_primary/leds(/.*)? u:object_r:sysfs_leds:s0
 
 # Radio
 /data/vendor/misc/cutback(/.*)?                          u:object_r:cutback_ipc_file:s0
 
 # Rmts
 /sys/kernel/debug/rmt_storage(/.*)?                      u:object_r:debugfs_rmt:s0
-
-# Thermal
-/dev/mmi_sys_temp                                        u:object_r:thermal_device:s0
