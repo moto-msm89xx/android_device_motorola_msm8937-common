@@ -15,3 +15,6 @@ type fingerprint_socket, file_type, data_file_type, core_data_file_type;
 
 # Radio
 type cutback_ipc_file, file_type, data_file_type;
+
+# Show IRQ
+type sysfs_show_irq, sysfs_type, fs_type;
