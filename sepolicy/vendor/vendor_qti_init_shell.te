@@ -1,2 +1,4 @@
 dontaudit vendor_qti_init_shell self:capability dac_override;
 allow vendor_qti_init_shell kmsg_device:chr_file { open write };
+allow vendor_qti_init_shell sysfs_leds:file setattr;
+allow vendor_qti_init_shell sysfs_show_irq:file w_file_perms;
