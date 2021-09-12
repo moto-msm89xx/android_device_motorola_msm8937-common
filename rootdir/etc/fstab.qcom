@@ -12,6 +12,7 @@ product                                               /product                ex
 system                                                /system                 ext4    ro,barrier=1,discard                                                               wait,logical,first_stage_mount
 system_ext                                            /system_ext             ext4    ro,barrier=1,discard                                                               wait,logical,first_stage_mount
 vendor                                                /vendor                 ext4    ro,barrier=1,discard                                                               wait,logical,first_stage_mount
+/dev/block/by-name/carrier                            /metadata               ext4    noatime,nosuid,nodev,discard,sync                                                  wait,check,formattable,first_stage_mount
 /dev/block/bootdevice/by-name/userdata                /data                   f2fs    rw,discard,nosuid,nodev,noatime,nodiratime,nobarrier,inline_xattr,inline_data      wait,check,latemount,formattable,fileencryption=ice,quota,encryptable=/dev/block/bootdevice/by-name/metadata,reservedsize=128M
 /dev/block/bootdevice/by-name/cache                   /cache                  ext4    rw,noatime,nosuid,nodev,barrier=1,data=ordered                                     wait,check,formattable
 /dev/block/bootdevice/by-name/modem                   /vendor/firmware_mnt    ext4    ro,nosuid,nodev,barrier=0,context=u:object_r:firmware_file:s0                      wait
