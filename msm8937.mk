@@ -109,8 +109,9 @@ PRODUCT_PACKAGES += \
 
 # FM
 PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni
+    FM2 \
+    libqcomfm_jni \
+    qcom.fmradio
 
 # Filesystem
 PRODUCT_PACKAGES += \
@@ -305,6 +306,7 @@ PRODUCT_PACKAGES += \
     init.mmi.usb.rc \
     init.oem.rc \
     init.qcom.rc \
+    init.qti.fm.rc \
     init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc
@@ -312,7 +314,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
-    init.qcom.sh
+    init.qcom.sh \
+    init.qti.fm.sh
 
 # Recovery
 PRODUCT_PACKAGES += \
