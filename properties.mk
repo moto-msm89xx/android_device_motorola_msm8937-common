@@ -41,10 +41,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.qcom.bluetooth.soc=smd
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    vendor.bluetooth.soc=smd
+    vendor.qcom.bluetooth.soc=pronto
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
